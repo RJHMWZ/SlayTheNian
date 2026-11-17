@@ -1,0 +1,5123 @@
+{
+  "gifts": [
+    {
+      "id": "sock",
+      "name": "Sock Swat",
+      "type": "atk",
+      "rarity": 0,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 6,
+          "up": 9
+        }
+      ],
+      "desc": "Deal {d} damage.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "mitten",
+      "name": "Woolly Mitten",
+      "type": "skl",
+      "rarity": 0,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 5,
+          "up": 8
+        }
+      ],
+      "desc": "Gain {b} Wrap.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "snowball",
+      "name": "Snowball",
+      "type": "atk",
+      "rarity": 0,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 8,
+          "up": 10
+        },
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Deal {d} damage. Apply {n} Brittle.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "canejab",
+      "name": "Candy Cane Jab",
+      "type": "atk",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 9,
+          "up": 10
+        },
+        {
+          "key": "n",
+          "base": 1,
+          "up": 2
+        }
+      ],
+      "desc": "Deal {d} damage. Draw {n}.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "icicle",
+      "name": "Icicle Toss",
+      "type": "atk",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 3,
+          "up": 4
+        },
+        {
+          "key": "n",
+          "base": 3,
+          "up": 5
+        }
+      ],
+      "desc": "Deal {d} damage. Apply {n} Frostbite.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "baubles",
+      "name": "Bauble Barrage",
+      "type": "atk",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "d",
+          "base": 3,
+          "up": 4
+        }
+      ],
+      "desc": "Deal {d} damage to a random enemy 3 times.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "sledsweep",
+      "name": "Sled Sweep",
+      "type": "atk",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "a",
+      "values": [
+        {
+          "key": "d",
+          "base": 8,
+          "up": 11
+        }
+      ],
+      "desc": "Deal {d} damage to ALL enemies.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "nutchomp",
+      "name": "Nutcracker Chomp",
+      "type": "atk",
+      "rarity": 1,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 12,
+          "up": 15
+        },
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Deal {d} damage. Apply {n} Soggy.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "tinselwhip",
+      "name": "Tinsel Whip",
+      "type": "atk",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 5,
+          "up": 7
+        },
+        {
+          "key": "b",
+          "base": 5,
+          "up": 7
+        }
+      ],
+      "desc": "Gain {b} Wrap. Deal {d} damage.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "bellslam",
+      "name": "Bell Slam",
+      "type": "atk",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 8,
+          "up": 11
+        }
+      ],
+      "desc": "Deal {d} damage. If the enemy is Brittle, gain 1 Cheer and draw 1.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "crumbs",
+      "name": "Cookie Crumbs",
+      "type": "atk",
+      "rarity": 1,
+      "cost": [
+        0,
+        0
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 3,
+          "up": 5
+        }
+      ],
+      "desc": "Deal {d} damage. Draw 1.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "scarf",
+      "name": "Scarf Wrap",
+      "type": "skl",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 8,
+          "up": 11
+        }
+      ],
+      "desc": "Gain {b} Wrap.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "cocoasip",
+      "name": "Cocoa Sip",
+      "type": "skl",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 5,
+          "up": 8
+        }
+      ],
+      "desc": "Gain {b} Wrap. Draw 1.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "offkey",
+      "name": "Off-Key Carol",
+      "type": "skl",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Apply {n} Soggy to ALL enemies.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "wrapspree",
+      "name": "Wrapping Spree",
+      "type": "skl",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 6,
+          "up": 9
+        }
+      ],
+      "desc": "Gain {b} Wrap. Next turn, draw 1 extra.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "stuffer",
+      "name": "Stocking Stuffer",
+      "type": "skl",
+      "rarity": 1,
+      "cost": [
+        0,
+        0
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Draw {n}. Consume.",
+      "flags": "x",
+      "steps": []
+    },
+    {
+      "id": "eggshot",
+      "name": "Eggnog Shot",
+      "type": "skl",
+      "rarity": 1,
+      "cost": [
+        0,
+        0
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 1,
+          "up": 2
+        }
+      ],
+      "desc": "Gain {n} Cheer. Consume.",
+      "flags": "x",
+      "steps": []
+    },
+    {
+      "id": "snowfort",
+      "name": "Snow Fort",
+      "type": "skl",
+      "rarity": 1,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 13,
+          "up": 17
+        }
+      ],
+      "desc": "Gain {b} Wrap.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "frostbreath",
+      "name": "Frosty Breath",
+      "type": "skl",
+      "rarity": 1,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "n",
+          "base": 5,
+          "up": 7
+        }
+      ],
+      "desc": "Apply {n} Frostbite.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "chimney",
+      "name": "Chimney Drop",
+      "type": "atk",
+      "rarity": 2,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 20,
+          "up": 26
+        }
+      ],
+      "desc": "Deal {d} damage.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "stampede",
+      "name": "Reindeer Stampede",
+      "type": "atk",
+      "rarity": 2,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "a",
+      "values": [
+        {
+          "key": "d",
+          "base": 4,
+          "up": 5
+        }
+      ],
+      "desc": "Deal {d} damage to ALL enemies 3 times.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "kiss",
+      "name": "Mistletoe Kiss",
+      "type": "atk",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 7,
+          "up": 9
+        },
+        {
+          "key": "n",
+          "base": 4,
+          "up": 6
+        }
+      ],
+      "desc": "Deal {d} damage. Heal {n}. Consume.",
+      "flags": "x",
+      "steps": []
+    },
+    {
+      "id": "bellybump",
+      "name": "Belly Bump",
+      "type": "atk",
+      "rarity": 2,
+      "cost": [
+        1,
+        0
+      ],
+      "target": "e",
+      "values": [],
+      "desc": "Deal damage equal to your Wrap.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "flurry",
+      "name": "Frostbite Flurry",
+      "type": "atk",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 6,
+          "up": 8
+        }
+      ],
+      "desc": "Deal {d} damage. Double the enemy's Frostbite.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "jingle",
+      "name": "Jingle Jangle",
+      "type": "skl",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 1,
+          "up": 2
+        }
+      ],
+      "desc": "Next turn, gain 2 Cheer and draw {n} extra.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "doublewrap",
+      "name": "Double Wrap",
+      "type": "skl",
+      "rarity": 2,
+      "cost": [
+        1,
+        0
+      ],
+      "target": "n",
+      "values": [],
+      "desc": "Double your Wrap.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "globe",
+      "name": "Snow Globe",
+      "type": "skl",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 7,
+          "up": 10
+        },
+        {
+          "key": "n",
+          "base": 1,
+          "up": 2
+        }
+      ],
+      "desc": "Gain {b} Wrap. Apply {n} Chilled to ALL enemies.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "fireplace",
+      "name": "Cozy Fireplace",
+      "type": "skl",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 6,
+          "up": 9
+        }
+      ],
+      "desc": "Heal {n}. Consume.",
+      "flags": "x",
+      "steps": []
+    },
+    {
+      "id": "checktwice",
+      "name": "Check It Twice",
+      "type": "skl",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Apply {n} Soggy and {n} Brittle. Consume.",
+      "flags": "x",
+      "steps": []
+    },
+    {
+      "id": "elfhelp",
+      "name": "Elf Helper",
+      "type": "skl",
+      "rarity": 2,
+      "cost": [
+        1,
+        0
+      ],
+      "target": "n",
+      "values": [],
+      "desc": "Add a random gift to your hand. It costs 0 this turn.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "spiked",
+      "name": "Spiked Eggnog",
+      "type": "pow",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Gain {n} Might.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "tinselarmor",
+      "name": "Tinsel Armor",
+      "type": "pow",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 3,
+          "up": 4
+        }
+      ],
+      "desc": "At the end of your turn, gain {n} Wrap.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "hollywreath",
+      "name": "Holly Wreath",
+      "type": "pow",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 3,
+          "up": 4
+        }
+      ],
+      "desc": "Gain {n} Holly.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "candles",
+      "name": "Advent Candles",
+      "type": "pow",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 3,
+          "up": 4
+        }
+      ],
+      "desc": "At the end of your turn, deal {n} damage to ALL enemies.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "snowfall",
+      "name": "Snowfall",
+      "type": "pow",
+      "rarity": 2,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "At the start of your turn, apply {n} Frostbite to ALL enemies.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "rhythm",
+      "name": "Workshop Rhythm",
+      "type": "pow",
+      "rarity": 2,
+      "cost": [
+        2,
+        1
+      ],
+      "target": "n",
+      "values": [],
+      "desc": "At the start of your turn, draw 1 extra gift.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "midnight",
+      "name": "Midnight Ride",
+      "type": "atk",
+      "rarity": 3,
+      "cost": [
+        3,
+        3
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 32,
+          "up": 42
+        }
+      ],
+      "desc": "Deal {d} damage.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "starfall",
+      "name": "Star Fall",
+      "type": "atk",
+      "rarity": 3,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "a",
+      "values": [
+        {
+          "key": "d",
+          "base": 10,
+          "up": 14
+        },
+        {
+          "key": "n",
+          "base": 2,
+          "up": 2
+        }
+      ],
+      "desc": "Deal {d} damage to ALL enemies. Apply {n} Brittle to ALL.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "birch",
+      "name": "Birch Breaker",
+      "type": "atk",
+      "rarity": 3,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 12,
+          "up": 16
+        },
+        {
+          "key": "n",
+          "base": 3,
+          "up": 4
+        }
+      ],
+      "desc": "Deal {d} damage. If this kills, gain {n} Max HP. Consume.",
+      "flags": "x",
+      "steps": []
+    },
+    {
+      "id": "bigbow",
+      "name": "Big Red Bow",
+      "type": "skl",
+      "rarity": 3,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 30,
+          "up": 40
+        }
+      ],
+      "desc": "Gain {b} Wrap. Consume.",
+      "flags": "x",
+      "steps": []
+    },
+    {
+      "id": "miracle",
+      "name": "Xmas Miracle",
+      "type": "skl",
+      "rarity": 3,
+      "cost": [
+        0,
+        0
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Gain {n} Cheer. Draw 2. Consume.",
+      "flags": "x",
+      "steps": []
+    },
+    {
+      "id": "milkcookies",
+      "name": "Milk & Cookies",
+      "type": "pow",
+      "rarity": 3,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "At the start of your turn, heal {n}.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "guidingstar",
+      "name": "Guiding Star",
+      "type": "pow",
+      "rarity": 3,
+      "cost": [
+        3,
+        2
+      ],
+      "target": "n",
+      "values": [],
+      "desc": "At the start of your turn, gain 1 Cheer.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "choir",
+      "name": "Choir of Angels",
+      "type": "pow",
+      "rarity": 3,
+      "cost": [
+        3,
+        3
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "n",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "At the start of your turn, gain {n} Might.",
+      "flags": "",
+      "steps": []
+    },
+    {
+      "id": "coal",
+      "name": "Lump of Coal",
+      "type": "curse",
+      "rarity": 9,
+      "cost": [
+        0,
+        0
+      ],
+      "target": "n",
+      "values": [],
+      "desc": "Ungiftable. Leaving it costs Spirit.",
+      "flags": "u",
+      "steps": []
+    },
+    {
+      "id": "soot",
+      "name": "Soot",
+      "type": "curse",
+      "rarity": 9,
+      "cost": [
+        0,
+        0
+      ],
+      "target": "n",
+      "values": [],
+      "desc": "Ungiftable. Melt.",
+      "flags": "um",
+      "steps": []
+    },
+    {
+      "id": "naughty",
+      "name": "Naughty Mark",
+      "type": "curse",
+      "rarity": 9,
+      "cost": [
+        0,
+        0
+      ],
+      "target": "n",
+      "values": [],
+      "desc": "Ungiftable. At the end of your turn, lose 2 HP.",
+      "flags": "u",
+      "steps": []
+    },
+    {
+      "id": "f_gingerling",
+      "name": "Gingerbread Man",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 5,
+          "up": 6
+        },
+        {
+          "key": "k1",
+          "base": 1,
+          "up": 2
+        }
+      ],
+      "desc": "Sugar Rush! Gain {b} Wrap. Gain {k1} Might. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "def",
+          "key": "b",
+          "status": "",
+          "hits": 1
+        },
+        {
+          "op": "buff",
+          "key": "k1",
+          "status": "might",
+          "hits": 1
+        }
+      ],
+      "enemy": "gingerling"
+    },
+    {
+      "id": "f_snowman",
+      "name": "Snowman",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "k0",
+          "base": 2,
+          "up": 3
+        },
+        {
+          "key": "b",
+          "base": 8,
+          "up": 10
+        }
+      ],
+      "desc": "Frost Glare! Apply {k0} Chilled. Gain {b} Wrap. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "debuff",
+          "key": "k0",
+          "status": "chilled",
+          "hits": 1
+        },
+        {
+          "op": "def",
+          "key": "b",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "snowman"
+    },
+    {
+      "id": "f_ornament",
+      "name": "Bad Bauble",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 4,
+          "up": 5
+        }
+      ],
+      "desc": "Shards! Deal {d} damage x2. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 2
+        }
+      ],
+      "enemy": "ornament"
+    },
+    {
+      "id": "f_rat",
+      "name": "Chimney Rat",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "k0",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Squeak! Gain {k0} Might. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "buff",
+          "key": "k0",
+          "status": "might",
+          "hits": 1
+        }
+      ],
+      "enemy": "rat"
+    },
+    {
+      "id": "f_lights",
+      "name": "Tangled Lights",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 11,
+          "up": 14
+        }
+      ],
+      "desc": "Short Circuit! Deal {d} damage. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "lights"
+    },
+    {
+      "id": "f_penguin",
+      "name": "Wind-up Penguin",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "k0",
+          "base": 3,
+          "up": 4
+        }
+      ],
+      "desc": "Wind Up! Gain {k0} Might. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "buff",
+          "key": "k0",
+          "status": "might",
+          "hits": 1
+        }
+      ],
+      "enemy": "penguin"
+    },
+    {
+      "id": "f_nutgrunt",
+      "name": "Nutcracker",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "b",
+          "base": 11,
+          "up": 14
+        },
+        {
+          "key": "d",
+          "base": 5,
+          "up": 6
+        }
+      ],
+      "desc": "Stand Guard! Gain {b} Wrap. Deal {d} damage. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "def",
+          "key": "b",
+          "status": "",
+          "hits": 1
+        },
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "nutgrunt"
+    },
+    {
+      "id": "f_toysoldier",
+      "name": "Tin Soldier",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 4,
+          "up": 5
+        }
+      ],
+      "desc": "Volley! Deal {d} damage x3. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 3
+        }
+      ],
+      "enemy": "toysoldier"
+    },
+    {
+      "id": "f_jack",
+      "name": "Jack-in-the-Box",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 20,
+          "up": 26
+        }
+      ],
+      "desc": "POP!! Deal {d} damage. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "jack"
+    },
+    {
+      "id": "f_fruitcake",
+      "name": "Fruity Snake",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 16,
+          "up": 21
+        }
+      ],
+      "desc": "Slam! Deal {d} damage. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "fruitcake"
+    },
+    {
+      "id": "f_angel",
+      "name": "Broken Bauble",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 8,
+          "up": 10
+        }
+      ],
+      "desc": "Wing Gust! Deal {d} damage x2. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 2
+        }
+      ],
+      "enemy": "angel"
+    },
+    {
+      "id": "f_slime",
+      "name": "Eggnog Slime",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 11,
+          "up": 14
+        },
+        {
+          "key": "k1",
+          "base": 1,
+          "up": 2
+        }
+      ],
+      "desc": "Splash! Deal {d} damage. Apply {k1} Soggy. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        },
+        {
+          "op": "debuff",
+          "key": "k1",
+          "status": "soggy",
+          "hits": 1
+        }
+      ],
+      "enemy": "slime"
+    },
+    {
+      "id": "f_bat",
+      "name": "Icicle Bat",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 8,
+          "up": 10
+        }
+      ],
+      "desc": "Dive! Deal {d} damage. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "bat"
+    },
+    {
+      "id": "f_grumpkin",
+      "name": "Grumpkin",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 10,
+          "up": 13
+        },
+        {
+          "key": "k1",
+          "base": 12,
+          "up": 18
+        }
+      ],
+      "desc": "Swipe! Deal {d} damage. Gain {k1} Cookies. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        },
+        {
+          "op": "cookies",
+          "key": "k1",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "grumpkin"
+    },
+    {
+      "id": "f_rogueelf",
+      "name": "Rogue Elf",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 9,
+          "up": 11
+        },
+        {
+          "key": "k1",
+          "base": 12,
+          "up": 18
+        }
+      ],
+      "desc": "Pickpocket! Deal {d} damage. Gain {k1} Cookies. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        },
+        {
+          "op": "cookies",
+          "key": "k1",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "rogueelf"
+    },
+    {
+      "id": "f_coalgolem",
+      "name": "Coal Golem",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 18,
+          "up": 22
+        }
+      ],
+      "desc": "Coal Fist! Deal {d} damage. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "coalgolem"
+    },
+    {
+      "id": "f_viper",
+      "name": "Candy Cane Viper",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 8,
+          "up": 10
+        },
+        {
+          "key": "k1",
+          "base": 3,
+          "up": 4
+        }
+      ],
+      "desc": "Fangs! Deal {d} damage. Apply {k1} Frostbite. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        },
+        {
+          "op": "debuff",
+          "key": "k1",
+          "status": "frostbite",
+          "hits": 1
+        }
+      ],
+      "enemy": "viper"
+    },
+    {
+      "id": "f_creeper",
+      "name": "Mistletoe Creeper",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        1,
+        1
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "k0",
+          "base": 3,
+          "up": 4
+        },
+        {
+          "key": "b",
+          "base": 8,
+          "up": 10
+        }
+      ],
+      "desc": "Grow! Gain {k0} Holly. Gain {b} Wrap. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "buff",
+          "key": "k0",
+          "status": "holly",
+          "hits": 1
+        },
+        {
+          "op": "def",
+          "key": "b",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "creeper"
+    },
+    {
+      "id": "f_general",
+      "name": "Nutcracker General",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 10,
+          "up": 13
+        },
+        {
+          "key": "k1",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Iron Jaw! Deal {d} damage x2. Apply {k1} Brittle. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 2
+        },
+        {
+          "op": "debuff",
+          "key": "k1",
+          "status": "brittle",
+          "hits": 1
+        }
+      ],
+      "enemy": "general"
+    },
+    {
+      "id": "f_yeti",
+      "name": "Abominable Snowman",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 28,
+          "up": 35
+        }
+      ],
+      "desc": "Avalanche! Deal {d} damage. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "yeti"
+    },
+    {
+      "id": "f_coalbaron",
+      "name": "Coal Baron",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "n",
+      "values": [
+        {
+          "key": "b",
+          "base": 19,
+          "up": 24
+        },
+        {
+          "key": "k1",
+          "base": 3,
+          "up": 4
+        }
+      ],
+      "desc": "Stockpile! Gain {b} Wrap. Gain {k1} Tinsel. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "def",
+          "key": "b",
+          "status": "",
+          "hits": 1
+        },
+        {
+          "op": "buff",
+          "key": "k1",
+          "status": "tinsel",
+          "hits": 1
+        }
+      ],
+      "enemy": "coalbaron"
+    },
+    {
+      "id": "f_alpha",
+      "name": "Reindeer Alpha",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 19,
+          "up": 24
+        }
+      ],
+      "desc": "Gore! Deal {d} damage. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        }
+      ],
+      "enemy": "alpha"
+    },
+    {
+      "id": "f_witch",
+      "name": "Gingerbread Witch",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "d",
+          "base": 15,
+          "up": 19
+        },
+        {
+          "key": "k1",
+          "base": 1,
+          "up": 2
+        }
+      ],
+      "desc": "Hex! Deal {d} damage. Apply {k1} Chilled. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "atk",
+          "key": "d",
+          "status": "",
+          "hits": 1
+        },
+        {
+          "op": "debuff",
+          "key": "k1",
+          "status": "chilled",
+          "hits": 1
+        }
+      ],
+      "enemy": "witch"
+    },
+    {
+      "id": "f_jackfrost",
+      "name": "Jack Frost",
+      "type": "friend",
+      "rarity": 4,
+      "cost": [
+        2,
+        2
+      ],
+      "target": "e",
+      "values": [
+        {
+          "key": "k0",
+          "base": 3,
+          "up": 4
+        },
+        {
+          "key": "k1",
+          "base": 2,
+          "up": 3
+        }
+      ],
+      "desc": "Freeze Over! Apply {k0} Frostbite. Apply {k1} Chilled. Consume.",
+      "flags": "x",
+      "steps": [
+        {
+          "op": "debuff",
+          "key": "k0",
+          "status": "frostbite",
+          "hits": 1
+        },
+        {
+          "op": "debuff",
+          "key": "k1",
+          "status": "chilled",
+          "hits": 1
+        }
+      ],
+      "enemy": "jackfrost"
+    }
+  ],
+  "relics": [
+    {
+      "id": "toolbelt",
+      "name": "Elf Toolbelt",
+      "rarity": 0,
+      "desc": "At the start of each battle, gain 1 Nimble. After each battle, gain 15 Cookies."
+    },
+    {
+      "id": "rednose",
+      "name": "Red Nose",
+      "rarity": 0,
+      "desc": "At the start of each battle, apply 1 Soggy to ALL enemies. Dazzling!"
+    },
+    {
+      "id": "cookietin",
+      "name": "Cookie Tin",
+      "rarity": 0,
+      "desc": "At the end of each battle, heal 6 HP."
+    },
+    {
+      "id": "jinglebell",
+      "name": "Jingle Bell",
+      "rarity": 2,
+      "desc": "At the start of each battle, draw 2 extra gifts."
+    },
+    {
+      "id": "warmsocks",
+      "name": "Warm Socks",
+      "rarity": 1,
+      "desc": "At the start of each battle, gain 10 Wrap."
+    },
+    {
+      "id": "candybowl",
+      "name": "Candy Bowl",
+      "rarity": 1,
+      "desc": "Gain 1 extra Cheer on the first turn of each battle."
+    },
+    {
+      "id": "snowglobe",
+      "name": "Snow Globe",
+      "rarity": 1,
+      "desc": "At the start of each battle, apply 1 Brittle to ALL enemies."
+    },
+    {
+      "id": "eggnogmug",
+      "name": "Eggnog Mug",
+      "rarity": 1,
+      "desc": "At the start of each battle, gain 1 Might."
+    },
+    {
+      "id": "iceskates",
+      "name": "Ice Skates",
+      "rarity": 1,
+      "desc": "At the start of each battle, gain 1 Nimble."
+    },
+    {
+      "id": "hollysprig",
+      "name": "Holly Sprig",
+      "rarity": 1,
+      "desc": "At the start of each battle, gain 3 Holly."
+    },
+    {
+      "id": "nutjaw",
+      "name": "Nutcracker Jaw",
+      "rarity": 2,
+      "desc": "Every 10th Attack you give deals double damage."
+    },
+    {
+      "id": "tinselgarland",
+      "name": "Tinsel Garland",
+      "rarity": 2,
+      "desc": "If you end your turn with 0 Wrap, gain 6 Wrap."
+    },
+    {
+      "id": "gingercharm",
+      "name": "Gingerbread Charm",
+      "rarity": 2,
+      "desc": "Every 3rd Attack in a turn grants 1 Might."
+    },
+    {
+      "id": "lostmitten",
+      "name": "Lost Mitten",
+      "rarity": 2,
+      "desc": "Every 3rd Skill in a turn grants 1 Nimble."
+    },
+    {
+      "id": "reindeerbell",
+      "name": "Reindeer Collar",
+      "rarity": 2,
+      "desc": "Every 3rd turn, gain 1 extra Cheer."
+    },
+    {
+      "id": "treestar",
+      "name": "Tree-Top Star",
+      "rarity": 3,
+      "desc": "Gain 1 extra Cheer every turn. Spirit fades 1 faster each night."
+    },
+    {
+      "id": "coalscuttle",
+      "name": "Coal Scuttle",
+      "rarity": 3,
+      "desc": "Leaving coal or curses GAINS 2 Spirit instead of losing it."
+    },
+    {
+      "id": "gifttag",
+      "name": "Gift Tag",
+      "rarity": 1,
+      "desc": "Whenever you leave a gift, gain 15 Cookies."
+    },
+    {
+      "id": "ledger",
+      "name": "Mrs. Claus's Ledger",
+      "rarity": 2,
+      "desc": "Whenever you leave a gift, gain 3 extra Spirit."
+    },
+    {
+      "id": "workbench",
+      "name": "Workshop Bench",
+      "rarity": 2,
+      "desc": "Whenever you leave a gift, Rewrap (upgrade) a random gift."
+    },
+    {
+      "id": "sackpatch",
+      "name": "Patched Sack",
+      "rarity": 3,
+      "desc": "With 12 or fewer gifts, you may skip leaving a gift."
+    },
+    {
+      "id": "cocoapot",
+      "name": "Cocoa Pot",
+      "rarity": 1,
+      "desc": "Resting by the fire heals 15 extra HP."
+    },
+    {
+      "id": "elfcoupon",
+      "name": "Elf Coupon",
+      "rarity": 2,
+      "desc": "Everything in the Elf Shop is 20% cheaper."
+    },
+    {
+      "id": "pocketwatch",
+      "name": "Santa's Pocket Watch",
+      "rarity": 3,
+      "desc": "If you give 3 or fewer gifts in a turn, draw 3 extra next turn."
+    },
+    {
+      "id": "fruitcake",
+      "name": "Fruitcake",
+      "rarity": 1,
+      "desc": "On pickup, gain 10 Max HP."
+    },
+    {
+      "id": "sugarplum",
+      "name": "Sugarplum Belt",
+      "rarity": 2,
+      "desc": "Gain an extra potion slot."
+    },
+    {
+      "id": "snowshovel",
+      "name": "Snow Shovel",
+      "rarity": 3,
+      "desc": "Up to 15 Wrap is kept between turns."
+    },
+    {
+      "id": "churchbell",
+      "name": "Church Bell",
+      "rarity": 3,
+      "desc": "Whenever an enemy is defeated, gain 1 Cheer and draw 1."
+    },
+    {
+      "id": "yulelog",
+      "name": "Yule Log",
+      "rarity": 2,
+      "desc": "At the end of your turn, deal 3 damage to a random enemy."
+    },
+    {
+      "id": "reindeerfeed",
+      "name": "Reindeer Feed",
+      "rarity": 1,
+      "desc": "Battles drop 25% more Cookies."
+    },
+    {
+      "id": "wishlist",
+      "name": "Wish List",
+      "rarity": 2,
+      "desc": "Gift rewards offer 4 choices instead of 3."
+    },
+    {
+      "id": "treeangel",
+      "name": "Tree Angel",
+      "rarity": 3,
+      "desc": "Once per run, when you would fall, rise with 50% HP."
+    }
+  ],
+  "potions": [
+    {
+      "id": "hotcocoa",
+      "name": "Hot Cocoa",
+      "target": "n",
+      "desc": "Heal 20 HP.",
+      "outside": true
+    },
+    {
+      "id": "eggnog",
+      "name": "Eggnog",
+      "target": "n",
+      "desc": "Gain 2 Might.",
+      "outside": false
+    },
+    {
+      "id": "cider",
+      "name": "Hot Cider",
+      "target": "n",
+      "desc": "Gain 2 Nimble.",
+      "outside": false
+    },
+    {
+      "id": "peppermint",
+      "name": "Peppermint Tea",
+      "target": "n",
+      "desc": "Gain 2 Cheer.",
+      "outside": false
+    },
+    {
+      "id": "snowflask",
+      "name": "Snow Flask",
+      "target": "n",
+      "desc": "Gain 12 Wrap.",
+      "outside": false
+    },
+    {
+      "id": "cracker",
+      "name": "Christmas Cracker",
+      "target": "e",
+      "desc": "Deal 20 damage.",
+      "outside": false
+    },
+    {
+      "id": "blizzard",
+      "name": "Blizzard in a Jar",
+      "target": "n",
+      "desc": "Deal 10 damage to ALL enemies.",
+      "outside": false
+    },
+    {
+      "id": "glitter",
+      "name": "Glitter Bomb",
+      "target": "e",
+      "desc": "Apply 3 Brittle.",
+      "outside": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk Dunk",
+      "target": "n",
+      "desc": "Apply 2 Soggy to ALL enemies.",
+      "outside": false
+    },
+    {
+      "id": "frostvial",
+      "name": "Frostbite Vial",
+      "target": "e",
+      "desc": "Apply 8 Frostbite.",
+      "outside": false
+    },
+    {
+      "id": "dough",
+      "name": "Cookie Dough",
+      "target": "n",
+      "desc": "Draw 3 gifts.",
+      "outside": false
+    },
+    {
+      "id": "elfdust",
+      "name": "Elf Dust",
+      "target": "n",
+      "desc": "Add a random Rare gift to your hand. It costs 0.",
+      "outside": false
+    },
+    {
+      "id": "deermilk",
+      "name": "Reindeer Milk",
+      "target": "n",
+      "desc": "Gain 5 Max HP.",
+      "outside": true
+    },
+    {
+      "id": "punch",
+      "name": "Holly Punch",
+      "target": "n",
+      "desc": "Gain 3 Holly.",
+      "outside": false
+    },
+    {
+      "id": "starlight",
+      "name": "Bottled Star",
+      "target": "n",
+      "desc": "Gain 2 Ribbon.",
+      "outside": false
+    },
+    {
+      "id": "smoke",
+      "name": "Chimney Smoke",
+      "target": "n",
+      "desc": "Escape a normal battle (no rewards, no gift to leave).",
+      "outside": false
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger Shot",
+      "target": "n",
+      "desc": "Rewrap (upgrade) all gifts in your hand this battle.",
+      "outside": false
+    },
+    {
+      "id": "wishbone",
+      "name": "Wishbone Broth",
+      "target": "n",
+      "desc": "Heal 30% of your Max HP.",
+      "outside": true
+    },
+    {
+      "id": "wax",
+      "name": "Candle Wax",
+      "target": "n",
+      "desc": "Gain 4 Tinsel this battle.",
+      "outside": false
+    },
+    {
+      "id": "elixir",
+      "name": "Spirit Elixir",
+      "target": "n",
+      "desc": "Gain 10 Christmas Spirit.",
+      "outside": true
+    }
+  ],
+  "enemies": [
+    {
+      "id": "gingerling",
+      "name": "Gingerbread Man",
+      "tier": "weak",
+      "hp": [
+        16,
+        20
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 2,
+      "love": "part:paint",
+      "hate": "part:glitter",
+      "lore": "Ran out of the North Pole ovens the moment the door opened and had been living off his own crumbs for months.",
+      "lines": [
+        "It's gingerDREAD man now!",
+        "Who are ya callin' half-baked?!"
+      ],
+      "moves": [
+        {
+          "id": "bite",
+          "name": "Crumbly Bite",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 6,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "rush",
+          "name": "Sugar Rush",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 4,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "bite",
+          "n": 3
+        },
+        {
+          "key": "rush",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "snowman",
+      "name": "Snowman",
+      "tier": "weak",
+      "hp": [
+        22,
+        26
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 2,
+      "love": "part:musicbox",
+      "hate": "part:battery",
+      "lore": "Came to life to a song once. Has been waiting for another one ever since.",
+      "lines": [
+        "Imma stick you with my carrot!",
+        "I'll keep you frozen till New Year!"
+      ],
+      "moves": [
+        {
+          "id": "ball",
+          "name": "Iceball",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 7,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "glare",
+          "name": "Frost Glare",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "chilled",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 6,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "glare",
+        "ball"
+      ],
+      "weights": []
+    },
+    {
+      "id": "ornament",
+      "name": "Bad Bauble",
+      "tier": "weak",
+      "hp": [
+        15,
+        18
+      ],
+      "fly": true,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 2,
+      "love": "part:glitter",
+      "hate": "part:squeaker",
+      "lore": "Fell off the tree Last Christmas  and has held a grudge against holidays ever since.",
+      "lines": [
+        "I'll shatter your face!",
+        "Tink tink! You'll break before I do!"
+      ],
+      "moves": [
+        {
+          "id": "shards",
+          "name": "Shards",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 3,
+              "hits": 2,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "glint",
+          "name": "Glint",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "shards",
+          "n": 2
+        },
+        {
+          "key": "glint",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "rat",
+      "name": "Chimney Rat",
+      "tier": "weak",
+      "hp": [
+        16,
+        20
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 2,
+      "love": "part:squeaker",
+      "hate": "part:bell",
+      "lore": "Despite their name, chimney rats prefer to live in arch-shaped holes cut into walls.",
+      "lines": [
+        "Squeak!",
+        "Stay away from my chimney!"
+      ],
+      "moves": [
+        {
+          "id": "gnaw",
+          "name": "Gnaw",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 5,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "squeak",
+          "name": "Squeak",
+          "actions": [
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "gnaw",
+          "n": 3
+        },
+        {
+          "key": "squeak",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "lights",
+      "name": "Tangled Lights",
+      "tier": "weak",
+      "hp": [
+        20,
+        25
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 2,
+      "love": "part:battery",
+      "hate": "part:spring",
+      "lore": "Every string of lights that was ever stuffed in a box, tangled into one.",
+      "lines": [
+        "Bzzt!",
+        "Night night, {nick}!"
+      ],
+      "moves": [
+        {
+          "id": "zap",
+          "name": "Zap",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 4,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "short",
+          "name": "Short Circuit",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 9,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "tangle",
+          "name": "Tangle",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "chilled",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "zap",
+          "n": 2
+        },
+        {
+          "key": "short",
+          "n": 2
+        },
+        {
+          "key": "tangle",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "penguin",
+      "name": "Wind-up Penguin",
+      "tier": "weak",
+      "hp": [
+        18,
+        23
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 2,
+      "love": "part:windup",
+      "hate": "part:wheels",
+      "lore": "A wind-up toy that kept going after its mechanism broke. It only knows forward.",
+      "lines": [
+        "Click-click-click... MAXIMUM WADDLE.",
+        "I only know how to move forward."
+      ],
+      "moves": [
+        {
+          "id": "waddle",
+          "name": "Waddle Smack",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 6,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "wind",
+          "name": "Wind Up",
+          "actions": [
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 3,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "waddle",
+        "waddle",
+        "wind"
+      ],
+      "weights": []
+    },
+    {
+      "id": "nutgrunt",
+      "name": "Nutcracker",
+      "tier": "normal",
+      "hp": [
+        42,
+        48
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:paint",
+      "hate": "part:squeaker",
+      "lore": "Cracks nuts for a living and wants everyone to know it.",
+      "lines": [
+        "Nuts and grannies get cracked alike!",
+        "CRACK. CRACK. CRACK."
+      ],
+      "moves": [
+        {
+          "id": "crack",
+          "name": "Crack",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 11,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "guard",
+          "name": "Stand Guard",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 9,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "atk",
+              "key": "",
+              "n": 4,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "grind",
+          "name": "Grind",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 5,
+              "hits": 2,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "crack",
+          "n": 2
+        },
+        {
+          "key": "guard",
+          "n": 1
+        },
+        {
+          "key": "grind",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "id": "toysoldier",
+      "name": "Tin Soldier",
+      "tier": "normal",
+      "hp": [
+        28,
+        33
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:windup",
+      "hate": "part:glitter",
+      "lore": "Marches in perfect lines.",
+      "lines": [
+        "Left, right, left, right... CHARGE!",
+        "Make war, not love!"
+      ],
+      "moves": [
+        {
+          "id": "march",
+          "name": "Bayonet",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 7,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "volley",
+          "name": "Volley",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 3,
+              "hits": 3,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "drill",
+          "name": "Drill",
+          "actions": [
+            {
+              "op": "buffAll",
+              "key": "might",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 4,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "march",
+          "n": 2
+        },
+        {
+          "key": "volley",
+          "n": 2
+        },
+        {
+          "key": "drill",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "jack",
+      "name": "Jack-in-the-Box",
+      "tier": "normal",
+      "hp": [
+        32,
+        36
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:spring",
+      "hate": "part:windup",
+      "lore": "Has a habit of popping out at the worst possible moment. The reason is anxiety.",
+      "lines": [
+        "Pop goes the... GRANNY!",
+        "Round and round the handle turns..."
+      ],
+      "moves": [
+        {
+          "id": "wind",
+          "name": "Winding...",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 8,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "pop",
+          "name": "POP!",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 16,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "wind",
+        "pop"
+      ],
+      "weights": []
+    },
+    {
+      "id": "fruitcake",
+      "name": "Fruity Snake",
+      "tier": "normal",
+      "hp": [
+        46,
+        52
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:ribbon",
+      "hate": "type:atk",
+      "lore": "Gifted and regifted forty times. All it ever wants is to be eaten.",
+      "lines": [
+        "I'm a fruity cutie patootie!",
+        "Feelin' thirsty? How about a PUNCH?"
+      ],
+      "moves": [
+        {
+          "id": "slam",
+          "name": "Slam",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 13,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "stale",
+          "name": "Stale Crumbs",
+          "actions": [
+            {
+              "op": "add",
+              "key": "soot",
+              "n": 2,
+              "hits": 1,
+              "pile": "discard"
+            }
+          ]
+        },
+        {
+          "id": "harden",
+          "name": "Harden",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 12,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "slam"
+      ],
+      "weights": [
+        {
+          "key": "slam",
+          "n": 2
+        },
+        {
+          "key": "stale",
+          "n": 1
+        },
+        {
+          "key": "harden",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "angel",
+      "name": "Broken Bauble",
+      "tier": "normal",
+      "hp": [
+        34,
+        38
+      ],
+      "fly": true,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:glitter",
+      "hate": "part:paint",
+      "lore": "A shapely fallen angel made out of fresh snow.",
+      "lines": [
+        "I'll shard all over you!",
+        "Silent night, violent night."
+      ],
+      "moves": [
+        {
+          "id": "gust",
+          "name": "Wing Gust",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 6,
+              "hits": 2,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "hymn",
+          "name": "Cold Hymn",
+          "actions": [
+            {
+              "op": "healAll",
+              "key": "",
+              "n": 8,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "lament",
+          "name": "Lament",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "brittle",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "hymn",
+        "hymn"
+      ],
+      "weights": [
+        {
+          "key": "gust",
+          "n": 2
+        },
+        {
+          "key": "lament",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "slime",
+      "name": "Eggnog Slime",
+      "tier": "normal",
+      "hp": [
+        36,
+        40
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "type:skl",
+      "hate": "part:battery",
+      "lore": "A spilled mug of eggnog that got ideas. Loves anything warm and cosy.",
+      "lines": [
+        "Ya callin' me spoiled?!",
+        "I'm gloopy and goopy."
+      ],
+      "moves": [
+        {
+          "id": "splash",
+          "name": "Splash",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 9,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "gloop",
+          "name": "Gloop",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "chilled",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 5,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "splash",
+          "n": 2
+        },
+        {
+          "key": "gloop",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "bat",
+      "name": "Icicle Bat",
+      "tier": "normal",
+      "hp": [
+        16,
+        20
+      ],
+      "fly": true,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:bell",
+      "hate": "part:squeaker",
+      "lore": "Hangs in frozen caves. A good jingle echoes for days in there.",
+      "lines": [
+        "Skreee!",
+        "I knew I should've stayed in Mt. Moon."
+      ],
+      "moves": [
+        {
+          "id": "dive",
+          "name": "Dive",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 6,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "screech",
+          "name": "Screech",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "dive",
+          "n": 3
+        },
+        {
+          "key": "screech",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "grumpkin",
+      "name": "Grumpkin",
+      "tier": "normal",
+      "hp": [
+        38,
+        42
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:ribbon",
+      "hate": "part:squeaker",
+      "lore": "Hates the noise, the noise, the NOISE. Secretly loves a well-tied bow.",
+      "lines": [
+        "You wouldn't like me when I'm grumpy.",
+        "Your cookies. Hand them over."
+      ],
+      "moves": [
+        {
+          "id": "swipe",
+          "name": "Swipe",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 8,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "steal",
+              "key": "",
+              "n": 15,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "sulk",
+          "name": "Sulk",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 12,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "grumble",
+          "name": "Grumble",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "swipe",
+          "n": 3
+        },
+        {
+          "key": "sulk",
+          "n": 1
+        },
+        {
+          "key": "grumble",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "rogueelf",
+      "name": "Rogue Elf",
+      "tier": "normal",
+      "hp": [
+        24,
+        28
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:wheels",
+      "hate": "part:ribbon",
+      "lore": "Quit the workshop over unpaid overtime. Always planning a getaway.",
+      "lines": [
+        "Your cookies or your life! ...Actually, just the cookies.",
+        "Santa never paid us overtime."
+      ],
+      "moves": [
+        {
+          "id": "pickpocket",
+          "name": "Pickpocket",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 7,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "pocket",
+              "key": "",
+              "n": 25,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "lurk",
+          "name": "Lie Low",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 10,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "flee",
+          "name": "Escape",
+          "actions": [
+            {
+              "op": "flee",
+              "key": "",
+              "n": 0,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "pickpocket",
+        "lurk",
+        "lurk",
+        "flee",
+        "pickpocket"
+      ],
+      "weights": []
+    },
+    {
+      "id": "coalgolem",
+      "name": "Coal Golem",
+      "tier": "normal",
+      "hp": [
+        48,
+        54
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:battery",
+      "hate": "part:paint",
+      "lore": "Built from every lump of coal ever given. Craves a little spark.",
+      "lines": [
+        "Every naughty child... made me BIGGER.",
+        "COAL FOR EVERYONE."
+      ],
+      "moves": [
+        {
+          "id": "fist",
+          "name": "Coal Fist",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 14,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "smog",
+          "name": "Smog",
+          "actions": [
+            {
+              "op": "add",
+              "key": "soot",
+              "n": 1,
+              "hits": 1,
+              "pile": "draw"
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 10,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "fist",
+          "n": 2
+        },
+        {
+          "key": "smog",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "viper",
+      "name": "Candy Cane Viper",
+      "tier": "normal",
+      "hp": [
+        26,
+        30
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:musicbox",
+      "hate": "part:bell",
+      "lore": "A candy cane that grew fangs. A soft tune still charms it.",
+      "lines": [
+        "Sssso sweet... sssso deadly.",
+        "Refresh yourssself with sssome peppermint venom!"
+      ],
+      "moves": [
+        {
+          "id": "fangs",
+          "name": "Fangs",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 6,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "frostbite",
+              "n": 3,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "coil",
+          "name": "Coil",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 7,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "fangs",
+          "n": 2
+        },
+        {
+          "key": "coil",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "creeper",
+      "name": "Mistletoe Creeper",
+      "tier": "normal",
+      "hp": [
+        40,
+        44
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 3,
+      "love": "part:ribbon",
+      "hate": "part:glitter",
+      "lore": "Mistletoe that got tired of waiting for kisses.",
+      "lines": [
+        "Kiss kiss bang bang.",
+        "A kiss? How about a SQUEEZE."
+      ],
+      "moves": [
+        {
+          "id": "lash",
+          "name": "Vine Lash",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 10,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "entangle",
+          "name": "Entangle",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "chilled",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "grow",
+          "name": "Grow",
+          "actions": [
+            {
+              "op": "buff",
+              "key": "holly",
+              "n": 3,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 6,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "entangle"
+      ],
+      "weights": [
+        {
+          "key": "lash",
+          "n": 3
+        },
+        {
+          "key": "grow",
+          "n": 1
+        },
+        {
+          "key": "entangle",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "krampimp",
+      "name": "Krampus Imp",
+      "tier": "normal",
+      "hp": [
+        24,
+        28
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": true,
+      "pips": 3,
+      "love": "",
+      "hate": "",
+      "lore": "Krampus's little helpers. Pure mischief; nothing you give them is ever enough.",
+      "lines": [
+        "The Master is coming! Heh heh!",
+        "Naughty, naughty, NAUGHTY!"
+      ],
+      "moves": [
+        {
+          "id": "switch",
+          "name": "Switch",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 4,
+              "hits": 2,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "snicker",
+          "name": "Snicker",
+          "actions": [
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 4,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [],
+      "weights": [
+        {
+          "key": "switch",
+          "n": 3
+        },
+        {
+          "key": "snicker",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "general",
+      "name": "Nutcracker General",
+      "tier": "elite",
+      "hp": [
+        82,
+        86
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 5,
+      "love": "rare",
+      "hate": "part:squeaker",
+      "lore": "Commander of the Nutcracker army. Accepts only the finest tribute.",
+      "lines": [
+        "Crush the intruder!",
+        "You're just another nut to crush."
+      ],
+      "moves": [
+        {
+          "id": "command",
+          "name": "Command",
+          "actions": [
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 10,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "saber",
+          "name": "Saber Slash",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 18,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "jaw",
+          "name": "Iron Jaw",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 8,
+              "hits": 2,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "brittle",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "command",
+        "saber",
+        "jaw"
+      ],
+      "weights": []
+    },
+    {
+      "id": "yeti",
+      "name": "Abominable Snowman",
+      "tier": "elite",
+      "hp": [
+        92,
+        96
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 5,
+      "love": "part:musicbox",
+      "hate": "part:bell",
+      "lore": "Lonely, enormous and very loud. A lullaby calms it right down.",
+      "lines": [
+        "RRRAAAWR!",
+        "GRRRR!"
+      ],
+      "moves": [
+        {
+          "id": "roar",
+          "name": "Roar",
+          "actions": [
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "maul",
+          "name": "Maul",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 8,
+              "hits": 2,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "avalanche",
+          "name": "Avalanche",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 22,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "roar",
+        "maul",
+        "avalanche",
+        "maul",
+        "roar"
+      ],
+      "weights": []
+    },
+    {
+      "id": "coalbaron",
+      "name": "Coal Baron",
+      "tier": "elite",
+      "hp": [
+        76,
+        80
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 5,
+      "love": "rare",
+      "hate": "part:ribbon",
+      "lore": "Hoards coal and cookies alike. Values a gift by its price tag.",
+      "lines": [
+        "Coal is the gift that keeps on giving.",
+        "GRAAAAWR!"
+      ],
+      "moves": [
+        {
+          "id": "shower",
+          "name": "Coal Shower",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 6,
+              "hits": 3,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "tax",
+          "name": "Coal Tax",
+          "actions": [
+            {
+              "op": "add",
+              "key": "soot",
+              "n": 3,
+              "hits": 1,
+              "pile": "draw"
+            },
+            {
+              "op": "steal",
+              "key": "",
+              "n": 20,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "pile",
+          "name": "Stockpile",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 15,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "buff",
+              "key": "tinsel",
+              "n": 3,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "pile",
+        "shower",
+        "tax",
+        "shower"
+      ],
+      "weights": []
+    },
+    {
+      "id": "alpha",
+      "name": "Reindeer Alpha",
+      "tier": "elite",
+      "hp": [
+        80,
+        85
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 5,
+      "love": "part:bell",
+      "hate": "part:wheels",
+      "lore": "Led the sleigh team for a hundred Christmases. Still answers to the jingle of sleigh bells.",
+      "lines": [
+        "The sleigh is broken. And so are the reins.",
+        "We pulled for HIM. Now we run wild!"
+      ],
+      "moves": [
+        {
+          "id": "bellow",
+          "name": "Bellow",
+          "actions": [
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 3,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "gore",
+          "name": "Gore",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 15,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "stampede",
+          "name": "Stampede",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 5,
+              "hits": 3,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "bellow",
+        "gore",
+        "stampede",
+        "gore",
+        "bellow"
+      ],
+      "weights": []
+    },
+    {
+      "id": "witch",
+      "name": "Gingerbread Witch",
+      "tier": "elite",
+      "hp": [
+        84,
+        88
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 5,
+      "love": "part:glitter",
+      "hate": "part:wheels",
+      "lore": "Lives in a gingerbread house. Will trade anything for a sprinkle of sparkle.",
+      "lines": [
+        "You son of a witch!",
+        "Mmm. Granny on gingerbread."
+      ],
+      "moves": [
+        {
+          "id": "hex",
+          "name": "Hex",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 12,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "chilled",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "bake",
+          "name": "Bake a Minion",
+          "actions": [
+            {
+              "op": "summon",
+              "key": "gingerling",
+              "n": 0,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 6,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "wall",
+          "name": "Candy Wall",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 14,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "bake"
+      ],
+      "weights": [
+        {
+          "key": "hex",
+          "n": 2
+        },
+        {
+          "key": "wall",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "id": "jackfrost",
+      "name": "Jack Frost",
+      "tier": "elite",
+      "hp": [
+        76,
+        80
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 5,
+      "love": "part:spring",
+      "hate": "part:musicbox",
+      "lore": "Nips noses for fun. Can't sit still; loves anything bouncy.",
+      "lines": [
+        "I'll frostbite your face off!",
+        "Christmas is cancelled!"
+      ],
+      "moves": [
+        {
+          "id": "freeze",
+          "name": "Freeze Over",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "frostbite",
+              "n": 7,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "chilled",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "nip",
+          "name": "Icy Nips",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 4,
+              "hits": 3,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "wall",
+          "name": "Ice Wall",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 16,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "freeze",
+        "nip",
+        "wall",
+        "nip"
+      ],
+      "weights": []
+    },
+    {
+      "id": "santa",
+      "name": "Corrupted Santa",
+      "tier": "boss",
+      "hp": [
+        128,
+        128
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": false,
+      "pips": 8,
+      "love": "part:ribbon",
+      "hate": "part:battery",
+      "lore": "Read the whole Naughty List in one night. Somewhere under the coal, he's still Nick.",
+      "lines": [
+        "What a ho-ho-horrible night to have a curse!"
+      ],
+      "moves": [
+        {
+          "id": "ho",
+          "name": "Ho Ho HURT",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 14,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "nice",
+          "name": "Naughty or Nice",
+          "actions": [
+            {
+              "op": "add",
+              "key": "soot",
+              "n": 2,
+              "hits": 1,
+              "pile": "discard"
+            },
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "slam",
+          "name": "Sack Slam",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 5,
+              "hits": 3,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "guard",
+          "name": "Chimney Guard",
+          "actions": [
+            {
+              "op": "def",
+              "key": "",
+              "n": 20,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "buff",
+              "key": "might",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "ho",
+        "nice",
+        "slam",
+        "guard"
+      ],
+      "weights": []
+    },
+    {
+      "id": "krampus",
+      "name": "KRAMPUS",
+      "tier": "boss",
+      "hp": [
+        160,
+        160
+      ],
+      "fly": false,
+      "scale": 1.0,
+      "noCharm": true,
+      "pips": 8,
+      "love": "",
+      "hate": "",
+      "lore": "What Santa becomes when the coal wins. There is no gift for this.",
+      "lines": [
+        "SANTA IS GONE. KRAMPUS IS FOREVER!"
+      ],
+      "moves": [
+        {
+          "id": "chains",
+          "name": "Chains of the Naughty",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "brittle",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "lash",
+          "name": "Birch Lash",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 4,
+              "hits": 4,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "howl",
+          "name": "Midnight Howl",
+          "actions": [
+            {
+              "op": "buff",
+              "key": "carol",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 15,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "sack",
+          "name": "Into the Sack",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 18,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "chains",
+        "lash",
+        "howl",
+        "sack",
+        "lash"
+      ],
+      "weights": []
+    },
+    {
+      "id": "naughtylist",
+      "name": "The Naughty List",
+      "tier": "boss",
+      "hp": [
+        200,
+        200
+      ],
+      "fly": false,
+      "scale": 1.6,
+      "noCharm": true,
+      "pips": 8,
+      "love": "",
+      "hate": "",
+      "lore": "The list itself, growing bigger with every naughty deed. Santa never had a chance.",
+      "lines": [
+        "I CAN SEE INTO YOUR HEART."
+      ],
+      "moves": [
+        {
+          "id": "read",
+          "name": "Read the Names",
+          "actions": [
+            {
+              "op": "debuff",
+              "key": "soggy",
+              "n": 2,
+              "hits": 1,
+              "pile": ""
+            },
+            {
+              "op": "debuff",
+              "key": "brittle",
+              "n": 1,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "ink",
+          "name": "Ink Lash",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 6,
+              "hits": 3,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "mark",
+          "name": "Mark as Naughty",
+          "actions": [
+            {
+              "op": "add",
+              "key": "naughty",
+              "n": 2,
+              "hits": 1,
+              "pile": "discard"
+            },
+            {
+              "op": "def",
+              "key": "",
+              "n": 14,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        },
+        {
+          "id": "cut",
+          "name": "Paper Cut",
+          "actions": [
+            {
+              "op": "atk",
+              "key": "",
+              "n": 20,
+              "hits": 1,
+              "pile": ""
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        "read",
+        "ink",
+        "mark",
+        "cut"
+      ],
+      "weights": []
+    }
+  ],
+  "encounters": [
+    {
+      "tier": "weak",
+      "groups": [
+        {
+          "ids": [
+            "gingerling"
+          ]
+        },
+        {
+          "ids": [
+            "snowman"
+          ]
+        },
+        {
+          "ids": [
+            "ornament",
+            "ornament"
+          ]
+        },
+        {
+          "ids": [
+            "rat",
+            "rat"
+          ]
+        },
+        {
+          "ids": [
+            "lights"
+          ]
+        },
+        {
+          "ids": [
+            "penguin"
+          ]
+        },
+        {
+          "ids": [
+            "ornament",
+            "rat"
+          ]
+        },
+        {
+          "ids": [
+            "gingerling",
+            "penguin"
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "normal",
+      "groups": [
+        {
+          "ids": [
+            "nutgrunt"
+          ]
+        },
+        {
+          "ids": [
+            "toysoldier",
+            "toysoldier"
+          ]
+        },
+        {
+          "ids": [
+            "jack"
+          ]
+        },
+        {
+          "ids": [
+            "fruitcake"
+          ]
+        },
+        {
+          "ids": [
+            "snowman",
+            "ornament"
+          ]
+        },
+        {
+          "ids": [
+            "slime"
+          ]
+        },
+        {
+          "ids": [
+            "bat",
+            "bat",
+            "bat"
+          ]
+        },
+        {
+          "ids": [
+            "slime",
+            "rat"
+          ]
+        },
+        {
+          "ids": [
+            "grumpkin"
+          ]
+        },
+        {
+          "ids": [
+            "coalgolem"
+          ]
+        },
+        {
+          "ids": [
+            "viper"
+          ]
+        },
+        {
+          "ids": [
+            "creeper"
+          ]
+        },
+        {
+          "ids": [
+            "krampimp",
+            "krampimp"
+          ]
+        },
+        {
+          "ids": [
+            "gingerling",
+            "gingerling",
+            "penguin"
+          ]
+        },
+        {
+          "ids": [
+            "snowman",
+            "lights"
+          ]
+        },
+        {
+          "ids": [
+            "rogueelf"
+          ]
+        },
+        {
+          "ids": [
+            "gingerling",
+            "rogueelf"
+          ]
+        },
+        {
+          "ids": [
+            "rat",
+            "ornament",
+            "ornament"
+          ]
+        },
+        {
+          "ids": [
+            "viper",
+            "bat",
+            "bat"
+          ]
+        },
+        {
+          "ids": [
+            "fruitcake",
+            "grumpkin",
+            "creeper"
+          ]
+        },
+        {
+          "ids": [
+            "snowman",
+            "gingerling",
+            "coalgolem"
+          ]
+        },
+        {
+          "ids": [
+            "krampimp",
+            "rogueelf"
+          ]
+        },
+        {
+          "ids": [
+            "angel",
+            "ornament"
+          ]
+        },
+        {
+          "ids": [
+            "jack",
+            "toysoldier"
+          ]
+        },
+        {
+          "ids": [
+            "nutgrunt",
+            "toysoldier"
+          ]
+        },
+        {
+          "ids": [
+            "jack",
+            "lights"
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "elite",
+      "groups": [
+        {
+          "ids": [
+            "general"
+          ]
+        },
+        {
+          "ids": [
+            "yeti"
+          ]
+        },
+        {
+          "ids": [
+            "coalbaron"
+          ]
+        },
+        {
+          "ids": [
+            "alpha"
+          ]
+        },
+        {
+          "ids": [
+            "witch",
+            "gingerling"
+          ]
+        },
+        {
+          "ids": [
+            "jackfrost"
+          ]
+        },
+        {
+          "ids": [
+            "general",
+            "toysoldier",
+            "toysoldier"
+          ]
+        },
+        {
+          "ids": [
+            "yeti",
+            "snowman"
+          ]
+        },
+        {
+          "ids": [
+            "jackfrost",
+            "lights"
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "boss",
+      "groups": [
+        {
+          "ids": [
+            "santa"
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "lostelf",
+      "title": "The Lost Elf",
+      "text": "A tiny elf shivers in a snowdrift, clutching a broken compass. \"I may have taken a wrong turn at the candy cane forest...\"",
+      "choices": [
+        {
+          "label": "Walk him home (lose 6 HP, gain a relic)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Point the way (+5 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Ignore him (-5 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "workshop",
+      "title": "Abandoned Workshop",
+      "text": "Half-finished toys line the dusty benches. The tools are still warm, as if the elves left in a hurry.",
+      "choices": [
+        {
+          "label": "Tinker (Rewrap a gift)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Scavenge (random gift + 30 Cookies)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Leave",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "carolers",
+      "title": "Carolers at the Door",
+      "text": "A ragged group of carolers is singing in front of a house. They look like they've been at it for quite a long time. Their voices crack with cold.",
+      "choices": [
+        {
+          "label": "Sing along (+10 Spirit, heal 5)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Give them 25 Cookies (random potion)",
+          "price": 25,
+          "needsPotion": false
+        },
+        {
+          "label": "Learn their song (gain Off-Key Carol)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "pond",
+      "title": "The Frozen Pond",
+      "text": "A frozen pond blocks the path. As you take a closer look, you note coins that twinkle under the ice. The ice creaks under your weight.",
+      "choices": [
+        {
+          "label": "Skate across (50%: +60 Cookies, else -10 HP)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Walk around (-4 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "cookiejar",
+      "title": "The Cookie Jar",
+      "text": "On a windowsill, you notice an enormous cookie jar. A note reads: FOR SANTA ONLY.",
+      "choices": [
+        {
+          "label": "Reach in deep (+75 Cookies, gain Lump of Coal)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Take just one (heal 10, -2 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Leave it",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "globeshop",
+      "title": "The Snow Globe Seller",
+      "text": "An old woman sells snow globes. You take one from her hands almost absentmindedly.",
+      "choices": [
+        {
+          "label": "Shake a globe (transform a gift)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Buy one for 60 Cookies (relic)",
+          "price": 60,
+          "needsPotion": false
+        },
+        {
+          "label": "Move along",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "stable",
+      "title": "The Empty Stable",
+      "text": "Santa's reserve reindeer pace in their stalls, hungry and restless.",
+      "choices": [
+        {
+          "label": "Feed them 30 Cookies (+6 Max HP)",
+          "price": 30,
+          "needsPotion": false
+        },
+        {
+          "label": "Ride one (lose 10 HP, gain a relic)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Leave them be",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "well",
+      "title": "The Wishing Well",
+      "text": "You stop by a wishing well and look inside. You see countless coins far below.",
+      "choices": [
+        {
+          "label": "Toss 25 Cookies (+8 Spirit)",
+          "price": 25,
+          "needsPotion": false
+        },
+        {
+          "label": "Toss a gift in (leave a gift)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Drink (heal 15, -5 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "elfgame",
+      "title": "Mischievous Elves",
+      "text": "Two elves with red eyes block the path. \"Hey, stranger! How about we play a game? Winner takes all!\"",
+      "choices": [
+        {
+          "label": "Play (fight two Krampus Imps)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Bribe them (-40 Cookies)",
+          "price": 40,
+          "needsPotion": false
+        },
+        {
+          "label": "Scold them (-6 HP)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "factory",
+      "title": "The Toy Factory",
+      "text": "The conveyor belts at a toy factory still run. Toys roll by, waiting to be wrapped.",
+      "choices": [
+        {
+          "label": "Work overtime (lose 7 HP, choose a gift)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Take a nap on the sacks (heal 12)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "gingerhouse",
+      "title": "The Gingerbread House",
+      "text": "A cottage made entirely of gingerbread. You feel as though there's something or someone inside.",
+      "choices": [
+        {
+          "label": "Nibble the roof (heal 20, gain Lump of Coal)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Knock on the door (ELITE fight)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Back away slowly",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "sleigh",
+      "title": "Santa's Abandoned Sleigh",
+      "text": "Santa's sleigh lies tipped in a ditch, one of its runners snapped. The seat is still warm.",
+      "choices": [
+        {
+          "label": "Search the seat (relic, -6 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Polish the bells (+12 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "naughtykid",
+      "title": "The Naughty Child",
+      "text": "A boy pelts you with snowballs. \"Santa never came last year! Why in the hell should I be nice?\"",
+      "choices": [
+        {
+          "label": "Give him a gift (leave; DOUBLE Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Snowball fight! (-5 HP, gain Snowball+)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Scold him (+40 Cookies, -8 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "mistletoe",
+      "title": "Mistletoe Arch",
+      "text": "A great arch of mistletoe appears above the path.",
+      "choices": [
+        {
+          "label": "Pass under (heal 12, gain Mistletoe Kiss)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Cut a sprig (gain a random Uncommon gift)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "toymaker",
+      "title": "The Old Toymaker",
+      "text": "A stooped toymaker fixes a rocking horse by candlelight. \"Need anything mended, dear?\"",
+      "choices": [
+        {
+          "label": "Mend my gifts (Rewrap 2 random gifts)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Buy a toy (50 Cookies, choose a gift)",
+          "price": 50,
+          "needsPotion": false
+        },
+        {
+          "label": "Leave",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "blizzard",
+      "title": "Blizzard!",
+      "text": "A howling blizzard swallows the road. You can barely see the tip of your own nose.",
+      "choices": [
+        {
+          "label": "Push through (-10 HP)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Shelter until it passes (-8 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Drink a potion for warmth (lose a potion)",
+          "price": 0,
+          "needsPotion": true
+        }
+      ]
+    },
+    {
+      "id": "postman",
+      "title": "The Frozen Postman",
+      "text": "A postman lies stuck in a snowdrift, his bag bursting with letters to Santa.",
+      "choices": [
+        {
+          "label": "Read the letters (+12 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Deliver them yourself (-6 HP, +18 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Burn them for warmth (heal 12, -12 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "cocoastand",
+      "title": "Hot Cocoa Stand",
+      "text": "A cheerful elf runs a cocoa stand in the middle of nowhere. \"Marshmallows are extra!\"",
+      "choices": [
+        {
+          "label": "Small cup, 20 Cookies (heal 18)",
+          "price": 20,
+          "needsPotion": false
+        },
+        {
+          "label": "To go, 45 Cookies (2 random potions)",
+          "price": 45,
+          "needsPotion": false
+        },
+        {
+          "label": "No thanks",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "fishing",
+      "title": "Ice Fishing",
+      "text": "A fishing hole and an abandoned rod. Something tugs at the line.",
+      "choices": [
+        {
+          "label": "Reel it in",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Leave the line",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "ball",
+      "title": "The Nutcracker's Ball",
+      "text": "Music drifts from a ballroom where nutcrackers waltz to the tune. One of them bows to you.",
+      "choices": [
+        {
+          "label": "Dance (-5 HP, Rewrap a gift)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Challenge him to a duel (fight)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Slip away",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "stocking",
+      "title": "Stocking on a Fence",
+      "text": "A lonely stocking hangs on a fence post, bulging with something.",
+      "choices": [
+        {
+          "label": "Peek inside (potion + 30 Cookies)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Fill it instead (leave a gift)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "angels",
+      "title": "Snow Angels",
+      "text": "A field of perfect, untouched snow sparkles under the moon.",
+      "choices": [
+        {
+          "label": "Make a snow angel (heal 8, +6 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Keep moving",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "fallenstar",
+      "title": "The Fallen Star",
+      "text": "A star has fallen into a snowbank, still glowing and sparking.",
+      "choices": [
+        {
+          "label": "Take it (Tree-Top Star, or 100 Cookies)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Make a wish (+20 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "exchange",
+      "title": "Secret Santa Swap",
+      "text": "A masked stranger holds out a wrapped box. \"Care for a swap, {title}? No peeking.\"",
+      "choices": [
+        {
+          "label": "Swap (transform a gift)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Decline",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "snowmanfriend",
+      "title": "The Lonely Snowman",
+      "text": "A small, friendly snowman sits alone in a park. It years for companionship.",
+      "choices": [
+        {
+          "label": "Build him a friend (-4 HP, +10 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Take his scarf (gain Scarf Wrap+, -8 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    },
+    {
+      "id": "mirror",
+      "title": "Mirror of Christmas Past",
+      "text": "An ornate mirror shows you young, laughing beside an even younger Santa.",
+      "choices": [
+        {
+          "label": "Reach into the memory (duplicate a gift, -6 Max HP)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Smile and remember (+10 Spirit)",
+          "price": 0,
+          "needsPotion": false
+        },
+        {
+          "label": "Shatter it (-4 HP, +40 Cookies)",
+          "price": 0,
+          "needsPotion": false
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "wheels",
+      "name": "Wheels",
+      "rarity": 1,
+      "desc": "Costs 1 less Cheer."
+    },
+    {
+      "id": "paint",
+      "name": "Fresh Paint",
+      "rarity": 1,
+      "desc": "+3 damage or Wrap."
+    },
+    {
+      "id": "squeaker",
+      "name": "Squeaker",
+      "rarity": 1,
+      "desc": "Apply 1 Soggy."
+    },
+    {
+      "id": "glitter",
+      "name": "Glitter",
+      "rarity": 1,
+      "desc": "Apply 1 Brittle."
+    },
+    {
+      "id": "bell",
+      "name": "Little Bell",
+      "rarity": 2,
+      "desc": "Draw 1 gift."
+    },
+    {
+      "id": "spring",
+      "name": "Spring",
+      "rarity": 2,
+      "desc": "Deal 4 damage to a random enemy."
+    },
+    {
+      "id": "musicbox",
+      "name": "Music Box",
+      "rarity": 2,
+      "desc": "Heal 2 HP."
+    },
+    {
+      "id": "windup",
+      "name": "Wind-up Key",
+      "rarity": 2,
+      "desc": "Next turn, gain 1 Cheer."
+    },
+    {
+      "id": "ribbon",
+      "name": "Big Ribbon",
+      "rarity": 2,
+      "desc": "Pops 1 Grumpy pip on any monster."
+    },
+    {
+      "id": "battery",
+      "name": "Battery",
+      "rarity": 3,
+      "desc": "Doubles this gift's power. Consume."
+    }
+  ]
+}
