@@ -119,7 +119,7 @@ namespace Sleigh
             Sprite(battleControls, "Icon", "sack", 30, 336); drawNumber = Label(battleControls, 42, 330, 45, battle.DrawPile.Count.ToString(), 1);
             BindTip(Hot(battleControls, 8, 317, 70, 35, () => OpenBag(battle.DrawPile.OrderBy(x => x.Name).ToList(), "IN THE SACK (random order)")), "Draw pile", "Click to view. Order is hidden.");
             Sprite(battleControls, "Icon", "sleigh", 610, 336); discardNumber = Label(battleControls, 552, 330, 43, battle.Discard.Count.ToString(), 1, White, 2);
-            consumedNumber = Label(battleControls, 554, 316, 62, "x" + battle.Consumed.Count, .75f, Muted, 2);
+            consumedNumber = Label(battleControls, 554, 316, 62, "×" + battle.Consumed.Count, .75f, Muted, 2);
             BindTip(Hot(battleControls, 551, 314, 80, 41, () => OpenBag(battle.Discard, "IN THE SLEIGH")), "Discard pile", "Refills the Sack when it runs out.");
             var power = Button(battleControls, 546, 258, 88, 20, DB.PowerName(run.character), PressPower, battle.Power >= 100 ? Hex(0xa8741f) : Hex(0x253262));
             powerButton = (RectTransform)power.transform.parent;
@@ -189,7 +189,7 @@ namespace Sleigh
             if (u.SkipTurn) return "Too flustered...";
             if (string.IsNullOrEmpty(u.Move)) return "?";
             var move = u.Def.Move(u.Move); var attack = move.actions.FirstOrDefault(x => x.op == "atk");
-            return move.name + (attack == null ? "" : " " + battle.DamageCalc(u, u.Charmed ? null : Display(battle.Player), attack.n) + (attack.hits > 1 ? "x" + attack.hits : ""));
+            return move.name + (attack == null ? "" : " " + battle.DamageCalc(u, u.Charmed ? null : Display(battle.Player), attack.n) + (attack.hits > 1 ? "×" + attack.hits : ""));
         }
         HandVisual MakeHandVisual(Gift gift, bool drawing)
         {
@@ -280,7 +280,7 @@ namespace Sleigh
         void UpdateBattleCounters()
         {
             if (orbNumber) orbNumber.Set(viewEnergy + "/" + battle.MaxEnergy); if (drawNumber) drawNumber.Set(viewDraw.ToString());
-            if (discardNumber) discardNumber.Set(viewDiscard.ToString()); if (consumedNumber) consumedNumber.Set("x" + viewConsumed);
+            if (discardNumber) discardNumber.Set(viewDiscard.ToString()); if (consumedNumber) consumedNumber.Set("×" + viewConsumed);
             if (powerFill) powerFill.rectTransform.sizeDelta = new Vector2(viewPower * .86f, 3);
             UpdateHudNumbers();
         }
@@ -448,6 +448,7 @@ namespace Sleigh
         }
         IEnumerator Say(ActorVisual actor, string text)
         {
+            text = Chinese.Text(text);
             var r = stage.bubbleRoot; r.gameObject.SetActive(true); stage.bubbleText.Set(""); var cg = r.GetComponent<CanvasGroup>(); cg.alpha = 1;
             r.anchoredPosition = new Vector2(Mathf.Clamp((actor?.x ?? 320) - 135, 5, 365), -Mathf.Clamp(226 - (actor?.Height ?? 80) - 80, 46, 170));
             float characters = 0; while (characters < text.Length)

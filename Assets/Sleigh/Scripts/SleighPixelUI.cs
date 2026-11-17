@@ -30,6 +30,7 @@ namespace Sleigh
         }
         public static PixelLabel Label(Transform p, float x, float y, float w, string text, float scale = 1, Color? color = null, int align = 0, bool wrap = false)
         {
+            text = Chinese.Text(text);
             var r = Acquire(p, "Label", "Text:" + (text ?? ""), x, y, w, 16 + PixelLabel.Lines(text, w, scale, wrap).Count * 12 * scale);
             var l = PixelUI.Ensure<PixelLabel>(r); l.text = text; l.fontScale = scale; l.color = color ?? White; l.align = align; l.wrap = wrap; l.shadow = true; l.raycastTarget = false; l.SetVerticesDirty(); return l;
         }

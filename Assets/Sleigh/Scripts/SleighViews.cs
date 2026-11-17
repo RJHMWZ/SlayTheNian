@@ -84,9 +84,9 @@ namespace Sleigh
             if (!g.Def.flags.Contains("u"))
             { Sprite(r, "Icon", "cost", 4, 4); Label(r, -3, -2, 14, g.Cost.ToString(), .8f, preview != null && g.Cost > preview.Energy ? Red : White, 1); }
             var values = g.Values(); string stat; string icon = null;
-            if (values.TryGetValue("d", out int d)) { stat = (preview != null ? preview.DamageCalc(preview.Player, null, d) : d).ToString(); icon = "sword"; if (g.Id == "baubles" || g.Id == "stampede") stat += "x3"; }
+            if (values.TryGetValue("d", out int d)) { stat = (preview != null ? preview.DamageCalc(preview.Player, null, d) : d).ToString(); icon = "sword"; if (g.Id == "baubles" || g.Id == "stampede") stat += "×3"; }
             else if (values.TryGetValue("b", out int b)) { stat = (preview != null ? preview.BlockCalc(preview.Player, b) : b).ToString(); icon = "shield"; }
-            else if (g.Id == "bellybump") { stat = preview != null ? preview.DamageCalc(preview.Player, null, preview.Player.Block).ToString() : "W"; icon = "sword"; }
+            else if (g.Id == "bellybump") { stat = preview != null ? preview.DamageCalc(preview.Player, null, preview.Player.Block).ToString() : "护甲"; icon = "sword"; }
             else stat = DB.TypeName(g.Def.type).ToUpperInvariant();
             if (icon != null) Sprite(r, "Icon", icon, 20, 76);
             Label(r, icon != null ? 29 : 1, 71, icon != null ? 34 : 64, stat, 1, White, icon != null ? 0 : 1);

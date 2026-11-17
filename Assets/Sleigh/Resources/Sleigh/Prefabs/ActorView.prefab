@@ -31,7 +31,7 @@ RectTransform:
   m_Children:
   - {fileID: 8392441398317780602}
   - {fileID: 4633014782117786722}
-  - {fileID: 7184463164190475090}
+  - {fileID: 88114502766980389}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &6693689280238310824
+--- !u!1 &8439066936266341482
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,10 +237,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7184463164190475090}
-  - component: {fileID: 2988860084142070907}
-  - component: {fileID: 8029341607684330570}
-  - component: {fileID: 6867393163564133412}
+  - component: {fileID: 88114502766980389}
+  - component: {fileID: 9064919038230165865}
+  - component: {fileID: 2220129764660592635}
+  - component: {fileID: 935535590862371182}
   m_Layer: 0
   m_Name: HeartEye:Animation 1
   m_TagString: Untagged
@@ -248,13 +248,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7184463164190475090
+--- !u!224 &88114502766980389
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6693689280238310824}
+  m_GameObject: {fileID: 8439066936266341482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -267,34 +267,34 @@ RectTransform:
   m_AnchoredPosition: {x: 8, y: 60}
   m_SizeDelta: {x: 18, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2988860084142070907
+--- !u!114 &9064919038230165865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6693689280238310824}
+  m_GameObject: {fileID: 8439066936266341482}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca21475f638a0d44989a6fe91dcf5fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   kind: Sprite
---- !u!222 &8029341607684330570
+--- !u!222 &2220129764660592635
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6693689280238310824}
+  m_GameObject: {fileID: 8439066936266341482}
   m_CullTransparentMesh: 1
---- !u!114 &6867393163564133412
+--- !u!114 &935535590862371182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6693689280238310824}
+  m_GameObject: {fileID: 8439066936266341482}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}

@@ -52,6 +52,7 @@ namespace Sleigh
         {
             if (All != null) return;
             All = JsonUtility.FromJson<DefinitionBundle>(Resources.Load<TextAsset>("Sleigh/Definitions").text);
+            Chinese.Localize(All);
             Gifts = All.gifts.ToDictionary(x => x.id); Enemies = All.enemies.ToDictionary(x => x.id);
             Relics = All.relics.ToDictionary(x => x.id); Potions = All.potions.ToDictionary(x => x.id);
             Parts = All.parts.ToDictionary(x => x.id); Events = All.events.ToDictionary(x => x.id);
@@ -81,7 +82,7 @@ namespace Sleigh
             }
             return s;
         }
-        public static string CharacterName(string id) => id == "tinsel" ? "Tinsel" : id == "rudolph" ? "Rudolph" : "Mrs. Claus";
+        public static string CharacterName(string id) => id == "tinsel" ? "廷瑟" : id == "rudolph" ? "鲁道夫" : "克劳斯夫人";
         public static string CharacterArt(string id) => id == "mrs" ? "idle" : id + "_idle";
         public static int CharacterHP(string id) => id == "tinsel" ? 64 : id == "rudolph" ? 84 : 75;
         public static string PowerName(string id) => id == "tinsel" ? "TINKER" : id == "rudolph" ? "REINDEER!" : "KIND WORD";

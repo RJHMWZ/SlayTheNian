@@ -14,7 +14,7 @@ namespace Sleigh.Editor
 {
     public static class SleighSceneBaker
     {
-        public const int Version = 4;
+        public const int Version = 5;
         const string Prefabs = "Assets/Sleigh/Resources/Sleigh/Prefabs";
         const string Materials = "Assets/Sleigh/Materials";
         static RectTransform Raw(Transform parent, string name, float w = 640, float h = 360)
@@ -46,7 +46,7 @@ namespace Sleigh.Editor
             var canvasObject = new GameObject("Sleigh Canvas", typeof(RectTransform), typeof(Canvas), typeof(GraphicRaycaster)); canvasObject.transform.SetParent(rootObject.transform, false);
             stage.canvas = canvasObject.GetComponent<Canvas>(); stage.canvas.renderMode = RenderMode.ScreenSpaceOverlay; stage.canvas.pixelPerfect = true; stage.canvas.sortingOrder = 100;
             var black = Rect(canvasObject.transform, 0, 0, 1, 1, Color.black); black.name = "Letterbox"; black.rectTransform.anchorMin = Vector2.zero; black.rectTransform.anchorMax = Vector2.one; black.rectTransform.offsetMin = black.rectTransform.offsetMax = Vector2.zero;
-            stage.viewport = Raw(canvasObject.transform, "Viewport 640 x 360"); stage.viewport.anchorMin = stage.viewport.anchorMax = new Vector2(.5f, .5f); stage.viewport.pivot = new Vector2(.5f, .5f); stage.viewport.gameObject.AddComponent<RectMask2D>();
+            stage.viewport = Raw(canvasObject.transform, "Viewport 640 x 360"); stage.viewport.anchorMin = stage.viewport.anchorMax = new Vector2(.5f, .5f); stage.viewport.pivot = new Vector2(.5f, .5f); stage.viewport.localScale = Vector3.one * 3; stage.viewport.gameObject.AddComponent<RectMask2D>();
             stage.backgroundLayer = Raw(stage.viewport, "BG"); stage.worldLayer = Raw(stage.viewport, "World"); stage.uiLayer = Raw(stage.viewport, "UI"); stage.effectLayer = Raw(stage.viewport, "FX"); stage.popupLayer = Raw(stage.viewport, "Pop");
             stage.worldLayer.pivot = new Vector2(.5f, .5f); stage.worldLayer.anchoredPosition = new Vector2(320, -180);
             string[] viewNames = { "Title", "CharacterSelect", "Intro", "Map", "Combat", "Reward", "LeaveGift", "Event", "Shop", "Rest", "Treasure", "Victory", "Defeat" };
@@ -82,9 +82,10 @@ namespace Sleigh.Editor
             PrefabUtility.SaveAsPrefabAsset(rootObject, Prefabs + "/GameRoot.prefab");
             EditorSceneManager.MarkSceneDirty(scene); EditorSceneManager.SaveScene(scene, scenePath);
             EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(scenePath, true) };
-            PlayerSettings.defaultScreenWidth = 1280; PlayerSettings.defaultScreenHeight = 720; PlayerSettings.resizableWindow = true; PlayerSettings.defaultIsNativeResolution = false;
+            PlayerSettings.defaultScreenWidth = 1920; PlayerSettings.defaultScreenHeight = 1080; PlayerSettings.resizableWindow = true; PlayerSettings.defaultIsNativeResolution = false;
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.LandscapeLeft;
             PlayerSettings.runInBackground = true;
+            if (!Application.isBatchMode) SleighDisplaySetup.FullHD();
             AssetDatabase.SaveAssets();
             Debug.Log("Sleigh scene baked: 13 complete views, persistent Canvas/Camera/EventSystem, 90 snow particles, 16 actor slots, pooled cards/dialogs/FX, 24 audio voices. " + root.GetComponentsInChildren<Transform>(true).Length + " saved objects.");
         }

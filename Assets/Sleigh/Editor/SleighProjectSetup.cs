@@ -11,6 +11,12 @@ namespace Sleigh.Editor
     {
         void OnPreprocessTexture()
         {
+            if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Fonts/", StringComparison.Ordinal))
+            {
+                var font = (TextureImporter)assetImporter; font.textureType = TextureImporterType.Default; font.filterMode = FilterMode.Point;
+                font.mipmapEnabled = false; font.textureCompression = TextureImporterCompression.Uncompressed; font.npotScale = TextureImporterNPOTScale.None;
+                font.maxTextureSize = 2048; font.wrapMode = TextureWrapMode.Clamp; return;
+            }
             if (!assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Art/", StringComparison.Ordinal)) return;
             var t = (TextureImporter)assetImporter; t.textureType = TextureImporterType.Sprite; t.spriteImportMode = SpriteImportMode.Single;
             t.spritePixelsPerUnit = 1; t.filterMode = FilterMode.Point; t.mipmapEnabled = false;

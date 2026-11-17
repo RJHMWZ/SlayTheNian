@@ -1,0 +1,4016 @@
+{
+  "entries": [
+    {
+      "source": "Sock Swat",
+      "text": "袜子拍击"
+    },
+    {
+      "source": "Deal {d} damage.",
+      "text": "造成{d}点伤害。"
+    },
+    {
+      "source": "Woolly Mitten",
+      "text": "羊毛手套"
+    },
+    {
+      "source": "Gain {b} Wrap.",
+      "text": "获得{b}点护甲。"
+    },
+    {
+      "source": "Snowball",
+      "text": "雪球"
+    },
+    {
+      "source": "Deal {d} damage. Apply {n} Brittle.",
+      "text": "造成{d}点伤害。施加{n}层易碎。"
+    },
+    {
+      "source": "Candy Cane Jab",
+      "text": "糖杖突刺"
+    },
+    {
+      "source": "Deal {d} damage. Draw {n}.",
+      "text": "造成{d}点伤害。抽{n}张礼物。"
+    },
+    {
+      "source": "Icicle Toss",
+      "text": "冰锥投掷"
+    },
+    {
+      "source": "Deal {d} damage. Apply {n} Frostbite.",
+      "text": "造成{d}点伤害。施加{n}层冻伤。"
+    },
+    {
+      "source": "Bauble Barrage",
+      "text": "彩球连射"
+    },
+    {
+      "source": "Deal {d} damage to a random enemy 3 times.",
+      "text": "对随机敌人造成{d}点伤害，重复3次。"
+    },
+    {
+      "source": "Sled Sweep",
+      "text": "雪橇横扫"
+    },
+    {
+      "source": "Deal {d} damage to ALL enemies.",
+      "text": "对所有敌人造成{d}点伤害。"
+    },
+    {
+      "source": "Nutcracker Chomp",
+      "text": "胡桃夹咬击"
+    },
+    {
+      "source": "Deal {d} damage. Apply {n} Soggy.",
+      "text": "造成{d}点伤害。施加{n}层湿透。"
+    },
+    {
+      "source": "Tinsel Whip",
+      "text": "彩带鞭"
+    },
+    {
+      "source": "Gain {b} Wrap. Deal {d} damage.",
+      "text": "获得{b}点护甲。造成{d}点伤害。"
+    },
+    {
+      "source": "Bell Slam",
+      "text": "铃铛重击"
+    },
+    {
+      "source": "Deal {d} damage. If the enemy is Brittle, gain 1 Cheer and draw 1.",
+      "text": "造成{d}点伤害。若目标有易碎，获得1点欢呼并抽1张礼物。"
+    },
+    {
+      "source": "Cookie Crumbs",
+      "text": "饼干碎屑"
+    },
+    {
+      "source": "Deal {d} damage. Draw 1.",
+      "text": "造成{d}点伤害。抽1张礼物。"
+    },
+    {
+      "source": "Scarf Wrap",
+      "text": "围巾防护"
+    },
+    {
+      "source": "Cocoa Sip",
+      "text": "热可可小酌"
+    },
+    {
+      "source": "Gain {b} Wrap. Draw 1.",
+      "text": "获得{b}点护甲。抽1张礼物。"
+    },
+    {
+      "source": "Off-Key Carol",
+      "text": "跑调颂歌"
+    },
+    {
+      "source": "Apply {n} Soggy to ALL enemies.",
+      "text": "对所有敌人施加{n}层湿透。"
+    },
+    {
+      "source": "Wrapping Spree",
+      "text": "包装狂欢"
+    },
+    {
+      "source": "Gain {b} Wrap. Next turn, draw 1 extra.",
+      "text": "获得{b}点护甲。下回合额外抽1张礼物。"
+    },
+    {
+      "source": "Stocking Stuffer",
+      "text": "装满圣诞袜"
+    },
+    {
+      "source": "Draw {n}. Consume.",
+      "text": "抽{n}张礼物。消耗。"
+    },
+    {
+      "source": "Eggnog Shot",
+      "text": "蛋奶酒畅饮"
+    },
+    {
+      "source": "Gain {n} Cheer. Consume.",
+      "text": "获得{n}点欢呼。消耗。"
+    },
+    {
+      "source": "Snow Fort",
+      "text": "雪堡"
+    },
+    {
+      "source": "Frosty Breath",
+      "text": "冰霜吐息"
+    },
+    {
+      "source": "Apply {n} Frostbite.",
+      "text": "施加{n}层冻伤。"
+    },
+    {
+      "source": "Chimney Drop",
+      "text": "烟囱突袭"
+    },
+    {
+      "source": "Reindeer Stampede",
+      "text": "驯鹿奔腾"
+    },
+    {
+      "source": "Deal {d} damage to ALL enemies 3 times.",
+      "text": "对所有敌人造成{d}点伤害，重复3次。"
+    },
+    {
+      "source": "Mistletoe Kiss",
+      "text": "槲寄生之吻"
+    },
+    {
+      "source": "Deal {d} damage. Heal {n}. Consume.",
+      "text": "造成{d}点伤害。恢复{n}点生命。消耗。"
+    },
+    {
+      "source": "Belly Bump",
+      "text": "肚皮撞击"
+    },
+    {
+      "source": "Deal damage equal to your Wrap.",
+      "text": "造成等同于当前护甲值的伤害。"
+    },
+    {
+      "source": "Frostbite Flurry",
+      "text": "冻伤狂舞"
+    },
+    {
+      "source": "Deal {d} damage. Double the enemy's Frostbite.",
+      "text": "造成{d}点伤害。目标的冻伤层数翻倍。"
+    },
+    {
+      "source": "Jingle Jangle",
+      "text": "叮当作响"
+    },
+    {
+      "source": "Next turn, gain 2 Cheer and draw {n} extra.",
+      "text": "下回合获得2点欢呼并额外抽{n}张礼物。"
+    },
+    {
+      "source": "Double Wrap",
+      "text": "双重包装"
+    },
+    {
+      "source": "Double your Wrap.",
+      "text": "当前护甲翻倍。"
+    },
+    {
+      "source": "Snow Globe",
+      "text": "雪景球"
+    },
+    {
+      "source": "Gain {b} Wrap. Apply {n} Chilled to ALL enemies.",
+      "text": "获得{b}点护甲。对所有敌人施加{n}层寒冷。"
+    },
+    {
+      "source": "Cozy Fireplace",
+      "text": "温暖壁炉"
+    },
+    {
+      "source": "Heal {n}. Consume.",
+      "text": "恢复{n}点生命。消耗。"
+    },
+    {
+      "source": "Check It Twice",
+      "text": "再查一遍"
+    },
+    {
+      "source": "Apply {n} Soggy and {n} Brittle. Consume.",
+      "text": "施加{n}层湿透和{n}层易碎。消耗。"
+    },
+    {
+      "source": "Elf Helper",
+      "text": "精灵帮手"
+    },
+    {
+      "source": "Add a random gift to your hand. It costs 0 this turn.",
+      "text": "将1张随机礼物加入手牌，本回合费用为0。"
+    },
+    {
+      "source": "Spiked Eggnog",
+      "text": "特调蛋奶酒"
+    },
+    {
+      "source": "Gain {n} Might.",
+      "text": "获得{n}层力量。"
+    },
+    {
+      "source": "Tinsel Armor",
+      "text": "彩带护甲"
+    },
+    {
+      "source": "At the end of your turn, gain {n} Wrap.",
+      "text": "每回合结束时，获得{n}点护甲。"
+    },
+    {
+      "source": "Holly Wreath",
+      "text": "冬青花环"
+    },
+    {
+      "source": "Gain {n} Holly.",
+      "text": "获得{n}层冬青。"
+    },
+    {
+      "source": "Advent Candles",
+      "text": "降临节蜡烛"
+    },
+    {
+      "source": "At the end of your turn, deal {n} damage to ALL enemies.",
+      "text": "每回合结束时，对所有敌人造成{n}点伤害。"
+    },
+    {
+      "source": "Snowfall",
+      "text": "飞雪"
+    },
+    {
+      "source": "At the start of your turn, apply {n} Frostbite to ALL enemies.",
+      "text": "每回合开始时，对所有敌人施加{n}层冻伤。"
+    },
+    {
+      "source": "Workshop Rhythm",
+      "text": "工坊节拍"
+    },
+    {
+      "source": "At the start of your turn, draw 1 extra gift.",
+      "text": "每回合开始时，额外抽1张礼物。"
+    },
+    {
+      "source": "Midnight Ride",
+      "text": "午夜疾驰"
+    },
+    {
+      "source": "Star Fall",
+      "text": "流星坠落"
+    },
+    {
+      "source": "Deal {d} damage to ALL enemies. Apply {n} Brittle to ALL.",
+      "text": "对所有敌人造成{d}点伤害，并施加{n}层易碎。"
+    },
+    {
+      "source": "Birch Breaker",
+      "text": "桦枝猛击"
+    },
+    {
+      "source": "Deal {d} damage. If this kills, gain {n} Max HP. Consume.",
+      "text": "造成{d}点伤害。若击败目标，增加{n}点生命上限。消耗。"
+    },
+    {
+      "source": "Big Red Bow",
+      "text": "大红蝴蝶结"
+    },
+    {
+      "source": "Gain {b} Wrap. Consume.",
+      "text": "获得{b}点护甲。消耗。"
+    },
+    {
+      "source": "Xmas Miracle",
+      "text": "圣诞奇迹"
+    },
+    {
+      "source": "Gain {n} Cheer. Draw 2. Consume.",
+      "text": "获得{n}点欢呼。抽2张礼物。消耗。"
+    },
+    {
+      "source": "Milk & Cookies",
+      "text": "牛奶饼干"
+    },
+    {
+      "source": "At the start of your turn, heal {n}.",
+      "text": "每回合开始时，恢复{n}点生命。"
+    },
+    {
+      "source": "Guiding Star",
+      "text": "引路星"
+    },
+    {
+      "source": "At the start of your turn, gain 1 Cheer.",
+      "text": "每回合开始时，获得1点欢呼。"
+    },
+    {
+      "source": "Choir of Angels",
+      "text": "天使合唱"
+    },
+    {
+      "source": "At the start of your turn, gain {n} Might.",
+      "text": "每回合开始时，获得{n}层力量。"
+    },
+    {
+      "source": "Lump of Coal",
+      "text": "煤块"
+    },
+    {
+      "source": "Ungiftable. Leaving it costs Spirit.",
+      "text": "无法赠送。留下它会降低圣诞精神。"
+    },
+    {
+      "source": "Soot",
+      "text": "煤灰"
+    },
+    {
+      "source": "Ungiftable. Melt.",
+      "text": "无法赠送。融化。"
+    },
+    {
+      "source": "Naughty Mark",
+      "text": "顽皮印记"
+    },
+    {
+      "source": "Ungiftable. At the end of your turn, lose 2 HP.",
+      "text": "无法赠送。回合结束时失去2点生命。"
+    },
+    {
+      "source": "Wheels",
+      "text": "轮子"
+    },
+    {
+      "source": "Costs 1 less Cheer.",
+      "text": "欢呼费用减少1点。"
+    },
+    {
+      "source": "Fresh Paint",
+      "text": "新油漆"
+    },
+    {
+      "source": "+3 damage or Wrap.",
+      "text": "伤害或护甲增加3点。"
+    },
+    {
+      "source": "Squeaker",
+      "text": "发声器"
+    },
+    {
+      "source": "Apply 1 Soggy.",
+      "text": "施加1层湿透。"
+    },
+    {
+      "source": "Glitter",
+      "text": "闪粉"
+    },
+    {
+      "source": "Apply 1 Brittle.",
+      "text": "施加1层易碎。"
+    },
+    {
+      "source": "Little Bell",
+      "text": "小铃铛"
+    },
+    {
+      "source": "Draw 1 gift.",
+      "text": "抽1张礼物。"
+    },
+    {
+      "source": "Spring",
+      "text": "弹簧"
+    },
+    {
+      "source": "Deal 4 damage to a random enemy.",
+      "text": "对随机敌人造成4点伤害。"
+    },
+    {
+      "source": "Music Box",
+      "text": "八音盒"
+    },
+    {
+      "source": "Heal 2 HP.",
+      "text": "恢复2点生命。"
+    },
+    {
+      "source": "Wind-up Key",
+      "text": "发条钥匙"
+    },
+    {
+      "source": "Next turn, gain 1 Cheer.",
+      "text": "下回合获得1点欢呼。"
+    },
+    {
+      "source": "Big Ribbon",
+      "text": "大缎带"
+    },
+    {
+      "source": "Pops 1 Grumpy pip on any monster.",
+      "text": "降低一名怪物的1格暴躁值。"
+    },
+    {
+      "source": "Battery",
+      "text": "电池"
+    },
+    {
+      "source": "Doubles this gift's power. Consume.",
+      "text": "此礼物的数值翻倍。消耗。"
+    },
+    {
+      "source": "Elf Toolbelt",
+      "text": "精灵工具带"
+    },
+    {
+      "source": "At the start of each battle, gain 1 Nimble. After each battle, gain 15 Cookies.",
+      "text": "战斗开始时获得1层灵巧。战斗结束后获得15块饼干。"
+    },
+    {
+      "source": "Red Nose",
+      "text": "红鼻子"
+    },
+    {
+      "source": "At the start of each battle, apply 1 Soggy to ALL enemies. Dazzling!",
+      "text": "战斗开始时，对所有敌人施加1层湿透。真耀眼！"
+    },
+    {
+      "source": "Cookie Tin",
+      "text": "饼干罐"
+    },
+    {
+      "source": "At the end of each battle, heal 6 HP.",
+      "text": "战斗结束后恢复6点生命。"
+    },
+    {
+      "source": "Jingle Bell",
+      "text": "圣诞铃铛"
+    },
+    {
+      "source": "At the start of each battle, draw 2 extra gifts.",
+      "text": "战斗开始时额外抽2张礼物。"
+    },
+    {
+      "source": "Warm Socks",
+      "text": "保暖袜"
+    },
+    {
+      "source": "At the start of each battle, gain 10 Wrap.",
+      "text": "战斗开始时获得10点护甲。"
+    },
+    {
+      "source": "Candy Bowl",
+      "text": "糖果碗"
+    },
+    {
+      "source": "Gain 1 extra Cheer on the first turn of each battle.",
+      "text": "每场战斗的第一回合额外获得1点欢呼。"
+    },
+    {
+      "source": "At the start of each battle, apply 1 Brittle to ALL enemies.",
+      "text": "战斗开始时，对所有敌人施加1层易碎。"
+    },
+    {
+      "source": "Eggnog Mug",
+      "text": "蛋奶酒杯"
+    },
+    {
+      "source": "At the start of each battle, gain 1 Might.",
+      "text": "战斗开始时获得1层力量。"
+    },
+    {
+      "source": "Ice Skates",
+      "text": "冰鞋"
+    },
+    {
+      "source": "At the start of each battle, gain 1 Nimble.",
+      "text": "战斗开始时获得1层灵巧。"
+    },
+    {
+      "source": "Holly Sprig",
+      "text": "冬青枝"
+    },
+    {
+      "source": "At the start of each battle, gain 3 Holly.",
+      "text": "战斗开始时获得3层冬青。"
+    },
+    {
+      "source": "Nutcracker Jaw",
+      "text": "胡桃夹下颚"
+    },
+    {
+      "source": "Every 10th Attack you give deals double damage.",
+      "text": "每赠送第10张攻击礼物，其伤害翻倍。"
+    },
+    {
+      "source": "Tinsel Garland",
+      "text": "彩带花环"
+    },
+    {
+      "source": "If you end your turn with 0 Wrap, gain 6 Wrap.",
+      "text": "若回合结束时没有护甲，获得6点护甲。"
+    },
+    {
+      "source": "Gingerbread Charm",
+      "text": "姜饼护符"
+    },
+    {
+      "source": "Every 3rd Attack in a turn grants 1 Might.",
+      "text": "每回合赠送第3张攻击礼物时，获得1层力量。"
+    },
+    {
+      "source": "Lost Mitten",
+      "text": "遗失的手套"
+    },
+    {
+      "source": "Every 3rd Skill in a turn grants 1 Nimble.",
+      "text": "每回合赠送第3张技能礼物时，获得1层灵巧。"
+    },
+    {
+      "source": "Reindeer Collar",
+      "text": "驯鹿项圈"
+    },
+    {
+      "source": "Every 3rd turn, gain 1 extra Cheer.",
+      "text": "每第3回合额外获得1点欢呼。"
+    },
+    {
+      "source": "Tree-Top Star",
+      "text": "树顶星"
+    },
+    {
+      "source": "Gain 1 extra Cheer every turn. Spirit fades 1 faster each night.",
+      "text": "每回合额外获得1点欢呼。每晚额外流失1点圣诞精神。"
+    },
+    {
+      "source": "Coal Scuttle",
+      "text": "煤斗"
+    },
+    {
+      "source": "Leaving coal or curses GAINS 2 Spirit instead of losing it.",
+      "text": "留下煤块或诅咒时，改为获得2点圣诞精神。"
+    },
+    {
+      "source": "Gift Tag",
+      "text": "礼物标签"
+    },
+    {
+      "source": "Whenever you leave a gift, gain 15 Cookies.",
+      "text": "每次留下礼物时获得15块饼干。"
+    },
+    {
+      "source": "Mrs. Claus's Ledger",
+      "text": "克劳斯夫人的账簿"
+    },
+    {
+      "source": "Whenever you leave a gift, gain 3 extra Spirit.",
+      "text": "每次留下礼物时额外获得3点圣诞精神。"
+    },
+    {
+      "source": "Workshop Bench",
+      "text": "工坊工作台"
+    },
+    {
+      "source": "Whenever you leave a gift, Rewrap (upgrade) a random gift.",
+      "text": "每次留下礼物时，重新包装一张随机礼物，使其升级。"
+    },
+    {
+      "source": "Patched Sack",
+      "text": "补丁礼袋"
+    },
+    {
+      "source": "With 12 or fewer gifts, you may skip leaving a gift.",
+      "text": "礼物数量不超过12张时，可以跳过留下礼物。"
+    },
+    {
+      "source": "Cocoa Pot",
+      "text": "可可壶"
+    },
+    {
+      "source": "Resting by the fire heals 15 extra HP.",
+      "text": "在壁炉旁休息时，额外恢复15点生命。"
+    },
+    {
+      "source": "Elf Coupon",
+      "text": "精灵优惠券"
+    },
+    {
+      "source": "Everything in the Elf Shop is 20% cheaper.",
+      "text": "精灵商店所有商品打八折。"
+    },
+    {
+      "source": "Santa's Pocket Watch",
+      "text": "圣诞老人的怀表"
+    },
+    {
+      "source": "If you give 3 or fewer gifts in a turn, draw 3 extra next turn.",
+      "text": "若本回合赠送不超过3张礼物，下回合额外抽3张。"
+    },
+    {
+      "source": "Fruitcake",
+      "text": "水果蛋糕"
+    },
+    {
+      "source": "On pickup, gain 10 Max HP.",
+      "text": "拾取时增加10点生命上限。"
+    },
+    {
+      "source": "Sugarplum Belt",
+      "text": "糖梅腰带"
+    },
+    {
+      "source": "Gain an extra potion slot.",
+      "text": "增加一个药水栏位。"
+    },
+    {
+      "source": "Snow Shovel",
+      "text": "雪铲"
+    },
+    {
+      "source": "Up to 15 Wrap is kept between turns.",
+      "text": "每回合最多保留15点护甲。"
+    },
+    {
+      "source": "Church Bell",
+      "text": "教堂钟"
+    },
+    {
+      "source": "Whenever an enemy is defeated, gain 1 Cheer and draw 1.",
+      "text": "每击败一名敌人，获得1点欢呼并抽1张礼物。"
+    },
+    {
+      "source": "Yule Log",
+      "text": "圣诞原木"
+    },
+    {
+      "source": "At the end of your turn, deal 3 damage to a random enemy.",
+      "text": "回合结束时，对随机敌人造成3点伤害。"
+    },
+    {
+      "source": "Reindeer Feed",
+      "text": "驯鹿饲料"
+    },
+    {
+      "source": "Battles drop 25% more Cookies.",
+      "text": "战斗掉落的饼干增加25%。"
+    },
+    {
+      "source": "Wish List",
+      "text": "愿望清单"
+    },
+    {
+      "source": "Gift rewards offer 4 choices instead of 3.",
+      "text": "礼物奖励从3选1变为4选1。"
+    },
+    {
+      "source": "Tree Angel",
+      "text": "树顶天使"
+    },
+    {
+      "source": "Once per run, when you would fall, rise with 50% HP.",
+      "text": "每局一次，倒下时以50%生命重新站起。"
+    },
+    {
+      "source": "Hot Cocoa",
+      "text": "热可可"
+    },
+    {
+      "source": "Heal 20 HP.",
+      "text": "恢复20点生命。"
+    },
+    {
+      "source": "Eggnog",
+      "text": "蛋奶酒"
+    },
+    {
+      "source": "Gain 2 Might.",
+      "text": "获得2层力量。"
+    },
+    {
+      "source": "Hot Cider",
+      "text": "热苹果酒"
+    },
+    {
+      "source": "Gain 2 Nimble.",
+      "text": "获得2层灵巧。"
+    },
+    {
+      "source": "Peppermint Tea",
+      "text": "薄荷茶"
+    },
+    {
+      "source": "Gain 2 Cheer.",
+      "text": "获得2点欢呼。"
+    },
+    {
+      "source": "Snow Flask",
+      "text": "雪花药瓶"
+    },
+    {
+      "source": "Gain 12 Wrap.",
+      "text": "获得12点护甲。"
+    },
+    {
+      "source": "Christmas Cracker",
+      "text": "圣诞拉炮"
+    },
+    {
+      "source": "Deal 20 damage.",
+      "text": "造成20点伤害。"
+    },
+    {
+      "source": "Blizzard in a Jar",
+      "text": "瓶中暴雪"
+    },
+    {
+      "source": "Deal 10 damage to ALL enemies.",
+      "text": "对所有敌人造成10点伤害。"
+    },
+    {
+      "source": "Glitter Bomb",
+      "text": "闪粉炸弹"
+    },
+    {
+      "source": "Apply 3 Brittle.",
+      "text": "施加3层易碎。"
+    },
+    {
+      "source": "Milk Dunk",
+      "text": "浸奶饼干"
+    },
+    {
+      "source": "Apply 2 Soggy to ALL enemies.",
+      "text": "对所有敌人施加2层湿透。"
+    },
+    {
+      "source": "Frostbite Vial",
+      "text": "冻伤药剂"
+    },
+    {
+      "source": "Apply 8 Frostbite.",
+      "text": "施加8层冻伤。"
+    },
+    {
+      "source": "Cookie Dough",
+      "text": "饼干面团"
+    },
+    {
+      "source": "Draw 3 gifts.",
+      "text": "抽3张礼物。"
+    },
+    {
+      "source": "Elf Dust",
+      "text": "精灵尘"
+    },
+    {
+      "source": "Add a random Rare gift to your hand. It costs 0.",
+      "text": "将一张随机稀有礼物加入手牌，费用为0。"
+    },
+    {
+      "source": "Reindeer Milk",
+      "text": "驯鹿奶"
+    },
+    {
+      "source": "Gain 5 Max HP.",
+      "text": "增加5点生命上限。"
+    },
+    {
+      "source": "Holly Punch",
+      "text": "冬青果饮"
+    },
+    {
+      "source": "Gain 3 Holly.",
+      "text": "获得3层冬青。"
+    },
+    {
+      "source": "Bottled Star",
+      "text": "瓶中星光"
+    },
+    {
+      "source": "Gain 2 Ribbon.",
+      "text": "获得2层缎带。"
+    },
+    {
+      "source": "Chimney Smoke",
+      "text": "烟囱浓烟"
+    },
+    {
+      "source": "Escape a normal battle (no rewards, no gift to leave).",
+      "text": "逃离普通战斗，不获得奖励，也不需要留下礼物。"
+    },
+    {
+      "source": "Ginger Shot",
+      "text": "姜汁饮"
+    },
+    {
+      "source": "Rewrap (upgrade) all gifts in your hand this battle.",
+      "text": "本场战斗中，升级手牌中的所有礼物。"
+    },
+    {
+      "source": "Wishbone Broth",
+      "text": "许愿骨汤"
+    },
+    {
+      "source": "Heal 30% of your Max HP.",
+      "text": "恢复相当于生命上限30%的生命。"
+    },
+    {
+      "source": "Candle Wax",
+      "text": "烛蜡"
+    },
+    {
+      "source": "Gain 4 Tinsel this battle.",
+      "text": "本场战斗获得4层彩带。"
+    },
+    {
+      "source": "Spirit Elixir",
+      "text": "精神灵药"
+    },
+    {
+      "source": "Gain 10 Christmas Spirit.",
+      "text": "获得10点圣诞精神。"
+    },
+    {
+      "source": "Gingerbread Man",
+      "text": "姜饼人"
+    },
+    {
+      "source": "Ran out of the North Pole ovens the moment the door opened and had been living off his own crumbs for months.",
+      "text": "烤炉的门一开就逃出了北极，靠自己掉落的饼干屑过了好几个月。"
+    },
+    {
+      "source": "Snowman",
+      "text": "雪人"
+    },
+    {
+      "source": "Came to life to a song once. Has been waiting for another one ever since.",
+      "text": "曾因一首歌获得生命，从此一直等待下一首歌。"
+    },
+    {
+      "source": "Bad Bauble",
+      "text": "坏彩球"
+    },
+    {
+      "source": "Fell off the tree Last Christmas  and has held a grudge against holidays ever since.",
+      "text": "去年圣诞从树上摔了下来，从此对节日怀恨在心。"
+    },
+    {
+      "source": "Chimney Rat",
+      "text": "烟囱鼠"
+    },
+    {
+      "source": "Despite their name, chimney rats prefer to live in arch-shaped holes cut into walls.",
+      "text": "名字虽叫烟囱鼠，却更喜欢住在墙上的拱形小洞里。"
+    },
+    {
+      "source": "Tangled Lights",
+      "text": "纠缠彩灯"
+    },
+    {
+      "source": "Every string of lights that was ever stuffed in a box, tangled into one.",
+      "text": "所有被胡乱塞进盒子的灯串，最终纠缠成了这一团。"
+    },
+    {
+      "source": "Wind-up Penguin",
+      "text": "发条企鹅"
+    },
+    {
+      "source": "A wind-up toy that kept going after its mechanism broke. It only knows forward.",
+      "text": "发条坏了仍不停向前的玩具。它只知道前进。"
+    },
+    {
+      "source": "Nutcracker",
+      "text": "胡桃夹子"
+    },
+    {
+      "source": "Cracks nuts for a living and wants everyone to know it.",
+      "text": "以夹核桃为生，而且非要让所有人都知道。"
+    },
+    {
+      "source": "Tin Soldier",
+      "text": "锡兵"
+    },
+    {
+      "source": "Marches in perfect lines.",
+      "text": "永远迈着整齐划一的步伐。"
+    },
+    {
+      "source": "Jack-in-the-Box",
+      "text": "惊吓盒"
+    },
+    {
+      "source": "Has a habit of popping out at the worst possible moment. The reason is anxiety.",
+      "text": "总在最不合时宜的时候弹出来，其实是因为焦虑。"
+    },
+    {
+      "source": "Fruity Snake",
+      "text": "水果蛇"
+    },
+    {
+      "source": "Gifted and regifted forty times. All it ever wants is to be eaten.",
+      "text": "被当作礼物转送了四十次。它唯一的心愿就是被吃掉。"
+    },
+    {
+      "source": "Broken Bauble",
+      "text": "破碎彩球"
+    },
+    {
+      "source": "A shapely fallen angel made out of fresh snow.",
+      "text": "用新雪塑成的堕落天使。"
+    },
+    {
+      "source": "Eggnog Slime",
+      "text": "蛋奶酒史莱姆"
+    },
+    {
+      "source": "A spilled mug of eggnog that got ideas. Loves anything warm and cosy.",
+      "text": "一杯打翻后有了自己想法的蛋奶酒，喜欢温暖舒适的东西。"
+    },
+    {
+      "source": "Icicle Bat",
+      "text": "冰锥蝙蝠"
+    },
+    {
+      "source": "Hangs in frozen caves. A good jingle echoes for days in there.",
+      "text": "倒挂在冰洞里，一声好听的铃响能回荡好几天。"
+    },
+    {
+      "source": "Grumpkin",
+      "text": "暴躁怪"
+    },
+    {
+      "source": "Hates the noise, the noise, the NOISE. Secretly loves a well-tied bow.",
+      "text": "讨厌吵闹，讨厌喧嚣，讨厌一切噪声。却偷偷喜欢系得漂亮的蝴蝶结。"
+    },
+    {
+      "source": "Rogue Elf",
+      "text": "叛逃精灵"
+    },
+    {
+      "source": "Quit the workshop over unpaid overtime. Always planning a getaway.",
+      "text": "因拿不到加班费离开工坊，总在盘算下一条逃跑路线。"
+    },
+    {
+      "source": "Coal Golem",
+      "text": "煤炭魔像"
+    },
+    {
+      "source": "Built from every lump of coal ever given. Craves a little spark.",
+      "text": "由曾被送出去的煤块堆成，渴望一点火花。"
+    },
+    {
+      "source": "Candy Cane Viper",
+      "text": "糖杖毒蛇"
+    },
+    {
+      "source": "A candy cane that grew fangs. A soft tune still charms it.",
+      "text": "长出毒牙的糖杖，柔和的旋律仍能打动它。"
+    },
+    {
+      "source": "Mistletoe Creeper",
+      "text": "槲寄生藤怪"
+    },
+    {
+      "source": "Mistletoe that got tired of waiting for kisses.",
+      "text": "等不到亲吻，终于失去耐心的槲寄生。"
+    },
+    {
+      "source": "Krampus Imp",
+      "text": "坎卜斯小鬼"
+    },
+    {
+      "source": "Krampus's little helpers. Pure mischief; nothing you give them is ever enough.",
+      "text": "坎卜斯的帮凶，满脑子恶作剧。送它什么都不够。"
+    },
+    {
+      "source": "Nutcracker General",
+      "text": "胡桃夹将军"
+    },
+    {
+      "source": "Commander of the Nutcracker army. Accepts only the finest tribute.",
+      "text": "胡桃夹军团的统帅，只接受最上等的贡品。"
+    },
+    {
+      "source": "Abominable Snowman",
+      "text": "凶恶雪怪"
+    },
+    {
+      "source": "Lonely, enormous and very loud. A lullaby calms it right down.",
+      "text": "孤独、庞大又吵闹。一首摇篮曲就能让它安静下来。"
+    },
+    {
+      "source": "Coal Baron",
+      "text": "煤炭男爵"
+    },
+    {
+      "source": "Hoards coal and cookies alike. Values a gift by its price tag.",
+      "text": "囤积煤炭，也囤积饼干。衡量礼物只看价签。"
+    },
+    {
+      "source": "Reindeer Alpha",
+      "text": "驯鹿首领"
+    },
+    {
+      "source": "Led the sleigh team for a hundred Christmases. Still answers to the jingle of sleigh bells.",
+      "text": "带领雪橇队度过了一百个圣诞节，至今仍会回应雪橇的铃声。"
+    },
+    {
+      "source": "Gingerbread Witch",
+      "text": "姜饼女巫"
+    },
+    {
+      "source": "Lives in a gingerbread house. Will trade anything for a sprinkle of sparkle.",
+      "text": "住在姜饼屋里，愿意用任何东西换一点闪闪发亮的装饰。"
+    },
+    {
+      "source": "Jack Frost",
+      "text": "冰霜杰克"
+    },
+    {
+      "source": "Nips noses for fun. Can't sit still; loves anything bouncy.",
+      "text": "以冻红别人的鼻子为乐。片刻也坐不住，喜欢会弹跳的东西。"
+    },
+    {
+      "source": "Corrupted Santa",
+      "text": "堕落圣诞老人"
+    },
+    {
+      "source": "Read the whole Naughty List in one night. Somewhere under the coal, he's still Nick.",
+      "text": "一夜之间读完了整本顽皮名单。煤灰之下，他仍然是尼克。"
+    },
+    {
+      "source": "KRAMPUS",
+      "text": "坎卜斯"
+    },
+    {
+      "source": "What Santa becomes when the coal wins. There is no gift for this.",
+      "text": "煤炭吞噬了圣诞老人之后的模样。没有礼物能打动它。"
+    },
+    {
+      "source": "The Naughty List",
+      "text": "顽皮名单"
+    },
+    {
+      "source": "The list itself, growing bigger with every naughty deed. Santa never had a chance.",
+      "text": "每一次顽皮都会让这份名单变得更长，圣诞老人从一开始就无力招架。"
+    },
+    {
+      "source": "It's gingerDREAD man now!",
+      "text": "现在该叫我恐怖姜饼人！"
+    },
+    {
+      "source": "Who are ya callin' half-baked?!",
+      "text": "你说谁没烤熟？！"
+    },
+    {
+      "source": "Imma stick you with my carrot!",
+      "text": "尝尝我的胡萝卜！"
+    },
+    {
+      "source": "I'll keep you frozen till New Year!",
+      "text": "我要把你冻到新年！"
+    },
+    {
+      "source": "I'll shatter your face!",
+      "text": "把你的脸也摔碎！"
+    },
+    {
+      "source": "Tink tink! You'll break before I do!",
+      "text": "叮叮！你会比我先碎！"
+    },
+    {
+      "source": "Squeak!",
+      "text": "吱吱！"
+    },
+    {
+      "source": "Stay away from my chimney!",
+      "text": "离我的烟囱远点！"
+    },
+    {
+      "source": "Bzzt!",
+      "text": "滋滋！"
+    },
+    {
+      "source": "Night night, {nick}!",
+      "text": "晚安，{nick}！"
+    },
+    {
+      "source": "Click-click-click... MAXIMUM WADDLE.",
+      "text": "咔哒咔哒……全速摇摆！"
+    },
+    {
+      "source": "I only know how to move forward.",
+      "text": "我只知道前进。"
+    },
+    {
+      "source": "Nuts and grannies get cracked alike!",
+      "text": "核桃和老太太，我都能夹碎！"
+    },
+    {
+      "source": "CRACK. CRACK. CRACK.",
+      "text": "咔嚓！咔嚓！咔嚓！"
+    },
+    {
+      "source": "Left, right, left, right... CHARGE!",
+      "text": "左右左，左右左……冲锋！"
+    },
+    {
+      "source": "Make war, not love!",
+      "text": "战斗至上，不谈感情！"
+    },
+    {
+      "source": "Pop goes the... GRANNY!",
+      "text": "弹出来的……是老太太！"
+    },
+    {
+      "source": "Round and round the handle turns...",
+      "text": "摇呀摇，摇动把手……"
+    },
+    {
+      "source": "I'm a fruity cutie patootie!",
+      "text": "我是可爱的水果小甜心！"
+    },
+    {
+      "source": "Feelin' thirsty? How about a PUNCH?",
+      "text": "渴了吗？来一记水果重拳！"
+    },
+    {
+      "source": "I'll shard all over you!",
+      "text": "碎片洒你一身！"
+    },
+    {
+      "source": "Silent night, violent night.",
+      "text": "平安夜？暴力夜！"
+    },
+    {
+      "source": "Ya callin' me spoiled?!",
+      "text": "你说我变质了？！"
+    },
+    {
+      "source": "I'm gloopy and goopy.",
+      "text": "黏糊糊，软绵绵！"
+    },
+    {
+      "source": "Skreee!",
+      "text": "吱——！"
+    },
+    {
+      "source": "I knew I should've stayed in Mt. Moon.",
+      "text": "早知道就留在月亮山了。"
+    },
+    {
+      "source": "You wouldn't like me when I'm grumpy.",
+      "text": "我暴躁起来，你可受不了。"
+    },
+    {
+      "source": "Your cookies. Hand them over.",
+      "text": "把饼干交出来。"
+    },
+    {
+      "source": "Your cookies or your life! ...Actually, just the cookies.",
+      "text": "要饼干还是要命！其实只要饼干。"
+    },
+    {
+      "source": "Santa never paid us overtime.",
+      "text": "圣诞老人从不付加班费。"
+    },
+    {
+      "source": "Every naughty child... made me BIGGER.",
+      "text": "每个顽皮的孩子，都让我更强大。"
+    },
+    {
+      "source": "COAL FOR EVERYONE.",
+      "text": "人人都有煤块！"
+    },
+    {
+      "source": "Sssso sweet... sssso deadly.",
+      "text": "甜得嘶嘶……毒得嘶嘶。"
+    },
+    {
+      "source": "Refresh yourssself with sssome peppermint venom!",
+      "text": "来点薄荷毒液提提神！"
+    },
+    {
+      "source": "Kiss kiss bang bang.",
+      "text": "亲一亲，砰砰砰。"
+    },
+    {
+      "source": "A kiss? How about a SQUEEZE.",
+      "text": "亲吻？不如来个绞抱！"
+    },
+    {
+      "source": "The Master is coming! Heh heh!",
+      "text": "主人就要来了！嘿嘿！"
+    },
+    {
+      "source": "Naughty, naughty, NAUGHTY!",
+      "text": "顽皮，顽皮，太顽皮！"
+    },
+    {
+      "source": "Crush the intruder!",
+      "text": "碾碎入侵者！"
+    },
+    {
+      "source": "You're just another nut to crush.",
+      "text": "你不过是另一颗核桃。"
+    },
+    {
+      "source": "RRRAAAWR!",
+      "text": "嗷——！"
+    },
+    {
+      "source": "GRRRR!",
+      "text": "吼——！"
+    },
+    {
+      "source": "Coal is the gift that keeps on giving.",
+      "text": "煤炭才是源源不断的礼物。"
+    },
+    {
+      "source": "GRAAAAWR!",
+      "text": "吼嗷——！"
+    },
+    {
+      "source": "The sleigh is broken. And so are the reins.",
+      "text": "雪橇坏了，缰绳也断了。"
+    },
+    {
+      "source": "We pulled for HIM. Now we run wild!",
+      "text": "我们曾为他拉车，如今只为自己狂奔！"
+    },
+    {
+      "source": "You son of a witch!",
+      "text": "你这个小坏蛋！"
+    },
+    {
+      "source": "Mmm. Granny on gingerbread.",
+      "text": "嗯……姜饼配老太太。"
+    },
+    {
+      "source": "I'll frostbite your face off!",
+      "text": "我要把你的脸冻掉！"
+    },
+    {
+      "source": "Christmas is cancelled!",
+      "text": "圣诞节取消了！"
+    },
+    {
+      "source": "What a ho-ho-horrible night to have a curse!",
+      "text": "中了诅咒的夜晚，真是糟、糟、糟透了！"
+    },
+    {
+      "source": "SANTA IS GONE. KRAMPUS IS FOREVER!",
+      "text": "圣诞老人消失了！坎卜斯永存！"
+    },
+    {
+      "source": "I CAN SEE INTO YOUR HEART.",
+      "text": "我看得穿你的内心。"
+    },
+    {
+      "source": "Crumbly Bite",
+      "text": "碎屑咬击"
+    },
+    {
+      "source": "Sugar Rush",
+      "text": "糖分冲刺"
+    },
+    {
+      "source": "Iceball",
+      "text": "冰球"
+    },
+    {
+      "source": "Frost Glare",
+      "text": "寒霜凝视"
+    },
+    {
+      "source": "Shards",
+      "text": "碎片迸射"
+    },
+    {
+      "source": "Glint",
+      "text": "闪光"
+    },
+    {
+      "source": "Gnaw",
+      "text": "啃咬"
+    },
+    {
+      "source": "Squeak",
+      "text": "吱吱叫"
+    },
+    {
+      "source": "Zap",
+      "text": "电击"
+    },
+    {
+      "source": "Short Circuit",
+      "text": "短路"
+    },
+    {
+      "source": "Tangle",
+      "text": "缠绕"
+    },
+    {
+      "source": "Waddle Smack",
+      "text": "摇摆拍击"
+    },
+    {
+      "source": "Wind Up",
+      "text": "上发条"
+    },
+    {
+      "source": "Crack",
+      "text": "夹碎"
+    },
+    {
+      "source": "Stand Guard",
+      "text": "站岗守卫"
+    },
+    {
+      "source": "Grind",
+      "text": "碾磨"
+    },
+    {
+      "source": "Bayonet",
+      "text": "刺刀"
+    },
+    {
+      "source": "Volley",
+      "text": "齐射"
+    },
+    {
+      "source": "Drill",
+      "text": "操练"
+    },
+    {
+      "source": "Winding...",
+      "text": "上紧发条……"
+    },
+    {
+      "source": "POP!",
+      "text": "弹出！"
+    },
+    {
+      "source": "Slam",
+      "text": "猛撞"
+    },
+    {
+      "source": "Stale Crumbs",
+      "text": "陈旧碎屑"
+    },
+    {
+      "source": "Harden",
+      "text": "硬化"
+    },
+    {
+      "source": "Wing Gust",
+      "text": "振翅狂风"
+    },
+    {
+      "source": "Cold Hymn",
+      "text": "寒冷赞美诗"
+    },
+    {
+      "source": "Lament",
+      "text": "哀歌"
+    },
+    {
+      "source": "Splash",
+      "text": "泼洒"
+    },
+    {
+      "source": "Gloop",
+      "text": "黏糊糊"
+    },
+    {
+      "source": "Dive",
+      "text": "俯冲"
+    },
+    {
+      "source": "Screech",
+      "text": "尖啸"
+    },
+    {
+      "source": "Swipe",
+      "text": "横抓"
+    },
+    {
+      "source": "Sulk",
+      "text": "生闷气"
+    },
+    {
+      "source": "Grumble",
+      "text": "嘟囔"
+    },
+    {
+      "source": "Pickpocket",
+      "text": "偷窃"
+    },
+    {
+      "source": "Lie Low",
+      "text": "潜伏"
+    },
+    {
+      "source": "Escape",
+      "text": "逃跑"
+    },
+    {
+      "source": "Coal Fist",
+      "text": "煤炭重拳"
+    },
+    {
+      "source": "Smog",
+      "text": "浓烟"
+    },
+    {
+      "source": "Fangs",
+      "text": "毒牙"
+    },
+    {
+      "source": "Coil",
+      "text": "盘绕"
+    },
+    {
+      "source": "Vine Lash",
+      "text": "藤蔓抽打"
+    },
+    {
+      "source": "Entangle",
+      "text": "纠缠"
+    },
+    {
+      "source": "Grow",
+      "text": "生长"
+    },
+    {
+      "source": "Switch",
+      "text": "枝条鞭打"
+    },
+    {
+      "source": "Snicker",
+      "text": "窃笑"
+    },
+    {
+      "source": "Command",
+      "text": "号令"
+    },
+    {
+      "source": "Saber Slash",
+      "text": "军刀斩击"
+    },
+    {
+      "source": "Iron Jaw",
+      "text": "铁颚"
+    },
+    {
+      "source": "Roar",
+      "text": "咆哮"
+    },
+    {
+      "source": "Maul",
+      "text": "猛击"
+    },
+    {
+      "source": "Avalanche",
+      "text": "雪崩"
+    },
+    {
+      "source": "Coal Shower",
+      "text": "煤炭雨"
+    },
+    {
+      "source": "Coal Tax",
+      "text": "煤炭税"
+    },
+    {
+      "source": "Stockpile",
+      "text": "囤积"
+    },
+    {
+      "source": "Bellow",
+      "text": "怒吼"
+    },
+    {
+      "source": "Gore",
+      "text": "鹿角突刺"
+    },
+    {
+      "source": "Stampede",
+      "text": "践踏"
+    },
+    {
+      "source": "Hex",
+      "text": "诅咒术"
+    },
+    {
+      "source": "Bake a Minion",
+      "text": "烘焙帮凶"
+    },
+    {
+      "source": "Candy Wall",
+      "text": "糖果墙"
+    },
+    {
+      "source": "Freeze Over",
+      "text": "冰封"
+    },
+    {
+      "source": "Icy Nips",
+      "text": "寒冰啃咬"
+    },
+    {
+      "source": "Ice Wall",
+      "text": "冰墙"
+    },
+    {
+      "source": "Ho Ho HURT",
+      "text": "吼吼重击"
+    },
+    {
+      "source": "Naughty or Nice",
+      "text": "顽皮还是乖巧"
+    },
+    {
+      "source": "Sack Slam",
+      "text": "礼袋重击"
+    },
+    {
+      "source": "Chimney Guard",
+      "text": "烟囱守卫"
+    },
+    {
+      "source": "Chains of the Naughty",
+      "text": "顽皮锁链"
+    },
+    {
+      "source": "Birch Lash",
+      "text": "桦枝鞭打"
+    },
+    {
+      "source": "Midnight Howl",
+      "text": "午夜嚎叫"
+    },
+    {
+      "source": "Into the Sack",
+      "text": "装进礼袋"
+    },
+    {
+      "source": "Read the Names",
+      "text": "宣读姓名"
+    },
+    {
+      "source": "Ink Lash",
+      "text": "墨汁抽打"
+    },
+    {
+      "source": "Mark as Naughty",
+      "text": "标记顽皮"
+    },
+    {
+      "source": "Paper Cut",
+      "text": "纸刃切割"
+    },
+    {
+      "source": "The Lost Elf",
+      "text": "迷路的小精灵"
+    },
+    {
+      "source": "A tiny elf shivers in a snowdrift, clutching a broken compass. \"I may have taken a wrong turn at the candy cane forest...\"",
+      "text": "一个小精灵抱着坏掉的指南针，在雪堆里瑟瑟发抖。“我可能在糖杖森林转错了弯……”"
+    },
+    {
+      "source": "Abandoned Workshop",
+      "text": "废弃工坊"
+    },
+    {
+      "source": "Half-finished toys line the dusty benches. The tools are still warm, as if the elves left in a hurry.",
+      "text": "落满灰尘的工作台上摆着半成品玩具。工具还温热，精灵们似乎走得很匆忙。"
+    },
+    {
+      "source": "Carolers at the Door",
+      "text": "门前的颂歌队"
+    },
+    {
+      "source": "A ragged group of carolers is singing in front of a house. They look like they've been at it for quite a long time. Their voices crack with cold.",
+      "text": "一群衣衫单薄的歌手站在门前唱颂歌。他们似乎唱了很久，嗓音冻得发颤。"
+    },
+    {
+      "source": "The Frozen Pond",
+      "text": "结冰的池塘"
+    },
+    {
+      "source": "A frozen pond blocks the path. As you take a closer look, you note coins that twinkle under the ice. The ice creaks under your weight.",
+      "text": "一片冰封的池塘挡住去路。冰下有硬币闪烁，脚下的冰层却吱呀作响。"
+    },
+    {
+      "source": "The Cookie Jar",
+      "text": "窗台上的饼干罐"
+    },
+    {
+      "source": "On a windowsill, you notice an enormous cookie jar. A note reads: FOR SANTA ONLY.",
+      "text": "窗台上摆着一个巨大的饼干罐。旁边的纸条写着：仅供圣诞老人享用。"
+    },
+    {
+      "source": "The Snow Globe Seller",
+      "text": "雪景球小贩"
+    },
+    {
+      "source": "An old woman sells snow globes. You take one from her hands almost absentmindedly.",
+      "text": "一位老妇人在卖雪景球。你不知不觉间接过了她手中的一只。"
+    },
+    {
+      "source": "The Empty Stable",
+      "text": "空荡的鹿舍"
+    },
+    {
+      "source": "Santa's reserve reindeer pace in their stalls, hungry and restless.",
+      "text": "圣诞老人的后备驯鹿饿得焦躁不安，在栏里来回踱步。"
+    },
+    {
+      "source": "The Wishing Well",
+      "text": "许愿井"
+    },
+    {
+      "source": "You stop by a wishing well and look inside. You see countless coins far below.",
+      "text": "你在许愿井边停下，探头望去，深处闪烁着数不清的硬币。"
+    },
+    {
+      "source": "Mischievous Elves",
+      "text": "恶作剧精灵"
+    },
+    {
+      "source": "Two elves with red eyes block the path. \"Hey, stranger! How about we play a game? Winner takes all!\"",
+      "text": "两个红眼精灵挡住去路。“陌生人，玩个游戏怎么样？赢家拿走一切！”"
+    },
+    {
+      "source": "The Toy Factory",
+      "text": "玩具工厂"
+    },
+    {
+      "source": "The conveyor belts at a toy factory still run. Toys roll by, waiting to be wrapped.",
+      "text": "玩具工厂的传送带仍在运转，一件件玩具等待着被包装。"
+    },
+    {
+      "source": "The Gingerbread House",
+      "text": "姜饼小屋"
+    },
+    {
+      "source": "A cottage made entirely of gingerbread. You feel as though there's something or someone inside.",
+      "text": "一栋完全由姜饼搭成的小屋。你感觉里面有什么东西，或者什么人。"
+    },
+    {
+      "source": "Santa's Abandoned Sleigh",
+      "text": "遗弃的圣诞雪橇"
+    },
+    {
+      "source": "Santa's sleigh lies tipped in a ditch, one of its runners snapped. The seat is still warm.",
+      "text": "圣诞老人的雪橇翻倒在沟里，一根滑板已经折断。座位却还温热。"
+    },
+    {
+      "source": "The Naughty Child",
+      "text": "顽皮的孩子"
+    },
+    {
+      "source": "A boy pelts you with snowballs. \"Santa never came last year! Why in the hell should I be nice?\"",
+      "text": "一个男孩朝你扔雪球。“圣诞老人去年根本没来！我凭什么还要乖？”"
+    },
+    {
+      "source": "Mistletoe Arch",
+      "text": "槲寄生拱门"
+    },
+    {
+      "source": "A great arch of mistletoe appears above the path.",
+      "text": "一座巨大的槲寄生拱门出现在道路上方。"
+    },
+    {
+      "source": "The Old Toymaker",
+      "text": "老玩具匠"
+    },
+    {
+      "source": "A stooped toymaker fixes a rocking horse by candlelight. \"Need anything mended, dear?\"",
+      "text": "一位驼背的玩具匠在烛光下修理木马。“亲爱的，有什么需要修补的吗？”"
+    },
+    {
+      "source": "Blizzard!",
+      "text": "暴风雪！"
+    },
+    {
+      "source": "A howling blizzard swallows the road. You can barely see the tip of your own nose.",
+      "text": "呼啸的暴风雪吞没了道路，你几乎看不清自己的鼻尖。"
+    },
+    {
+      "source": "The Frozen Postman",
+      "text": "冻僵的邮递员"
+    },
+    {
+      "source": "A postman lies stuck in a snowdrift, his bag bursting with letters to Santa.",
+      "text": "一位邮递员陷在雪堆里，邮袋塞满了写给圣诞老人的信。"
+    },
+    {
+      "source": "Hot Cocoa Stand",
+      "text": "热可可摊"
+    },
+    {
+      "source": "A cheerful elf runs a cocoa stand in the middle of nowhere. \"Marshmallows are extra!\"",
+      "text": "荒郊野外，一个快乐的精灵经营着热可可摊。“棉花糖要另外加钱哦！”"
+    },
+    {
+      "source": "Ice Fishing",
+      "text": "冰上垂钓"
+    },
+    {
+      "source": "A fishing hole and an abandoned rod. Something tugs at the line.",
+      "text": "冰洞边有一根无人看管的鱼竿。有什么东西正在拉扯鱼线。"
+    },
+    {
+      "source": "The Nutcracker's Ball",
+      "text": "胡桃夹舞会"
+    },
+    {
+      "source": "Music drifts from a ballroom where nutcrackers waltz to the tune. One of them bows to you.",
+      "text": "舞厅里传来音乐，胡桃夹子们正跳着华尔兹。其中一个向你鞠躬。"
+    },
+    {
+      "source": "Stocking on a Fence",
+      "text": "篱笆上的圣诞袜"
+    },
+    {
+      "source": "A lonely stocking hangs on a fence post, bulging with something.",
+      "text": "一只孤零零的圣诞袜挂在篱笆上，里面鼓鼓囊囊。"
+    },
+    {
+      "source": "Snow Angels",
+      "text": "雪地天使"
+    },
+    {
+      "source": "A field of perfect, untouched snow sparkles under the moon.",
+      "text": "月光下，一片无人踏足的雪地闪闪发亮。"
+    },
+    {
+      "source": "The Fallen Star",
+      "text": "坠落的星星"
+    },
+    {
+      "source": "A star has fallen into a snowbank, still glowing and sparking.",
+      "text": "一颗星星落进雪堆，仍在发光，迸出细小的火花。"
+    },
+    {
+      "source": "Secret Santa Swap",
+      "text": "神秘圣诞交换"
+    },
+    {
+      "source": "A masked stranger holds out a wrapped box. \"Care for a swap, {title}? No peeking.\"",
+      "text": "一个蒙面陌生人递来包装好的盒子。“{title}，要交换礼物吗？不许偷看。”"
+    },
+    {
+      "source": "The Lonely Snowman",
+      "text": "孤独的雪人"
+    },
+    {
+      "source": "A small, friendly snowman sits alone in a park. It years for companionship.",
+      "text": "一个友善的小雪人独自坐在公园里，渴望有人陪伴。"
+    },
+    {
+      "source": "Mirror of Christmas Past",
+      "text": "往昔圣诞之镜"
+    },
+    {
+      "source": "An ornate mirror shows you young, laughing beside an even younger Santa.",
+      "text": "华丽的镜子映出年轻的你，身旁是更加年轻的圣诞老人，你们笑得很开心。"
+    },
+    {
+      "source": "Walk him home (lose 6 HP, gain a relic)",
+      "text": "送他回家（失去6点生命，获得遗物）"
+    },
+    {
+      "source": "Point the way (+5 Spirit)",
+      "text": "为他指路（精神+5）"
+    },
+    {
+      "source": "Ignore him (-5 Spirit)",
+      "text": "不予理会（精神-5）"
+    },
+    {
+      "source": "Tinker (Rewrap a gift)",
+      "text": "修修补补（升级一张礼物）"
+    },
+    {
+      "source": "Scavenge (random gift + 30 Cookies)",
+      "text": "搜寻物资（随机礼物和30块饼干）"
+    },
+    {
+      "source": "Leave",
+      "text": "离开"
+    },
+    {
+      "source": "Sing along (+10 Spirit, heal 5)",
+      "text": "一起唱歌（精神+10，恢复5点生命）"
+    },
+    {
+      "source": "Give them 25 Cookies (random potion)",
+      "text": "赠送25块饼干（随机药水）"
+    },
+    {
+      "source": "Learn their song (gain Off-Key Carol)",
+      "text": "学习歌曲（获得跑调颂歌）"
+    },
+    {
+      "source": "Skate across (50%: +60 Cookies, else -10 HP)",
+      "text": "滑过去（50%获得60块饼干，否则失去10点生命）"
+    },
+    {
+      "source": "Walk around (-4 Spirit)",
+      "text": "绕道而行（精神-4）"
+    },
+    {
+      "source": "Reach in deep (+75 Cookies, gain Lump of Coal)",
+      "text": "往深处掏（75块饼干，获得煤块）"
+    },
+    {
+      "source": "Take just one (heal 10, -2 Spirit)",
+      "text": "只吃一块（恢复10点生命，精神-2）"
+    },
+    {
+      "source": "Leave it",
+      "text": "不碰它"
+    },
+    {
+      "source": "Shake a globe (transform a gift)",
+      "text": "摇晃雪景球（变换一张礼物）"
+    },
+    {
+      "source": "Buy one for 60 Cookies (relic)",
+      "text": "花60块饼干购买（遗物）"
+    },
+    {
+      "source": "Move along",
+      "text": "继续赶路"
+    },
+    {
+      "source": "Feed them 30 Cookies (+6 Max HP)",
+      "text": "喂30块饼干（生命上限+6）"
+    },
+    {
+      "source": "Ride one (lose 10 HP, gain a relic)",
+      "text": "骑上一头（失去10点生命，获得遗物）"
+    },
+    {
+      "source": "Leave them be",
+      "text": "让它们待着"
+    },
+    {
+      "source": "Toss 25 Cookies (+8 Spirit)",
+      "text": "投入25块饼干（精神+8）"
+    },
+    {
+      "source": "Toss a gift in (leave a gift)",
+      "text": "投入一张礼物（留下礼物）"
+    },
+    {
+      "source": "Drink (heal 15, -5 Spirit)",
+      "text": "喝井水（恢复15点生命，精神-5）"
+    },
+    {
+      "source": "Play (fight two Krampus Imps)",
+      "text": "接受游戏（与两个坎卜斯小鬼战斗）"
+    },
+    {
+      "source": "Bribe them (-40 Cookies)",
+      "text": "贿赂它们（饼干-40）"
+    },
+    {
+      "source": "Scold them (-6 HP)",
+      "text": "责骂它们（生命-6）"
+    },
+    {
+      "source": "Work overtime (lose 7 HP, choose a gift)",
+      "text": "加班（失去7点生命，选择礼物）"
+    },
+    {
+      "source": "Take a nap on the sacks (heal 12)",
+      "text": "在礼袋上小睡（恢复12点生命）"
+    },
+    {
+      "source": "Nibble the roof (heal 20, gain Lump of Coal)",
+      "text": "啃屋顶（恢复20点生命，获得煤块）"
+    },
+    {
+      "source": "Knock on the door (ELITE fight)",
+      "text": "敲门（精英战斗）"
+    },
+    {
+      "source": "Back away slowly",
+      "text": "慢慢后退"
+    },
+    {
+      "source": "Search the seat (relic, -6 Spirit)",
+      "text": "搜查座位（获得遗物，精神-6）"
+    },
+    {
+      "source": "Polish the bells (+12 Spirit)",
+      "text": "擦亮铃铛（精神+12）"
+    },
+    {
+      "source": "Give him a gift (leave; DOUBLE Spirit)",
+      "text": "送他礼物（留下礼物，获得双倍精神）"
+    },
+    {
+      "source": "Snowball fight! (-5 HP, gain Snowball+)",
+      "text": "打雪仗（生命-5，获得升级的雪球）"
+    },
+    {
+      "source": "Scold him (+40 Cookies, -8 Spirit)",
+      "text": "责骂他（饼干+40，精神-8）"
+    },
+    {
+      "source": "Pass under (heal 12, gain Mistletoe Kiss)",
+      "text": "从拱门下走过（恢复12点生命，获得槲寄生之吻）"
+    },
+    {
+      "source": "Cut a sprig (gain a random Uncommon gift)",
+      "text": "剪下一枝（随机罕见礼物）"
+    },
+    {
+      "source": "Mend my gifts (Rewrap 2 random gifts)",
+      "text": "修补礼物（升级两张随机礼物）"
+    },
+    {
+      "source": "Buy a toy (50 Cookies, choose a gift)",
+      "text": "花50块饼干买玩具（选择礼物）"
+    },
+    {
+      "source": "Push through (-10 HP)",
+      "text": "顶风前进（生命-10）"
+    },
+    {
+      "source": "Shelter until it passes (-8 Spirit)",
+      "text": "躲避风雪（精神-8）"
+    },
+    {
+      "source": "Drink a potion for warmth (lose a potion)",
+      "text": "喝药水取暖（失去一瓶药水）"
+    },
+    {
+      "source": "Read the letters (+12 Spirit)",
+      "text": "读信（精神+12）"
+    },
+    {
+      "source": "Deliver them yourself (-6 HP, +18 Spirit)",
+      "text": "亲自送信（生命-6，精神+18）"
+    },
+    {
+      "source": "Burn them for warmth (heal 12, -12 Spirit)",
+      "text": "烧信取暖（恢复12点生命，精神-12）"
+    },
+    {
+      "source": "Small cup, 20 Cookies (heal 18)",
+      "text": "小杯20块饼干（恢复18点生命）"
+    },
+    {
+      "source": "To go, 45 Cookies (2 random potions)",
+      "text": "打包45块饼干（两瓶随机药水）"
+    },
+    {
+      "source": "No thanks",
+      "text": "不用了"
+    },
+    {
+      "source": "Reel it in",
+      "text": "收线"
+    },
+    {
+      "source": "Leave the line",
+      "text": "放下鱼竿"
+    },
+    {
+      "source": "Dance (-5 HP, Rewrap a gift)",
+      "text": "共舞（生命-5，升级一张礼物）"
+    },
+    {
+      "source": "Challenge him to a duel (fight)",
+      "text": "发起决斗（战斗）"
+    },
+    {
+      "source": "Slip away",
+      "text": "悄悄离开"
+    },
+    {
+      "source": "Peek inside (potion + 30 Cookies)",
+      "text": "看看里面（药水和30块饼干）"
+    },
+    {
+      "source": "Fill it instead (leave a gift)",
+      "text": "往里面装礼物（留下礼物）"
+    },
+    {
+      "source": "Make a snow angel (heal 8, +6 Spirit)",
+      "text": "做个雪地天使（恢复8点生命，精神+6）"
+    },
+    {
+      "source": "Keep moving",
+      "text": "继续赶路"
+    },
+    {
+      "source": "Take it (Tree-Top Star, or 100 Cookies)",
+      "text": "拾起星星（树顶星或100块饼干）"
+    },
+    {
+      "source": "Make a wish (+20 Spirit)",
+      "text": "许个愿（精神+20）"
+    },
+    {
+      "source": "Swap (transform a gift)",
+      "text": "交换（变换一张礼物）"
+    },
+    {
+      "source": "Decline",
+      "text": "婉拒"
+    },
+    {
+      "source": "Build him a friend (-4 HP, +10 Spirit)",
+      "text": "为他堆个朋友（生命-4，精神+10）"
+    },
+    {
+      "source": "Take his scarf (gain Scarf Wrap+, -8 Spirit)",
+      "text": "拿走围巾（获得升级围巾，精神-8）"
+    },
+    {
+      "source": "Reach into the memory (duplicate a gift, -6 Max HP)",
+      "text": "伸手触碰回忆（复制一张礼物，生命上限-6）"
+    },
+    {
+      "source": "Smile and remember (+10 Spirit)",
+      "text": "微笑回忆（精神+10）"
+    },
+    {
+      "source": "Shatter it (-4 HP, +40 Cookies)",
+      "text": "打碎镜子（生命-4，饼干+40）"
+    },
+    {
+      "source": "YOUR SACK",
+      "text": "你的礼袋"
+    },
+    {
+      "source": "SPIRIT ",
+      "text": "精神 "
+    },
+    {
+      "source": "Christmas Spirit",
+      "text": "圣诞精神"
+    },
+    {
+      "source": "Click to drink or discard.",
+      "text": "点击饮用或丢弃。"
+    },
+    {
+      "source": "SACK ",
+      "text": "礼袋 "
+    },
+    {
+      "source": "Your gifts",
+      "text": "你的礼物"
+    },
+    {
+      "source": "Tab: view your permanent deck.",
+      "text": "制表键：查看永久牌组。"
+    },
+    {
+      "source": "LEDGER",
+      "text": "图鉴"
+    },
+    {
+      "source": "MENU",
+      "text": "菜单"
+    },
+    {
+      "source": "DEC ",
+      "text": "12月 "
+    },
+    {
+      "source": "CHRISTMAS SPIRIT: ",
+      "text": "圣诞精神："
+    },
+    {
+      "source": "Current tier: ",
+      "text": "当前状态："
+    },
+    {
+      "source": "BACK",
+      "text": "返回"
+    },
+    {
+      "source": "Mrs. C",
+      "text": "克劳斯夫人"
+    },
+    {
+      "source": "Mrs. Claus",
+      "text": "克劳斯夫人"
+    },
+    {
+      "source": "Rudolph",
+      "text": "鲁道夫"
+    },
+    {
+      "source": "Rudie",
+      "text": "小鲁迪"
+    },
+    {
+      "source": "little elf",
+      "text": "小精灵"
+    },
+    {
+      "source": "missus",
+      "text": "夫人"
+    },
+    {
+      "source": "red-nose",
+      "text": "红鼻子"
+    },
+    {
+      "source": "24 NIGHTS TO SAVE CHRISTMAS",
+      "text": "二十四个夜晚，拯救圣诞节"
+    },
+    {
+      "source": "NEW RUN",
+      "text": "开始冒险"
+    },
+    {
+      "source": "CONTINUE / DEC ",
+      "text": "继续冒险 / 12月 "
+    },
+    {
+      "source": "HOW TO PLAY",
+      "text": "游戏玩法"
+    },
+    {
+      "source": "SETTINGS",
+      "text": "设置"
+    },
+    {
+      "source": "WHO WILL SAVE CHRISTMAS?",
+      "text": "谁来拯救圣诞节？"
+    },
+    {
+      "source": "Runs the North Pole while Santa\ntakes all the credit.",
+      "text": "北极的大小事务由她打理，\n功劳却都归圣诞老人。"
+    },
+    {
+      "source": "Head toymaker of Santa's\nworkshop and his trusted advisor.",
+      "text": "圣诞工坊的首席玩具匠，\n也是圣诞老人信赖的顾问。"
+    },
+    {
+      "source": "The reindeer with the brightest\nnose and the biggest heart.",
+      "text": "鼻子最亮的驯鹿，\n也有最温暖的心。"
+    },
+    {
+      "source": " HP / ",
+      "text": " 生命 / "
+    },
+    {
+      "source": "Power: ",
+      "text": "特殊能力："
+    },
+    {
+      "source": "ADVENT OFF",
+      "text": "进阶挑战：关闭"
+    },
+    {
+      "source": "ADVENT ",
+      "text": "进阶挑战 "
+    },
+    {
+      "source": "Advent ",
+      "text": "进阶挑战 "
+    },
+    {
+      "source": "BEGIN >",
+      "text": "出发 >"
+    },
+    {
+      "source": "SKIP",
+      "text": "跳过"
+    },
+    {
+      "source": "hold to speed up",
+      "text": "按住可加速"
+    },
+    {
+      "source": "HOW TO SAVE CHRISTMAS",
+      "text": "如何拯救圣诞节"
+    },
+    {
+      "source": "LET'S GO",
+      "text": "开始吧"
+    },
+    {
+      "source": "MASTER",
+      "text": "总音量"
+    },
+    {
+      "source": "MUSIC",
+      "text": "音乐音量"
+    },
+    {
+      "source": "EFFECTS",
+      "text": "音效音量"
+    },
+    {
+      "source": "MUTE: ",
+      "text": "静音："
+    },
+    {
+      "source": "ON",
+      "text": "开启"
+    },
+    {
+      "source": "OFF",
+      "text": "关闭"
+    },
+    {
+      "source": "REDUCE MOTION: ",
+      "text": "减少动态效果："
+    },
+    {
+      "source": "FAST ENEMY: ",
+      "text": "加速敌方行动："
+    },
+    {
+      "source": "CONFIRM END TURN: ",
+      "text": "结束回合前确认："
+    },
+    {
+      "source": "TITLE",
+      "text": "返回标题"
+    },
+    {
+      "source": "Return to title? Continue resumes from the start of this night.",
+      "text": "返回标题？继续冒险时将从本晚开始处恢复。"
+    },
+    {
+      "source": "ARE YOU SURE?",
+      "text": "确定吗？"
+    },
+    {
+      "source": "YES",
+      "text": "确定"
+    },
+    {
+      "source": "'S WISH: ",
+      "text": "的愿望："
+    },
+    {
+      "source": "'S WISH",
+      "text": "的愿望"
+    },
+    {
+      "source": "'s house / DEC ",
+      "text": "的家 / 12月 "
+    },
+    {
+      "source": "A lovely gift lit up the night.",
+      "text": "温暖的礼物点亮了夜晚。"
+    },
+    {
+      "source": "The house stayed dark.",
+      "text": "房屋依旧暗着。"
+    },
+    {
+      "source": "A child is waiting for Christmas.",
+      "text": "有个孩子正在等待圣诞节。"
+    },
+    {
+      "source": "Fireside",
+      "text": "壁炉"
+    },
+    {
+      "source": "Elf Shop",
+      "text": "精灵商店"
+    },
+    {
+      "source": "Stocking",
+      "text": "圣诞袜"
+    },
+    {
+      "source": "Christmas Eve",
+      "text": "平安夜"
+    },
+    {
+      "source": "Battle",
+      "text": "战斗"
+    },
+    {
+      "source": "Event",
+      "text": "事件"
+    },
+    {
+      "source": "Elite",
+      "text": "精英"
+    },
+    {
+      "source": "Shop",
+      "text": "商店"
+    },
+    {
+      "source": "Rest",
+      "text": "休息"
+    },
+    {
+      "source": "Treasure",
+      "text": "宝藏"
+    },
+    {
+      "source": "Boss",
+      "text": "首领"
+    },
+    {
+      "source": "Monsters lurk in the snow.",
+      "text": "怪物潜伏在雪地里。"
+    },
+    {
+      "source": "A powerful foe guards a relic.",
+      "text": "强大的敌人守护着遗物。"
+    },
+    {
+      "source": "Rest, rewrap a gift or write to Santa.",
+      "text": "休息、升级礼物，或给圣诞老人写信。"
+    },
+    {
+      "source": "Spend Cookies on gifts, relics and potions.",
+      "text": "用饼干购买礼物、遗物和药水。"
+    },
+    {
+      "source": "A stocking stuffed with a relic.",
+      "text": "塞着遗物的圣诞袜。"
+    },
+    {
+      "source": "Save Santa's soul.",
+      "text": "拯救圣诞老人的灵魂。"
+    },
+    {
+      "source": "Something strange awaits you.",
+      "text": "奇妙的际遇正等待着你。"
+    },
+    {
+      "source": "Choose one node for tonight.",
+      "text": "今晚只能选择一个地点。"
+    },
+    {
+      "source": " NIGHTS UNTIL CHRISTMAS",
+      "text": " 晚后迎来圣诞节"
+    },
+    {
+      "source": "Drag, scroll or use arrow keys",
+      "text": "拖动、滚轮或方向键移动地图"
+    },
+    {
+      "source": "Starter",
+      "text": "初始"
+    },
+    {
+      "source": "Common",
+      "text": "普通"
+    },
+    {
+      "source": "Uncommon",
+      "text": "罕见"
+    },
+    {
+      "source": "Rare",
+      "text": "稀有"
+    },
+    {
+      "source": "Friend",
+      "text": "伙伴"
+    },
+    {
+      "source": "Curse",
+      "text": "诅咒"
+    },
+    {
+      "source": "Attack",
+      "text": "攻击"
+    },
+    {
+      "source": "Skill",
+      "text": "技能"
+    },
+    {
+      "source": "Power",
+      "text": "能力"
+    },
+    {
+      "source": "Hover or tap a gift to inspect it.",
+      "text": "悬停或轻触礼物，查看详细效果。"
+    },
+    {
+      "source": "No gifts available.",
+      "text": "没有可选的礼物。"
+    },
+    {
+      "source": "Choose one gift. Hover to read its effect.",
+      "text": "选择一张礼物，悬停可查看效果。"
+    },
+    {
+      "source": "CHOOSE A TOY PART",
+      "text": "选择玩具配件"
+    },
+    {
+      "source": "Then choose a gift to fit it on.",
+      "text": "随后选择一张礼物进行安装。"
+    },
+    {
+      "source": "CHOOSE",
+      "text": "选择"
+    },
+    {
+      "source": "NOT NOW",
+      "text": "暂时不用"
+    },
+    {
+      "source": "FIT ",
+      "text": "安装 "
+    },
+    {
+      "source": "DRINK",
+      "text": "饮用"
+    },
+    {
+      "source": "No running from this one!",
+      "text": "这场战斗无法逃跑！"
+    },
+    {
+      "source": "DISCARD",
+      "text": "丢弃"
+    },
+    {
+      "source": "ELITE SPOILS",
+      "text": "精英战利品"
+    },
+    {
+      "source": "SPOILS OF THE NIGHT",
+      "text": "今夜的战利品"
+    },
+    {
+      "source": "CLAIMED",
+      "text": "已领取"
+    },
+    {
+      "source": " COOKIES",
+      "text": " 块饼干"
+    },
+    {
+      "source": "Potion slots full!",
+      "text": "药水栏已满！"
+    },
+    {
+      "source": "BEFRIEND ",
+      "text": "结交伙伴："
+    },
+    {
+      "source": "CHOOSE A FRIEND",
+      "text": "选择伙伴"
+    },
+    {
+      "source": "CHOOSE A GIFT",
+      "text": "选择礼物"
+    },
+    {
+      "source": "LEAVE A GIFT >",
+      "text": "留下礼物 >"
+    },
+    {
+      "source": "Little ",
+      "text": "小小的"
+    },
+    {
+      "source": " is asleep. Leave a gift under the tree.",
+      "text": "已经熟睡。请在树下留下一份礼物。"
+    },
+    {
+      "source": "LEAVE A GIFT UNDER THE TREE",
+      "text": "在圣诞树下留下礼物"
+    },
+    {
+      "source": " WISH!",
+      "text": " 愿望达成！"
+    },
+    {
+      "source": " ADOPT!",
+      "text": " 领养伙伴！"
+    },
+    {
+      "source": " SPIRIT",
+      "text": " 精神"
+    },
+    {
+      "source": "GIVE ",
+      "text": "赠送 "
+    },
+    {
+      "source": " COOKIES (+1)",
+      "text": " 块饼干（精神+1）"
+    },
+    {
+      "source": "PATCHED SACK: SKIP",
+      "text": "补丁礼袋：跳过"
+    },
+    {
+      "source": "NOTHING TO SPARE",
+      "text": "没有多余礼物"
+    },
+    {
+      "source": "FIGHT!",
+      "text": "开始战斗！"
+    },
+    {
+      "source": "CONTINUE >",
+      "text": "继续 >"
+    },
+    {
+      "source": "Your sack is too light to spare a gift.",
+      "text": "礼袋里的礼物太少，无法再送出了。"
+    },
+    {
+      "source": "Nothing to rewrap.",
+      "text": "没有可升级的礼物。"
+    },
+    {
+      "source": "REWRAP A GIFT",
+      "text": "升级礼物"
+    },
+    {
+      "source": "LEAVE A GIFT",
+      "text": "留下礼物"
+    },
+    {
+      "source": "DUPLICATE A GIFT",
+      "text": "复制礼物"
+    },
+    {
+      "source": "TRANSFORM A GIFT",
+      "text": "变换礼物"
+    },
+    {
+      "source": "It became ",
+      "text": "它变成了"
+    },
+    {
+      "source": "FIRESIDE - A QUIET NIGHT",
+      "text": "壁炉旁，静谧的夜晚"
+    },
+    {
+      "source": "REST (+",
+      "text": "休息（恢复"
+    },
+    {
+      "source": " HP)",
+      "text": "点生命）"
+    },
+    {
+      "source": "You doze by the crackling fire. The aches fade away.",
+      "text": "你在噼啪作响的壁炉旁打起了盹，疲惫渐渐消散。"
+    },
+    {
+      "source": "Ribbons tied, bows fluffed. Good as new.",
+      "text": "系好缎带，整理蝴蝶结。礼物焕然一新。"
+    },
+    {
+      "source": "WRITE TO SANTA",
+      "text": "写信给圣诞老人"
+    },
+    {
+      "source": "Dear Nick, remember the boy who carved toys for everyone?\n+8 Spirit",
+      "text": "亲爱的尼克，还记得那个给大家雕刻玩具的男孩吗？\n圣诞精神+8"
+    },
+    {
+      "source": "A STOCKING STUFFED WITH SOMETHING...",
+      "text": "这只圣诞袜里好像装着什么……"
+    },
+    {
+      "source": "OPEN STOCKING",
+      "text": "打开圣诞袜"
+    },
+    {
+      "source": "Welcome to the\nElf Shop!\n\nEverything here\nis hand-made.",
+      "text": "欢迎光临\n精灵商店！\n\n这里的东西\n都是手工制作。"
+    },
+    {
+      "source": "SOLD",
+      "text": "已售出"
+    },
+    {
+      "source": " Cookies",
+      "text": " 块饼干"
+    },
+    {
+      "source": "REWRAP ",
+      "text": "升级礼物 "
+    },
+    {
+      "source": "DONATE ",
+      "text": "捐赠 "
+    },
+    {
+      "source": "LEAVE >",
+      "text": "离开 >"
+    },
+    {
+      "source": "Not enough cookies, love!",
+      "text": "亲爱的，饼干不够啦！"
+    },
+    {
+      "source": "Your potion belt is full!",
+      "text": "你的药水栏已满！"
+    },
+    {
+      "source": "None of your gifts has room for it!",
+      "text": "没有能安装此配件的礼物！"
+    },
+    {
+      "source": "NICE & NAUGHTY LEDGER / ",
+      "text": "乖巧与顽皮图鉴 / "
+    },
+    {
+      "source": "Loves: ",
+      "text": "喜爱："
+    },
+    {
+      "source": "Hates: ",
+      "text": "讨厌："
+    },
+    {
+      "source": "Defeated: ",
+      "text": "击败："
+    },
+    {
+      "source": "Befriended: ",
+      "text": "结交："
+    },
+    {
+      "source": "You haven't met this monster yet.",
+      "text": "你还没有遇到过这只怪物。"
+    },
+    {
+      "source": "A TRULY NICE CHRISTMAS!",
+      "text": "这才是真正美好的圣诞节！"
+    },
+    {
+      "source": "MERRY CHRISTMAS!",
+      "text": "圣诞快乐！"
+    },
+    {
+      "source": "GAME HO-HO-HOVER!",
+      "text": "冒险结束了！"
+    },
+    {
+      "source": "The list is torn. Every friend you were kind to\ncame to help. Santa remembers who he is.",
+      "text": "名单被撕碎。你曾善待的伙伴们前来相助，\n圣诞老人终于找回了自己。"
+    },
+    {
+      "source": "The coal falls away. Santa is himself again.\nChristmas Day is safe.",
+      "text": "煤灰散去，圣诞老人恢复了原样。\n圣诞节得救了。"
+    },
+    {
+      "source": "Spirit: ",
+      "text": "圣诞精神："
+    },
+    {
+      "source": "Gifts left: ",
+      "text": "留下礼物："
+    },
+    {
+      "source": "Wishes granted: ",
+      "text": "实现愿望："
+    },
+    {
+      "source": " unlocked!",
+      "text": " 已解锁！"
+    },
+    {
+      "source": "Nights survived: ",
+      "text": "度过夜晚："
+    },
+    {
+      "source": " of 24",
+      "text": " / 24"
+    },
+    {
+      "source": "Monsters defeated: ",
+      "text": "击败怪物："
+    },
+    {
+      "source": "Gifts left for children: ",
+      "text": "送给孩子的礼物："
+    },
+    {
+      "source": "Spirit given: ",
+      "text": "带来的圣诞精神："
+    },
+    {
+      "source": "THE END",
+      "text": "故事结束"
+    },
+    {
+      "source": "TRY AGAIN",
+      "text": "再次冒险"
+    },
+    {
+      "source": "Cheer",
+      "text": "欢呼"
+    },
+    {
+      "source": "Spent to give gifts. Refills every turn.",
+      "text": "赠送礼物需要消耗欢呼，每回合补满。"
+    },
+    {
+      "source": "IN THE SACK (random order)",
+      "text": "礼袋中的礼物（顺序隐藏）"
+    },
+    {
+      "source": "Draw pile",
+      "text": "抽牌堆"
+    },
+    {
+      "source": "Click to view. Order is hidden.",
+      "text": "点击查看，抽牌顺序不会显示。"
+    },
+    {
+      "source": "IN THE SLEIGH",
+      "text": "雪橇中的礼物"
+    },
+    {
+      "source": "Discard pile",
+      "text": "弃牌堆"
+    },
+    {
+      "source": "Refills the Sack when it runs out.",
+      "text": "抽牌堆耗尽后重新洗入礼袋。"
+    },
+    {
+      "source": "Next: ",
+      "text": "下一个："
+    },
+    {
+      "source": "END TURN",
+      "text": "结束回合"
+    },
+    {
+      "source": "GIFT COMBO x",
+      "text": "连续赠礼 ×"
+    },
+    {
+      "source": "TURN ",
+      "text": "回合 "
+    },
+    {
+      "source": "CHOOSE A MONSTER / RIGHT CLICK TO CANCEL",
+      "text": "选择一只怪物，右键取消"
+    },
+    {
+      "source": "Grumpy: ",
+      "text": "暴躁值："
+    },
+    {
+      "source": "Cannot be won over.",
+      "text": "无法收服。"
+    },
+    {
+      "source": "Leave it unharmed to win it over.",
+      "text": "不要伤害它，它就会成为伙伴。"
+    },
+    {
+      "source": "Softened / won't join",
+      "text": "已软化，但不会加入"
+    },
+    {
+      "source": "Softened / joins if unharmed",
+      "text": "已软化，未受伤便会加入"
+    },
+    {
+      "source": "Too flustered...",
+      "text": "慌乱得无法行动……"
+    },
+    {
+      "source": "Not enough Cheer, or this gift is ungiftable.",
+      "text": "欢呼不足，或这张礼物无法赠送。"
+    },
+    {
+      "source": "Grumpy",
+      "text": "暴躁"
+    },
+    {
+      "source": "Give it gifts it loves. Leave it unharmed once Softened.",
+      "text": "赠送它喜爱的礼物。软化后不要再伤害它。"
+    },
+    {
+      "source": "This enemy cannot be won over.",
+      "text": "这名敌人无法收服。"
+    },
+    {
+      "source": "Still charging...",
+      "text": "能力还在充能……"
+    },
+    {
+      "source": "No gifts to tinker with.",
+      "text": "没有可改装的礼物。"
+    },
+    {
+      "source": "CANCEL",
+      "text": "取消"
+    },
+    {
+      "source": "Replaces any part already on the gift. Permanent for gifts in your sack.",
+      "text": "替换该礼物已有的配件。礼袋中的礼物会永久保留改装。"
+    },
+    {
+      "source": "You still have Cheer and gifts you can give. End your turn anyway?",
+      "text": "还有欢呼和可赠送的礼物。仍要结束回合吗？"
+    },
+    {
+      "source": "CONSUMED",
+      "text": "已消耗"
+    },
+    {
+      "source": "POWER READY!",
+      "text": "能力已就绪！"
+    },
+    {
+      "source": "BLOCKED",
+      "text": "已格挡"
+    },
+    {
+      "source": "WON OVER!",
+      "text": "收服成功！"
+    },
+    {
+      "source": "VICTORY!",
+      "text": "胜利！"
+    },
+    {
+      "source": "HP",
+      "text": "生命"
+    },
+    {
+      "source": "WRAP",
+      "text": "护甲"
+    },
+    {
+      "source": "Jolly",
+      "text": "欢欣"
+    },
+    {
+      "source": "Festive",
+      "text": "喜庆"
+    },
+    {
+      "source": "Merry",
+      "text": "愉快"
+    },
+    {
+      "source": "Fading",
+      "text": "衰落"
+    },
+    {
+      "source": "Grim",
+      "text": "黯淡"
+    },
+    {
+      "source": "+100 Cookies",
+      "text": "饼干+100"
+    },
+    {
+      "source": "Something sweet for the road.",
+      "text": "旅途中的一点甜蜜。"
+    },
+    {
+      "source": "A little Christmas magic lights up the night.",
+      "text": "一点圣诞魔法，点亮了这个夜晚。"
+    },
+    {
+      "source": "The house stays quiet in the snow.",
+      "text": "房屋在雪中依然静悄悄。"
+    },
+    {
+      "source": " CHRISTMAS SPIRIT",
+      "text": " 圣诞精神"
+    },
+    {
+      "source": "TINKER",
+      "text": "巧手改装"
+    },
+    {
+      "source": "REINDEER!",
+      "text": "驯鹿出动！"
+    },
+    {
+      "source": "KIND WORD",
+      "text": "温柔劝慰"
+    },
+    {
+      "source": "Choose a toy part to add to a gift in your hand. Fills as you play gifts.",
+      "text": "选择配件，安装到手牌中的礼物。赠送礼物和触发配件时充能。"
+    },
+    {
+      "source": "The next reindeer of Santa's team gallops in to help. Fills when you take damage.",
+      "text": "召唤队列中的下一头驯鹿前来援助。受到伤害或格挡时充能。"
+    },
+    {
+      "source": "Pick a monster: pop 1 Grumpy pip, learn what it loves and apply a random debuff. Fills from Skills and Grumpy pips.",
+      "text": "选择怪物：降低1格暴躁值，揭示喜好并施加随机减益。使用技能或降低暴躁值时充能。"
+    },
+    {
+      "source": "Draw 2 gifts and gain 1 Cheer.",
+      "text": "抽2张礼物，获得1点欢呼。"
+    },
+    {
+      "source": "Apply 2 Soggy and 2 Brittle to a random enemy.",
+      "text": "对随机敌人施加2层湿透和2层易碎。"
+    },
+    {
+      "source": "Deal 20 damage to a random enemy.",
+      "text": "对随机敌人造成20点伤害。"
+    },
+    {
+      "source": "Pop 2 Grumpy pips on a random monster.",
+      "text": "降低随机怪物的2格暴躁值。"
+    },
+    {
+      "source": "Deal 8 damage to ALL enemies.",
+      "text": "对所有敌人造成8点伤害。"
+    },
+    {
+      "source": "Deal 4 damage 5 times to random enemies.",
+      "text": "对随机敌人造成4点伤害，重复5次。"
+    },
+    {
+      "source": "Elites have 10% more HP.",
+      "text": "精英敌人的生命增加10%。"
+    },
+    {
+      "source": "All monsters have 10% more HP.",
+      "text": "所有怪物的生命增加10%。"
+    },
+    {
+      "source": "Start with a Lump of Coal.",
+      "text": "初始牌组加入一张煤块。"
+    },
+    {
+      "source": "Start with 40 Spirit instead of 50.",
+      "text": "初始圣诞精神从50降至40。"
+    },
+    {
+      "source": "Resting heals less.",
+      "text": "休息时恢复的生命减少。"
+    },
+    {
+      "source": "Monsters have 1 extra Grumpy pip.",
+      "text": "怪物额外拥有1格暴躁值。"
+    },
+    {
+      "source": "Shop prices +15%.",
+      "text": "商店价格提高15%。"
+    },
+    {
+      "source": "Start with 5 less Max HP.",
+      "text": "初始生命上限降低5点。"
+    },
+    {
+      "source": "Monsters hit 10% harder.",
+      "text": "怪物造成的伤害增加10%。"
+    },
+    {
+      "source": "Santa and Krampus are tougher.",
+      "text": "圣诞老人和坎卜斯变得更强。"
+    },
+    {
+      "source": "I want something with wheels!",
+      "text": "我想要带轮子的礼物！"
+    },
+    {
+      "source": "I want something that squeaks!",
+      "text": "我想要会吱吱叫的礼物！"
+    },
+    {
+      "source": "I want something that plays music!",
+      "text": "我想要会奏乐的礼物！"
+    },
+    {
+      "source": "I want something that jingles!",
+      "text": "我想要叮当作响的礼物！"
+    },
+    {
+      "source": "I want something bouncy!",
+      "text": "我想要会弹跳的礼物！"
+    },
+    {
+      "source": "I want a wind-up toy!",
+      "text": "我想要发条玩具！"
+    },
+    {
+      "source": "I want a present with a big bow!",
+      "text": "我想要有大蝴蝶结的礼物！"
+    },
+    {
+      "source": "I want something sparkly!",
+      "text": "我想要闪闪发亮的礼物！"
+    },
+    {
+      "source": "I want something warm and cosy!",
+      "text": "我想要温暖舒服的礼物！"
+    },
+    {
+      "source": "I want something I can throw!",
+      "text": "我想要能扔出去的礼物！"
+    },
+    {
+      "source": "I want something rare and shiny!",
+      "text": "我想要稀有又漂亮的礼物！"
+    },
+    {
+      "source": "I want a big surprise!",
+      "text": "我想要一个大惊喜！"
+    },
+    {
+      "source": "Might",
+      "text": "力量"
+    },
+    {
+      "source": "Nimble",
+      "text": "灵巧"
+    },
+    {
+      "source": "Soggy",
+      "text": "湿透"
+    },
+    {
+      "source": "Brittle",
+      "text": "易碎"
+    },
+    {
+      "source": "Chilled",
+      "text": "寒冷"
+    },
+    {
+      "source": "Frostbite",
+      "text": "冻伤"
+    },
+    {
+      "source": "Holly",
+      "text": "冬青"
+    },
+    {
+      "source": "Carol",
+      "text": "颂歌"
+    },
+    {
+      "source": "Ribbon",
+      "text": "缎带"
+    },
+    {
+      "source": "Tinsel",
+      "text": "彩带"
+    },
+    {
+      "source": "Candles",
+      "text": "烛光"
+    },
+    {
+      "source": "Workshop",
+      "text": "工坊"
+    },
+    {
+      "source": "Choir",
+      "text": "天使合唱"
+    },
+    {
+      "source": "Eager",
+      "text": "期待"
+    },
+    {
+      "source": "Attacks deal +1 damage per stack.",
+      "text": "每层使攻击伤害增加1点。"
+    },
+    {
+      "source": "Gifts grant +1 Wrap per stack.",
+      "text": "每层使礼物提供的护甲增加1点。"
+    },
+    {
+      "source": "Attack damage -25%. Drops by 1 each turn.",
+      "text": "攻击伤害降低25%，每回合减少1层。"
+    },
+    {
+      "source": "Attack damage taken +50%. Drops by 1 each turn.",
+      "text": "受到的攻击伤害增加50%，每回合减少1层。"
+    },
+    {
+      "source": "Wrap gained -25%. Drops by 1 each turn.",
+      "text": "获得的护甲减少25%，每回合减少1层。"
+    },
+    {
+      "source": "Lose this much HP at turn start; then drops by 1.",
+      "text": "回合开始时失去等同层数的生命，随后减少1层。"
+    },
+    {
+      "source": "Attackers take this much damage back.",
+      "text": "攻击者受到等同层数的反伤。"
+    },
+    {
+      "source": "Gain this much Might at end of turn.",
+      "text": "回合结束时获得等同层数的力量。"
+    },
+    {
+      "source": "Heal this much at turn start.",
+      "text": "回合开始时恢复等同层数的生命。"
+    },
+    {
+      "source": "Negates the next debuff per stack.",
+      "text": "每层抵消下一次减益。"
+    },
+    {
+      "source": "Gain this much Wrap at end of turn.",
+      "text": "回合结束时获得等同层数的护甲。"
+    },
+    {
+      "source": "Deal this much damage to ALL enemies at turn end.",
+      "text": "回合结束时对所有敌人造成等同层数的伤害。"
+    },
+    {
+      "source": "Apply this much Frostbite to ALL at turn start.",
+      "text": "回合开始时对所有敌人施加等同层数的冻伤。"
+    },
+    {
+      "source": "Draw this many extra gifts every turn.",
+      "text": "每回合额外抽取等同层数的礼物。"
+    },
+    {
+      "source": "Gain this much Cheer every turn.",
+      "text": "每回合获得等同层数的欢呼。"
+    },
+    {
+      "source": "Gain this much Might every turn.",
+      "text": "每回合获得等同层数的力量。"
+    },
+    {
+      "source": "Gain extra Cheer next turn.",
+      "text": "下回合额外获得欢呼。"
+    },
+    {
+      "source": "Draw extra gifts next turn.",
+      "text": "下回合额外抽取礼物。"
+    },
+    {
+      "source": "Rare gifts",
+      "text": "稀有礼物"
+    },
+    {
+      "source": "Nothing in particular",
+      "text": "没有特别喜好"
+    },
+    {
+      "source": " gifts",
+      "text": "礼物"
+    },
+    {
+      "source": "NEW FRIEND",
+      "text": "新伙伴"
+    },
+    {
+      "source": "FRIEND UPGRADED",
+      "text": "伙伴已升级"
+    },
+    {
+      "source": "+2 SPIRIT",
+      "text": "精神+2"
+    },
+    {
+      "source": "CHRISTMAS EVE",
+      "text": "平安夜"
+    },
+    {
+      "source": "ELITE!",
+      "text": "精英来袭！"
+    },
+    {
+      "source": "NIGHT ",
+      "text": "夜晚 "
+    },
+    {
+      "source": "RIBBON!",
+      "text": "缎带生效！"
+    },
+    {
+      "source": "MAX HP",
+      "text": "生命上限"
+    },
+    {
+      "source": "IT WON'T JOIN NOW",
+      "text": "它不愿加入了"
+    },
+    {
+      "source": "WRAP BROKEN!",
+      "text": "护甲破碎！"
+    },
+    {
+      "source": "TREE ANGEL!",
+      "text": "树顶天使庇佑！"
+    },
+    {
+      "source": "CHRISTMAS FADES...",
+      "text": "圣诞精神正在消散……"
+    },
+    {
+      "source": "HAND FULL",
+      "text": "手牌已满"
+    },
+    {
+      "source": "YOUR TURN ",
+      "text": "你的回合 "
+    },
+    {
+      "source": "LOVES IT!",
+      "text": "它很喜欢！"
+    },
+    {
+      "source": "HATES IT!",
+      "text": "它很讨厌！"
+    },
+    {
+      "source": "GRUMPY AGAIN!",
+      "text": "又暴躁起来了！"
+    },
+    {
+      "source": "SOFTENED! Leave it be to win it over.",
+      "text": "已软化！不再伤害它，就能收服。"
+    },
+    {
+      "source": "The LIST... it was the list all along!",
+      "text": "那份名单……原来一切都是名单的错！"
+    },
+    {
+      "source": "THE NAUGHTY LIST",
+      "text": "顽皮名单"
+    },
+    {
+      "source": "KRAMPUS / Spirit: ",
+      "text": "坎卜斯 / 圣诞精神："
+    },
+    {
+      "source": "CHRISTMAS IS SAVED!",
+      "text": "圣诞节得救了！"
+    },
+    {
+      "source": "ENEMY TURN",
+      "text": "敌方回合"
+    },
+    {
+      "source": "NOW WANTS: ",
+      "text": "现在想要："
+    },
+    {
+      "source": "ESCAPED!",
+      "text": "已逃离！"
+    },
+    {
+      "source": "LOVES ",
+      "text": "喜爱 "
+    },
+    {
+      "source": "TINKER: ",
+      "text": "巧手改装："
+    },
+    {
+      "source": "REWRAPPED!",
+      "text": "礼物已升级！"
+    },
+    {
+      "source": "Dasher",
+      "text": "达舍"
+    },
+    {
+      "source": "Dancer",
+      "text": "丹瑟"
+    },
+    {
+      "source": "Prancer",
+      "text": "普兰瑟"
+    },
+    {
+      "source": "Vixen",
+      "text": "维克森"
+    },
+    {
+      "source": "Comet",
+      "text": "彗星"
+    },
+    {
+      "source": "Cupid",
+      "text": "丘比特"
+    },
+    {
+      "source": "Donner",
+      "text": "唐纳"
+    },
+    {
+      "source": "Blitzen",
+      "text": "布利岑"
+    },
+    {
+      "source": "Mila",
+      "text": "米拉"
+    },
+    {
+      "source": "Oskar",
+      "text": "奥斯卡"
+    },
+    {
+      "source": "Ada",
+      "text": "艾达"
+    },
+    {
+      "source": "Tommy",
+      "text": "汤米"
+    },
+    {
+      "source": "Lea",
+      "text": "莉娅"
+    },
+    {
+      "source": "Rasmus",
+      "text": "拉斯穆斯"
+    },
+    {
+      "source": "Grete",
+      "text": "格蕾特"
+    },
+    {
+      "source": "Kaspar",
+      "text": "卡斯帕"
+    },
+    {
+      "source": "Liis",
+      "text": "莉丝"
+    },
+    {
+      "source": "Theo",
+      "text": "西奥"
+    },
+    {
+      "source": "Nora",
+      "text": "诺拉"
+    },
+    {
+      "source": "Jakob",
+      "text": "雅各布"
+    },
+    {
+      "source": "Elsa",
+      "text": "艾尔莎"
+    },
+    {
+      "source": "Finn",
+      "text": "芬恩"
+    },
+    {
+      "source": "Maarja",
+      "text": "玛雅"
+    },
+    {
+      "source": "Leo",
+      "text": "利奥"
+    },
+    {
+      "source": "Ida",
+      "text": "伊达"
+    },
+    {
+      "source": "Hugo",
+      "text": "雨果"
+    },
+    {
+      "source": "Anni",
+      "text": "安妮"
+    },
+    {
+      "source": "Sam",
+      "text": "山姆"
+    },
+    {
+      "source": "Rosa",
+      "text": "罗莎"
+    },
+    {
+      "source": "Eli",
+      "text": "伊莱"
+    },
+    {
+      "source": "Pip",
+      "text": "皮普"
+    },
+    {
+      "source": "Juno",
+      "text": "朱诺"
+    },
+    {
+      "source": "Kai",
+      "text": "凯"
+    },
+    {
+      "source": "Fades by 1 each night.\n0-24: draw 1 fewer.\n25-49: Krampus grows stronger.\n50-69: Merry.\n70-89: +1 Cheer on turn 1.\n90-100: +1 Cheer each turn.\nLeave gifts and fulfill wishes to raise it.",
+      "text": "每晚降低1点。\n0—24：少抽1张礼物。\n25—49：坎卜斯更强。\n50—69：愉快。\n70—89：首回合欢呼+1。\n90—100：每回合欢呼+1。\n留下礼物、实现愿望可提升精神。"
+    },
+    {
+      "source": ".\n\nSpirit fades every night. Leave gifts to keep Christmas alive.\n\nGrim: draw 1 fewer. Fading: Krampus grows stronger. Merry: kids still believe. Festive: +1 Cheer on the first turn. Jolly: +1 Cheer every turn.",
+      "text": "。\n\n圣诞精神每晚都会流失。留下礼物，让圣诞的希望延续。\n\n黯淡：少抽1张。衰落：坎卜斯更强。愉快：孩子们仍相信圣诞。喜庆：首回合欢呼+1。欢欣：每回合欢呼+1。"
+    },
+    {
+      "source": "Give Gifts using Cheer. Choose a gift, then a monster; drag-and-drop also works. Cheer refills each turn. Wrap absorbs damage until your next turn. E ends the turn. P uses your charged power.\n\nFit toy parts to gifts. Give monsters things they love to pop Grumpy pips. A Softened monster skips its turn and joins you if you leave it unharmed. Hitting it breaks its trust.\n\nTake rewards, then leave a gift for a child. Fulfill their wish for +4 Spirit. Your sack needs at least 5 gifts. Spirit fades nightly and changes Krampus's strength.\n\nBeat all 24 nights. Can you bring Santa home without hurting him?",
+      "text": "消耗欢呼来赠送礼物。先选礼物，再选怪物，也可以拖拽赠送。欢呼每回合补满，护甲可抵挡伤害，持续至下回合。E键结束回合，Q键或P键使用充能能力。\n\n给礼物安装配件。赠送怪物喜爱的礼物可降低暴躁值。软化的怪物会跳过行动；不再伤害它，它就会成为伙伴。攻击它则会破坏信任。\n\n领取奖励后，给孩子留下一份礼物。实现愿望额外获得4点精神。礼袋至少保留5张礼物。精神每晚流失，并影响坎卜斯的实力。\n\n度过全部24晚。你能在不伤害圣诞老人的情况下带他回家吗？"
+    },
+    {
+      "source": "'Twas the night before Christmas, and all through the land,",
+      "text": "圣诞前夜，白雪覆盖大地，"
+    },
+    {
+      "source": "Not a sleigh bell was jingling, not a reindeer at hand.",
+      "text": "不闻雪橇铃声，不见驯鹿踪迹。"
+    },
+    {
+      "source": "For Santa had read the long Naughty List through,",
+      "text": "圣诞老人读完了漫长的顽皮名单，"
+    },
+    {
+      "source": "And each name that he read made his heart darker, too.",
+      "text": "每念一个名字，心头便多一分黑暗。"
+    },
+    {
+      "source": "Till one frosty midnight, he grabbed his big sack",
+      "text": "直到一个霜冷的午夜，他抓起礼袋，"
+    },
+    {
+      "source": "And ran off the North Pole with the coal on his back.",
+      "text": "背着煤炭，独自离开北极。"
+    },
+    {
+      "source": "But up at his home, by the fire's warm glow,",
+      "text": "而家中，炉火仍映着温暖的光，"
+    },
+    {
+      "source": "But down in the workshop, by lantern-light's glow,",
+      "text": "而工坊里，灯笼仍映着温暖的光，"
+    },
+    {
+      "source": "But out in the stable, his nose all aglow,",
+      "text": "而鹿舍中，一只红鼻子闪着光，"
+    },
+    {
+      "source": "Sat wise Mrs. Claus. She won't let it go!",
+      "text": "克劳斯夫人决心不再坐视不管！"
+    },
+    {
+      "source": "Worked Tinsel the elf, who would not let it go!",
+      "text": "精灵廷瑟决心不再坐视不管！"
+    },
+    {
+      "source": "Stood Rudolph the reindeer, who would not let go!",
+      "text": "驯鹿鲁道夫决心不再坐视不管！"
+    },
+    {
+      "source": "\"Twenty-five nights until Christmas morn breaks.",
+      "text": "“距离圣诞清晨还有二十五晚，"
+    },
+    {
+      "source": "I'll keep Christmas living, whatever it takes!",
+      "text": "无论付出什么，也要让圣诞延续！"
+    },
+    {
+      "source": "I'll fight every monster from here to the Pole",
+      "text": "我要打败沿途怪物，直抵北极，"
+    },
+    {
+      "source": "And bring my dear husband back, body and soul!\"",
+      "text": "把我亲爱的丈夫完整地带回家！”"
+    },
+    {
+      "source": "\"Twenty-five nights till the Christmas bells chime.",
+      "text": "“距离圣诞钟响还有二十五晚，"
+    },
+    {
+      "source": "I'll mend every toy and I'll do it in time!",
+      "text": "我要修好所有玩具，赶在期限之前！"
+    },
+    {
+      "source": "I'll hammer and tinker my way to the Pole",
+      "text": "我要一路敲敲打打，直抵北极，"
+    },
+    {
+      "source": "And bring the boss back, body and soul!\"",
+      "text": "把我们的老板完整地带回家！”"
+    },
+    {
+      "source": "\"Twenty-five nights till the sleigh bells will chime.",
+      "text": "“距离雪橇铃响还有二十五晚，"
+    },
+    {
+      "source": "I'll light up the dark and the cold, all in time!",
+      "text": "我要及时照亮黑暗，驱散严寒！"
+    },
+    {
+      "source": "I'll gallop through blizzards from here to the Pole",
+      "text": "我要穿越沿途暴雪，直抵北极，"
+    },
+    {
+      "source": "And bring Santa back, body and soul!\"",
+      "text": "把圣诞老人完整地带回家！”"
+    },
+    {
+      "source": "The Naughty List shredded, its dark magic fled,",
+      "text": "顽皮名单化为碎片，黑暗魔法消散，"
+    },
+    {
+      "source": "The Krampus fell silent, the dark shadow fled",
+      "text": "坎卜斯归于沉寂，黑暗阴影消散，"
+    },
+    {
+      "source": "And Santa stood laughing, his cheeks rosy red.",
+      "text": "圣诞老人放声大笑，双颊又红润起来。"
+    },
+    {
+      "source": "And Santa stood blinking, his cheeks rosy red.",
+      "text": "圣诞老人眨眨眼，双颊又红润起来。"
+    },
+    {
+      "source": "\"Martha,\" he whispered, \"you've saved Christmas Day!\"",
+      "text": "“玛莎，”他轻声说，“是你救了圣诞节！”"
+    },
+    {
+      "source": "\"Tinsel,\" he whispered, \"you've saved Christmas Day!\"",
+      "text": "“廷瑟，”他轻声说，“是你救了圣诞节！”"
+    },
+    {
+      "source": "\"Rudie,\" he whispered, \"you've saved Christmas Day!\"",
+      "text": "“小鲁迪，”他轻声说，“是你救了圣诞节！”"
+    },
+    {
+      "source": "\"I know, dear,\" she said. \"Now get on that sleigh!\"",
+      "text": "“我知道，亲爱的。快坐上雪橇吧！”"
+    },
+    {
+      "source": "\"I know, boss,\" she grinned. \"Now get on that sleigh!\"",
+      "text": "“我知道，老板。快坐上雪橇吧！”"
+    },
+    {
+      "source": "So Rudolph just snorted and lit up the way.",
+      "text": "鲁道夫喷了个响鼻，再次照亮前方。"
+    },
+    {
+      "source": "And all of the friends that were won on the way",
+      "text": "旅途中结识的所有伙伴，"
+    },
+    {
+      "source": "Climbed into the sleigh for the ride Christmas Day.",
+      "text": "都登上雪橇，一起迎接圣诞清晨。"
+    },
+    {
+      "source": "And kids heard them say as they flew out of sight:",
+      "text": "雪橇渐渐远去，孩子们听见祝愿："
+    },
+    {
+      "source": "\"Merry Christmas to all! Have a jolly good night!\"",
+      "text": "“祝大家圣诞快乐，度过美好的夜晚！”"
+    },
+    {
+      "source": "The elf's family gives you their heirloom: ",
+      "text": "精灵一家送给你传家宝："
+    },
+    {
+      "source": "He waves goodbye and skips off whistling a carol.",
+      "text": "他挥手道别，哼着颂歌蹦蹦跳跳地走了。"
+    },
+    {
+      "source": "His little sobs follow you into the night.",
+      "text": "细小的抽泣声追着你的背影，融进夜色。"
+    },
+    {
+      "source": "You work late into the night.",
+      "text": "你一直忙到深夜。"
+    },
+    {
+      "source": "You find ",
+      "text": "你找到了"
+    },
+    {
+      "source": " and a tin of cookies.",
+      "text": "和一罐饼干。"
+    },
+    {
+      "source": "Some places are best left alone.",
+      "text": "有些地方还是别打扰为好。"
+    },
+    {
+      "source": "For one verse, the whole street glows warmer.",
+      "text": "一曲唱罢，整条街似乎都暖了起来。"
+    },
+    {
+      "source": "They hand you a steaming flask: ",
+      "text": "他们递给你一瓶热气腾腾的药水："
+    },
+    {
+      "source": "Terribly out of tune, just how you like it.",
+      "text": "跑调得厉害，却正合你的心意。"
+    },
+    {
+      "source": "You glide across and chip out a fistful of coins!",
+      "text": "你滑过冰面，凿出一把闪亮的硬币！"
+    },
+    {
+      "source": "CRACK! You fall through. Brrr.",
+      "text": "咔嚓！冰破了。冷得直打哆嗦。"
+    },
+    {
+      "source": "The long way. A whole hour lost.",
+      "text": "你绕了远路，白白耽搁了一小时。"
+    },
+    {
+      "source": "Your hand closes on cookies... and something sooty.",
+      "text": "你抓到了饼干……还有一块黑乎乎的东西。"
+    },
+    {
+      "source": "Still warm. Delicious.",
+      "text": "还温着呢，真好吃。"
+    },
+    {
+      "source": "Santa would have wanted that.",
+      "text": "圣诞老人一定也希望你这样做。"
+    },
+    {
+      "source": "The flakes swirl... and something changes.",
+      "text": "雪花旋转……有什么悄然改变了。"
+    },
+    {
+      "source": "It holds ",
+      "text": "里面装着"
+    },
+    {
+      "source": "Her eyes follow you down the street.",
+      "text": "她的目光追着你，直到街道尽头。"
+    },
+    {
+      "source": "They nuzzle you gratefully. You feel sturdier.",
+      "text": "它们感激地蹭着你，你也感觉更有精神了。"
+    },
+    {
+      "source": "A wild ride! You find ",
+      "text": "真是疯狂的一程！你找到了"
+    },
+    {
+      "source": " in the saddlebag.",
+      "text": "，就在鞍袋里。"
+    },
+    {
+      "source": "They stamp impatiently.",
+      "text": "它们不耐烦地跺着蹄子。"
+    },
+    {
+      "source": "Somewhere, a child's wish comes true.",
+      "text": "不知何处，一个孩子的心愿实现了。"
+    },
+    {
+      "source": "The well sighs happily.",
+      "text": "井底传来满足的叹息。"
+    },
+    {
+      "source": "Refreshing. A little selfish.",
+      "text": "真清爽，虽然有点自私。"
+    },
+    {
+      "source": "The game is called TAG. You're IT!",
+      "text": "游戏叫捉人，现在轮到你来追了！"
+    },
+    {
+      "source": "They scamper off giggling.",
+      "text": "它们嬉笑着跑开了。"
+    },
+    {
+      "source": "They kick your shins before running away.",
+      "text": "它们临走前还踢了你的小腿一脚。"
+    },
+    {
+      "source": "Three fine toys roll off the line.",
+      "text": "三件精致的玩具滑下了生产线。"
+    },
+    {
+      "source": "The hum of machines lulls you to sleep.",
+      "text": "机器的嗡鸣声让你渐渐睡着。"
+    },
+    {
+      "source": "Delicious! ...Wait, why is the gutter made of coal?",
+      "text": "真好吃！等等，为什么排水槽是煤做的？"
+    },
+    {
+      "source": "The door creaks open. Come in, dearie!",
+      "text": "门吱呀一声打开。“进来吧，亲爱的！”"
+    },
+    {
+      "source": "The cackling stops. You don't look back.",
+      "text": "怪笑声停了。你没有回头。"
+    },
+    {
+      "source": ". It feels like stealing.",
+      "text": "。总觉得像在偷东西。"
+    },
+    {
+      "source": "They ring once, clear and bright, across the valley.",
+      "text": "铃声清亮，久久回荡在山谷之间。"
+    },
+    {
+      "source": "His frown wobbles... and cracks into a grin.",
+      "text": "他皱着的眉头渐渐松开，露出了笑容。"
+    },
+    {
+      "source": "You lose in a very pathetic fashion.",
+      "text": "你输得狼狈不堪。"
+    },
+    {
+      "source": "He drops his pocket money and runs.",
+      "text": "他扔下零花钱，转身跑了。"
+    },
+    {
+      "source": "A warm feeling spreads through you.",
+      "text": "温暖的感觉传遍全身。"
+    },
+    {
+      "source": "It turns into ",
+      "text": "它在你手中变成了"
+    },
+    {
+      "source": " in your hands.",
+      "text": "。"
+    },
+    {
+      "source": " gift(s) shine like new.",
+      "text": "张礼物焕然一新。"
+    },
+    {
+      "source": "Everything is already perfect.",
+      "text": "一切都已经很完美了。"
+    },
+    {
+      "source": "He shows you his finest work.",
+      "text": "他拿出了最得意的作品。"
+    },
+    {
+      "source": "Merry Christmas, he murmurs.",
+      "text": "“圣诞快乐。”他轻声说。"
+    },
+    {
+      "source": "You emerge frostbitten but on schedule.",
+      "text": "你冻得发抖，总算没有耽误行程。"
+    },
+    {
+      "source": "Hours lost.",
+      "text": "几个小时就这样过去了。"
+    },
+    {
+      "source": "Warm and toasty, you march on.",
+      "text": "暖意融融，你继续前进。"
+    },
+    {
+      "source": "Every letter is a tiny, hopeful heart.",
+      "text": "每一封信，都是一颗小小的、充满希望的心。"
+    },
+    {
+      "source": "Mailbox after mailbox, the village lights up.",
+      "text": "一个又一个信箱被填满，村庄渐渐亮了起来。"
+    },
+    {
+      "source": "The fire is warm, but your heart isn't.",
+      "text": "火很暖，你的心却没有暖起来。"
+    },
+    {
+      "source": "Perfect temperature.",
+      "text": "温度刚刚好。"
+    },
+    {
+      "source": "Two flasks, carefully corked.",
+      "text": "两瓶药水，瓶塞都仔细塞好了。"
+    },
+    {
+      "source": "Suit yourself, {nick}!",
+      "text": "随你吧，{nick}！"
+    },
+    {
+      "source": "Patience is overrated, anyway.",
+      "text": "反正耐心也没那么重要。"
+    },
+    {
+      "source": "A floating bottle: ",
+      "text": "浮上来一只瓶子："
+    },
+    {
+      "source": "A sunken purse full of cookies!",
+      "text": "沉底的钱袋里装满了饼干！"
+    },
+    {
+      "source": "An angry pike bites your finger.",
+      "text": "愤怒的梭鱼咬了你的手指。"
+    },
+    {
+      "source": "Your feet ache, but your spirit soars.",
+      "text": "双脚酸痛，心情却无比轻快。"
+    },
+    {
+      "source": "En garde!",
+      "text": "接招吧！"
+    },
+    {
+      "source": "The music fades behind you.",
+      "text": "音乐声渐渐消失在身后。"
+    },
+    {
+      "source": "Inside: ",
+      "text": "里面是："
+    },
+    {
+      "source": " and some coins.",
+      "text": "，还有一些硬币。"
+    },
+    {
+      "source": "Someone will be very surprised.",
+      "text": "有人会收到一份大惊喜。"
+    },
+    {
+      "source": "You laugh like a child. When did you last do that?",
+      "text": "你笑得像个孩子。上一次这样开心是什么时候？"
+    },
+    {
+      "source": "Duty calls.",
+      "text": "还有责任在等着你。"
+    },
+    {
+      "source": "It settles warmly in your sack.",
+      "text": "星星温暖地落进你的礼袋。"
+    },
+    {
+      "source": "It crumbles into golden coins.",
+      "text": "它化作了一把金灿灿的硬币。"
+    },
+    {
+      "source": "It rises back into the sky. The world around you feels brighter.",
+      "text": "它重回夜空，周围的世界似乎更亮了。"
+    },
+    {
+      "source": "You trade boxes.",
+      "text": "你们交换了盒子。"
+    },
+    {
+      "source": "The stranger vanishes in a puff of smoke.",
+      "text": "陌生人消失在一团烟雾中。"
+    },
+    {
+      "source": "Two snowmen, side by side. What a jolly sight!",
+      "text": "两个雪人并肩站着，多么快乐的景象！"
+    },
+    {
+      "source": "He watches you go with coal-black eyes.",
+      "text": "它用煤黑的眼睛目送你远去。"
+    },
+    {
+      "source": "Something comes back with you.",
+      "text": "你从回忆里带回了什么。"
+    },
+    {
+      "source": "That's the man you're fighting for.",
+      "text": "这就是你拼尽全力也要拯救的人。"
+    },
+    {
+      "source": "So many coins, so many shattered memories.",
+      "text": "满地硬币，也满地破碎的回忆。"
+    },
+    {
+      "source": "Sugar Rush! Gain {b} Wrap. Gain {k1} Might. Consume.",
+      "text": "糖分冲刺！获得{b}点护甲。获得{k1}层力量。消耗。"
+    },
+    {
+      "source": "Frost Glare! Apply {k0} Chilled. Gain {b} Wrap. Consume.",
+      "text": "寒霜凝视！施加{k0}层寒冷。获得{b}点护甲。消耗。"
+    },
+    {
+      "source": "Shards! Deal {d} damage x2. Consume.",
+      "text": "碎片迸射！造成{d}点伤害，重复2次。消耗。"
+    },
+    {
+      "source": "Squeak! Gain {k0} Might. Consume.",
+      "text": "吱吱叫！获得{k0}层力量。消耗。"
+    },
+    {
+      "source": "Short Circuit! Deal {d} damage. Consume.",
+      "text": "短路！造成{d}点伤害。消耗。"
+    },
+    {
+      "source": "Wind Up! Gain {k0} Might. Consume.",
+      "text": "上发条！获得{k0}层力量。消耗。"
+    },
+    {
+      "source": "Stand Guard! Gain {b} Wrap. Deal {d} damage. Consume.",
+      "text": "站岗守卫！获得{b}点护甲。造成{d}点伤害。消耗。"
+    },
+    {
+      "source": "Volley! Deal {d} damage x3. Consume.",
+      "text": "齐射！造成{d}点伤害，重复3次。消耗。"
+    },
+    {
+      "source": "POP!! Deal {d} damage. Consume.",
+      "text": "弹出！！造成{d}点伤害。消耗。"
+    },
+    {
+      "source": "Slam! Deal {d} damage. Consume.",
+      "text": "猛撞！造成{d}点伤害。消耗。"
+    },
+    {
+      "source": "Wing Gust! Deal {d} damage x2. Consume.",
+      "text": "振翅狂风！造成{d}点伤害，重复2次。消耗。"
+    },
+    {
+      "source": "Splash! Deal {d} damage. Apply {k1} Soggy. Consume.",
+      "text": "泼洒！造成{d}点伤害。施加{k1}层湿透。消耗。"
+    },
+    {
+      "source": "Dive! Deal {d} damage. Consume.",
+      "text": "俯冲！造成{d}点伤害。消耗。"
+    },
+    {
+      "source": "Swipe! Deal {d} damage. Gain {k1} Cookies. Consume.",
+      "text": "横抓！造成{d}点伤害。获得{k1}块饼干。消耗。"
+    },
+    {
+      "source": "Pickpocket! Deal {d} damage. Gain {k1} Cookies. Consume.",
+      "text": "偷窃！造成{d}点伤害。获得{k1}块饼干。消耗。"
+    },
+    {
+      "source": "Coal Fist! Deal {d} damage. Consume.",
+      "text": "煤炭重拳！造成{d}点伤害。消耗。"
+    },
+    {
+      "source": "Fangs! Deal {d} damage. Apply {k1} Frostbite. Consume.",
+      "text": "毒牙！造成{d}点伤害。施加{k1}层冻伤。消耗。"
+    },
+    {
+      "source": "Grow! Gain {k0} Holly. Gain {b} Wrap. Consume.",
+      "text": "生长！获得{k0}层冬青。获得{b}点护甲。消耗。"
+    },
+    {
+      "source": "Iron Jaw! Deal {d} damage x2. Apply {k1} Brittle. Consume.",
+      "text": "铁颚！造成{d}点伤害，重复2次。施加{k1}层易碎。消耗。"
+    },
+    {
+      "source": "Avalanche! Deal {d} damage. Consume.",
+      "text": "雪崩！造成{d}点伤害。消耗。"
+    },
+    {
+      "source": "Stockpile! Gain {b} Wrap. Gain {k1} Tinsel. Consume.",
+      "text": "囤积！获得{b}点护甲。获得{k1}层彩带。消耗。"
+    },
+    {
+      "source": "Gore! Deal {d} damage. Consume.",
+      "text": "鹿角突刺！造成{d}点伤害。消耗。"
+    },
+    {
+      "source": "Hex! Deal {d} damage. Apply {k1} Chilled. Consume.",
+      "text": "诅咒术！造成{d}点伤害。施加{k1}层寒冷。消耗。"
+    },
+    {
+      "source": "Freeze Over! Apply {k0} Frostbite. Apply {k1} Chilled. Consume.",
+      "text": "冰封！施加{k0}层冻伤。施加{k1}层寒冷。消耗。"
+    },
+    {
+      "source": "YOUR TURN",
+      "text": "你的回合"
+    },
+    {
+      "source": "Apply 1 Brittle to all enemies.",
+      "text": "对所有敌人施加1层易碎。"
+    }
+  ]
+}

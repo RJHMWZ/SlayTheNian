@@ -40,6 +40,8 @@ namespace Sleigh
         {
             if (Instance && Instance != this) { Destroy(gameObject); return; } Instance = this;
             DB.Load(); Application.targetFrameRate = 60; Application.runInBackground = true; Screen.orientation = ScreenOrientation.LandscapeLeft;
+            if (!Application.isEditor && (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.LinuxPlayer))
+                Screen.SetResolution(1920, 1080, Screen.fullScreenMode);
             if (!stage || !stage.canvas)
             { Debug.LogError("This scene has no baked stage. Run Sleigh/Bake Scene and Presentation.", this); enabled = false; return; }
             BindStage(stage, false);
@@ -119,6 +121,7 @@ namespace Sleigh
         }
         void ShowTip(string content)
         {
+            content = Chinese.Text(content);
             if (busy) return; tipContent = content;
             if (!tip)
             {
@@ -178,12 +181,13 @@ namespace Sleigh
         void ShowItem(string title, string text, string icon)
         { var m = OpenModal(title); Sprite(m, "Icon", icon, 320, 90, 3); Label(m, 110, 130, 420, text, 1, White, 1, true); Button(m, 250, 308, 140, 24, "BACK", CloseModal); }
         string CharacterText(string s)
-        { string id = run?.character ?? characters[characterIndex]; return s.Replace("{nick}", id == "mrs" ? "Mrs. C" : id == "rudolph" ? "Rudie" : "Tinsel").Replace("{name}", DB.CharacterName(id)).Replace("{title}", id == "mrs" ? "missus" : id == "rudolph" ? "red-nose" : "little elf"); }
+        { string id = run?.character ?? characters[characterIndex]; return Chinese.Text(s).Replace("{nick}", DB.CharacterName(id)).Replace("{name}", DB.CharacterName(id)).Replace("{title}", id == "mrs" ? "夫人" : id == "rudolph" ? "红鼻子" : "小精灵"); }
         public void ShowTitle()
         {
             battle = null; run = null; NewScreen("Title"); TiledBackground();
-            var logo = DB.Frame("GameLogo", "Animation 1");
-            SleighMotion.Add(Sprite(ui, "GameLogo", "Animation 1", 320, 86, 1).rectTransform, SleighMotion.Style.Float, 2, 1.5f);
+            var logo = Label(ui, 20, 62, 600, "圣诞救援", 3.5f, Gold, 1);
+            SleighMotion.Add(logo.rectTransform, SleighMotion.Style.Float, 2, 1.5f);
+            Label(ui, 100, 122, 440, "雪橇上的圣诞冒险", 1.1f, Ice, 1);
             SleighMotion.Add(Sprite(world, "BGImage", "sleighs", 100, 48).rectTransform, SleighMotion.Style.Sleigh);
             Label(ui, 180, 165, 280, "24 NIGHTS TO SAVE CHRISTMAS", .75f, Gold, 1);
             var saved = Run.Load(); bool canContinue = saved != null && saved.active && saved.hp > 0 && saved.night < 24;
