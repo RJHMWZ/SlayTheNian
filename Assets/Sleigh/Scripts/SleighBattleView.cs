@@ -180,7 +180,7 @@ namespace Sleigh
                 var model = a.unit;
                 var hot = Hot(p, -Mathf.Max(30, a.Width / 2), -a.Height - 6, Mathf.Max(60, a.Width), a.Height + 23, () => ClickUnit(model), () => { hoveredUnit = model; }, () => { if (hoveredUnit == model) hoveredUnit = null; });
                 var entry = Ledger.Get(u.Id);
-                BindTip(hot, u.Name, intent + (u.PipMax > 0 ? "\nGrumpy: " + u.Pips + "/" + u.PipMax + "\nLoves: " + (entry.love || u.Id == "santa" ? DB.LikeLabel(u.Love) : "???") + "\nHates: " + (entry.hate || u.Id == "santa" ? DB.LikeLabel(u.Hate) : "???") : "\nCannot be won over.") + (u.Soft ? "\nLeave it unharmed to win it over." : ""));
+                BindTip(hot, u.Name, intent + (u.PipMax > 0 ? "\nGrumpy: " + u.Pips + "/" + u.PipMax + "\nLoves: " + (entry.love || u.Id == "santa" ? DB.LikeLabel(u.Love) : "???") + "\nHates: " + (entry.hate || u.Id == "santa" ? DB.LikeLabel(u.Hate) : "???") : "\nCannot be won over.") + (u.Soft ? "\nLeave it unharmed to win it over." : ""), true);
             }
         }
         string DisplayIntent(Unit u)

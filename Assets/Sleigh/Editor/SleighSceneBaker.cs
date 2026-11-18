@@ -14,7 +14,7 @@ namespace Sleigh.Editor
 {
     public static class SleighSceneBaker
     {
-        public const int Version = 5;
+        public const int Version = 6;
         const string Prefabs = "Assets/Sleigh/Resources/Sleigh/Prefabs";
         const string Materials = "Assets/Sleigh/Materials";
         static RectTransform Raw(Transform parent, string name, float w = 640, float h = 360)
@@ -40,6 +40,7 @@ namespace Sleigh.Editor
             foreach (var previous in scene.GetRootGameObjects().Where(o => o.GetComponent<GameRoot>()).ToArray()) Undo.DestroyObjectImmediate(previous);
             var rootObject = new GameObject("GameRoot"); Undo.RegisterCreatedObjectUndo(rootObject, "Bake Sleigh presentation");
             var root = rootObject.AddComponent<GameRoot>(); var stage = rootObject.AddComponent<SleighStage>();
+            stage.titleArtwork = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Bg1.png");
             var cameraObject = new GameObject("Pixel Camera", typeof(Camera), typeof(AudioListener), typeof(SleighAudioCompressor)); cameraObject.transform.SetParent(rootObject.transform, false); cameraObject.tag = "MainCamera";
             var camera = cameraObject.GetComponent<Camera>(); camera.orthographic = true; camera.orthographicSize = 180; camera.transform.position = new Vector3(320, -180, -10); camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = Color.black; stage.pixelCamera = camera;
             var eventObject = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule)); eventObject.transform.SetParent(rootObject.transform, false); eventObject.GetComponent<EventSystem>().pixelDragThreshold = 7;
@@ -54,6 +55,8 @@ namespace Sleigh.Editor
             stage.snowRoot = Raw(stage.backgroundLayer, "Snow (reused by all views)"); stage.snowParticles = new RectTransform[90];
             var random = new System.Random(931);
             for (int i = 0; i < stage.snowParticles.Length; i++) stage.snowParticles[i] = Rect(stage.snowRoot, random.Next(640), random.Next(360), i % 5 == 0 ? 2 : 1, i % 5 == 0 ? 2 : 1, Hex(0xf4f8ff, .25f + i % 4 * .15f)).rectTransform;
+            var fireworkObject = Raw(stage.backgroundLayer, "Menu pixel fireworks (behind World and UI)");
+            stage.titleFireworks = fireworkObject.gameObject.AddComponent<PixelParticleField>(); stage.titleFireworks.raycastTarget = false;
             var particleObject = Raw(stage.effectLayer, "Pooled Pixel Particles (768)"); stage.particles = particleObject.gameObject.AddComponent<PixelParticleField>(); stage.particles.raycastTarget = false;
             stage.flashOverlay = Rect(stage.effectLayer, 0, 0, 640, 360, Color.clear); stage.flashOverlay.name = "Impact flash";
             stage.effectPool = Raw(stage.effectLayer, "Reusable transient visuals"); stage.popupPool = Raw(stage.popupLayer, "Reusable dialogs");

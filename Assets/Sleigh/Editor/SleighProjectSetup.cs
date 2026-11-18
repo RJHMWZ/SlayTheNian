@@ -11,6 +11,22 @@ namespace Sleigh.Editor
     {
         void OnPreprocessTexture()
         {
+            if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Scenery/", StringComparison.Ordinal))
+            {
+                var scenery = (TextureImporter)assetImporter;
+                scenery.textureType = TextureImporterType.Default; scenery.filterMode = FilterMode.Point;
+                scenery.mipmapEnabled = false; scenery.textureCompression = TextureImporterCompression.Uncompressed;
+                scenery.npotScale = TextureImporterNPOTScale.None; scenery.wrapMode = TextureWrapMode.Clamp;
+                scenery.maxTextureSize = 2048; return;
+            }
+            if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Festival/", StringComparison.Ordinal))
+            {
+                var pixel = (TextureImporter)assetImporter;
+                pixel.textureType = TextureImporterType.Default; pixel.filterMode = FilterMode.Point;
+                pixel.mipmapEnabled = false; pixel.textureCompression = TextureImporterCompression.Uncompressed;
+                pixel.npotScale = TextureImporterNPOTScale.None; pixel.wrapMode = TextureWrapMode.Clamp;
+                pixel.alphaIsTransparency = true; pixel.maxTextureSize = 2048; return;
+            }
             if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Nian/", StringComparison.Ordinal))
             {
                 var atlas = (TextureImporter)assetImporter;

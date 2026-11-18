@@ -10,6 +10,8 @@ namespace Sleigh
     {
         PixelLabel hudHp, hudCookies, hudSpirit;
         float ambientTimer, ambientFireTimer, mapTarget, mapFling, lastMapDrag;
+        float titleFireworkTimer;
+        int titleFireworkIndex;
         RectTransform floatingRelic;
         readonly System.Collections.Generic.HashSet<string> nianPhases = new System.Collections.Generic.HashSet<string>();
         Gift previewGift;
@@ -27,6 +29,19 @@ namespace Sleigh
         {
             if (IsBaking || !Application.isPlaying) return;
             float dt = Time.unscaledDeltaTime;
+            if (ScreenName == "Title" && stage.titleFireworks && !reduceMotion)
+            {
+                titleFireworkTimer -= dt;
+                if (titleFireworkTimer <= 0)
+                {
+                    int index = titleFireworkIndex++;
+                    // Keep bursts in the side sky so even the largest ring avoids the menu.
+                    float x = index % 2 == 0 ? 94 + index % 3 * 25 : 492 + index % 3 * 22;
+                    stage.titleFireworks.Firework(new Vector2(x, 46 + index % 3 * 23), index % 4,
+                        index % 3 == 0 ? Gold : index % 3 == 1 ? Pink : Ice);
+                    titleFireworkTimer = 1.9f + index % 3 * .4f;
+                }
+            }
             if (ScreenName == "Map" && mapContent)
             {
                 if (!Input.GetMouseButton(0) && Time.unscaledTime - lastMapDrag > .03f) { mapTarget = Mathf.Clamp(mapTarget + mapFling * dt, 0, 1676); mapFling *= Mathf.Exp(-8 * dt); }

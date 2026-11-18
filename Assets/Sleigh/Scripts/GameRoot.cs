@@ -72,7 +72,8 @@ namespace Sleigh
             if (tip && tip.gameObject.activeSelf)
             {
                 Vector2 p = LocalPointer(Input.mousePosition); float height = tip.sizeDelta.y;
-                tip.anchoredPosition = new Vector2(Mathf.Clamp(p.x + 14, 4, 396), -Mathf.Clamp(p.y - height - 8, 45, 354 - height)); tip.SetAsLastSibling();
+                tip.anchoredPosition = combatTipDock ? new Vector2(28, -50)
+                    : new Vector2(Mathf.Clamp(p.x + 14, 4, 396), -Mathf.Clamp(p.y - height - 8, 45, 354 - height)); tip.SetAsLastSibling();
             }
             if (busy) return;
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
@@ -101,46 +102,75 @@ namespace Sleigh
             var view = stage.Show(name); bg = view.background; world = view.world; ui = view.ui;
             foreach (var layer in new[] { bg, world, ui, fx, pop }) Clear(layer);
             actors.Clear(); nianPhases.Clear(); handViews.Clear(); handOrder.Clear(); displayedUnits.Clear(); assistingGuest = null; usingVisualNumbers = false; ambientTimer = .2f; ambientFireTimer = .25f; floatingRelic = null; tip = null; sound.Music(music); stage.Transition();
-            Rect(bg, 0, 0, 640, 360, Hex(0x160f16));
+            Rect(bg, 0, 0, 640, 360, Hex(0x6ca7a1));
         }
         void TiledBackground(bool intro = false, float up = 0)
         {
-            if (ScreenName == "Title" || ScreenName == "Intro" || ScreenName == "CharacterSelect" || ScreenName == "Victory" || ScreenName == "Defeat")
-                Sprite(bg, "NianTitle", "default", 0, 0, 1, false, 640, 360);
-            else if (ScreenName == "Combat") Sprite(bg, "NianTitle", "default", 0, -50, 1, false, 640, 360);
-            else Sprite(bg, intro ? "IntroBG" : "BG", "default", 0, -up, 1, false, 640, 360 + up);
-            Snow(65);
+            if (ScreenName == "CharacterSelect") ScenicBackground("characters");
+            else if (ScreenName == "Map") ScenicBackground("map");
+            else if (ScreenName == "Combat") ScenicBackground("battle");
+            else if (ScreenName == "Title" || ScreenName == "Intro" || ScreenName == "Victory" || ScreenName == "Defeat")
+                MenuArtwork();
+            else Sprite(bg, "FestivalRegion", NianTheme.RegionArt(run?.night ?? 0), 0, -up, 1, false, 640, 360 + up);
+            // The authored scenes already contain snow. Keep the active gameplay area clear.
+            Snow(ScreenName == "Title" || ScreenName == "CharacterSelect" || ScreenName == "Map" || ScreenName == "Combat" ? 0 : 12);
+        }
+        Sprite menuArtworkSprite;
+        void MenuArtwork()
+        {
+            if (!stage.titleArtwork) { FitBackdrop(Sprite(bg, "NianTitle", "default", 0, 0, 1, false)); return; }
+            if (!menuArtworkSprite || menuArtworkSprite.texture != stage.titleArtwork)
+                menuArtworkSprite = UnityEngine.Sprite.Create(stage.titleArtwork, new Rect(0, 0, stage.titleArtwork.width, stage.titleArtwork.height), new Vector2(.5f, .5f), 1);
+            var image = Rect(bg, 0, 0, 640, 360, Color.white, false, "Menu artwork: Bg1");
+            image.sprite = menuArtworkSprite; FitBackdrop(image);
+        }
+        void ScenicBackground(string scene)
+        { FitBackdrop(Sprite(bg, "Scenery", scene, 0, 0, 1, false)); }
+        static void FitBackdrop(Image image)
+        {
+            if (!image || !image.sprite) return;
+            var size = image.sprite.rect.size;
+            size *= Mathf.Max(640 / size.x, 360 / size.y);
+            image.rectTransform.sizeDelta = size;
+            image.rectTransform.anchoredPosition = new Vector2((640 - size.x) * .5f, (size.y - 360) * .5f);
         }
         void Snow(int count)
         {
             stage.snowRoot.gameObject.SetActive(true);
             for (int i = 0; i < snow.Count; i++) snow[i].rect.gameObject.SetActive(i < count);
         }
-        void BindTip(Hotspot h, string title, string description)
+        void BindTip(Hotspot h, string title, string description, bool enemy = false)
         {
             Action enter = h.enter, exit = h.exit;
-            h.enter = () => { enter?.Invoke(); ShowTip(title + "\n\n" + description); };
+            h.enter = () => { enter?.Invoke(); ShowTip(title + "\n\n" + description, enemy); };
             h.exit = () => { exit?.Invoke(); HideTip(); };
         }
-        void ShowTip(string content)
+        bool combatTipDock;
+        void ShowTip(string content, bool enemy = false)
         {
+            combatTipDock = enemy && ScreenName == "Combat";
+            if (combatTipDock) content = content.Replace("\n\n", " · ").Replace("\n", " · ");
             content = Chinese.Text(content);
             if (busy) return; tipContent = content;
+            float width = combatTipDock ? 584 : 240, scale = combatTipDock ? .7f : .8f;
             if (!tip)
             {
-                tip = PanelBox(pop, 0, 0, 240, 100, Gold);
-                tipText = Label(tip, 9, 8, 222, content, .8f, White, 0, true);
+                tip = PanelBox(pop, 0, 0, width, 100, Gold);
+                tipText = Label(tip, 9, 8, width - 18, content, scale, White, 0, true);
             }
-            tipText.Set(content); float h = 18 + PixelLabel.Lines(content, 222, .8f, true).Count * 9.6f;
-            tip.sizeDelta = new Vector2(240, h);
+            tipText.rectTransform.sizeDelta = new Vector2(width - 18, 120); tipText.fontScale = scale;
+            tipText.Set(content); tipText.SetVerticesDirty();
+            float h = 18 + PixelLabel.Lines(content, width - 18, scale, true).Count * 12 * scale;
+            tip.sizeDelta = new Vector2(width, h);
             var imgs = tip.GetComponentsInChildren<Image>();
-            if (imgs.Length >= 3) { imgs[0].rectTransform.sizeDelta = new Vector2(240, h); imgs[1].rectTransform.sizeDelta = new Vector2(238, h - 2); imgs[2].rectTransform.sizeDelta = new Vector2(234, h - 6); }
+            if (imgs.Length >= 3) { imgs[0].rectTransform.sizeDelta = new Vector2(width, h); imgs[1].rectTransform.sizeDelta = new Vector2(width - 2, h - 2); imgs[2].rectTransform.sizeDelta = new Vector2(width - 6, h - 6); }
+            if (imgs.Length >= 4) imgs[3].rectTransform.sizeDelta = new Vector2(width - 8, 1);
             tip.gameObject.SetActive(true); tip.SetAsLastSibling();
         }
         void HideTip() { tipContent = null; if (tip) tip.gameObject.SetActive(false); }
         RectTransform OpenModal(string title, Action back = null)
         {
-            CloseModal(); HideTip(); modal = Group(pop, "Modal:" + title); Rect(modal, 0, 0, 640, 360, Hex(0x05050b, .91f), true);
+            CloseModal(); HideTip(); modal = Group(pop, "Modal:" + title); Rect(modal, 0, 0, 640, 360, Hex(0x6b3f38, .88f), true);
             modalBack = back ?? CloseModal; Label(modal, 30, 18, 580, title, 1.1f, Gold, 1);
             if (tip) tip.SetAsLastSibling(); return modal;
         }
@@ -156,7 +186,7 @@ namespace Sleigh
         void Hud()
         {
             if (run == null) return;
-            Rect(ui, 0, 0, 640, 26, Hex(0x21151b, .96f)); Rect(ui, 0, 25, 640, 1, Hex(0x79513c));
+            Rect(ui, 0, 0, 640, 26, Hex(0x9a4039, .98f)); Rect(ui, 0, 25, 640, 1, Gold);
             Sprite(ui, "Icon", "heart", 15, 13); hudHp = Label(ui, 26, 7, 92, run.hp + "/" + run.maxHp, .8f);
             Sprite(ui, "Icon", "coin", 116, 13); hudCookies = Label(ui, 127, 7, 58, run.cookies.ToString(), .8f, Gold);
             for (int i = 0; i < run.potionSlots; i++)
@@ -188,43 +218,53 @@ namespace Sleigh
         public void ShowTitle()
         {
             battle = null; run = null; NewScreen("Title"); TiledBackground();
-            var logo = Label(ui, 20, 62, 600, "逐年", 3.5f, Gold, 1);
+            var logo = Label(ui, 20, 62, 600, "逐年", 3.5f, Hex(0xffe9a4), 1);
             SleighMotion.Add(logo.rectTransform, SleighMotion.Style.Float, 2, 1.5f);
-            Label(ui, 100, 122, 440, "除夕之战 · Hunt the Nian", 1.1f, Ice, 1);
-            SleighMotion.Add(Sprite(world, "BGImage", "sleighs", 100, 48).rectTransform, SleighMotion.Style.Sleigh);
-            Label(ui, 180, 165, 280, "24 NIGHTS TO SAVE CHRISTMAS", .75f, Gold, 1);
+            Label(ui, 100, 122, 440, "除夕之战 · Hunt the Nian", 1.1f, White, 1);
+            titleFireworkTimer = .65f; titleFireworkIndex = 0;
+            Label(ui, 180, 165, 280, "24 NIGHTS TO SAVE CHRISTMAS", .75f, White, 1);
             var saved = Run.Load(); bool canContinue = saved != null && saved.active && saved.hp > 0 && saved.night < 24;
-            Button(ui, 240, 196, 160, 24, "NEW RUN", ShowCharacters, Hex(0x8e1d2b));
-            if (canContinue) Button(ui, 240, 227, 160, 22, "CONTINUE / DEC " + (saved.night + 1), () => { run = saved; ShowMap(); });
-            Button(ui, 240, canContinue ? 256 : 227, 160, 22, "HOW TO PLAY", ShowHelp);
-            Button(ui, 240, canContinue ? 285 : 256, 160, 22, "SETTINGS", ShowSettings);
-            Button(ui, 240, canContinue ? 314 : 285, 160, 22, "LEDGER", () => OpenLedger());
+            Button(ui, 240, 196, 160, 24, "NEW RUN", ShowCharacters, Hex(0xd94332), fontScale: 1f);
+            if (canContinue) Button(ui, 240, 227, 160, 22, "CONTINUE / DEC " + (saved.night + 1), () => { run = saved; ShowMap(); }, fontScale: 1f);
+            Button(ui, 240, canContinue ? 256 : 227, 160, 22, "HOW TO PLAY", ShowHelp, fontScale: 1f);
+            Button(ui, 240, canContinue ? 285 : 256, 160, 22, "SETTINGS", ShowSettings, fontScale: 1f);
+            Button(ui, 240, canContinue ? 314 : 285, 160, 22, "LEDGER", () => OpenLedger(), fontScale: 1f);
         }
         void ShowCharacters()
         {
-            NewScreen("CharacterSelect"); Sprite(bg, "Background", "stage", 0, 0, 1, false);
+            NewScreen("CharacterSelect"); TiledBackground();
             string id = characters[characterIndex];
             Label(ui, 40, 16, 560, "WHO WILL SAVE CHRISTMAS?", 1.5f, Gold, 1);
-            var panel = PanelBox(ui, 170, 45, 300, 96, id == "tinsel" ? Green : Red); Appear(panel);
-            Label(panel, 8, 6, 284, DB.CharacterName(id).ToUpperInvariant(), 1, Gold, 1);
+            var panel = Group(ui, "Guardian information", 444, 50, 182, 244);
+            Rect(panel, 0, 0, 182, 244, Gold); Rect(panel, 2, 2, 178, 240, Hex(0x252e49, .97f)); Appear(panel);
+            Label(panel, 10, 12, 162, DB.CharacterName(id), 1, Gold, 1);
+            Rect(panel, 12, 34, 158, 1, Hex(0x8f765d));
             string[] blurbs = { "Runs the North Pole while Santa\ntakes all the credit.", "Head toymaker of Santa's\nworkshop and his trusted advisor.", "The reindeer with the brightest\nnose and the biggest heart." };
-            Label(panel, 8, 23, 284, blurbs[characterIndex], .85f, White, 1);
+            Label(panel, 12, 45, 158, blurbs[characterIndex], .8f, White, 0, true);
             string relic = id == "mrs" ? "cookietin" : id == "tinsel" ? "toolbelt" : "rednose";
-            Label(panel, 8, 60, 284, DB.CharacterHP(id) + " HP / " + DB.Relics[relic].name, .8f, Gold, 1);
-            Label(panel, 8, 77, 284, "Power: " + DB.PowerName(id), .8f, Pink, 1);
+            Label(panel, 12, 94, 158, "生命：" + DB.CharacterHP(id), .85f, White);
+            Label(panel, 12, 115, 158, "遗物：" + DB.Relics[relic].name, .8f, Gold, 0, true);
+            Rect(panel, 12, 142, 158, 1, Hex(0x8f765d));
+            Label(panel, 12, 153, 158, DB.PowerName(id), .95f, Ice);
+            Label(panel, 12, 178, 158, DB.PowerDesc(id), .73f, White, 0, true);
             for (int i = 0; i < 3; i++)
             {
-                int idx = i; float x = 170 + i * 150;
-                var a = Sprite(world, "Claus", DB.CharacterArt(characters[i]), x, 288, 1.5f);
-                if (a) { a.color = i == characterIndex ? Color.white : Hex(0x666676); if (i == characterIndex) SleighMotion.Add(a.rectTransform, SleighMotion.Style.Pulse, .018f, 2.2f); }
-                var hot = Hot(ui, x - 50, 150, 100, 138, () => { characterIndex = idx; ShowCharacters(); }); BindTip(hot, DB.PowerName(characters[i]), DB.PowerDesc(characters[i]));
+                int idx = i; float x = 90 + i * 145;
+                Rect(world, x - 33, 277, 66, 2, i == characterIndex ? Gold : Hex(0x77758c));
+                var a = Sprite(world, "Claus", DB.CharacterArt(characters[i]), x, 278, 1.25f);
+                if (a) { a.color = i == characterIndex ? Color.white : Hex(0xbec5d2); if (i == characterIndex) SleighMotion.Add(a.rectTransform, SleighMotion.Style.Pulse, .012f, 2.2f); }
+                Rect(ui, x - 54, 284, 108, 18, Hex(0x252e49, .94f));
+                Label(ui, x - 52, 287, 104, DB.CharacterName(characters[i]), .8f, i == characterIndex ? Gold : White, 1);
+                Hot(ui, x - 54, 118, 108, 185, () => { characterIndex = idx; ShowCharacters(); });
             }
             int unlocked = PlayerPrefs.GetInt("Sleigh.Advent", 0); advent = Mathf.Clamp(advent, 0, unlocked);
-            Button(ui, 228, 295, 22, 19, "-", () => { advent = Mathf.Max(0, advent - 1); ShowCharacters(); });
-            Label(ui, 255, 298, 130, advent == 0 ? "ADVENT OFF" : "ADVENT " + advent, .8f, Gold, 1);
-            Button(ui, 390, 295, 22, 19, "+", () => { advent = Mathf.Min(unlocked, advent + 1); ShowCharacters(); }, null, advent < unlocked);
-            if (advent > 0) BindTip(Hot(ui, 250, 294, 140, 22, () => ShowItem("ADVENT " + advent, string.Join("\n", DB.Advent.Take(advent)), "calendar")), "Advent " + advent, string.Join("\n", DB.Advent.Take(advent)));
-            Button(ui, 160, 327, 150, 24, "< BACK", ShowTitle); Button(ui, 330, 327, 150, 24, "BEGIN >", BeginRun, Hex(0x1c5a3a));
+            Rect(ui, 120, 304, 220, 22, Hex(0x252e49, .92f));
+            Button(ui, 126, 305, 22, 19, "-", () => { advent = Mathf.Max(0, advent - 1); ShowCharacters(); });
+            Label(ui, 154, 309, 155, advent == 0 ? "ADVENT OFF" : "ADVENT " + advent, .8f, Gold, 1);
+            Button(ui, 316, 305, 22, 19, "+", () => { advent = Mathf.Min(unlocked, advent + 1); ShowCharacters(); }, null, advent < unlocked);
+            if (advent > 0) BindTip(Hot(ui, 151, 305, 160, 19, () => ShowItem("ADVENT " + advent, string.Join("\n", DB.Advent.Take(advent)), "calendar")), "Advent " + advent, string.Join("\n", DB.Advent.Take(advent)));
+            Button(ui, 45, 330, 160, 23, "< BACK", ShowTitle, fontScale: .95f);
+            Button(ui, 225, 330, 160, 23, "BEGIN >", BeginRun, Hex(0x398268), fontScale: .95f);
         }
         void BeginRun()
         {
@@ -275,7 +315,7 @@ namespace Sleigh
         {
             var m = OpenModal("HOW TO SAVE CHRISTMAS");
             Label(m, 72, 58, 496, "消耗灯火打出法牌：点击后选择目标，也可拖放。灯火每回合恢复；格挡在下回合开始时清空。E结束回合，P释放蓄满的绝技。\n\n给法牌附上符印。用妖灵喜爱的法牌或红绳结消除怨气；息怒后留它一回合不受伤，它就会结盟。再次攻击会失去信任。收服奖励能获得伙伴牌。\n\n战后可留下法牌，为沿途人家点灯；符合心愿额外获得4岁火。行囊至少保留5张。岁火逐关消耗：低于25少抽1张；70起首回合多1灯火；90起每回合多1灯火。它也决定噬岁年兽的强度。\n\n穿过24关。击破年兽进入狂暴决战；以红绳安抚年兽则开启岁门魇路线，途中伙伴会前来助阵。", .86f, White, 0, true);
-            Button(m, 240, 318, 160, 24, "LET'S GO", CloseModal, Hex(0x1c5a3a));
+            Button(m, 240, 318, 160, 24, "LET'S GO", CloseModal, Hex(0x398268));
         }
         void ShowSettings()
         {
@@ -291,10 +331,10 @@ namespace Sleigh
             Button(m, 160, 188, 288, 23, "REDUCE MOTION: " + (reduceMotion ? "ON" : "OFF"), () => { reduceMotion = !reduceMotion; PlayerPrefs.SetInt("Sleigh.ReduceMotion", reduceMotion ? 1 : 0); ShowSettings(); });
             Button(m, 160, 218, 288, 23, "FAST ENEMY: " + (fastEnemy ? "ON" : "OFF"), () => { fastEnemy = !fastEnemy; PlayerPrefs.SetInt("Sleigh.FastEnemy", fastEnemy ? 1 : 0); ShowSettings(); });
             Button(m, 160, 248, 288, 23, "CONFIRM END TURN: " + (confirmEnd ? "ON" : "OFF"), () => { confirmEnd = !confirmEnd; PlayerPrefs.SetInt("Sleigh.ConfirmEnd", confirmEnd ? 1 : 0); ShowSettings(); });
-            Button(m, 160, 307, 134, 24, "BACK", CloseModal, Hex(0x1c5a3a));
+            Button(m, 160, 307, 134, 24, "BACK", CloseModal, Hex(0x398268));
             if (run != null && run.active) Button(m, 314, 307, 134, 24, "TITLE", () => Confirm("Return to title? Continue resumes from the start of this night.", ShowTitle));
         }
         void Confirm(string text, Action yes)
-        { var m = OpenModal("ARE YOU SURE?"); Label(m, 120, 115, 400, text, 1, White, 1, true); Button(m, 170, 250, 140, 26, "YES", () => { CloseModal(); yes(); }, Hex(0x8e1d2b)); Button(m, 330, 250, 140, 26, "BACK", CloseModal); }
+        { var m = OpenModal("ARE YOU SURE?"); Label(m, 120, 115, 400, text, 1, White, 1, true); Button(m, 170, 250, 140, 26, "YES", () => { CloseModal(); yes(); }, Hex(0xd94332)); Button(m, 330, 250, 140, 26, "BACK", CloseModal); }
     }
 }

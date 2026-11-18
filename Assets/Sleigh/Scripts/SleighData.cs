@@ -72,7 +72,8 @@ namespace Sleigh
         {
             var f = Frame(type, anim, frame); if (f == null) return null;
             string spriteKey = f.columns > 0 ? f.path + "#" + f.tile : f.path;
-            if (!sprites.TryGetValue(spriteKey, out var s))
+            // Runtime-created sprites/textures can be released when leaving Play mode or reimporting art.
+            if (!sprites.TryGetValue(spriteKey, out var s) || !s || !s.texture)
             {
                 s = f.columns > 0 ? null : Resources.Load<Sprite>(f.path);
                 if (s == null)
