@@ -11,6 +11,14 @@ namespace Sleigh.Editor
     {
         void OnPreprocessTexture()
         {
+            if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Nian/", StringComparison.Ordinal))
+            {
+                var atlas = (TextureImporter)assetImporter;
+                atlas.textureType = TextureImporterType.Default; atlas.filterMode = FilterMode.Bilinear;
+                atlas.mipmapEnabled = false; atlas.textureCompression = TextureImporterCompression.Uncompressed;
+                atlas.npotScale = TextureImporterNPOTScale.None; atlas.wrapMode = TextureWrapMode.Clamp;
+                atlas.alphaIsTransparency = true; atlas.maxTextureSize = 4096; return;
+            }
             if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Fonts/", StringComparison.Ordinal))
             {
                 var font = (TextureImporter)assetImporter; font.textureType = TextureImporterType.Default; font.filterMode = FilterMode.Point;

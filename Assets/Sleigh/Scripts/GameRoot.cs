@@ -100,12 +100,15 @@ namespace Sleigh
             HideTip(); CloseModal(); skipPoem = null; ScreenName = name; busy = false; selectedGift = null; powerAim = false; potionAim = -1;
             var view = stage.Show(name); bg = view.background; world = view.world; ui = view.ui;
             foreach (var layer in new[] { bg, world, ui, fx, pop }) Clear(layer);
-            actors.Clear(); handViews.Clear(); handOrder.Clear(); displayedUnits.Clear(); assistingGuest = null; usingVisualNumbers = false; ambientTimer = .2f; ambientFireTimer = .25f; floatingRelic = null; tip = null; sound.Music(music); stage.Transition();
-            Rect(bg, 0, 0, 640, 360, Hex(0x060914));
+            actors.Clear(); nianPhases.Clear(); handViews.Clear(); handOrder.Clear(); displayedUnits.Clear(); assistingGuest = null; usingVisualNumbers = false; ambientTimer = .2f; ambientFireTimer = .25f; floatingRelic = null; tip = null; sound.Music(music); stage.Transition();
+            Rect(bg, 0, 0, 640, 360, Hex(0x160f16));
         }
         void TiledBackground(bool intro = false, float up = 0)
         {
-            Sprite(bg, intro ? "IntroBG" : "BG", "default", -100, -up, 1, false, 840, 360 + up);
+            if (ScreenName == "Title" || ScreenName == "Intro" || ScreenName == "CharacterSelect" || ScreenName == "Victory" || ScreenName == "Defeat")
+                Sprite(bg, "NianTitle", "default", 0, 0, 1, false, 640, 360);
+            else if (ScreenName == "Combat") Sprite(bg, "NianTitle", "default", 0, -50, 1, false, 640, 360);
+            else Sprite(bg, intro ? "IntroBG" : "BG", "default", 0, -up, 1, false, 640, 360 + up);
             Snow(65);
         }
         void Snow(int count)
@@ -153,13 +156,13 @@ namespace Sleigh
         void Hud()
         {
             if (run == null) return;
-            Rect(ui, 0, 0, 640, 26, Hex(0x0b1026, .96f)); Rect(ui, 0, 25, 640, 1, Hex(0x394775));
+            Rect(ui, 0, 0, 640, 26, Hex(0x21151b, .96f)); Rect(ui, 0, 25, 640, 1, Hex(0x79513c));
             Sprite(ui, "Icon", "heart", 15, 13); hudHp = Label(ui, 26, 7, 92, run.hp + "/" + run.maxHp, .8f);
             Sprite(ui, "Icon", "coin", 116, 13); hudCookies = Label(ui, 127, 7, 58, run.cookies.ToString(), .8f, Gold);
             for (int i = 0; i < run.potionSlots; i++)
             {
                 int slot = i; string id = run.potions[i]; float x = 184 + i * 19;
-                if (string.IsNullOrEmpty(id)) { Rect(ui, x - 5, 9, 9, 9, Hex(0x253262)); continue; }
+                if (string.IsNullOrEmpty(id)) { Rect(ui, x - 5, 9, 9, 9, Hex(0x632b2d)); continue; }
                 Sprite(ui, "Icon", "potion_" + id, x, 13);
                 BindTip(Hot(ui, x - 8, 3, 17, 22, () => PotionMenu(slot)), DB.Potions[id].name, DB.Potions[id].desc + "\nClick to drink or discard.");
             }
@@ -175,19 +178,19 @@ namespace Sleigh
                 Sprite(ui, "Icon", "relic_" + r.id, x, y);
                 BindTip(Hot(ui, x - 8, y - 8, 17, 17, () => ShowItem(DB.Relics[r.id].name, DB.Relics[r.id].desc, "relic_" + r.id)), DB.Relics[r.id].name, DB.Relics[r.id].desc);
             }
-            Label(ui, 530, 31, 100, "DEC " + Mathf.Min(24, run.night + 1) + " / 24", .7f, Muted, 2);
+            Label(ui, 530, 31, 100, "第 " + Mathf.Min(24, run.night + 1) + " / 24", .7f, Muted, 2);
         }
         void ShowSpirit() => ShowItem("CHRISTMAS SPIRIT: " + run.spirit, "Current tier: " + run.SpiritName + ".\n\nSpirit fades every night. Leave gifts to keep Christmas alive.\n\nGrim: draw 1 fewer. Fading: Krampus grows stronger. Merry: kids still believe. Festive: +1 Cheer on the first turn. Jolly: +1 Cheer every turn.", "tree");
         void ShowItem(string title, string text, string icon)
         { var m = OpenModal(title); Sprite(m, "Icon", icon, 320, 90, 3); Label(m, 110, 130, 420, text, 1, White, 1, true); Button(m, 250, 308, 140, 24, "BACK", CloseModal); }
         string CharacterText(string s)
-        { string id = run?.character ?? characters[characterIndex]; return Chinese.Text(s).Replace("{nick}", DB.CharacterName(id)).Replace("{name}", DB.CharacterName(id)).Replace("{title}", id == "mrs" ? "夫人" : id == "rudolph" ? "红鼻子" : "小精灵"); }
+        { string id = run?.character ?? characters[characterIndex]; return Chinese.Text(s).Replace("{nick}", DB.CharacterName(id)).Replace("{name}", DB.CharacterName(id)).Replace("{title}", id == "mrs" ? "守灯人" : id == "rudolph" ? "巡山客" : "符匠"); }
         public void ShowTitle()
         {
             battle = null; run = null; NewScreen("Title"); TiledBackground();
-            var logo = Label(ui, 20, 62, 600, "圣诞救援", 3.5f, Gold, 1);
+            var logo = Label(ui, 20, 62, 600, "逐年", 3.5f, Gold, 1);
             SleighMotion.Add(logo.rectTransform, SleighMotion.Style.Float, 2, 1.5f);
-            Label(ui, 100, 122, 440, "雪橇上的圣诞冒险", 1.1f, Ice, 1);
+            Label(ui, 100, 122, 440, "除夕之战 · Hunt the Nian", 1.1f, Ice, 1);
             SleighMotion.Add(Sprite(world, "BGImage", "sleighs", 100, 48).rectTransform, SleighMotion.Style.Sleigh);
             Label(ui, 180, 165, 280, "24 NIGHTS TO SAVE CHRISTMAS", .75f, Gold, 1);
             var saved = Run.Load(); bool canContinue = saved != null && saved.active && saved.hp > 0 && saved.night < 24;
@@ -230,13 +233,11 @@ namespace Sleigh
         void ShowIntro()
         {
             NewScreen("Intro"); TiledBackground(true); Sprite(bg, "BGImage", "moon", 540, 76);
-            string[] first = { "'Twas the night before Christmas, and all through the land,", "Not a sleigh bell was jingling, not a reindeer at hand.", "For Santa had read the long Naughty List through,", "And each name that he read made his heart darker, too." };
-            string[] second = { "Till one frosty midnight, he grabbed his big sack", "And ran off the North Pole with the coal on his back.",
-                run.character == "mrs" ? "But up at his home, by the fire's warm glow," : run.character == "tinsel" ? "But down in the workshop, by lantern-light's glow," : "But out in the stable, his nose all aglow,",
-                run.character == "mrs" ? "Sat wise Mrs. Claus. She won't let it go!" : run.character == "tinsel" ? "Worked Tinsel the elf, who would not let it go!" : "Stood Rudolph the reindeer, who would not let go!" };
-            string[] third = run.character == "mrs" ? new[] { "\"Twenty-five nights until Christmas morn breaks.", "I'll keep Christmas living, whatever it takes!", "I'll fight every monster from here to the Pole", "And bring my dear husband back, body and soul!\"" }
-                : run.character == "tinsel" ? new[] { "\"Twenty-five nights till the Christmas bells chime.", "I'll mend every toy and I'll do it in time!", "I'll hammer and tinker my way to the Pole", "And bring the boss back, body and soul!\"" }
-                : new[] { "\"Twenty-five nights till the sleigh bells will chime.", "I'll light up the dark and the cold, all in time!", "I'll gallop through blizzards from here to the Pole", "And bring Santa back, body and soul!\"" };
+            string[] first = { "每逢岁末，年兽穿过岁门，吞噬人间灯火。", "今年除夕，守护村镇的岁火意外熄灭。", "年关失守，妖邪沿古道而下，万家归途断绝。", "你带着最后一盏岁灯，踏上二十四关的寻火之路。" };
+            string[] second = { "腊月古镇、雪封山道、灯火集市、岁门禁地。", "散落的岁火，藏在尚未放弃团圆的人心里。",
+                run.character == "mrs" ? "阿照接过先师的残灯，学会以春符安魂。" : run.character == "tinsel" ? "符匠青禾背起百工囊，要把旧手艺送回千家。" : "巡山客赤行提灯入雪，要为失散的山灵寻回旧约。",
+                "爆竹驱煞，门神护身；一张法牌，也能点亮一户灯。" };
+            string[] third = { "怨气并非不可化解，安抚后的妖灵也愿与你同行。", "但若将年兽的妖壳强行击碎，噬岁之焰便会苏醒。", "若能唤回它的守岁旧约，岁门后的真魇才会现身。", "无论走哪条路，都要让新年的第一缕光照进人间。" };
             PlayPoem(new[] { first, second, third }, ShowMap);
         }
         void PlayPoem(string[][] stanzas, Action onDone)
@@ -273,7 +274,7 @@ namespace Sleigh
         void ShowHelp()
         {
             var m = OpenModal("HOW TO SAVE CHRISTMAS");
-            Label(m, 72, 58, 496, "Give Gifts using Cheer. Choose a gift, then a monster; drag-and-drop also works. Cheer refills each turn. Wrap absorbs damage until your next turn. E ends the turn. P uses your charged power.\n\nFit toy parts to gifts. Give monsters things they love to pop Grumpy pips. A Softened monster skips its turn and joins you if you leave it unharmed. Hitting it breaks its trust.\n\nTake rewards, then leave a gift for a child. Fulfill their wish for +4 Spirit. Your sack needs at least 5 gifts. Spirit fades nightly and changes Krampus's strength.\n\nBeat all 24 nights. Can you bring Santa home without hurting him?", .86f, White, 0, true);
+            Label(m, 72, 58, 496, "消耗灯火打出法牌：点击后选择目标，也可拖放。灯火每回合恢复；格挡在下回合开始时清空。E结束回合，P释放蓄满的绝技。\n\n给法牌附上符印。用妖灵喜爱的法牌或红绳结消除怨气；息怒后留它一回合不受伤，它就会结盟。再次攻击会失去信任。收服奖励能获得伙伴牌。\n\n战后可留下法牌，为沿途人家点灯；符合心愿额外获得4岁火。行囊至少保留5张。岁火逐关消耗：低于25少抽1张；70起首回合多1灯火；90起每回合多1灯火。它也决定噬岁年兽的强度。\n\n穿过24关。击破年兽进入狂暴决战；以红绳安抚年兽则开启岁门魇路线，途中伙伴会前来助阵。", .86f, White, 0, true);
             Button(m, 240, 318, 160, 24, "LET'S GO", CloseModal, Hex(0x1c5a3a));
         }
         void ShowSettings()

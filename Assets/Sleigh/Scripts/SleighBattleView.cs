@@ -92,7 +92,7 @@ namespace Sleigh
                 heart.rectTransform.anchoredPosition = new Vector2((point.x - f.pivotX) * a.Width, -(point.y - f.pivotY) * a.Height);
                 if (a.frame.Charmed) { var pos = heart.rectTransform.anchoredPosition; pos.x = -pos.x; heart.rectTransform.anchoredPosition = pos; }
             }
-            a.art.rectTransform.localScale = new Vector3(a.frame.Charmed ? -1 : 1, 1, 1);
+            a.art.rectTransform.localScale = new Vector3(a.frame.Charmed ^ f.flipX ? -1 : 1, 1, 1);
         }
         void UpdateActorArt(ActorVisual a)
         {

@@ -168,12 +168,12 @@
       "y": 129,
       "eyes": [
         {
-          "x": 0.42857142857142855,
-          "y": 0.25
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.26373626373626374,
-          "y": 0.19736842105263158
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -191,12 +191,12 @@
       "y": 129,
       "eyes": [
         {
-          "x": 0.4,
-          "y": 0.24175824175824176
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.575,
-          "y": 0.25274725274725274
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -214,12 +214,12 @@
       "y": 257,
       "eyes": [
         {
-          "x": 0.22950819672131148,
-          "y": 0.20588235294117646
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.4098360655737705,
-          "y": 0.22058823529411764
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -237,12 +237,12 @@
       "y": 385,
       "eyes": [
         {
-          "x": 0.35294117647058826,
-          "y": 0.18666666666666668
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.5490196078431373,
-          "y": 0.18666666666666668
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -260,12 +260,12 @@
       "y": 257,
       "eyes": [
         {
-          "x": 0.32558139534883723,
-          "y": 0.37362637362637363
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.5348837209302325,
-          "y": 0.37362637362637363
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -273,47 +273,55 @@
       "type": "Enemy",
       "anim": "slime",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__slime__0",
-      "width": 86,
-      "height": 67,
-      "pivotX": 0.4883720930232558,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 361,
       "y": 385,
       "eyes": [
         {
-          "x": 0.23255813953488372,
-          "y": 0.3582089552238806
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.4069767441860465,
-          "y": 0.40298507462686567
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 2,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "grumpkin",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__grumpkin__0",
-      "width": 72,
-      "height": 79,
-      "pivotX": 0.4861111111111111,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 257,
       "y": 385,
       "eyes": [
         {
-          "x": 0.1527777777777778,
-          "y": 0.4430379746835443
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.4583333333333333,
-          "y": 0.4810126582278481
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 4,
+      "authored": true
     },
     {
       "type": "Enemy",
@@ -329,12 +337,12 @@
       "y": 257,
       "eyes": [
         {
-          "x": 0.29850746268656714,
-          "y": 0.46835443037974683
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.5970149253731343,
-          "y": 0.46835443037974683
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -352,12 +360,12 @@
       "y": 385,
       "eyes": [
         {
-          "x": 0.30952380952380953,
-          "y": 0.32222222222222224
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.5952380952380952,
-          "y": 0.32222222222222224
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -375,12 +383,12 @@
       "y": 385,
       "eyes": [
         {
-          "x": 0.09876543209876543,
-          "y": 0.2361111111111111
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.32098765432098764,
-          "y": 0.3055555555555556
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -388,299 +396,356 @@
       "type": "Enemy",
       "anim": "yeti",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__yeti__0",
-      "width": 85,
-      "height": 81,
-      "pivotX": 0.5411764705882353,
-      "pivotY": 0.9876543209876543,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 108,
+      "height": 100,
+      "pivotX": 0.5,
+      "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 361,
       "y": 257,
       "eyes": [
         {
-          "x": 0.36470588235294116,
-          "y": 0.1728395061728395
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.4823529411764706,
-          "y": 0.18518518518518517
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 2,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "witch",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__witch__0",
-      "width": 67,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 95,
       "height": 100,
-      "pivotX": 0.5373134328358209,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 444,
       "y": 257,
       "eyes": [
         {
-          "x": 0.40298507462686567,
-          "y": 0.33
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.582089552238806,
-          "y": 0.33
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 5,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "general",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__general__0",
-      "width": 42,
-      "height": 90,
-      "pivotX": 0.47619047619047616,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 129,
       "y": 385,
       "eyes": [
         {
-          "x": 0.30952380952380953,
-          "y": 0.32222222222222224
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.6190476190476191,
-          "y": 0.3333333333333333
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 1,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "creeper",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__creeper__0",
-      "width": 80,
-      "height": 99,
-      "pivotX": 0.5125,
-      "pivotY": 0.98989898989899,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
+      "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 395,
       "y": 1,
       "eyes": [
         {
-          "x": 0.3,
-          "y": 0.46464646464646464
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.5,
-          "y": 0.494949494949495
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 8,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "angel",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__angel__0",
-      "width": 67,
-      "height": 81,
-      "pivotX": 0.5074626865671642,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 67,
       "y": 129,
       "eyes": [
         {
-          "x": 0.31343283582089554,
-          "y": 0.24691358024691357
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.44776119402985076,
-          "y": 0.24691358024691357
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 1,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "viper",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__viper__0",
-      "width": 91,
-      "height": 76,
-      "pivotX": 0.5164835164835165,
-      "pivotY": 0.9868421052631579,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
+      "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 257,
       "y": 257,
       "eyes": [
         {
-          "x": 0.24175824175824176,
-          "y": 0.13157894736842105
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.3956043956043956,
-          "y": 0.14473684210526316
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 7,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "fruitcake",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__fruitcake__0",
-      "width": 73,
-      "height": 75,
-      "pivotX": 0.4931506849315068,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 1,
       "y": 385,
       "eyes": [
         {
-          "x": 0.136986301369863,
-          "y": 0.5333333333333333
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.3698630136986301,
-          "y": 0.56
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 0,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "rogueelf",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__rogueelf__0",
-      "width": 57,
-      "height": 80,
-      "pivotX": 0.49122807017543857,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 136,
       "y": 257,
       "eyes": [
         {
-          "x": 0.3508771929824561,
-          "y": 0.3125
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.5263157894736842,
-          "y": 0.3125
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 5,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "santa",
       "frame": 0,
       "path": "Sleigh/Art/Enemy__santa__0",
-      "width": 81,
-      "height": 87,
-      "pivotX": 0.5308641975308642,
+      "width": 120,
+      "height": 102,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 308,
       "y": 129,
       "eyes": [
         {
-          "x": 0.4074074074074074,
-          "y": 0.22988505747126436
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.5679012345679012,
-          "y": 0.2413793103448276
+          "x": 0.62,
+          "y": 0.42
         }
-      ]
+      ],
+      "authored": true,
+      "flipX": true
     },
     {
       "type": "Enemy",
       "anim": "bat",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__bat__0",
-      "width": 69,
-      "height": 81,
-      "pivotX": 0.42028985507246375,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 430,
       "y": 385,
       "eyes": [
         {
-          "x": 0.028985507246376812,
-          "y": 0.43209876543209874
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.2028985507246377,
-          "y": 0.4567901234567901
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 3,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "krampus",
       "frame": 0,
       "path": "Sleigh/Art/Enemy__krampus__0",
-      "width": 66,
-      "height": 82,
-      "pivotX": 0.42424242424242425,
+      "width": 130,
+      "height": 110,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 136,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true,
+      "flipX": true
     },
     {
       "type": "Enemy",
       "anim": "jackfrost",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__jackfrost__0",
-      "width": 72,
-      "height": 79,
-      "pivotX": 0.4861111111111111,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 153,
       "y": 385,
       "eyes": [
         {
-          "x": 0.1527777777777778,
-          "y": 0.4430379746835443
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.4722222222222222,
-          "y": 0.46835443037974683
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 6,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "coalgolem",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__coalgolem__0",
-      "width": 76,
-      "height": 83,
-      "pivotX": 0.5131578947368421,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 129,
       "y": 257,
       "eyes": [
         {
-          "x": 0.2474929760989515,
-          "y": 0.16551580353964004
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.43687324402473776,
-          "y": 0.16551580353964004
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 6,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "coalbaron",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__coalbaron__0",
-      "width": 76,
-      "height": 83,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 95,
+      "height": 100,
       "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
@@ -688,28 +753,45 @@
       "y": 257,
       "eyes": [
         {
-          "x": 0.2602760404253031,
-          "y": 0.18107105475219104
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.4400690101063257,
-          "y": 0.18107105475219104
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 3,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "krampimp",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__krampimp__0",
-      "width": 59,
-      "height": 63,
-      "pivotX": 0.4915254237288136,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 1,
       "y": 385,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 0,
+      "authored": true
     },
     {
       "type": "Enemy",
@@ -725,12 +807,12 @@
       "y": 1,
       "eyes": [
         {
-          "x": 0.28125,
-          "y": 0.15294117647058825
+          "x": 0.39,
+          "y": 0.42
         },
         {
-          "x": 0.421875,
-          "y": 0.1411764705882353
+          "x": 0.62,
+          "y": 0.42
         }
       ]
     },
@@ -738,75 +820,106 @@
       "type": "Enemy",
       "anim": "alpha",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__alpha__0",
-      "width": 85,
-      "height": 103,
-      "pivotX": 0.5294117647058824,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 108,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 308,
       "y": 1,
       "eyes": [
         {
-          "x": 0.38823529411764707,
-          "y": 0.2815533980582524
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.49411764705882355,
-          "y": 0.2815533980582524
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 4,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "Animation 1",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__Animation_1__0",
-      "width": 51,
-      "height": 90,
-      "pivotX": 0.49019607843137275,
-      "pivotY": 0.9999999999999992,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
+      "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 204,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 8,
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "naughtylist",
       "frame": 0,
       "path": "Sleigh/Art/Enemy__naughtylist__0",
-      "width": 101,
-      "height": 112,
+      "width": 100,
+      "height": 125,
       "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 205,
       "y": 1,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
     },
     {
       "type": "Enemy",
       "anim": "deer",
       "frame": 0,
-      "path": "Sleigh/Art/Enemy__deer__0",
-      "width": 59,
-      "height": 71,
-      "pivotX": 0.4915254237288136,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 95,
+      "height": 100,
+      "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 1,
       "y": 129,
       "eyes": [
         {
-          "x": 0.6101694915254238,
-          "y": 0.16549295774647893
+          "x": 0.42,
+          "y": 0.35
         },
         {
-          "x": 0.864406779661017,
-          "y": 0.10693106004447743
+          "x": 0.58,
+          "y": 0.35
         }
-      ]
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 7,
+      "authored": true
     },
     {
       "type": "Enemy",
@@ -820,7 +933,16 @@
       "sheet": "enemy-sheet0.png",
       "x": 1,
       "y": 1,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ]
     },
     {
       "type": "Gift",
@@ -2249,449 +2371,865 @@
       "type": "Icon",
       "anim": "relic_snowshovel",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_snowshovel__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 60,
       "y": 97,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 26,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_sackpatch",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_sackpatch__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 80,
       "y": 97,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 20,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_treestar",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_treestar__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 100,
       "y": 97,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 15,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_jinglebell",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_jinglebell__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 120,
       "y": 97,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 3,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_gingercharm",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_gingercharm__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 140,
       "y": 76,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 12,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_lostmitten",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_lostmitten__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 20,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 13,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_snowglobe",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_snowglobe__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 60,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 6,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_cookietin",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_cookietin__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 80,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 2,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_nutjaw",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_nutjaw__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 100,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 10,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_eggnogmug",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_eggnogmug__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 120,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 7,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_iceskates",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_iceskates__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 140,
       "y": 97,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 8,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_churchbell",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_churchbell__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 161,
       "y": 97,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 27,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_hollysprig",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_hollysprig__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 193,
       "y": 97,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 9,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_cocoapot",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_cocoapot__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 200,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 21,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_warmsocks",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_warmsocks__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 220,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 4,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_wishlist",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_wishlist__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 40,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 30,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_sugarplum",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_sugarplum__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 161,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 25,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_candybowl",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_candybowl__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 60,
       "y": 161,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 5,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_gifttag",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_gifttag__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 80,
       "y": 161,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 17,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_workbench",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_workbench__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 100,
       "y": 161,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 19,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_treeangel",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_treeangel__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 120,
       "y": 161,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 31,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_yulelog",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_yulelog__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 140,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 28,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_reindeerfeed",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_reindeerfeed__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 160,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 29,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_fruitcake",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_fruitcake__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 180,
       "y": 129,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 24,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_pocketwatch",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_pocketwatch__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 200,
       "y": 161,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 23,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_elfcoupon",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_elfcoupon__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 220,
       "y": 161,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 22,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_reindeerbell",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_reindeerbell__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 21,
       "y": 161,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 14,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_ledger",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_ledger__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 193,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 18,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_coalscuttle",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_coalscuttle__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 41,
       "y": 193,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 16,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_tinselgarland",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_tinselgarland__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 61,
       "y": 193,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 11,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_rednose",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_rednose__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 81,
       "y": 193,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 1,
+      "authored": true
     },
     {
       "type": "Icon",
       "anim": "relic_toolbelt",
       "frame": 0,
-      "path": "Sleigh/Art/Icon__relic_toolbelt__0",
+      "path": "Sleigh/Nian/Relics",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0.5,
+      "pivotY": 0,
       "sheet": "icon-sheet2.png",
       "x": 101,
       "y": 193,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 6,
+      "rows": 6,
+      "tile": 0,
+      "authored": true
     },
     {
       "type": "Icon",
@@ -3741,7 +4279,16 @@
       "sheet": "shared-0-sheet1.png",
       "x": 200,
       "y": 385,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.47,
+          "y": 0.28
+        },
+        {
+          "x": 0.59,
+          "y": 0.28
+        }
+      ]
     },
     {
       "type": "Claus",
@@ -3755,7 +4302,16 @@
       "sheet": "shared-0-sheet1.png",
       "x": 129,
       "y": 385,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.47,
+          "y": 0.28
+        },
+        {
+          "x": 0.59,
+          "y": 0.28
+        }
+      ]
     },
     {
       "type": "Claus",
@@ -3769,15 +4325,24 @@
       "sheet": "shared-0-sheet1.png",
       "x": 138,
       "y": 257,
-      "eyes": []
+      "eyes": [
+        {
+          "x": 0.47,
+          "y": 0.28
+        },
+        {
+          "x": 0.59,
+          "y": 0.28
+        }
+      ]
     },
     {
       "type": "BG",
       "anim": "default",
       "frame": 0,
       "path": "Sleigh/Art/BG__default__0",
-      "width": 235,
-      "height": 540,
+      "width": 640,
+      "height": 360,
       "pivotX": 0,
       "pivotY": 0,
       "sheet": "bg-sheet0.png",
@@ -4238,8 +4803,8 @@
       "anim": "default",
       "frame": 0,
       "path": "Sleigh/Art/IntroBG__default__0",
-      "width": 235,
-      "height": 540,
+      "width": 640,
+      "height": 360,
       "pivotX": 0,
       "pivotY": 0,
       "sheet": "introbg-sheet0.png",
@@ -4273,6 +4838,1546 @@
       "sheet": "shared-0-sheet0.png",
       "x": 363,
       "y": 1025,
+      "eyes": []
+    },
+    {
+      "type": "NianTitle",
+      "anim": "default",
+      "frame": 0,
+      "path": "Sleigh/Nian/Title",
+      "width": 640,
+      "height": 360,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "sock",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 0,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "mitten",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 1,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "snowball",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 2,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "canejab",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 3,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "icicle",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 4,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "baubles",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 5,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "sledsweep",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 6,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "nutchomp",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 7,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "tinselwhip",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 8,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "bellslam",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 9,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "crumbs",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 10,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "scarf",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 11,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "cocoasip",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 12,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "offkey",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 13,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "wrapspree",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 14,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "stuffer",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 15,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "eggshot",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 16,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "snowfort",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 17,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "frostbreath",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 18,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "chimney",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 19,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "stampede",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 20,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "kiss",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 21,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "bellybump",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 22,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "flurry",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 23,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "jingle",
+      "frame": 0,
+      "path": "Sleigh/Nian/CardsA",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 5,
+      "rows": 5,
+      "tile": 24,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_gingerling",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__gingerling__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 65,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_snowman",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__snowman__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 395,
+      "y": 129,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_ornament",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__ornament__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 67,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_rat",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__rat__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 205,
+      "y": 129,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_lights",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__lights__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 79,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_penguin",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__penguin__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 1,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_nutgrunt",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__nutgrunt__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 193,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_toysoldier",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__toysoldier__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 195,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_jack",
+      "frame": 0,
+      "path": "Sleigh/Art/Enemy__jack__0",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 129,
+      "y": 1,
+      "eyes": [
+        {
+          "x": 0.39,
+          "y": 0.42
+        },
+        {
+          "x": 0.62,
+          "y": 0.42
+        }
+      ],
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_fruitcake",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 1,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 0,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_angel",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 67,
+      "y": 129,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 1,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_slime",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 361,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 2,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_bat",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 430,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 3,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_grumpkin",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 257,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 4,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_rogueelf",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 136,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 5,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_coalgolem",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 129,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 6,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_viper",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 257,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 7,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_creeper",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkB",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 395,
+      "y": 1,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 8,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_general",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet1.png",
+      "x": 129,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 1,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_yeti",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 361,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 2,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_coalbaron",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 1,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 3,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_alpha",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 308,
+      "y": 1,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 4,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_witch",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 444,
+      "y": 257,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 5,
+      "authored": true
+    },
+    {
+      "type": "GiftIllustration",
+      "anim": "f_jackfrost",
+      "frame": 0,
+      "path": "Sleigh/Nian/FolkC",
+      "width": 66,
+      "height": 66,
+      "pivotX": 0,
+      "pivotY": 0,
+      "sheet": "enemy-sheet0.png",
+      "x": 153,
+      "y": 385,
+      "eyes": [
+        {
+          "x": 0.42,
+          "y": 0.35
+        },
+        {
+          "x": 0.58,
+          "y": 0.35
+        }
+      ],
+      "columns": 3,
+      "rows": 3,
+      "tile": 6,
+      "authored": true
+    },
+    {
+      "type": "Gift",
+      "anim": "flurry",
+      "frame": 0,
+      "path": "Sleigh/Art/Gift__flurry__0",
+      "width": 66,
+      "height": 88,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "Gift",
+      "anim": "fireplace",
+      "frame": 0,
+      "path": "Sleigh/Art/Gift__fireplace__0",
+      "width": 66,
+      "height": 88,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "lostelf",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__lostelf",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "workshop",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__workshop",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "carolers",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__carolers",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "pond",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__pond",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "cookiejar",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__cookiejar",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "globeshop",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__globeshop",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "stable",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__stable",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "well",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__well",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "elfgame",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__elfgame",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "factory",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__factory",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "gingerhouse",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__gingerhouse",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "sleigh",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__sleigh",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "naughtykid",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__naughtykid",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "mistletoe",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__mistletoe",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "toymaker",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__toymaker",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "blizzard",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__blizzard",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "postman",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__postman",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "cocoastand",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__cocoastand",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "fishing",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__fishing",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "ball",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__ball",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "stocking",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__stocking",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "angels",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__angels",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "fallenstar",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__fallenstar",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "exchange",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__exchange",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "snowmanfriend",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__snowmanfriend",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
+      "eyes": []
+    },
+    {
+      "type": "EventArt",
+      "anim": "mirror",
+      "frame": 0,
+      "path": "Sleigh/Art/Event__mirror",
+      "width": 128,
+      "height": 160,
+      "pivotX": 0,
+      "pivotY": 0,
       "eyes": []
     }
   ]
