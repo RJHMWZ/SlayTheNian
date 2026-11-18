@@ -1,0 +1,104 @@
+using UnityEngine;
+using UnityEngine.UI;
+using static Sleigh.PixelUI;
+
+namespace Sleigh
+{
+    // Reusable pixel UI skin. The hit area and caption are separate from this illustration.
+    [RequireComponent(typeof(CanvasRenderer))]
+    public sealed class FirecrackerButtonBackground : MaskableGraphic
+    {
+        public bool primary;
+        float highlight;
+        bool hovered;
+
+        public void SetHovered(bool value)
+        {
+            hovered = value;
+            if (!value) highlight = 0;
+            SetVerticesDirty();
+        }
+
+        void Update()
+        {
+            bool reduced = GameRoot.Instance && GameRoot.Instance.ReduceMotion;
+            float target = hovered ? 1 : 0;
+            float value = reduced ? target : Mathf.MoveTowards(highlight, target, Time.unscaledDeltaTime * 9);
+            if (Mathf.Abs(value - highlight) < .001f) return;
+            highlight = value; SetVerticesDirty();
+        }
+
+        protected override void OnPopulateMesh(VertexHelper vh)
+        {
+            vh.Clear();
+            float w = rectTransform.rect.width, h = rectTransform.rect.height, cy = h * .5f;
+            var outline = Hex(0x751329);
+            var paper = Color.Lerp(Hex(primary ? 0xef432d : 0xc62432), Hex(0xff7150), highlight * .55f);
+            var gold = Color.Lerp(Hex(0xf4b73f), Hex(0xffe498), highlight);
+            var light = Hex(0xffdf7e);
+
+            // A long cylinder with curved paper ends, rather than a rectangular panel.
+            Disc(vh, 6, cy + 2, 10, cy, outline); Box(vh, 6, 2, w - 12, h, outline);
+            Disc(vh, w - 6, cy + 2, 10, cy, outline);
+            Disc(vh, 6, cy, 9, cy, gold); Box(vh, 6, 0, w - 12, h, paper);
+            Disc(vh, w - 6, cy, 10, cy, gold);
+            Box(vh, 8, 1, w - 22, 2, Hex(0xffa15c));
+            Box(vh, 8, 3, w - 22, 2, Hex(0xff6850));
+            Box(vh, 8, h - 5, w - 22, 2, Hex(0xad1b2e));
+            Box(vh, 8, h - 3, w - 22, 2, Hex(0x8f182b));
+
+            // Two gilded collars and tiny printed lozenges on the red wrapper.
+            Box(vh, 8, 0, 8, h, gold); Box(vh, 9, 1, 2, h - 2, light);
+            Box(vh, 15, 1, 1, h - 2, Hex(0xbf792d));
+            Box(vh, w - 20, 0, 8, h, gold); Box(vh, w - 19, 1, 2, h - 2, light);
+            Box(vh, w - 13, 1, 1, h - 2, Hex(0xbf792d));
+            Diamond(vh, 22, cy, 2, gold); Diamond(vh, w - 26, cy, 2, gold);
+
+            // Rolled paper cross sections make both ends read as a real firecracker.
+            Disc(vh, 4, cy, 4, Mathf.Max(1, cy - 3), Hex(0xd68c38));
+            Disc(vh, 4, cy, 2, Mathf.Max(1, cy - 5), Hex(0xf8ce71));
+            Disc(vh, w - 5, cy, 6, Mathf.Max(1, cy - 2), Hex(0x9f2630));
+            Disc(vh, w - 5, cy, 4, Mathf.Max(1, cy - 4), Hex(0xf2ac51));
+            Disc(vh, w - 5, cy, 2, Mathf.Max(1, cy - 6), Hex(0xa94a30));
+
+            // Braided fuse turns upward into a small gold spark outside the caption.
+            Box(vh, w - 3, cy - 1, 11, 2, Hex(0x81382c));
+            Box(vh, w + 6, cy - 4, 4, 3, Hex(0xf2cd84));
+            Box(vh, w + 9, cy - 7, 4, 3, Hex(0xa7723a));
+            Box(vh, w + 12, cy - 9, 5, 2, Hex(0xffdc88));
+            float sx = w + 18, sy = cy - 9;
+            Diamond(vh, sx, sy, 2 + highlight, Hex(0xffd254));
+            Box(vh, sx, sy, 1, 1, Hex(0xfff1ba));
+            if (primary || highlight > .1f)
+            {
+                Box(vh, sx - 5, sy - 4, 2, 1, light);
+                Box(vh, sx + 4, sy + 3, 2, 1, light);
+                Box(vh, sx + 3, sy - 5, 1, 2, light);
+            }
+        }
+
+        static void Disc(VertexHelper vh, float x, float y, float rx, float ry, Color ink)
+        {
+            for (float row = -ry; row < ry; row++)
+            {
+                float half = Mathf.Sqrt(Mathf.Max(0, 1 - Mathf.Pow((row + .5f) / ry, 2))) * rx;
+                Box(vh, Mathf.Round(x - half), Mathf.Round(y + row), Mathf.Round(half * 2), 1, ink);
+            }
+        }
+        static void Diamond(VertexHelper vh, float x, float y, float radius, Color ink)
+        {
+            for (float row = -radius; row <= radius; row++)
+            {
+                float half = radius - Mathf.Abs(row);
+                Box(vh, x - half, y + row, half * 2 + 1, 1, ink);
+            }
+        }
+        static void Box(VertexHelper vh, float x, float y, float w, float h, Color ink)
+        {
+            int n = vh.currentVertCount;
+            vh.AddVert(new Vector3(x, -y), ink, Vector2.zero); vh.AddVert(new Vector3(x + w, -y), ink, Vector2.zero);
+            vh.AddVert(new Vector3(x + w, -y - h), ink, Vector2.zero); vh.AddVert(new Vector3(x, -y - h), ink, Vector2.zero);
+            vh.AddTriangle(n, n + 1, n + 2); vh.AddTriangle(n + 2, n + 3, n);
+        }
+    }
+}

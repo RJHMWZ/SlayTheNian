@@ -13,6 +13,7 @@ namespace Sleigh
     {
         public static GameRoot Instance;
         [SerializeField] SleighStage stage;
+        [SerializeField] string menuTitle = "爆竹驱年";
         [NonSerialized]
         public Run run;
         [NonSerialized]
@@ -184,18 +185,14 @@ namespace Sleigh
         { string id = run?.character ?? characters[characterIndex]; return Chinese.Text(s).Replace("{nick}", DB.CharacterName(id)).Replace("{name}", DB.CharacterName(id)).Replace("{title}", id == "mrs" ? "夫人" : id == "rudolph" ? "红鼻子" : "小精灵"); }
         public void ShowTitle()
         {
-            battle = null; run = null; NewScreen("Title"); TiledBackground();
-            var logo = Label(ui, 20, 62, 600, "圣诞救援", 3.5f, Gold, 1);
-            SleighMotion.Add(logo.rectTransform, SleighMotion.Style.Float, 2, 1.5f);
-            Label(ui, 100, 122, 440, "雪橇上的圣诞冒险", 1.1f, Ice, 1);
-            SleighMotion.Add(Sprite(world, "BGImage", "sleighs", 100, 48).rectTransform, SleighMotion.Style.Sleigh);
-            Label(ui, 180, 165, 280, "24 NIGHTS TO SAVE CHRISTMAS", .75f, Gold, 1);
+            battle = null; run = null; NewScreen("Title");
+            SpringFestivalMenu.Build(bg, ui, menuTitle);
             var saved = Run.Load(); bool canContinue = saved != null && saved.active && saved.hp > 0 && saved.night < 24;
-            Button(ui, 240, 196, 160, 24, "NEW RUN", ShowCharacters, Hex(0x8e1d2b));
-            if (canContinue) Button(ui, 240, 227, 160, 22, "CONTINUE / DEC " + (saved.night + 1), () => { run = saved; ShowMap(); });
-            Button(ui, 240, canContinue ? 256 : 227, 160, 22, "HOW TO PLAY", ShowHelp);
-            Button(ui, 240, canContinue ? 285 : 256, 160, 22, "SETTINGS", ShowSettings);
-            Button(ui, 240, canContinue ? 314 : 285, 160, 22, "LEDGER", () => OpenLedger());
+            SpringFestivalMenu.MenuButton(ui, 196, 24, "NEW RUN", ShowCharacters, true);
+            if (canContinue) SpringFestivalMenu.MenuButton(ui, 227, 22, "CONTINUE / DEC " + (saved.night + 1), () => { run = saved; ShowMap(); });
+            SpringFestivalMenu.MenuButton(ui, canContinue ? 256 : 227, 22, "HOW TO PLAY", ShowHelp);
+            SpringFestivalMenu.MenuButton(ui, canContinue ? 285 : 256, 22, "SETTINGS", ShowSettings);
+            SpringFestivalMenu.MenuButton(ui, canContinue ? 314 : 285, 22, "LEDGER", () => OpenLedger());
         }
         void ShowCharacters()
         {
