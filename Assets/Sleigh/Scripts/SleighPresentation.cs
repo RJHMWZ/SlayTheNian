@@ -10,10 +10,7 @@ namespace Sleigh
     {
         PixelLabel hudHp, hudCookies, hudSpirit;
         float ambientTimer, ambientFireTimer, mapTarget, mapFling, lastMapDrag;
-        float titleFireworkTimer;
-        int titleFireworkIndex;
         RectTransform floatingRelic;
-        readonly System.Collections.Generic.HashSet<string> nianPhases = new System.Collections.Generic.HashSet<string>();
         Gift previewGift;
         string previewPart;
         int previewBaseDamage;
@@ -29,19 +26,6 @@ namespace Sleigh
         {
             if (IsBaking || !Application.isPlaying) return;
             float dt = Time.unscaledDeltaTime;
-            if (ScreenName == "Title" && stage.titleFireworks && !reduceMotion)
-            {
-                titleFireworkTimer -= dt;
-                if (titleFireworkTimer <= 0)
-                {
-                    int index = titleFireworkIndex++;
-                    // Keep bursts in the side sky so even the largest ring avoids the menu.
-                    float x = index % 2 == 0 ? 94 + index % 3 * 25 : 492 + index % 3 * 22;
-                    stage.titleFireworks.Firework(new Vector2(x, 46 + index % 3 * 23), index % 4,
-                        index % 3 == 0 ? Gold : index % 3 == 1 ? Pink : Ice);
-                    titleFireworkTimer = 1.9f + index % 3 * .4f;
-                }
-            }
             if (ScreenName == "Map" && mapContent)
             {
                 if (!Input.GetMouseButton(0) && Time.unscaledTime - lastMapDrag > .03f) { mapTarget = Mathf.Clamp(mapTarget + mapFling * dt, 0, 1676); mapFling *= Mathf.Exp(-8 * dt); }
@@ -71,16 +55,6 @@ namespace Sleigh
             }
             foreach (var a in actors.Values)
             {
-                var boss = a.frame;
-                if (boss != null && boss.Def != null && boss.Def.tier == "boss" && !boss.Dead && !boss.Charmed)
-                {
-                    bool finalFlame = boss.Id == "krampus" && boss.Hp <= boss.MaxHp / 2;
-                    string phase = boss.Id == "santa" ? "壹 · 年兽初现" : boss.Id == "naughtylist" ? "隐 · 岁门魇" : finalFlame ? "叁 · 岁火决战" : "贰 · 噬岁狂年";
-                    if (nianPhases.Add(phase))
-                    { Toast(phase, Gold); sound.Play("jingle"); stage.Flash(finalFlame ? Gold : Red, .2f, .45f); Burst(a.x, 210, finalFlame ? Gold : Red, 24); }
-                    if (finalFlame && !reduceMotion && a.art)
-                    { a.art.color = Color.Lerp(Color.white, Hex(0xffbd76), .2f + .15f * Mathf.Sin(Time.unscaledTime * 6)); }
-                }
                 if (a.hud) a.hud.anchoredPosition = new Vector2(a.x, -232);
                 if (a.hearts != null) foreach (var h in a.hearts) if (h) { var c = h.color; c.a = a.alpha; h.color = c; }
             }

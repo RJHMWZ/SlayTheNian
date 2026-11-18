@@ -158,9 +158,9 @@
       "type": "Enemy",
       "anim": "rat",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_rat",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__rat__0",
+      "width": 91,
+      "height": 76,
       "pivotX": 0.5164835164835165,
       "pivotY": 0.9999999999999991,
       "sheet": "enemy-sheet0.png",
@@ -168,28 +168,22 @@
       "y": 129,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.42857142857142855,
+          "y": 0.25
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.26373626373626374,
+          "y": 0.19736842105263158
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "snowman",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_snowman",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__snowman__0",
+      "width": 80,
+      "height": 91,
       "pivotX": 0.5125,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
@@ -197,28 +191,22 @@
       "y": 129,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.4,
+          "y": 0.24175824175824176
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.575,
+          "y": 0.25274725274725274
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "penguin",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_penguin",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__penguin__0",
+      "width": 61,
+      "height": 68,
       "pivotX": 0.39344262295081966,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
@@ -226,28 +214,22 @@
       "y": 257,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.22950819672131148,
+          "y": 0.20588235294117646
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.4098360655737705,
+          "y": 0.22058823529411764
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "gingerling",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_gingerling",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__gingerling__0",
+      "width": 51,
+      "height": 75,
       "pivotX": 0.49019607843137275,
       "pivotY": 0.999999999999999,
       "sheet": "enemy-sheet1.png",
@@ -255,28 +237,22 @@
       "y": 385,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.35294117647058826,
+          "y": 0.18666666666666668
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.5490196078431373,
+          "y": 0.18666666666666668
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "toysoldier",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_toysoldier",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__toysoldier__0",
+      "width": 43,
+      "height": 91,
       "pivotX": 0.4883720930232558,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
@@ -284,86 +260,68 @@
       "y": 257,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.32558139534883723,
+          "y": 0.37362637362637363
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.5348837209302325,
+          "y": 0.37362637362637363
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "slime",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_slime",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__slime__0",
+      "width": 86,
+      "height": 67,
+      "pivotX": 0.4883720930232558,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 361,
       "y": 385,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.23255813953488372,
+          "y": 0.3582089552238806
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.4069767441860465,
+          "y": 0.40298507462686567
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "grumpkin",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_grumpkin",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__grumpkin__0",
+      "width": 72,
+      "height": 79,
+      "pivotX": 0.4861111111111111,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 257,
       "y": 385,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.1527777777777778,
+          "y": 0.4430379746835443
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.4583333333333333,
+          "y": 0.4810126582278481
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "ornament",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_ornament",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__ornament__0",
+      "width": 67,
+      "height": 79,
       "pivotX": 0.47761194029850745,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
@@ -371,28 +329,22 @@
       "y": 257,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.29850746268656714,
+          "y": 0.46835443037974683
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.5970149253731343,
+          "y": 0.46835443037974683
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "nutgrunt",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_nutgrunt",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__nutgrunt__0",
+      "width": 42,
+      "height": 90,
       "pivotX": 0.47619047619047616,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
@@ -400,28 +352,22 @@
       "y": 385,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.30952380952380953,
+          "y": 0.32222222222222224
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.5952380952380952,
+          "y": 0.32222222222222224
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "lights",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_lights",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__lights__0",
+      "width": 81,
+      "height": 72,
       "pivotX": 0.5308641975308642,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
@@ -429,405 +375,312 @@
       "y": 385,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.09876543209876543,
+          "y": 0.2361111111111111
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.32098765432098764,
+          "y": 0.3055555555555556
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "yeti",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_yeti",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
-      "pivotY": 1,
+      "path": "Sleigh/Art/Enemy__yeti__0",
+      "width": 85,
+      "height": 81,
+      "pivotX": 0.5411764705882353,
+      "pivotY": 0.9876543209876543,
       "sheet": "enemy-sheet0.png",
       "x": 361,
       "y": 257,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.36470588235294116,
+          "y": 0.1728395061728395
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.4823529411764706,
+          "y": 0.18518518518518517
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "witch",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_witch",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__witch__0",
+      "width": 67,
+      "height": 100,
+      "pivotX": 0.5373134328358209,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 444,
       "y": 257,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.40298507462686567,
+          "y": 0.33
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.582089552238806,
+          "y": 0.33
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "general",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_general",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__general__0",
+      "width": 42,
+      "height": 90,
+      "pivotX": 0.47619047619047616,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 129,
       "y": 385,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.30952380952380953,
+          "y": 0.32222222222222224
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.6190476190476191,
+          "y": 0.3333333333333333
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "creeper",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_creeper",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
-      "pivotY": 1,
+      "path": "Sleigh/Art/Enemy__creeper__0",
+      "width": 80,
+      "height": 99,
+      "pivotX": 0.5125,
+      "pivotY": 0.98989898989899,
       "sheet": "enemy-sheet0.png",
       "x": 395,
       "y": 1,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.3,
+          "y": 0.46464646464646464
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.5,
+          "y": 0.494949494949495
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "angel",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_angel",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__angel__0",
+      "width": 67,
+      "height": 81,
+      "pivotX": 0.5074626865671642,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 67,
       "y": 129,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.31343283582089554,
+          "y": 0.24691358024691357
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.44776119402985076,
+          "y": 0.24691358024691357
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "viper",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_viper",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
-      "pivotY": 1,
+      "path": "Sleigh/Art/Enemy__viper__0",
+      "width": 91,
+      "height": 76,
+      "pivotX": 0.5164835164835165,
+      "pivotY": 0.9868421052631579,
       "sheet": "enemy-sheet0.png",
       "x": 257,
       "y": 257,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.24175824175824176,
+          "y": 0.13157894736842105
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.3956043956043956,
+          "y": 0.14473684210526316
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "fruitcake",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_fruitcake",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__fruitcake__0",
+      "width": 73,
+      "height": 75,
+      "pivotX": 0.4931506849315068,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 1,
       "y": 385,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.136986301369863,
+          "y": 0.5333333333333333
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.3698630136986301,
+          "y": 0.56
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "rogueelf",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_rogueelf",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__rogueelf__0",
+      "width": 57,
+      "height": 80,
+      "pivotX": 0.49122807017543857,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 136,
       "y": 257,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.3508771929824561,
+          "y": 0.3125
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.5263157894736842,
+          "y": 0.3125
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "santa",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_santa",
-      "width": 144,
-      "height": 168,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__santa__0",
+      "width": 81,
+      "height": 87,
+      "pivotX": 0.5308641975308642,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 308,
       "y": 129,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.4074074074074074,
+          "y": 0.22988505747126436
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.5679012345679012,
+          "y": 0.2413793103448276
         }
-      ],
-      "authored": true,
-      "flipX": false,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
+      ]
     },
     {
       "type": "Enemy",
       "anim": "bat",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_bat",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__bat__0",
+      "width": 69,
+      "height": 81,
+      "pivotX": 0.42028985507246375,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 430,
       "y": 385,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.028985507246376812,
+          "y": 0.43209876543209874
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.2028985507246377,
+          "y": 0.4567901234567901
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "krampus",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_krampus",
-      "width": 144,
-      "height": 168,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__krampus__0",
+      "width": 66,
+      "height": 82,
+      "pivotX": 0.42424242424242425,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 136,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "flipX": false,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Enemy",
       "anim": "jackfrost",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_jackfrost",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__jackfrost__0",
+      "width": 72,
+      "height": 79,
+      "pivotX": 0.4861111111111111,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 153,
       "y": 385,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.1527777777777778,
+          "y": 0.4430379746835443
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.4722222222222222,
+          "y": 0.46835443037974683
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "coalgolem",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_coalgolem",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__coalgolem__0",
+      "width": 76,
+      "height": 83,
+      "pivotX": 0.5131578947368421,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 129,
       "y": 257,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.2474929760989515,
+          "y": 0.16551580353964004
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.43687324402473776,
+          "y": 0.16551580353964004
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "coalbaron",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_coalbaron",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__coalbaron__0",
+      "width": 76,
+      "height": 83,
       "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
@@ -835,57 +688,36 @@
       "y": 257,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.2602760404253031,
+          "y": 0.18107105475219104
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.4400690101063257,
+          "y": 0.18107105475219104
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "krampimp",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_krampimp",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__krampimp__0",
+      "width": 59,
+      "height": 63,
+      "pivotX": 0.4915254237288136,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 1,
       "y": 385,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      "eyes": []
     },
     {
       "type": "Enemy",
       "anim": "jack",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_jack",
-      "width": 96,
-      "height": 112,
+      "path": "Sleigh/Art/Enemy__jack__0",
+      "width": 64,
+      "height": 85,
       "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
@@ -893,171 +725,108 @@
       "y": 1,
       "eyes": [
         {
-          "x": 0.39,
-          "y": 0.42
+          "x": 0.28125,
+          "y": 0.15294117647058825
         },
         {
-          "x": 0.62,
-          "y": 0.42
+          "x": 0.421875,
+          "y": 0.1411764705882353
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "alpha",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_alpha",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__alpha__0",
+      "width": 85,
+      "height": 103,
+      "pivotX": 0.5294117647058824,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 308,
       "y": 1,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.38823529411764707,
+          "y": 0.2815533980582524
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.49411764705882355,
+          "y": 0.2815533980582524
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "Animation 1",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_Animation_1",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
-      "pivotY": 1,
+      "path": "Sleigh/Art/Enemy__Animation_1__0",
+      "width": 51,
+      "height": 90,
+      "pivotX": 0.49019607843137275,
+      "pivotY": 0.9999999999999992,
       "sheet": "enemy-sheet1.png",
       "x": 204,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      "eyes": []
     },
     {
       "type": "Enemy",
       "anim": "naughtylist",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_naughtylist",
-      "width": 80,
-      "height": 94,
+      "path": "Sleigh/Art/Enemy__naughtylist__0",
+      "width": 101,
+      "height": 112,
       "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 205,
       "y": 1,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "flipX": false
+      "eyes": []
     },
     {
       "type": "Enemy",
       "anim": "deer",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_deer",
-      "width": 96,
-      "height": 112,
-      "pivotX": 0.5,
+      "path": "Sleigh/Art/Enemy__deer__0",
+      "width": 59,
+      "height": 71,
+      "pivotX": 0.4915254237288136,
       "pivotY": 1,
       "sheet": "enemy-sheet1.png",
       "x": 1,
       "y": 129,
       "eyes": [
         {
-          "x": 0.42,
-          "y": 0.35
+          "x": 0.6101694915254238,
+          "y": 0.16549295774647893
         },
         {
-          "x": 0.58,
-          "y": 0.35
+          "x": 0.864406779661017,
+          "y": 0.10693106004447743
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true,
-      "flipX": false
+      ]
     },
     {
       "type": "Enemy",
       "anim": "naughtylistbig",
       "frame": 0,
-      "path": "Sleigh/Festival/Enemy_naughtylistbig",
-      "width": 80,
-      "height": 94,
+      "path": "Sleigh/Art/Enemy__naughtylistbig__0",
+      "width": 202,
+      "height": 224,
       "pivotX": 0.5,
       "pivotY": 1,
       "sheet": "enemy-sheet0.png",
       "x": 1,
       "y": 1,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true,
-      "flipX": false
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "rat",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_rat",
+      "path": "Sleigh/Art/Gift__rat__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1065,18 +834,13 @@
       "sheet": "gift-sheet0.png",
       "x": 953,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "snowman",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_snowman",
+      "path": "Sleigh/Art/Gift__snowman__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1084,18 +848,13 @@
       "sheet": "gift-sheet0.png",
       "x": 885,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "toysoldier",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_toysoldier",
+      "path": "Sleigh/Art/Gift__toysoldier__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1103,18 +862,13 @@
       "sheet": "gift-sheet0.png",
       "x": 817,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "gingerling",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_gingerling",
+      "path": "Sleigh/Art/Gift__gingerling__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1122,18 +876,13 @@
       "sheet": "gift-sheet0.png",
       "x": 749,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "slime",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_slime",
+      "path": "Sleigh/Art/Gift__slime__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1141,18 +890,13 @@
       "sheet": "gift-sheet0.png",
       "x": 681,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "jack",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_jack",
+      "path": "Sleigh/Art/Gift__jack__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1160,18 +904,13 @@
       "sheet": "gift-sheet0.png",
       "x": 613,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "nutgrunt",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_nutgrunt",
+      "path": "Sleigh/Art/Gift__nutgrunt__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1179,18 +918,13 @@
       "sheet": "gift-sheet0.png",
       "x": 545,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "lights",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_lights",
+      "path": "Sleigh/Art/Gift__lights__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1198,18 +932,13 @@
       "sheet": "gift-sheet0.png",
       "x": 477,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "penguin",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_penguin",
+      "path": "Sleigh/Art/Gift__penguin__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1217,18 +946,13 @@
       "sheet": "gift-sheet0.png",
       "x": 409,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "ornament",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_ornament",
+      "path": "Sleigh/Art/Gift__ornament__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1236,18 +960,13 @@
       "sheet": "gift-sheet0.png",
       "x": 341,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "fruitcake",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_fruitcake",
+      "path": "Sleigh/Art/Gift__fruitcake__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1255,18 +974,13 @@
       "sheet": "gift-sheet0.png",
       "x": 273,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "angel",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_angel",
+      "path": "Sleigh/Art/Gift__angel__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1274,18 +988,13 @@
       "sheet": "gift-sheet0.png",
       "x": 205,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "rogueelf",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_rogueelf",
+      "path": "Sleigh/Art/Gift__rogueelf__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1293,18 +1002,13 @@
       "sheet": "gift-sheet0.png",
       "x": 137,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "viper",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_viper",
+      "path": "Sleigh/Art/Gift__viper__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1312,18 +1016,13 @@
       "sheet": "gift-sheet0.png",
       "x": 69,
       "y": 385,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "bat",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_bat",
+      "path": "Sleigh/Art/Gift__bat__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1331,18 +1030,13 @@
       "sheet": "gift-sheet0.png",
       "x": 1,
       "y": 360,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "coalgolem",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_coalgolem",
+      "path": "Sleigh/Art/Gift__coalgolem__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1350,18 +1044,13 @@
       "sheet": "gift-sheet0.png",
       "x": 953,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "coalbaron",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_coalbaron",
+      "path": "Sleigh/Art/Gift__coalbaron__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1369,18 +1058,13 @@
       "sheet": "gift-sheet0.png",
       "x": 885,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "alpha",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_alpha",
+      "path": "Sleigh/Art/Gift__alpha__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1388,18 +1072,13 @@
       "sheet": "gift-sheet0.png",
       "x": 817,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "krampimp",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_krampimp",
+      "path": "Sleigh/Art/Gift__krampimp__0",
       "width": 59,
       "height": 63,
       "pivotX": 0.4915254237288136,
@@ -1407,18 +1086,13 @@
       "sheet": "gift-sheet0.png",
       "x": 1,
       "y": 450,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "krampus",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_krampus",
+      "path": "Sleigh/Art/Gift__krampus__0",
       "width": 66,
       "height": 82,
       "pivotX": 0.42424242424242425,
@@ -1426,18 +1100,13 @@
       "sheet": "gift-sheet1.png",
       "x": 0,
       "y": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "santa",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_santa",
+      "path": "Sleigh/Art/Gift__santa__0",
       "width": 81,
       "height": 87,
       "pivotX": 0.5308641975308642,
@@ -1454,18 +1123,13 @@
           "x": 0.5679012345679012,
           "y": 0.2413793103448276
         }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      ]
     },
     {
       "type": "Gift",
       "anim": "grumpkin",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_grumpkin",
+      "path": "Sleigh/Art/Gift__grumpkin__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1473,18 +1137,13 @@
       "sheet": "gift-sheet0.png",
       "x": 749,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "yeti",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_yeti",
+      "path": "Sleigh/Art/Gift__yeti__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1492,18 +1151,13 @@
       "sheet": "gift-sheet0.png",
       "x": 681,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "witch",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_witch",
+      "path": "Sleigh/Art/Gift__witch__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1511,18 +1165,13 @@
       "sheet": "gift-sheet0.png",
       "x": 613,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "general",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_general",
+      "path": "Sleigh/Art/Gift__general__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1530,18 +1179,13 @@
       "sheet": "gift-sheet0.png",
       "x": 545,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "creeper",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_creeper",
+      "path": "Sleigh/Art/Gift__creeper__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1549,18 +1193,13 @@
       "sheet": "gift-sheet0.png",
       "x": 477,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "jackfrost",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_jackfrost",
+      "path": "Sleigh/Art/Gift__jackfrost__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1568,18 +1207,13 @@
       "sheet": "gift-sheet0.png",
       "x": 409,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "skl",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_skl",
+      "path": "Sleigh/Art/Gift__skl__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1587,18 +1221,13 @@
       "sheet": "gift-sheet0.png",
       "x": 341,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "mitten",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_mitten",
+      "path": "Sleigh/Art/Gift__mitten__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1606,18 +1235,13 @@
       "sheet": "gift-sheet0.png",
       "x": 273,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "cocoasip",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_cocoasip",
+      "path": "Sleigh/Art/Gift__cocoasip__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1625,18 +1249,13 @@
       "sheet": "gift-sheet0.png",
       "x": 205,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "scarf",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_scarf",
+      "path": "Sleigh/Art/Gift__scarf__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1644,18 +1263,13 @@
       "sheet": "gift-sheet0.png",
       "x": 137,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "bigbow",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_bigbow",
+      "path": "Sleigh/Art/Gift__bigbow__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1663,18 +1277,13 @@
       "sheet": "gift-sheet0.png",
       "x": 69,
       "y": 271,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "stuffer",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_stuffer",
+      "path": "Sleigh/Art/Gift__stuffer__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1682,18 +1291,13 @@
       "sheet": "gift-sheet0.png",
       "x": 1,
       "y": 270,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "eggshot",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_eggshot",
+      "path": "Sleigh/Art/Gift__eggshot__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1701,18 +1305,13 @@
       "sheet": "gift-sheet0.png",
       "x": 953,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "frostbreath",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_frostbreath",
+      "path": "Sleigh/Art/Gift__frostbreath__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1720,18 +1319,13 @@
       "sheet": "gift-sheet0.png",
       "x": 885,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "checktwice",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_checktwice",
+      "path": "Sleigh/Art/Gift__checktwice__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1739,18 +1333,13 @@
       "sheet": "gift-sheet0.png",
       "x": 817,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "snowfort",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_snowfort",
+      "path": "Sleigh/Art/Gift__snowfort__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1758,18 +1347,13 @@
       "sheet": "gift-sheet0.png",
       "x": 749,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "globe",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_globe",
+      "path": "Sleigh/Art/Gift__globe__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1777,18 +1361,13 @@
       "sheet": "gift-sheet0.png",
       "x": 681,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "elfhelp",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_elfhelp",
+      "path": "Sleigh/Art/Gift__elfhelp__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1796,18 +1375,13 @@
       "sheet": "gift-sheet0.png",
       "x": 613,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "jingle",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_jingle",
+      "path": "Sleigh/Art/Gift__jingle__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1815,18 +1389,13 @@
       "sheet": "gift-sheet0.png",
       "x": 545,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "miracle",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_miracle",
+      "path": "Sleigh/Art/Gift__miracle__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1834,18 +1403,13 @@
       "sheet": "gift-sheet0.png",
       "x": 477,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "wrapspree",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_wrapspree",
+      "path": "Sleigh/Art/Gift__wrapspree__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1853,18 +1417,13 @@
       "sheet": "gift-sheet0.png",
       "x": 409,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "doublewrap",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_doublewrap",
+      "path": "Sleigh/Art/Gift__doublewrap__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1872,18 +1431,13 @@
       "sheet": "gift-sheet0.png",
       "x": 341,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "offkey",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_offkey",
+      "path": "Sleigh/Art/Gift__offkey__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1891,18 +1445,13 @@
       "sheet": "gift-sheet0.png",
       "x": 273,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "atk",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_atk",
+      "path": "Sleigh/Art/Gift__atk__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1910,18 +1459,13 @@
       "sheet": "gift-sheet0.png",
       "x": 205,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "sock",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_sock",
+      "path": "Sleigh/Art/Gift__sock__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1929,18 +1473,13 @@
       "sheet": "gift-sheet0.png",
       "x": 137,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "baubles",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_baubles",
+      "path": "Sleigh/Art/Gift__baubles__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1948,18 +1487,13 @@
       "sheet": "gift-sheet0.png",
       "x": 69,
       "y": 181,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "canejab",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_canejab",
+      "path": "Sleigh/Art/Gift__canejab__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1967,18 +1501,13 @@
       "sheet": "gift-sheet0.png",
       "x": 1,
       "y": 180,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "bellslam",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_bellslam",
+      "path": "Sleigh/Art/Gift__bellslam__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -1986,18 +1515,13 @@
       "sheet": "gift-sheet0.png",
       "x": 953,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "snowball",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_snowball",
+      "path": "Sleigh/Art/Gift__snowball__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2005,18 +1529,13 @@
       "sheet": "gift-sheet0.png",
       "x": 885,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "crumbs",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_crumbs",
+      "path": "Sleigh/Art/Gift__crumbs__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2024,18 +1543,13 @@
       "sheet": "gift-sheet0.png",
       "x": 817,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "icicle",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_icicle",
+      "path": "Sleigh/Art/Gift__icicle__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2043,18 +1557,13 @@
       "sheet": "gift-sheet0.png",
       "x": 749,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "sledsweep",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_sledsweep",
+      "path": "Sleigh/Art/Gift__sledsweep__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2062,18 +1571,13 @@
       "sheet": "gift-sheet0.png",
       "x": 681,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "nutchomp",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_nutchomp",
+      "path": "Sleigh/Art/Gift__nutchomp__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2081,18 +1585,13 @@
       "sheet": "gift-sheet0.png",
       "x": 613,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "tinselwhip",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_tinselwhip",
+      "path": "Sleigh/Art/Gift__tinselwhip__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2100,18 +1599,13 @@
       "sheet": "gift-sheet0.png",
       "x": 545,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "kiss",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_kiss",
+      "path": "Sleigh/Art/Gift__kiss__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2119,18 +1613,13 @@
       "sheet": "gift-sheet0.png",
       "x": 477,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "midnight",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_midnight",
+      "path": "Sleigh/Art/Gift__midnight__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2138,18 +1627,13 @@
       "sheet": "gift-sheet0.png",
       "x": 409,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "birch",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_birch",
+      "path": "Sleigh/Art/Gift__birch__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2157,18 +1641,13 @@
       "sheet": "gift-sheet0.png",
       "x": 341,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "starfall",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_starfall",
+      "path": "Sleigh/Art/Gift__starfall__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2176,18 +1655,13 @@
       "sheet": "gift-sheet0.png",
       "x": 273,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "chimney",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_chimney",
+      "path": "Sleigh/Art/Gift__chimney__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2195,18 +1669,13 @@
       "sheet": "gift-sheet0.png",
       "x": 205,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "bellybump",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_bellybump",
+      "path": "Sleigh/Art/Gift__bellybump__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2214,18 +1683,13 @@
       "sheet": "gift-sheet0.png",
       "x": 137,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "stampede",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_stampede",
+      "path": "Sleigh/Art/Gift__stampede__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2233,18 +1697,13 @@
       "sheet": "gift-sheet0.png",
       "x": 69,
       "y": 91,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "pow",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_pow",
+      "path": "Sleigh/Art/Gift__pow__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2252,18 +1711,13 @@
       "sheet": "gift-sheet0.png",
       "x": 1,
       "y": 90,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "milkcookies",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_milkcookies",
+      "path": "Sleigh/Art/Gift__milkcookies__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2271,18 +1725,13 @@
       "sheet": "gift-sheet0.png",
       "x": 900,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "rhythm",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_rhythm",
+      "path": "Sleigh/Art/Gift__rhythm__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2290,18 +1739,13 @@
       "sheet": "gift-sheet0.png",
       "x": 832,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "hollywreath",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_hollywreath",
+      "path": "Sleigh/Art/Gift__hollywreath__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2309,18 +1753,13 @@
       "sheet": "gift-sheet0.png",
       "x": 764,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "candles",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_candles",
+      "path": "Sleigh/Art/Gift__candles__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2328,18 +1767,13 @@
       "sheet": "gift-sheet0.png",
       "x": 696,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "choir",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_choir",
+      "path": "Sleigh/Art/Gift__choir__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2347,18 +1781,13 @@
       "sheet": "gift-sheet0.png",
       "x": 628,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "guidingstar",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_guidingstar",
+      "path": "Sleigh/Art/Gift__guidingstar__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2366,18 +1795,13 @@
       "sheet": "gift-sheet0.png",
       "x": 560,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "spiked",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_spiked",
+      "path": "Sleigh/Art/Gift__spiked__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2385,18 +1809,13 @@
       "sheet": "gift-sheet0.png",
       "x": 492,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "tinselarmor",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_tinselarmor",
+      "path": "Sleigh/Art/Gift__tinselarmor__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2404,18 +1823,13 @@
       "sheet": "gift-sheet0.png",
       "x": 424,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "snowfall",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_snowfall",
+      "path": "Sleigh/Art/Gift__snowfall__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2423,18 +1837,13 @@
       "sheet": "gift-sheet0.png",
       "x": 356,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "curse",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_curse",
+      "path": "Sleigh/Art/Gift__curse__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2442,18 +1851,13 @@
       "sheet": "gift-sheet0.png",
       "x": 288,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "coal",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_coal",
+      "path": "Sleigh/Art/Gift__coal__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2461,18 +1865,13 @@
       "sheet": "gift-sheet0.png",
       "x": 220,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "soot",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_soot",
+      "path": "Sleigh/Art/Gift__soot__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2480,18 +1879,13 @@
       "sheet": "gift-sheet0.png",
       "x": 152,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Gift",
       "anim": "naughty",
       "frame": 0,
-      "path": "Sleigh/Festival/Card_naughty",
+      "path": "Sleigh/Art/Gift__naughty__0",
       "width": 66,
       "height": 88,
       "pivotX": 0.5,
@@ -2499,18 +1893,13 @@
       "sheet": "gift-sheet0.png",
       "x": 84,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_0",
+      "path": "Sleigh/Art/Icon__potion__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2518,18 +1907,13 @@
       "sheet": "icon-sheet2.png",
       "x": 67,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_hotcocoa",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_hotcocoa_0",
+      "path": "Sleigh/Art/Icon__potion_hotcocoa__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2537,18 +1921,13 @@
       "sheet": "icon-sheet2.png",
       "x": 89,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_eggnog",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_eggnog_0",
+      "path": "Sleigh/Art/Icon__potion_eggnog__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2556,18 +1935,13 @@
       "sheet": "icon-sheet2.png",
       "x": 111,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_cider",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_cider_0",
+      "path": "Sleigh/Art/Icon__potion_cider__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2575,18 +1949,13 @@
       "sheet": "icon-sheet2.png",
       "x": 133,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_peppermint",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_peppermint_0",
+      "path": "Sleigh/Art/Icon__potion_peppermint__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2594,18 +1963,13 @@
       "sheet": "icon-sheet2.png",
       "x": 155,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_snowflask",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_snowflask_0",
+      "path": "Sleigh/Art/Icon__potion_snowflask__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2613,18 +1977,13 @@
       "sheet": "icon-sheet2.png",
       "x": 177,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_cracker",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_cracker_0",
+      "path": "Sleigh/Art/Icon__potion_cracker__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2632,18 +1991,13 @@
       "sheet": "icon-sheet2.png",
       "x": 199,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_blizzard",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_blizzard_0",
+      "path": "Sleigh/Art/Icon__potion_blizzard__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2651,18 +2005,13 @@
       "sheet": "icon-sheet2.png",
       "x": 221,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_glitter",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_glitter_0",
+      "path": "Sleigh/Art/Icon__potion_glitter__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2670,18 +2019,13 @@
       "sheet": "icon-sheet2.png",
       "x": 43,
       "y": 33,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_glitter",
       "frame": 1,
-      "path": "Sleigh/Festival/Icon_potion_glitter_1",
+      "path": "Sleigh/Art/Icon__potion_glitter__1",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2689,18 +2033,13 @@
       "sheet": "icon-sheet2.png",
       "x": 65,
       "y": 33,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_glitter",
       "frame": 2,
-      "path": "Sleigh/Festival/Icon_potion_glitter_2",
+      "path": "Sleigh/Art/Icon__potion_glitter__2",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2708,18 +2047,13 @@
       "sheet": "icon-sheet2.png",
       "x": 87,
       "y": 33,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_glitter",
       "frame": 3,
-      "path": "Sleigh/Festival/Icon_potion_glitter_3",
+      "path": "Sleigh/Art/Icon__potion_glitter__3",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2727,18 +2061,13 @@
       "sheet": "icon-sheet2.png",
       "x": 109,
       "y": 33,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_glitter",
       "frame": 4,
-      "path": "Sleigh/Festival/Icon_potion_glitter_4",
+      "path": "Sleigh/Art/Icon__potion_glitter__4",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2746,18 +2075,13 @@
       "sheet": "icon-sheet2.png",
       "x": 131,
       "y": 26,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_milk",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_milk_0",
+      "path": "Sleigh/Art/Icon__potion_milk__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2765,18 +2089,13 @@
       "sheet": "icon-sheet2.png",
       "x": 153,
       "y": 26,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_frostvial",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_frostvial_0",
+      "path": "Sleigh/Art/Icon__potion_frostvial__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2784,18 +2103,13 @@
       "sheet": "icon-sheet2.png",
       "x": 175,
       "y": 26,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_dough",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_dough_0",
+      "path": "Sleigh/Art/Icon__potion_dough__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2803,18 +2117,13 @@
       "sheet": "icon-sheet2.png",
       "x": 197,
       "y": 26,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_elfdust",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_elfdust_0",
+      "path": "Sleigh/Art/Icon__potion_elfdust__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2822,18 +2131,13 @@
       "sheet": "icon-sheet2.png",
       "x": 219,
       "y": 26,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_deermilk",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_deermilk_0",
+      "path": "Sleigh/Art/Icon__potion_deermilk__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2841,18 +2145,13 @@
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 33,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_punch",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_punch_0",
+      "path": "Sleigh/Art/Icon__potion_punch__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2860,18 +2159,13 @@
       "sheet": "icon-sheet2.png",
       "x": 23,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_starlight",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_starlight_0",
+      "path": "Sleigh/Art/Icon__potion_starlight__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2879,18 +2173,13 @@
       "sheet": "icon-sheet2.png",
       "x": 45,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_smoke",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_smoke_0",
+      "path": "Sleigh/Art/Icon__potion_smoke__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2898,18 +2187,13 @@
       "sheet": "icon-sheet2.png",
       "x": 67,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_ginger",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_ginger_0",
+      "path": "Sleigh/Art/Icon__potion_ginger__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2917,18 +2201,13 @@
       "sheet": "icon-sheet2.png",
       "x": 89,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_wishbone",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_wishbone_0",
+      "path": "Sleigh/Art/Icon__potion_wishbone__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2936,18 +2215,13 @@
       "sheet": "icon-sheet2.png",
       "x": 111,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_wax",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_wax_0",
+      "path": "Sleigh/Art/Icon__potion_wax__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2955,18 +2229,13 @@
       "sheet": "icon-sheet2.png",
       "x": 133,
       "y": 51,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "potion_elixir",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_potion_elixir_0",
+      "path": "Sleigh/Art/Icon__potion_elixir__0",
       "width": 20,
       "height": 23,
       "pivotX": 0.5,
@@ -2974,914 +2243,461 @@
       "sheet": "icon-sheet2.png",
       "x": 155,
       "y": 51,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_snowshovel",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_snowshovel_0",
+      "path": "Sleigh/Art/Icon__relic_snowshovel__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 60,
       "y": 97,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_sackpatch",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_sackpatch_0",
+      "path": "Sleigh/Art/Icon__relic_sackpatch__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 80,
       "y": 97,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_treestar",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_treestar_0",
+      "path": "Sleigh/Art/Icon__relic_treestar__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 100,
       "y": 97,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_jinglebell",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_jinglebell_0",
+      "path": "Sleigh/Art/Icon__relic_jinglebell__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 120,
       "y": 97,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_gingercharm",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_gingercharm_0",
+      "path": "Sleigh/Art/Icon__relic_gingercharm__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 140,
       "y": 76,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_lostmitten",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_lostmitten_0",
+      "path": "Sleigh/Art/Icon__relic_lostmitten__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 20,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_snowglobe",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_snowglobe_0",
+      "path": "Sleigh/Art/Icon__relic_snowglobe__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 60,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_cookietin",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_cookietin_0",
+      "path": "Sleigh/Art/Icon__relic_cookietin__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 80,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_nutjaw",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_nutjaw_0",
+      "path": "Sleigh/Art/Icon__relic_nutjaw__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 100,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_eggnogmug",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_eggnogmug_0",
+      "path": "Sleigh/Art/Icon__relic_eggnogmug__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 120,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_iceskates",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_iceskates_0",
+      "path": "Sleigh/Art/Icon__relic_iceskates__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 140,
       "y": 97,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_churchbell",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_churchbell_0",
+      "path": "Sleigh/Art/Icon__relic_churchbell__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 161,
       "y": 97,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_hollysprig",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_hollysprig_0",
+      "path": "Sleigh/Art/Icon__relic_hollysprig__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 193,
       "y": 97,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_cocoapot",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_cocoapot_0",
+      "path": "Sleigh/Art/Icon__relic_cocoapot__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 200,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_warmsocks",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_warmsocks_0",
+      "path": "Sleigh/Art/Icon__relic_warmsocks__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 220,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_wishlist",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_wishlist_0",
+      "path": "Sleigh/Art/Icon__relic_wishlist__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 40,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_sugarplum",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_sugarplum_0",
+      "path": "Sleigh/Art/Icon__relic_sugarplum__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 161,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_candybowl",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_candybowl_0",
+      "path": "Sleigh/Art/Icon__relic_candybowl__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 60,
       "y": 161,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_gifttag",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_gifttag_0",
+      "path": "Sleigh/Art/Icon__relic_gifttag__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 80,
       "y": 161,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_workbench",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_workbench_0",
+      "path": "Sleigh/Art/Icon__relic_workbench__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 100,
       "y": 161,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_treeangel",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_treeangel_0",
+      "path": "Sleigh/Art/Icon__relic_treeangel__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 120,
       "y": 161,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_yulelog",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_yulelog_0",
+      "path": "Sleigh/Art/Icon__relic_yulelog__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 140,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_reindeerfeed",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_reindeerfeed_0",
+      "path": "Sleigh/Art/Icon__relic_reindeerfeed__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 160,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_fruitcake",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_fruitcake_0",
+      "path": "Sleigh/Art/Icon__relic_fruitcake__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 180,
       "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_pocketwatch",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_pocketwatch_0",
+      "path": "Sleigh/Art/Icon__relic_pocketwatch__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 200,
       "y": 161,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_elfcoupon",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_elfcoupon_0",
+      "path": "Sleigh/Art/Icon__relic_elfcoupon__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 220,
       "y": 161,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_reindeerbell",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_reindeerbell_0",
+      "path": "Sleigh/Art/Icon__relic_reindeerbell__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 21,
       "y": 161,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_ledger",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_ledger_0",
+      "path": "Sleigh/Art/Icon__relic_ledger__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 193,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_coalscuttle",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_coalscuttle_0",
+      "path": "Sleigh/Art/Icon__relic_coalscuttle__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 41,
       "y": 193,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_tinselgarland",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_tinselgarland_0",
+      "path": "Sleigh/Art/Icon__relic_tinselgarland__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 61,
       "y": 193,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_rednose",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_rednose_0",
+      "path": "Sleigh/Art/Icon__relic_rednose__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 81,
       "y": 193,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "relic_toolbelt",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_relic_toolbelt_0",
+      "path": "Sleigh/Art/Icon__relic_toolbelt__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
-      "pivotY": 0,
+      "pivotY": 0.5,
       "sheet": "icon-sheet2.png",
       "x": 101,
       "y": 193,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "node_battle",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_node_battle_0",
+      "path": "Sleigh/Art/Icon__node_battle__0",
       "width": 44,
       "height": 44,
       "pivotX": 0.5,
@@ -3889,18 +2705,13 @@
       "sheet": "icon-sheet1.png",
       "x": 65,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "node_event",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_node_event_0",
+      "path": "Sleigh/Art/Icon__node_event__0",
       "width": 44,
       "height": 44,
       "pivotX": 0.5,
@@ -3908,18 +2719,13 @@
       "sheet": "icon-sheet1.png",
       "x": 129,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "node_elite",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_node_elite_0",
+      "path": "Sleigh/Art/Icon__node_elite__0",
       "width": 44,
       "height": 44,
       "pivotX": 0.5,
@@ -3927,18 +2733,13 @@
       "sheet": "icon-sheet1.png",
       "x": 201,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "node_shop",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_node_shop_0",
+      "path": "Sleigh/Art/Icon__node_shop__0",
       "width": 44,
       "height": 44,
       "pivotX": 0.5,
@@ -3946,18 +2747,13 @@
       "sheet": "icon-sheet1.png",
       "x": 109,
       "y": 129,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "node_rest",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_node_rest_0",
+      "path": "Sleigh/Art/Icon__node_rest__0",
       "width": 44,
       "height": 44,
       "pivotX": 0.5,
@@ -3965,18 +2761,13 @@
       "sheet": "icon-sheet1.png",
       "x": 155,
       "y": 129,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "node_boss",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_node_boss_0",
+      "path": "Sleigh/Art/Icon__node_boss__0",
       "width": 44,
       "height": 44,
       "pivotX": 0.5,
@@ -3984,18 +2775,13 @@
       "sheet": "icon-sheet1.png",
       "x": 201,
       "y": 129,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "node_treasure",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_node_treasure_0",
+      "path": "Sleigh/Art/Icon__node_treasure__0",
       "width": 44,
       "height": 44,
       "pivotX": 0.5,
@@ -4003,18 +2789,13 @@
       "sheet": "icon-sheet1.png",
       "x": 63,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "intent_attack",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_intent_attack_0",
+      "path": "Sleigh/Art/Icon__intent_attack__0",
       "width": 14,
       "height": 14,
       "pivotX": 0.5,
@@ -4022,18 +2803,13 @@
       "sheet": "icon-sheet2.png",
       "x": 23,
       "y": 49,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "intent_defend",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_intent_defend_0",
+      "path": "Sleigh/Art/Icon__intent_defend__0",
       "width": 14,
       "height": 14,
       "pivotX": 0.5,
@@ -4041,18 +2817,13 @@
       "sheet": "icon-sheet2.png",
       "x": 161,
       "y": 81,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "intent_buff",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_intent_buff_0",
+      "path": "Sleigh/Art/Icon__intent_buff__0",
       "width": 14,
       "height": 14,
       "pivotX": 0.5,
@@ -4060,18 +2831,13 @@
       "sheet": "icon-sheet2.png",
       "x": 241,
       "y": 145,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "intent_debuff",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_intent_debuff_0",
+      "path": "Sleigh/Art/Icon__intent_debuff__0",
       "width": 14,
       "height": 14,
       "pivotX": 0.5,
@@ -4079,18 +2845,13 @@
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 145,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "intent_unknown",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_intent_unknown_0",
+      "path": "Sleigh/Art/Icon__intent_unknown__0",
       "width": 12,
       "height": 14,
       "pivotX": 0.5,
@@ -4098,18 +2859,13 @@
       "sheet": "icon-sheet2.png",
       "x": 243,
       "y": 81,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "intent_escape",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_intent_escape_0",
+      "path": "Sleigh/Art/Icon__intent_escape__0",
       "width": 14,
       "height": 14,
       "pivotX": 0.5,
@@ -4117,18 +2873,13 @@
       "sheet": "icon-sheet2.png",
       "x": 241,
       "y": 161,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_might",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_might_0",
+      "path": "Sleigh/Art/Icon__st_might__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4136,18 +2887,13 @@
       "sheet": "icon-sheet2.png",
       "x": 41,
       "y": 161,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_nimble",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_nimble_0",
+      "path": "Sleigh/Art/Icon__st_nimble__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4155,18 +2901,13 @@
       "sheet": "icon-sheet2.png",
       "x": 161,
       "y": 161,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_soggy",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_soggy_0",
+      "path": "Sleigh/Art/Icon__st_soggy__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4174,18 +2915,13 @@
       "sheet": "icon-sheet2.png",
       "x": 179,
       "y": 161,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_brittle",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_brittle_0",
+      "path": "Sleigh/Art/Icon__st_brittle__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4193,18 +2929,13 @@
       "sheet": "icon-sheet2.png",
       "x": 197,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_chilled",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_chilled_0",
+      "path": "Sleigh/Art/Icon__st_chilled__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4212,18 +2943,13 @@
       "sheet": "icon-sheet2.png",
       "x": 215,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_frostbite",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_frostbite_0",
+      "path": "Sleigh/Art/Icon__st_frostbite__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4231,18 +2957,13 @@
       "sheet": "icon-sheet2.png",
       "x": 233,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_holly",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_holly_0",
+      "path": "Sleigh/Art/Icon__st_holly__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4250,18 +2971,13 @@
       "sheet": "icon-sheet2.png",
       "x": 21,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_carol",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_carol_0",
+      "path": "Sleigh/Art/Icon__st_carol__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4269,18 +2985,13 @@
       "sheet": "icon-sheet2.png",
       "x": 161,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_cocoa",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_cocoa_0",
+      "path": "Sleigh/Art/Icon__st_cocoa__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4288,18 +2999,13 @@
       "sheet": "icon-sheet2.png",
       "x": 179,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_ribbon",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_ribbon_0",
+      "path": "Sleigh/Art/Icon__st_ribbon__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4307,18 +3013,13 @@
       "sheet": "icon-sheet2.png",
       "x": 197,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_tinsel",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_tinsel_0",
+      "path": "Sleigh/Art/Icon__st_tinsel__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4326,18 +3027,13 @@
       "sheet": "icon-sheet2.png",
       "x": 215,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_candles",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_candles_0",
+      "path": "Sleigh/Art/Icon__st_candles__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4345,18 +3041,13 @@
       "sheet": "icon-sheet2.png",
       "x": 233,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_snowfall",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_snowfall_0",
+      "path": "Sleigh/Art/Icon__st_snowfall__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4364,18 +3055,13 @@
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_workshop",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_workshop_0",
+      "path": "Sleigh/Art/Icon__st_workshop__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4383,18 +3069,13 @@
       "sheet": "icon-sheet2.png",
       "x": 19,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_star",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_star_0",
+      "path": "Sleigh/Art/Icon__st_star__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4402,18 +3083,13 @@
       "sheet": "icon-sheet2.png",
       "x": 37,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_choir",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_choir_0",
+      "path": "Sleigh/Art/Icon__st_choir__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4421,18 +3097,13 @@
       "sheet": "icon-sheet2.png",
       "x": 55,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_jolly",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_jolly_0",
+      "path": "Sleigh/Art/Icon__st_jolly__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4440,18 +3111,13 @@
       "sheet": "icon-sheet2.png",
       "x": 73,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "st_drawnext",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_st_drawnext_0",
+      "path": "Sleigh/Art/Icon__st_drawnext__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4459,18 +3125,13 @@
       "sheet": "icon-sheet2.png",
       "x": 91,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_musicbox",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_musicbox_0",
+      "path": "Sleigh/Art/Icon__part_musicbox__0",
       "width": 19,
       "height": 21,
       "pivotX": 0.5263157894736842,
@@ -4478,18 +3139,13 @@
       "sheet": "icon-sheet2.png",
       "x": 199,
       "y": 74,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_ribbon",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_ribbon_0",
+      "path": "Sleigh/Art/Icon__part_ribbon__0",
       "width": 20,
       "height": 17,
       "pivotX": 0.5,
@@ -4497,18 +3153,13 @@
       "sheet": "icon-sheet2.png",
       "x": 41,
       "y": 97,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_bell",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_bell_0",
+      "path": "Sleigh/Art/Icon__part_bell__0",
       "width": 19,
       "height": 19,
       "pivotX": 0.47368421052631576,
@@ -4516,18 +3167,13 @@
       "sheet": "icon-sheet2.png",
       "x": 20,
       "y": 97,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_paint",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_paint_0",
+      "path": "Sleigh/Art/Icon__part_paint__0",
       "width": 18,
       "height": 21,
       "pivotX": 0.5,
@@ -4535,18 +3181,13 @@
       "sheet": "icon-sheet2.png",
       "x": 220,
       "y": 97,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_battery",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_battery_0",
+      "path": "Sleigh/Art/Icon__part_battery__0",
       "width": 13,
       "height": 19,
       "pivotX": 0.46153846153846156,
@@ -4554,18 +3195,13 @@
       "sheet": "icon-sheet2.png",
       "x": 241,
       "y": 33,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_spring",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_spring_0",
+      "path": "Sleigh/Art/Icon__part_spring__0",
       "width": 17,
       "height": 22,
       "pivotX": 0.47058823529411764,
@@ -4573,18 +3209,13 @@
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 97,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_windup",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_windup_0",
+      "path": "Sleigh/Art/Icon__part_windup__0",
       "width": 21,
       "height": 20,
       "pivotX": 0.47619047619047616,
@@ -4592,18 +3223,13 @@
       "sheet": "icon-sheet2.png",
       "x": 177,
       "y": 51,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_glitter",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_glitter_0",
+      "path": "Sleigh/Art/Icon__part_glitter__0",
       "width": 21,
       "height": 20,
       "pivotX": 0.47619047619047616,
@@ -4611,18 +3237,13 @@
       "sheet": "icon-sheet2.png",
       "x": 199,
       "y": 51,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_squeaker",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_squeaker_0",
+      "path": "Sleigh/Art/Icon__part_squeaker__0",
       "width": 21,
       "height": 20,
       "pivotX": 0.47619047619047616,
@@ -4630,18 +3251,13 @@
       "sheet": "icon-sheet2.png",
       "x": 221,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "part_wheels",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_part_wheels_0",
+      "path": "Sleigh/Art/Icon__part_wheels__0",
       "width": 21,
       "height": 20,
       "pivotX": 0.47619047619047616,
@@ -4649,18 +3265,13 @@
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "hook",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_hook_0",
+      "path": "Sleigh/Art/Icon__hook__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
@@ -4668,18 +3279,13 @@
       "sheet": "icon-sheet2.png",
       "x": 121,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "gift_mitten",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_gift_mitten_0",
+      "path": "Sleigh/Art/Icon__gift_mitten__0",
       "width": 52,
       "height": 44,
       "pivotX": 0.5,
@@ -4687,18 +3293,13 @@
       "sheet": "icon-sheet1.png",
       "x": 63,
       "y": 129,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "Animation 2",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_Animation_2_0",
+      "path": "Sleigh/Art/Icon__Animation_2__0",
       "width": 423,
       "height": 179,
       "pivotX": 0.5,
@@ -4706,18 +3307,13 @@
       "sheet": "icon-sheet0.png",
       "x": 0,
       "y": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "shield",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_shield_0",
+      "path": "Sleigh/Art/Icon__shield__0",
       "width": 12,
       "height": 12,
       "pivotX": 0.5,
@@ -4725,18 +3321,13 @@
       "sheet": "icon-sheet2.png",
       "x": 145,
       "y": 209,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "sword",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_sword_0",
+      "path": "Sleigh/Art/Icon__sword__0",
       "width": 12,
       "height": 12,
       "pivotX": 0.5,
@@ -4744,18 +3335,13 @@
       "sheet": "icon-sheet2.png",
       "x": 181,
       "y": 241,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "cost",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_cost_0",
+      "path": "Sleigh/Art/Icon__cost__0",
       "width": 20,
       "height": 20,
       "pivotX": 0.5,
@@ -4763,18 +3349,13 @@
       "sheet": "icon-sheet2.png",
       "x": 177,
       "y": 74,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "coin",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_coin_0",
+      "path": "Sleigh/Art/Icon__coin__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4782,18 +3363,13 @@
       "sheet": "icon-sheet2.png",
       "x": 109,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "gear",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_gear_0",
+      "path": "Sleigh/Art/Icon__gear__0",
       "width": 22,
       "height": 22,
       "pivotX": 0.5,
@@ -4801,18 +3377,13 @@
       "sheet": "icon-sheet2.png",
       "x": 43,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "heart",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_heart_0",
+      "path": "Sleigh/Art/Icon__heart__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4820,18 +3391,13 @@
       "sheet": "icon-sheet2.png",
       "x": 127,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "tree",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_tree_0",
+      "path": "Sleigh/Art/Icon__tree__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -4839,18 +3405,13 @@
       "sheet": "icon-sheet2.png",
       "x": 145,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "calendar",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_calendar_0",
+      "path": "Sleigh/Art/Icon__calendar__0",
       "width": 24,
       "height": 22,
       "pivotX": 0.5,
@@ -4858,18 +3419,13 @@
       "sheet": "icon-sheet2.png",
       "x": 1,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "pin",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_pin_0",
+      "path": "Sleigh/Art/Icon__pin__0",
       "width": 28,
       "height": 27,
       "pivotX": 0.5,
@@ -4877,18 +3433,13 @@
       "sheet": "icon-sheet1.png",
       "x": 227,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "sack",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_sack_0",
+      "path": "Sleigh/Art/Icon__sack__0",
       "width": 18,
       "height": 18,
       "pivotX": 0.5,
@@ -4896,18 +3447,13 @@
       "sheet": "icon-sheet2.png",
       "x": 141,
       "y": 161,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "orb",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_orb_0",
+      "path": "Sleigh/Art/Icon__orb__0",
       "width": 40,
       "height": 40,
       "pivotX": 0.5,
@@ -4915,18 +3461,13 @@
       "sheet": "icon-sheet1.png",
       "x": 109,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "node",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_node_0",
+      "path": "Sleigh/Art/Icon__node__0",
       "width": 10,
       "height": 10,
       "pivotX": 0.5,
@@ -4934,18 +3475,13 @@
       "sheet": "icon-sheet2.png",
       "x": 241,
       "y": 177,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "arrow",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_arrow_0",
+      "path": "Sleigh/Art/Icon__arrow__0",
       "width": 14,
       "height": 16,
       "pivotX": 0.5,
@@ -4953,18 +3489,13 @@
       "sheet": "icon-sheet2.png",
       "x": 241,
       "y": 97,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "path_dot",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_path_dot_0",
+      "path": "Sleigh/Art/Icon__path_dot__0",
       "width": 4,
       "height": 4,
       "pivotX": 0.5,
@@ -4972,18 +3503,13 @@
       "sheet": "icon-sheet3.png",
       "x": 0,
       "y": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "check",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_check_0",
+      "path": "Sleigh/Art/Icon__check__0",
       "width": 15,
       "height": 12,
       "pivotX": 0.4666666666666667,
@@ -4991,18 +3517,13 @@
       "sheet": "icon-sheet2.png",
       "x": 243,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "orb_empty",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_orb_empty_0",
+      "path": "Sleigh/Art/Icon__orb_empty__0",
       "width": 40,
       "height": 40,
       "pivotX": 0.5,
@@ -5010,18 +3531,13 @@
       "sheet": "icon-sheet1.png",
       "x": 151,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "sleigh",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_sleigh_0",
+      "path": "Sleigh/Art/Icon__sleigh__0",
       "width": 31,
       "height": 16,
       "pivotX": 0.4838709677419355,
@@ -5029,18 +3545,13 @@
       "sheet": "icon-sheet2.png",
       "x": 25,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "gift",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_gift_0",
+      "path": "Sleigh/Art/Icon__gift__0",
       "width": 16,
       "height": 16,
       "pivotX": 0.5,
@@ -5048,18 +3559,13 @@
       "sheet": "icon-sheet2.png",
       "x": 163,
       "y": 225,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "stocking",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_stocking_0",
+      "path": "Sleigh/Art/Icon__stocking__0",
       "width": 60,
       "height": 97,
       "pivotX": 0.5,
@@ -5067,18 +3573,13 @@
       "sheet": "icon-sheet1.png",
       "x": 1,
       "y": 129,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Icon",
       "anim": "new_arrow",
       "frame": 0,
-      "path": "Sleigh/Festival/Icon_new_arrow_0",
+      "path": "Sleigh/Art/Icon__new_arrow__0",
       "width": 32,
       "height": 32,
       "pivotX": 0.5,
@@ -5086,12 +3587,7 @@
       "sheet": "icon-sheet1.png",
       "x": 193,
       "y": 193,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Board",
@@ -5139,7 +3635,7 @@
       "type": "BGImage",
       "anim": "house",
       "frame": 0,
-      "path": "Sleigh/Festival/House_house",
+      "path": "Sleigh/Art/BGImage__house__0",
       "width": 46,
       "height": 31,
       "pivotX": 0.5,
@@ -5147,18 +3643,13 @@
       "sheet": "shared-0-sheet2.png",
       "x": 91,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "BGImage",
       "anim": "moon",
       "frame": 0,
-      "path": "Sleigh/Festival/Moon",
+      "path": "Sleigh/Art/BGImage__moon__0",
       "width": 40,
       "height": 40,
       "pivotX": 0.5,
@@ -5166,18 +3657,13 @@
       "sheet": "shared-0-sheet2.png",
       "x": 1,
       "y": 25,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "BGImage",
       "anim": "house_lit",
       "frame": 0,
-      "path": "Sleigh/Festival/House_house_lit",
+      "path": "Sleigh/Art/BGImage__house_lit__0",
       "width": 46,
       "height": 31,
       "pivotX": 0.5,
@@ -5185,12 +3671,7 @@
       "sheet": "shared-0-sheet2.png",
       "x": 43,
       "y": 65,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "BGImage",
@@ -5210,7 +3691,7 @@
       "type": "BGImage",
       "anim": "tree",
       "frame": 0,
-      "path": "Sleigh/Festival/SpringTree_tree",
+      "path": "Sleigh/Art/BGImage__tree__0",
       "width": 168,
       "height": 256,
       "pivotX": 0.5,
@@ -5218,18 +3699,13 @@
       "sheet": "shared-0-sheet0.png",
       "x": 769,
       "y": 1025,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "BGImage",
       "anim": "Animation 1",
       "frame": 0,
-      "path": "Sleigh/Festival/SpringTree_Animation_1",
+      "path": "Sleigh/Art/BGImage__Animation_1__0",
       "width": 168,
       "height": 256,
       "pivotX": 0.5,
@@ -5237,12 +3713,7 @@
       "sheet": "shared-0-sheet0.png",
       "x": 769,
       "y": 1537,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "BGImage",
@@ -5262,104 +3733,57 @@
       "type": "Claus",
       "anim": "idle",
       "frame": 0,
-      "path": "Sleigh/Festival/Hero_idle",
-      "width": 80,
-      "height": 120,
+      "path": "Sleigh/Art/Claus__idle__0",
+      "width": 54,
+      "height": 84,
       "pivotX": 0.5185185185185186,
       "pivotY": 1,
       "sheet": "shared-0-sheet1.png",
       "x": 200,
       "y": 385,
-      "eyes": [
-        {
-          "x": 0.47,
-          "y": 0.28
-        },
-        {
-          "x": 0.59,
-          "y": 0.28
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Claus",
       "anim": "rudolph_idle",
       "frame": 0,
-      "path": "Sleigh/Festival/Hero_rudolph_idle",
-      "width": 80,
-      "height": 120,
+      "path": "Sleigh/Art/Claus__rudolph_idle__0",
+      "width": 65,
+      "height": 79,
       "pivotX": 0.5076923076923077,
       "pivotY": 1,
       "sheet": "shared-0-sheet1.png",
       "x": 129,
       "y": 385,
-      "eyes": [
-        {
-          "x": 0.47,
-          "y": 0.28
-        },
-        {
-          "x": 0.59,
-          "y": 0.28
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Claus",
       "anim": "tinsel_idle",
       "frame": 0,
-      "path": "Sleigh/Festival/Hero_tinsel_idle",
-      "width": 80,
-      "height": 120,
+      "path": "Sleigh/Art/Claus__tinsel_idle__0",
+      "width": 73,
+      "height": 87,
       "pivotX": 0.5068493150684932,
       "pivotY": 1,
       "sheet": "shared-0-sheet1.png",
       "x": 138,
       "y": 257,
-      "eyes": [
-        {
-          "x": 0.47,
-          "y": 0.28
-        },
-        {
-          "x": 0.59,
-          "y": 0.28
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "BG",
       "anim": "default",
       "frame": 0,
-      "path": "Sleigh/Festival/Background_town",
-      "width": 640,
-      "height": 360,
+      "path": "Sleigh/Art/BG__default__0",
+      "width": 235,
+      "height": 540,
       "pivotX": 0,
       "pivotY": 0,
       "sheet": "bg-sheet0.png",
       "x": 0,
       "y": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "ButtonPanel",
@@ -5379,7 +3803,7 @@
       "type": "ShopBG",
       "anim": "Animation 1",
       "frame": 0,
-      "path": "Sleigh/Festival/Background_shop",
+      "path": "Sleigh/Art/ShopBG__Animation_1__0",
       "width": 640,
       "height": 360,
       "pivotX": 0,
@@ -5387,12 +3811,7 @@
       "sheet": "shared-0-sheet0.png",
       "x": 403,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "Txt3",
@@ -5412,7 +3831,7 @@
       "type": "ChimneyBG",
       "anim": "Animation 1",
       "frame": 0,
-      "path": "Sleigh/Festival/Background_rest",
+      "path": "Sleigh/Art/ChimneyBG__Animation_1__0",
       "width": 640,
       "height": 360,
       "pivotX": 0,
@@ -5420,12 +3839,7 @@
       "sheet": "shared-0-sheet0.png",
       "x": 1,
       "y": 1025,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "SliderBar",
@@ -5767,7 +4181,7 @@
       "type": "HeartEye",
       "anim": "Animation 1",
       "frame": 0,
-      "path": "Sleigh/Festival/FriendshipHeart",
+      "path": "Sleigh/Art/HeartEye__Animation_1__0",
       "width": 18,
       "height": 16,
       "pivotX": 0.5,
@@ -5775,12 +4189,7 @@
       "sheet": "shared-0-sheet2.png",
       "x": 1,
       "y": 97,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "TreeNode",
@@ -5814,7 +4223,7 @@
       "type": "Background",
       "anim": "stage",
       "frame": 0,
-      "path": "Sleigh/Festival/Background_town",
+      "path": "Sleigh/Art/Background__stage__0",
       "width": 640,
       "height": 400,
       "pivotX": 0,
@@ -5822,31 +4231,21 @@
       "sheet": "shared-0-sheet0.png",
       "x": 1,
       "y": 1,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "IntroBG",
       "anim": "default",
       "frame": 0,
-      "path": "Sleigh/Festival/Background_town",
-      "width": 640,
-      "height": 360,
+      "path": "Sleigh/Art/IntroBG__default__0",
+      "width": 235,
+      "height": 540,
       "pivotX": 0,
       "pivotY": 0,
       "sheet": "introbg-sheet0.png",
       "x": 0,
       "y": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
+      "eyes": []
     },
     {
       "type": "PowerFill",
@@ -5866,7 +4265,7 @@
       "type": "StockingBG",
       "anim": "Animation 1",
       "frame": 0,
-      "path": "Sleigh/Festival/Background_treasure",
+      "path": "Sleigh/Art/StockingBG__Animation_1__0",
       "width": 640,
       "height": 360,
       "pivotX": 0,
@@ -5874,1873 +4273,7 @@
       "sheet": "shared-0-sheet0.png",
       "x": 363,
       "y": 1025,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "NianTitle",
-      "anim": "default",
-      "frame": 0,
-      "path": "Sleigh/Festival/Background_town",
-      "width": 640,
-      "height": 360,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "sock",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_sock",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "mitten",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_mitten",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "snowball",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_snowball",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "canejab",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_canejab",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "icicle",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_icicle",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "baubles",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_baubles",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "sledsweep",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_sledsweep",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "nutchomp",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_nutchomp",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "tinselwhip",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_tinselwhip",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "bellslam",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_bellslam",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "crumbs",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_crumbs",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "scarf",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_scarf",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "cocoasip",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_cocoasip",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "offkey",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_offkey",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "wrapspree",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_wrapspree",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "stuffer",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_stuffer",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "eggshot",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_eggshot",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "snowfort",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_snowfort",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "frostbreath",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_frostbreath",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "chimney",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_chimney",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "stampede",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_stampede",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "kiss",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_kiss",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "bellybump",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_bellybump",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "flurry",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_flurry",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "jingle",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_jingle",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_gingerling",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_gingerling",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 65,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_snowman",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_snowman",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 395,
-      "y": 129,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_ornament",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_ornament",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 67,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_rat",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_rat",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 205,
-      "y": 129,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_lights",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_lights",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 79,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_penguin",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_penguin",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 1,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_nutgrunt",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_nutgrunt",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 193,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_toysoldier",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_toysoldier",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 195,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_jack",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_jack",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 129,
-      "y": 1,
-      "eyes": [
-        {
-          "x": 0.39,
-          "y": 0.42
-        },
-        {
-          "x": 0.62,
-          "y": 0.42
-        }
-      ],
-      "authored": true,
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_fruitcake",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_fruitcake",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 1,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_angel",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_angel",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 67,
-      "y": 129,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_slime",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_slime",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 361,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_bat",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_bat",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 430,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_grumpkin",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_grumpkin",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 257,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_rogueelf",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_rogueelf",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 136,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_coalgolem",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_coalgolem",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 129,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_viper",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_viper",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 257,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_creeper",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_creeper",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 395,
-      "y": 1,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_general",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_general",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet1.png",
-      "x": 129,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_yeti",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_yeti",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 361,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_coalbaron",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_coalbaron",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 1,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_alpha",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_alpha",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 308,
-      "y": 1,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_witch",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_witch",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 444,
-      "y": 257,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "GiftIllustration",
-      "anim": "f_jackfrost",
-      "frame": 0,
-      "path": "Sleigh/Festival/Illustration_f_jackfrost",
-      "width": 66,
-      "height": 66,
-      "pivotX": 0,
-      "pivotY": 0,
-      "sheet": "enemy-sheet0.png",
-      "x": 153,
-      "y": 385,
-      "eyes": [
-        {
-          "x": 0.42,
-          "y": 0.35
-        },
-        {
-          "x": 0.58,
-          "y": 0.35
-        }
-      ],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "authored": true,
-      "pixel": true
-    },
-    {
-      "type": "Gift",
-      "anim": "flurry",
-      "frame": 0,
-      "path": "Sleigh/Festival/Card_flurry",
-      "width": 66,
-      "height": 88,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "Gift",
-      "anim": "fireplace",
-      "frame": 0,
-      "path": "Sleigh/Festival/Card_fireplace",
-      "width": 66,
-      "height": 88,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "lostelf",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_lostelf",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "workshop",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_workshop",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "carolers",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_carolers",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "pond",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_pond",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "cookiejar",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_cookiejar",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "globeshop",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_globeshop",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "stable",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_stable",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "well",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_well",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "elfgame",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_elfgame",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "factory",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_factory",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "gingerhouse",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_gingerhouse",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "sleigh",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_sleigh",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "naughtykid",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_naughtykid",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "mistletoe",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_mistletoe",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "toymaker",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_toymaker",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "blizzard",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_blizzard",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "postman",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_postman",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "cocoastand",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_cocoastand",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "fishing",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_fishing",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "ball",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_ball",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "stocking",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_stocking",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "angels",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_angels",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "fallenstar",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_fallenstar",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "exchange",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_exchange",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "snowmanfriend",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_snowmanfriend",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "EventArt",
-      "anim": "mirror",
-      "frame": 0,
-      "path": "Sleigh/Festival/Event_mirror",
-      "width": 128,
-      "height": 160,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "FestivalRegion",
-      "anim": "town",
-      "frame": 0,
-      "width": 640,
-      "height": 360,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "path": "Sleigh/Festival/Region_town",
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "FestivalRegion",
-      "anim": "mountain",
-      "frame": 0,
-      "width": 640,
-      "height": 360,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "path": "Sleigh/Festival/Region_mountain",
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "FestivalRegion",
-      "anim": "market",
-      "frame": 0,
-      "width": 640,
-      "height": 360,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "path": "Sleigh/Festival/Region_market",
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "FestivalRegion",
-      "anim": "gate",
-      "frame": 0,
-      "width": 640,
-      "height": 360,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "path": "Sleigh/Festival/Region_gate",
-      "columns": 0,
-      "rows": 0,
-      "tile": 0,
-      "pixel": true,
-      "authored": true
-    },
-    {
-      "type": "Scenery",
-      "anim": "characters",
-      "frame": 0,
-      "path": "Sleigh/Scenery/Characters",
-      "width": 640,
-      "height": 360,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "authored": true
-    },
-    {
-      "type": "Scenery",
-      "anim": "map",
-      "frame": 0,
-      "path": "Sleigh/Scenery/Map",
-      "width": 640,
-      "height": 360,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "authored": true
-    },
-    {
-      "type": "Scenery",
-      "anim": "battle",
-      "frame": 0,
-      "path": "Sleigh/Scenery/Battle",
-      "width": 640,
-      "height": 360,
-      "pivotX": 0,
-      "pivotY": 0,
-      "eyes": [],
-      "authored": true
+      "eyes": []
     }
   ]
 }

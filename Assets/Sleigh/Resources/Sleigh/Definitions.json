@@ -2,7 +2,7 @@
   "gifts": [
     {
       "id": "sock",
-      "name": "爆竹初响",
+      "name": "Sock Swat",
       "type": "atk",
       "rarity": 0,
       "cost": [
@@ -17,13 +17,13 @@
           "up": 9
         }
       ],
-      "desc": "造成{d}点伤害。",
+      "desc": "Deal {d} damage.",
       "flags": "",
       "steps": []
     },
     {
       "id": "mitten",
-      "name": "门神护佑",
+      "name": "Woolly Mitten",
       "type": "skl",
       "rarity": 0,
       "cost": [
@@ -38,13 +38,13 @@
           "up": 8
         }
       ],
-      "desc": "获得{b}点格挡。",
+      "desc": "Gain {b} Wrap.",
       "flags": "",
       "steps": []
     },
     {
       "id": "snowball",
-      "name": "震煞雷",
+      "name": "Snowball",
       "type": "atk",
       "rarity": 0,
       "cost": [
@@ -64,13 +64,13 @@
           "up": 3
         }
       ],
-      "desc": "造成{d}点伤害。施加{n}层破绽。",
+      "desc": "Deal {d} damage. Apply {n} Brittle.",
       "flags": "",
       "steps": []
     },
     {
       "id": "canejab",
-      "name": "桃剑探路",
+      "name": "Candy Cane Jab",
       "type": "atk",
       "rarity": 1,
       "cost": [
@@ -90,13 +90,13 @@
           "up": 2
         }
       ],
-      "desc": "造成{d}点伤害。抽{n}张法牌。",
+      "desc": "Deal {d} damage. Draw {n}.",
       "flags": "",
       "steps": []
     },
     {
       "id": "icicle",
-      "name": "寒符飞刃",
+      "name": "Icicle Toss",
       "type": "atk",
       "rarity": 1,
       "cost": [
@@ -116,13 +116,13 @@
           "up": 5
         }
       ],
-      "desc": "造成{d}点伤害。施加{n}层寒煞。",
+      "desc": "Deal {d} damage. Apply {n} Frostbite.",
       "flags": "",
       "steps": []
     },
     {
       "id": "baubles",
-      "name": "连珠爆竹",
+      "name": "Bauble Barrage",
       "type": "atk",
       "rarity": 1,
       "cost": [
@@ -137,13 +137,13 @@
           "up": 4
         }
       ],
-      "desc": "对随机敌人造成{d}点伤害，重复3次。",
+      "desc": "Deal {d} damage to a random enemy 3 times.",
       "flags": "",
       "steps": []
     },
     {
       "id": "sledsweep",
-      "name": "扫岁长鞭",
+      "name": "Sled Sweep",
       "type": "atk",
       "rarity": 1,
       "cost": [
@@ -158,13 +158,13 @@
           "up": 11
         }
       ],
-      "desc": "对所有敌人造成{d}点伤害。",
+      "desc": "Deal {d} damage to ALL enemies.",
       "flags": "",
       "steps": []
     },
     {
       "id": "nutchomp",
-      "name": "狮口破阵",
+      "name": "Nutcracker Chomp",
       "type": "atk",
       "rarity": 1,
       "cost": [
@@ -184,13 +184,13 @@
           "up": 3
         }
       ],
-      "desc": "造成{d}点伤害。施加{n}层虚弱。",
+      "desc": "Deal {d} damage. Apply {n} Soggy.",
       "flags": "",
       "steps": []
     },
     {
       "id": "tinselwhip",
-      "name": "红绫缠刃",
+      "name": "Tinsel Whip",
       "type": "atk",
       "rarity": 1,
       "cost": [
@@ -210,13 +210,13 @@
           "up": 7
         }
       ],
-      "desc": "获得{b}点格挡。造成{d}点伤害。",
+      "desc": "Gain {b} Wrap. Deal {d} damage.",
       "flags": "",
       "steps": []
     },
     {
       "id": "bellslam",
-      "name": "镇岁铜锣",
+      "name": "Bell Slam",
       "type": "atk",
       "rarity": 1,
       "cost": [
@@ -231,13 +231,13 @@
           "up": 11
         }
       ],
-      "desc": "造成{d}点伤害。若目标有破绽，获得1点灯火并抽1张法牌。",
+      "desc": "Deal {d} damage. If the enemy is Brittle, gain 1 Cheer and draw 1.",
       "flags": "",
       "steps": []
     },
     {
       "id": "crumbs",
-      "name": "火星迸射",
+      "name": "Cookie Crumbs",
       "type": "atk",
       "rarity": 1,
       "cost": [
@@ -252,13 +252,13 @@
           "up": 5
         }
       ],
-      "desc": "造成{d}点伤害。抽1张法牌。",
+      "desc": "Deal {d} damage. Draw 1.",
       "flags": "",
       "steps": []
     },
     {
       "id": "scarf",
-      "name": "护身红绫",
+      "name": "Scarf Wrap",
       "type": "skl",
       "rarity": 1,
       "cost": [
@@ -273,13 +273,13 @@
           "up": 11
         }
       ],
-      "desc": "获得{b}点格挡。",
+      "desc": "Gain {b} Wrap.",
       "flags": "",
       "steps": []
     },
     {
       "id": "cocoasip",
-      "name": "姜汤暖身",
+      "name": "Cocoa Sip",
       "type": "skl",
       "rarity": 1,
       "cost": [
@@ -294,13 +294,13 @@
           "up": 8
         }
       ],
-      "desc": "获得{b}点格挡。抽1张法牌。",
+      "desc": "Gain {b} Wrap. Draw 1.",
       "flags": "",
       "steps": []
     },
     {
       "id": "offkey",
-      "name": "傩鼓乱心",
+      "name": "Off-Key Carol",
       "type": "skl",
       "rarity": 1,
       "cost": [
@@ -315,13 +315,13 @@
           "up": 3
         }
       ],
-      "desc": "对所有敌人施加{n}层虚弱。",
+      "desc": "Apply {n} Soggy to ALL enemies.",
       "flags": "",
       "steps": []
     },
     {
       "id": "wrapspree",
-      "name": "叠符待晓",
+      "name": "Wrapping Spree",
       "type": "skl",
       "rarity": 1,
       "cost": [
@@ -336,13 +336,13 @@
           "up": 9
         }
       ],
-      "desc": "获得{b}点格挡。下回合额外抽1张法牌。",
+      "desc": "Gain {b} Wrap. Next turn, draw 1 extra.",
       "flags": "",
       "steps": []
     },
     {
       "id": "stuffer",
-      "name": "锦囊启封",
+      "name": "Stocking Stuffer",
       "type": "skl",
       "rarity": 1,
       "cost": [
@@ -357,13 +357,13 @@
           "up": 3
         }
       ],
-      "desc": "抽{n}张法牌。消耗。",
+      "desc": "Draw {n}. Consume.",
       "flags": "x",
       "steps": []
     },
     {
       "id": "eggshot",
-      "name": "屠苏燃气",
+      "name": "Eggnog Shot",
       "type": "skl",
       "rarity": 1,
       "cost": [
@@ -378,13 +378,13 @@
           "up": 2
         }
       ],
-      "desc": "获得{n}点灯火。消耗。",
+      "desc": "Gain {n} Cheer. Consume.",
       "flags": "x",
       "steps": []
     },
     {
       "id": "snowfort",
-      "name": "门神列阵",
+      "name": "Snow Fort",
       "type": "skl",
       "rarity": 1,
       "cost": [
@@ -399,13 +399,13 @@
           "up": 17
         }
       ],
-      "desc": "获得{b}点格挡。",
+      "desc": "Gain {b} Wrap.",
       "flags": "",
       "steps": []
     },
     {
       "id": "frostbreath",
-      "name": "寒煞入骨",
+      "name": "Frosty Breath",
       "type": "skl",
       "rarity": 1,
       "cost": [
@@ -420,13 +420,13 @@
           "up": 7
         }
       ],
-      "desc": "施加{n}层寒煞。",
+      "desc": "Apply {n} Frostbite.",
       "flags": "",
       "steps": []
     },
     {
       "id": "chimney",
-      "name": "天降伏魔",
+      "name": "Chimney Drop",
       "type": "atk",
       "rarity": 2,
       "cost": [
@@ -441,13 +441,13 @@
           "up": 26
         }
       ],
-      "desc": "造成{d}点伤害。",
+      "desc": "Deal {d} damage.",
       "flags": "",
       "steps": []
     },
     {
       "id": "stampede",
-      "name": "百狮踏阵",
+      "name": "Reindeer Stampede",
       "type": "atk",
       "rarity": 2,
       "cost": [
@@ -462,13 +462,13 @@
           "up": 5
         }
       ],
-      "desc": "对所有敌人造成{d}点伤害，重复3次。",
+      "desc": "Deal {d} damage to ALL enemies 3 times.",
       "flags": "",
       "steps": []
     },
     {
       "id": "kiss",
-      "name": "团圆回响",
+      "name": "Mistletoe Kiss",
       "type": "atk",
       "rarity": 2,
       "cost": [
@@ -488,13 +488,13 @@
           "up": 6
         }
       ],
-      "desc": "造成{d}点伤害。恢复{n}点生命。消耗。",
+      "desc": "Deal {d} damage. Heal {n}. Consume.",
       "flags": "x",
       "steps": []
     },
     {
       "id": "bellybump",
-      "name": "门神反震",
+      "name": "Belly Bump",
       "type": "atk",
       "rarity": 2,
       "cost": [
@@ -503,13 +503,13 @@
       ],
       "target": "e",
       "values": [],
-      "desc": "造成等同于当前格挡值的伤害。",
+      "desc": "Deal damage equal to your Wrap.",
       "flags": "",
       "steps": []
     },
     {
       "id": "flurry",
-      "name": "寒符叠煞",
+      "name": "Frostbite Flurry",
       "type": "atk",
       "rarity": 2,
       "cost": [
@@ -524,13 +524,13 @@
           "up": 8
         }
       ],
-      "desc": "造成{d}点伤害。目标的寒煞层数翻倍。",
+      "desc": "Deal {d} damage. Double the enemy's Frostbite.",
       "flags": "",
       "steps": []
     },
     {
       "id": "jingle",
-      "name": "更鼓催明",
+      "name": "Jingle Jangle",
       "type": "skl",
       "rarity": 2,
       "cost": [
@@ -545,13 +545,13 @@
           "up": 2
         }
       ],
-      "desc": "下回合获得2点灯火并额外抽{n}张法牌。",
+      "desc": "Next turn, gain 2 Cheer and draw {n} extra.",
       "flags": "",
       "steps": []
     },
     {
       "id": "doublewrap",
-      "name": "双门合璧",
+      "name": "Double Wrap",
       "type": "skl",
       "rarity": 2,
       "cost": [
@@ -560,13 +560,13 @@
       ],
       "target": "n",
       "values": [],
-      "desc": "当前格挡翻倍。",
+      "desc": "Double your Wrap.",
       "flags": "",
       "steps": []
     },
     {
       "id": "globe",
-      "name": "五帝钱镜",
+      "name": "Snow Globe",
       "type": "skl",
       "rarity": 2,
       "cost": [
@@ -586,13 +586,13 @@
           "up": 2
         }
       ],
-      "desc": "获得{b}点格挡。对所有敌人施加{n}层封息。",
+      "desc": "Gain {b} Wrap. Apply {n} Chilled to ALL enemies.",
       "flags": "",
       "steps": []
     },
     {
       "id": "fireplace",
-      "name": "围炉守岁",
+      "name": "Cozy Fireplace",
       "type": "skl",
       "rarity": 2,
       "cost": [
@@ -607,13 +607,13 @@
           "up": 9
         }
       ],
-      "desc": "恢复{n}点生命。消耗。",
+      "desc": "Heal {n}. Consume.",
       "flags": "x",
       "steps": []
     },
     {
       "id": "checktwice",
-      "name": "春符镇邪",
+      "name": "Check It Twice",
       "type": "skl",
       "rarity": 2,
       "cost": [
@@ -628,13 +628,13 @@
           "up": 3
         }
       ],
-      "desc": "施加{n}层虚弱和{n}层破绽。消耗。",
+      "desc": "Apply {n} Soggy and {n} Brittle. Consume.",
       "flags": "x",
       "steps": []
     },
     {
       "id": "elfhelp",
-      "name": "纸灵借法",
+      "name": "Elf Helper",
       "type": "skl",
       "rarity": 2,
       "cost": [
@@ -643,13 +643,13 @@
       ],
       "target": "n",
       "values": [],
-      "desc": "将1张随机法牌加入手牌，本回合费用为0。",
+      "desc": "Add a random gift to your hand. It costs 0 this turn.",
       "flags": "",
       "steps": []
     },
     {
       "id": "spiked",
-      "name": "饮屠苏",
+      "name": "Spiked Eggnog",
       "type": "pow",
       "rarity": 2,
       "cost": [
@@ -664,13 +664,13 @@
           "up": 3
         }
       ],
-      "desc": "获得{n}层力量。",
+      "desc": "Gain {n} Might.",
       "flags": "",
       "steps": []
     },
     {
       "id": "tinselarmor",
-      "name": "金缕护甲",
+      "name": "Tinsel Armor",
       "type": "pow",
       "rarity": 2,
       "cost": [
@@ -685,13 +685,13 @@
           "up": 4
         }
       ],
-      "desc": "每回合结束时，获得{n}点格挡。",
+      "desc": "At the end of your turn, gain {n} Wrap.",
       "flags": "",
       "steps": []
     },
     {
       "id": "hollywreath",
-      "name": "荆符反噬",
+      "name": "Holly Wreath",
       "type": "pow",
       "rarity": 2,
       "cost": [
@@ -706,13 +706,13 @@
           "up": 4
         }
       ],
-      "desc": "获得{n}层荆符。",
+      "desc": "Gain {n} Holly.",
       "flags": "",
       "steps": []
     },
     {
       "id": "candles",
-      "name": "长明灯阵",
+      "name": "Advent Candles",
       "type": "pow",
       "rarity": 2,
       "cost": [
@@ -727,13 +727,13 @@
           "up": 4
         }
       ],
-      "desc": "每回合结束时，对所有敌人造成{n}点伤害。",
+      "desc": "At the end of your turn, deal {n} damage to ALL enemies.",
       "flags": "",
       "steps": []
     },
     {
       "id": "snowfall",
-      "name": "朔风符阵",
+      "name": "Snowfall",
       "type": "pow",
       "rarity": 2,
       "cost": [
@@ -748,13 +748,13 @@
           "up": 3
         }
       ],
-      "desc": "每回合开始时，对所有敌人施加{n}层寒煞。",
+      "desc": "At the start of your turn, apply {n} Frostbite to ALL enemies.",
       "flags": "",
       "steps": []
     },
     {
       "id": "rhythm",
-      "name": "灯市百工",
+      "name": "Workshop Rhythm",
       "type": "pow",
       "rarity": 2,
       "cost": [
@@ -763,13 +763,13 @@
       ],
       "target": "n",
       "values": [],
-      "desc": "每回合开始时，额外抽1张法牌。",
+      "desc": "At the start of your turn, draw 1 extra gift.",
       "flags": "",
       "steps": []
     },
     {
       "id": "midnight",
-      "name": "子夜惊雷",
+      "name": "Midnight Ride",
       "type": "atk",
       "rarity": 3,
       "cost": [
@@ -784,13 +784,13 @@
           "up": 42
         }
       ],
-      "desc": "造成{d}点伤害。",
+      "desc": "Deal {d} damage.",
       "flags": "",
       "steps": []
     },
     {
       "id": "starfall",
-      "name": "万灯破夜",
+      "name": "Star Fall",
       "type": "atk",
       "rarity": 3,
       "cost": [
@@ -810,13 +810,13 @@
           "up": 2
         }
       ],
-      "desc": "对所有敌人造成{d}点伤害，并施加{n}层破绽。",
+      "desc": "Deal {d} damage to ALL enemies. Apply {n} Brittle to ALL.",
       "flags": "",
       "steps": []
     },
     {
       "id": "birch",
-      "name": "桃剑斩祟",
+      "name": "Birch Breaker",
       "type": "atk",
       "rarity": 3,
       "cost": [
@@ -836,13 +836,13 @@
           "up": 4
         }
       ],
-      "desc": "造成{d}点伤害。若击败目标，增加{n}点生命上限。消耗。",
+      "desc": "Deal {d} damage. If this kills, gain {n} Max HP. Consume.",
       "flags": "x",
       "steps": []
     },
     {
       "id": "bigbow",
-      "name": "金刚门神",
+      "name": "Big Red Bow",
       "type": "skl",
       "rarity": 3,
       "cost": [
@@ -857,13 +857,13 @@
           "up": 40
         }
       ],
-      "desc": "获得{b}点格挡。消耗。",
+      "desc": "Gain {b} Wrap. Consume.",
       "flags": "x",
       "steps": []
     },
     {
       "id": "miracle",
-      "name": "岁火重燃",
+      "name": "Xmas Miracle",
       "type": "skl",
       "rarity": 3,
       "cost": [
@@ -878,13 +878,13 @@
           "up": 3
         }
       ],
-      "desc": "获得{n}点灯火。抽2张法牌。消耗。",
+      "desc": "Gain {n} Cheer. Draw 2. Consume.",
       "flags": "x",
       "steps": []
     },
     {
       "id": "milkcookies",
-      "name": "团圆汤",
+      "name": "Milk & Cookies",
       "type": "pow",
       "rarity": 3,
       "cost": [
@@ -899,13 +899,13 @@
           "up": 3
         }
       ],
-      "desc": "每回合开始时，恢复{n}点生命。",
+      "desc": "At the start of your turn, heal {n}.",
       "flags": "",
       "steps": []
     },
     {
       "id": "guidingstar",
-      "name": "引岁灯",
+      "name": "Guiding Star",
       "type": "pow",
       "rarity": 3,
       "cost": [
@@ -914,13 +914,13 @@
       ],
       "target": "n",
       "values": [],
-      "desc": "每回合开始时，获得1点灯火。",
+      "desc": "At the start of your turn, gain 1 Cheer.",
       "flags": "",
       "steps": []
     },
     {
       "id": "choir",
-      "name": "百家傩舞",
+      "name": "Choir of Angels",
       "type": "pow",
       "rarity": 3,
       "cost": [
@@ -935,13 +935,13 @@
           "up": 3
         }
       ],
-      "desc": "每回合开始时，获得{n}层力量。",
+      "desc": "At the start of your turn, gain {n} Might.",
       "flags": "",
       "steps": []
     },
     {
       "id": "coal",
-      "name": "晦炭",
+      "name": "Lump of Coal",
       "type": "curse",
       "rarity": 9,
       "cost": [
@@ -950,13 +950,13 @@
       ],
       "target": "n",
       "values": [],
-      "desc": "无法赠送。留下它会降低岁火。",
+      "desc": "Ungiftable. Leaving it costs Spirit.",
       "flags": "u",
       "steps": []
     },
     {
       "id": "soot",
-      "name": "灶灰",
+      "name": "Soot",
       "type": "curse",
       "rarity": 9,
       "cost": [
@@ -965,13 +965,13 @@
       ],
       "target": "n",
       "values": [],
-      "desc": "无法赠送。融化。",
+      "desc": "Ungiftable. Melt.",
       "flags": "um",
       "steps": []
     },
     {
       "id": "naughty",
-      "name": "失岁咒",
+      "name": "Naughty Mark",
       "type": "curse",
       "rarity": 9,
       "cost": [
@@ -980,13 +980,13 @@
       ],
       "target": "n",
       "values": [],
-      "desc": "无法赠送。回合结束时失去2点生命。",
+      "desc": "Ungiftable. At the end of your turn, lose 2 HP.",
       "flags": "u",
       "steps": []
     },
     {
       "id": "f_gingerling",
-      "name": "灶糖童子",
+      "name": "Gingerbread Man",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1006,7 +1006,7 @@
           "up": 2
         }
       ],
-      "desc": "糖分冲刺！获得{b}点格挡。获得{k1}层力量。消耗。",
+      "desc": "Sugar Rush! Gain {b} Wrap. Gain {k1} Might. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1026,7 +1026,7 @@
     },
     {
       "id": "f_snowman",
-      "name": "雪魈",
+      "name": "Snowman",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1046,7 +1046,7 @@
           "up": 10
         }
       ],
-      "desc": "寒霜凝视！施加{k0}层封息。获得{b}点格挡。消耗。",
+      "desc": "Frost Glare! Apply {k0} Chilled. Gain {b} Wrap. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1066,7 +1066,7 @@
     },
     {
       "id": "f_ornament",
-      "name": "灯笼鬼",
+      "name": "Bad Bauble",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1081,7 +1081,7 @@
           "up": 5
         }
       ],
-      "desc": "碎片迸射！造成{d}点伤害，重复2次。消耗。",
+      "desc": "Shards! Deal {d} damage x2. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1095,7 +1095,7 @@
     },
     {
       "id": "f_rat",
-      "name": "灶台鼠",
+      "name": "Chimney Rat",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1110,7 +1110,7 @@
           "up": 3
         }
       ],
-      "desc": "吱吱叫！获得{k0}层力量。消耗。",
+      "desc": "Squeak! Gain {k0} Might. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1124,7 +1124,7 @@
     },
     {
       "id": "f_lights",
-      "name": "烛火精",
+      "name": "Tangled Lights",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1139,7 +1139,7 @@
           "up": 14
         }
       ],
-      "desc": "短路！造成{d}点伤害。消耗。",
+      "desc": "Short Circuit! Deal {d} damage. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1153,7 +1153,7 @@
     },
     {
       "id": "f_penguin",
-      "name": "机括小狮",
+      "name": "Wind-up Penguin",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1168,7 +1168,7 @@
           "up": 4
         }
       ],
-      "desc": "上机括！获得{k0}层力量。消耗。",
+      "desc": "Wind Up! Gain {k0} Might. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1182,7 +1182,7 @@
     },
     {
       "id": "f_nutgrunt",
-      "name": "纸甲门卒",
+      "name": "Nutcracker",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1202,7 +1202,7 @@
           "up": 6
         }
       ],
-      "desc": "站岗守卫！获得{b}点格挡。造成{d}点伤害。消耗。",
+      "desc": "Stand Guard! Gain {b} Wrap. Deal {d} damage. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1222,7 +1222,7 @@
     },
     {
       "id": "f_toysoldier",
-      "name": "纸人弩手",
+      "name": "Tin Soldier",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1237,7 +1237,7 @@
           "up": 5
         }
       ],
-      "desc": "齐射！造成{d}点伤害，重复3次。消耗。",
+      "desc": "Volley! Deal {d} damage x3. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1251,7 +1251,7 @@
     },
     {
       "id": "f_jack",
-      "name": "爆竹精",
+      "name": "Jack-in-the-Box",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1266,7 +1266,7 @@
           "up": 26
         }
       ],
-      "desc": "弹出！！造成{d}点伤害。消耗。",
+      "desc": "POP!! Deal {d} damage. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1280,7 +1280,7 @@
     },
     {
       "id": "f_fruitcake",
-      "name": "年糕蛇",
+      "name": "Fruity Snake",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1295,7 +1295,7 @@
           "up": 21
         }
       ],
-      "desc": "猛撞！造成{d}点伤害。消耗。",
+      "desc": "Slam! Deal {d} damage. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1309,7 +1309,7 @@
     },
     {
       "id": "f_angel",
-      "name": "纸鸢妖",
+      "name": "Broken Bauble",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1324,7 +1324,7 @@
           "up": 10
         }
       ],
-      "desc": "振翅狂风！造成{d}点伤害，重复2次。消耗。",
+      "desc": "Wing Gust! Deal {d} damage x2. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1338,7 +1338,7 @@
     },
     {
       "id": "f_slime",
-      "name": "糯米怪",
+      "name": "Eggnog Slime",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1358,7 +1358,7 @@
           "up": 2
         }
       ],
-      "desc": "泼洒！造成{d}点伤害。施加{k1}层虚弱。消耗。",
+      "desc": "Splash! Deal {d} damage. Apply {k1} Soggy. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1378,7 +1378,7 @@
     },
     {
       "id": "f_bat",
-      "name": "寒翼蝠",
+      "name": "Icicle Bat",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1393,7 +1393,7 @@
           "up": 10
         }
       ],
-      "desc": "俯冲！造成{d}点伤害。消耗。",
+      "desc": "Dive! Deal {d} damage. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1407,7 +1407,7 @@
     },
     {
       "id": "f_grumpkin",
-      "name": "招财妖",
+      "name": "Grumpkin",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1427,7 +1427,7 @@
           "up": 18
         }
       ],
-      "desc": "横抓！造成{d}点伤害。获得{k1}块铜钱。消耗。",
+      "desc": "Swipe! Deal {d} damage. Gain {k1} Cookies. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1447,7 +1447,7 @@
     },
     {
       "id": "f_rogueelf",
-      "name": "灯市飞贼",
+      "name": "Rogue Elf",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1467,7 +1467,7 @@
           "up": 18
         }
       ],
-      "desc": "偷窃！造成{d}点伤害。获得{k1}块铜钱。消耗。",
+      "desc": "Pickpocket! Deal {d} damage. Gain {k1} Cookies. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1487,7 +1487,7 @@
     },
     {
       "id": "f_coalgolem",
-      "name": "灶灰石灵",
+      "name": "Coal Golem",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1502,7 +1502,7 @@
           "up": 22
         }
       ],
-      "desc": "煤炭重拳！造成{d}点伤害。消耗。",
+      "desc": "Coal Fist! Deal {d} damage. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1516,7 +1516,7 @@
     },
     {
       "id": "f_viper",
-      "name": "朱砂蛇",
+      "name": "Candy Cane Viper",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1536,7 +1536,7 @@
           "up": 4
         }
       ],
-      "desc": "毒牙！造成{d}点伤害。施加{k1}层寒煞。消耗。",
+      "desc": "Fangs! Deal {d} damage. Apply {k1} Frostbite. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1556,7 +1556,7 @@
     },
     {
       "id": "f_creeper",
-      "name": "桃枝妖",
+      "name": "Mistletoe Creeper",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1576,7 +1576,7 @@
           "up": 10
         }
       ],
-      "desc": "生长！获得{k0}层荆符。获得{b}点格挡。消耗。",
+      "desc": "Grow! Gain {k0} Holly. Gain {b} Wrap. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1596,7 +1596,7 @@
     },
     {
       "id": "f_general",
-      "name": "纸人将军",
+      "name": "Nutcracker General",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1616,7 +1616,7 @@
           "up": 3
         }
       ],
-      "desc": "铁颚！造成{d}点伤害，重复2次。施加{k1}层破绽。消耗。",
+      "desc": "Iron Jaw! Deal {d} damage x2. Apply {k1} Brittle. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1636,7 +1636,7 @@
     },
     {
       "id": "f_yeti",
-      "name": "雪山魈王",
+      "name": "Abominable Snowman",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1651,7 +1651,7 @@
           "up": 35
         }
       ],
-      "desc": "雪崩！造成{d}点伤害。消耗。",
+      "desc": "Avalanche! Deal {d} damage. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1665,7 +1665,7 @@
     },
     {
       "id": "f_coalbaron",
-      "name": "灰财主",
+      "name": "Coal Baron",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1685,7 +1685,7 @@
           "up": 4
         }
       ],
-      "desc": "囤积！获得{b}点格挡。获得{k1}层红绳。消耗。",
+      "desc": "Stockpile! Gain {b} Wrap. Gain {k1} Tinsel. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1705,7 +1705,7 @@
     },
     {
       "id": "f_alpha",
-      "name": "巡夜狮王",
+      "name": "Reindeer Alpha",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1720,7 +1720,7 @@
           "up": 24
         }
       ],
-      "desc": "鹿角突刺！造成{d}点伤害。消耗。",
+      "desc": "Gore! Deal {d} damage. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1734,7 +1734,7 @@
     },
     {
       "id": "f_witch",
-      "name": "灶糖婆",
+      "name": "Gingerbread Witch",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1754,7 +1754,7 @@
           "up": 2
         }
       ],
-      "desc": "诅咒术！造成{d}点伤害。施加{k1}层封息。消耗。",
+      "desc": "Hex! Deal {d} damage. Apply {k1} Chilled. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1774,7 +1774,7 @@
     },
     {
       "id": "f_jackfrost",
-      "name": "霜煞童",
+      "name": "Jack Frost",
       "type": "friend",
       "rarity": 4,
       "cost": [
@@ -1794,7 +1794,7 @@
           "up": 3
         }
       ],
-      "desc": "冰封！施加{k0}层寒煞。施加{k1}层封息。消耗。",
+      "desc": "Freeze Over! Apply {k0} Frostbite. Apply {k1} Chilled. Consume.",
       "flags": "x",
       "steps": [
         {
@@ -1816,343 +1816,343 @@
   "relics": [
     {
       "id": "toolbelt",
-      "name": "百工符囊",
+      "name": "Elf Toolbelt",
       "rarity": 0,
-      "desc": "战斗开始时获得1层灵巧。战斗结束后获得15块铜钱。\n百工把万般手艺缝进一只布囊。"
+      "desc": "At the start of each battle, gain 1 Nimble. After each battle, gain 15 Cookies."
     },
     {
       "id": "rednose",
-      "name": "巡山红灯",
+      "name": "Red Nose",
       "rarity": 0,
-      "desc": "战斗开始时，对所有敌人施加1层虚弱。真耀眼！\n巡山红灯不问来路，只照归途。"
+      "desc": "At the start of each battle, apply 1 Soggy to ALL enemies. Dazzling!"
     },
     {
       "id": "cookietin",
-      "name": "传家汤盅",
+      "name": "Cookie Tin",
       "rarity": 0,
-      "desc": "战斗结束后恢复6点生命。\n先师留下的汤盅，盛着回家的温度。"
+      "desc": "At the end of each battle, heal 6 HP."
     },
     {
       "id": "jinglebell",
-      "name": "招财铜铃",
+      "name": "Jingle Bell",
       "rarity": 2,
-      "desc": "战斗开始时额外抽2张法牌。\n旧时人家的招财铜铃，如今随守岁人照亮年关。"
+      "desc": "At the start of each battle, draw 2 extra gifts."
     },
     {
       "id": "warmsocks",
-      "name": "门神画像",
+      "name": "Warm Socks",
       "rarity": 1,
-      "desc": "战斗开始时获得10点格挡。\n旧时人家的门神画像，如今随守岁人照亮年关。"
+      "desc": "At the start of each battle, gain 10 Wrap."
     },
     {
       "id": "candybowl",
-      "name": "压岁红包",
+      "name": "Candy Bowl",
       "rarity": 1,
-      "desc": "每场战斗的第一回合额外获得1点灯火。\n旧时人家的压岁红包，如今随守岁人照亮年关。"
+      "desc": "Gain 1 extra Cheer on the first turn of each battle."
     },
     {
       "id": "snowglobe",
-      "name": "五帝钱镜",
+      "name": "Snow Globe",
       "rarity": 1,
-      "desc": "战斗开始时，对所有敌人施加1层破绽。\n旧时人家的五帝钱镜，如今随守岁人照亮年关。"
+      "desc": "At the start of each battle, apply 1 Brittle to ALL enemies."
     },
     {
       "id": "eggnogmug",
-      "name": "屠苏金盏",
+      "name": "Eggnog Mug",
       "rarity": 1,
-      "desc": "战斗开始时获得1层力量。\n旧时人家的屠苏金盏，如今随守岁人照亮年关。"
+      "desc": "At the start of each battle, gain 1 Might."
     },
     {
       "id": "iceskates",
-      "name": "踏雪云履",
+      "name": "Ice Skates",
       "rarity": 1,
-      "desc": "战斗开始时获得1层灵巧。\n旧时人家的踏雪云履，如今随守岁人照亮年关。"
+      "desc": "At the start of each battle, gain 1 Nimble."
     },
     {
       "id": "hollysprig",
-      "name": "桃木荆符",
+      "name": "Holly Sprig",
       "rarity": 1,
-      "desc": "战斗开始时获得3层荆符。\n旧时人家的桃木荆符，如今随守岁人照亮年关。"
+      "desc": "At the start of each battle, gain 3 Holly."
     },
     {
       "id": "nutjaw",
-      "name": "铜钱剑",
+      "name": "Nutcracker Jaw",
       "rarity": 2,
-      "desc": "每赠送第10张攻击法牌，其伤害翻倍。\n旧时人家的铜钱剑，如今随守岁人照亮年关。"
+      "desc": "Every 10th Attack you give deals double damage."
     },
     {
       "id": "tinselgarland",
-      "name": "护命红绳",
+      "name": "Tinsel Garland",
       "rarity": 2,
-      "desc": "若回合结束时没有格挡，获得6点格挡。\n旧时人家的护命红绳，如今随守岁人照亮年关。"
+      "desc": "If you end your turn with 0 Wrap, gain 6 Wrap."
     },
     {
       "id": "gingercharm",
-      "name": "舞狮面具",
+      "name": "Gingerbread Charm",
       "rarity": 2,
-      "desc": "每回合赠送第3张攻击法牌时，获得1层力量。\n旧时人家的舞狮面具，如今随守岁人照亮年关。"
+      "desc": "Every 3rd Attack in a turn grants 1 Might."
     },
     {
       "id": "lostmitten",
-      "name": "玉扣护符",
+      "name": "Lost Mitten",
       "rarity": 2,
-      "desc": "每回合赠送第3张技能法牌时，获得1层灵巧。\n旧时人家的玉扣护符，如今随守岁人照亮年关。"
+      "desc": "Every 3rd Skill in a turn grants 1 Nimble."
     },
     {
       "id": "reindeerbell",
-      "name": "更鼓铜铃",
+      "name": "Reindeer Collar",
       "rarity": 2,
-      "desc": "每第3回合额外获得1点灯火。\n旧时人家的更鼓铜铃，如今随守岁人照亮年关。"
+      "desc": "Every 3rd turn, gain 1 extra Cheer."
     },
     {
       "id": "treestar",
-      "name": "岁灯灯芯",
+      "name": "Tree-Top Star",
       "rarity": 3,
-      "desc": "每回合额外获得1点灯火。每晚额外流失1点岁火。\n灯芯取自岁火，光明亦有代价。"
+      "desc": "Gain 1 extra Cheer every turn. Spirit fades 1 faster each night."
     },
     {
       "id": "coalscuttle",
-      "name": "化煞香炉",
+      "name": "Coal Scuttle",
       "rarity": 3,
-      "desc": "留下晦炭或诅咒时，改为获得2点岁火。\n旧时人家的化煞香炉，如今随守岁人照亮年关。"
+      "desc": "Leaving coal or curses GAINS 2 Spirit instead of losing it."
     },
     {
       "id": "gifttag",
-      "name": "年货签",
+      "name": "Gift Tag",
       "rarity": 1,
-      "desc": "每次留下法牌时获得15块铜钱。\n旧时人家的年货签，如今随守岁人照亮年关。"
+      "desc": "Whenever you leave a gift, gain 15 Cookies."
     },
     {
       "id": "ledger",
-      "name": "百家心愿簿",
+      "name": "Mrs. Claus's Ledger",
       "rarity": 2,
-      "desc": "每次留下法牌时额外获得3点岁火。\n旧时人家的百家心愿簿，如今随守岁人照亮年关。"
+      "desc": "Whenever you leave a gift, gain 3 extra Spirit."
     },
     {
       "id": "workbench",
-      "name": "写符案",
+      "name": "Workshop Bench",
       "rarity": 2,
-      "desc": "每次留下法牌时，重新绘符一张随机法牌，使其升级。\n旧时人家的写符案，如今随守岁人照亮年关。"
+      "desc": "Whenever you leave a gift, Rewrap (upgrade) a random gift."
     },
     {
       "id": "sackpatch",
-      "name": "补缀行囊",
+      "name": "Patched Sack",
       "rarity": 3,
-      "desc": "法牌数量不超过12张时，可以跳过留下法牌。\n旧时人家的补缀行囊，如今随守岁人照亮年关。"
+      "desc": "With 12 or fewer gifts, you may skip leaving a gift."
     },
     {
       "id": "cocoapot",
-      "name": "姜枣陶壶",
+      "name": "Cocoa Pot",
       "rarity": 1,
-      "desc": "在守岁炉旁休息时，额外恢复15点生命。\n旧时人家的姜枣陶壶，如今随守岁人照亮年关。"
+      "desc": "Resting by the fire heals 15 extra HP."
     },
     {
       "id": "elfcoupon",
-      "name": "年货行券",
+      "name": "Elf Coupon",
       "rarity": 2,
-      "desc": "年货铺所有商品打八折。\n百工同业相赠的行券，认券如见故人。"
+      "desc": "Everything in the Elf Shop is 20% cheaper."
     },
     {
       "id": "pocketwatch",
-      "name": "守更铜表",
+      "name": "Santa's Pocket Watch",
       "rarity": 3,
-      "desc": "若本回合赠送不超过3张法牌，下回合额外抽3张。\n旧时人家的守更铜表，如今随守岁人照亮年关。"
+      "desc": "If you give 3 or fewer gifts in a turn, draw 3 extra next turn."
     },
     {
       "id": "fruitcake",
-      "name": "团圆年糕",
+      "name": "Fruitcake",
       "rarity": 1,
-      "desc": "拾取时增加10点生命上限。\n旧时人家的团圆年糕，如今随守岁人照亮年关。"
+      "desc": "On pickup, gain 10 Max HP."
     },
     {
       "id": "sugarplum",
-      "name": "百宝葫芦",
+      "name": "Sugarplum Belt",
       "rarity": 2,
-      "desc": "增加一个药水栏位。\n旧时人家的百宝葫芦，如今随守岁人照亮年关。"
+      "desc": "Gain an extra potion slot."
     },
     {
       "id": "snowshovel",
-      "name": "门闩镇尺",
+      "name": "Snow Shovel",
       "rarity": 3,
-      "desc": "每回合最多保留15点格挡。\n旧时人家的门闩镇尺，如今随守岁人照亮年关。"
+      "desc": "Up to 15 Wrap is kept between turns."
     },
     {
       "id": "churchbell",
-      "name": "报晓金锣",
+      "name": "Church Bell",
       "rarity": 3,
-      "desc": "每击败一名敌人，获得1点灯火并抽1张法牌。\n旧时人家的报晓金锣，如今随守岁人照亮年关。"
+      "desc": "Whenever an enemy is defeated, gain 1 Cheer and draw 1."
     },
     {
       "id": "yulelog",
-      "name": "不熄岁薪",
+      "name": "Yule Log",
       "rarity": 2,
-      "desc": "回合结束时，对随机敌人造成3点伤害。\n旧时人家的不熄岁薪，如今随守岁人照亮年关。"
+      "desc": "At the end of your turn, deal 3 damage to a random enemy."
     },
     {
       "id": "reindeerfeed",
-      "name": "招财元宝",
+      "name": "Reindeer Feed",
       "rarity": 1,
-      "desc": "战斗掉落的铜钱增加25%。\n旧时人家的招财元宝，如今随守岁人照亮年关。"
+      "desc": "Battles drop 25% more Cookies."
     },
     {
       "id": "wishlist",
-      "name": "迎春愿笺",
+      "name": "Wish List",
       "rarity": 2,
-      "desc": "法牌奖励从3选1变为4选1。\n旧时人家的迎春愿笺，如今随守岁人照亮年关。"
+      "desc": "Gift rewards offer 4 choices instead of 3."
     },
     {
       "id": "treeangel",
-      "name": "续命长生结",
+      "name": "Tree Angel",
       "rarity": 3,
-      "desc": "每局一次，倒下时以50%生命重新站起。\n红绳结着未尽的牵挂。"
+      "desc": "Once per run, when you would fall, rise with 50% HP."
     }
   ],
   "potions": [
     {
       "id": "hotcocoa",
-      "name": "姜枣汤",
+      "name": "Hot Cocoa",
       "target": "n",
-      "desc": "恢复20点生命。",
+      "desc": "Heal 20 HP.",
       "outside": true
     },
     {
       "id": "eggnog",
-      "name": "屠苏酒",
+      "name": "Eggnog",
       "target": "n",
-      "desc": "获得2层力量。",
+      "desc": "Gain 2 Might.",
       "outside": false
     },
     {
       "id": "cider",
-      "name": "桂花露",
+      "name": "Hot Cider",
       "target": "n",
-      "desc": "获得2层灵巧。",
+      "desc": "Gain 2 Nimble.",
       "outside": false
     },
     {
       "id": "peppermint",
-      "name": "灯油",
+      "name": "Peppermint Tea",
       "target": "n",
-      "desc": "获得2点灯火。",
+      "desc": "Gain 2 Cheer.",
       "outside": false
     },
     {
       "id": "snowflask",
-      "name": "门神墨",
+      "name": "Snow Flask",
       "target": "n",
-      "desc": "获得12点格挡。",
+      "desc": "Gain 12 Wrap.",
       "outside": false
     },
     {
       "id": "cracker",
-      "name": "震岁爆竹",
+      "name": "Christmas Cracker",
       "target": "e",
-      "desc": "造成20点伤害。",
+      "desc": "Deal 20 damage.",
       "outside": false
     },
     {
       "id": "blizzard",
-      "name": "雷火罐",
+      "name": "Blizzard in a Jar",
       "target": "n",
-      "desc": "对所有敌人造成10点伤害。",
+      "desc": "Deal 10 damage to ALL enemies.",
       "outside": false
     },
     {
       "id": "glitter",
-      "name": "朱砂粉",
+      "name": "Glitter Bomb",
       "target": "e",
-      "desc": "施加3层破绽。",
+      "desc": "Apply 3 Brittle.",
       "outside": false
     },
     {
       "id": "milk",
-      "name": "米浆",
+      "name": "Milk Dunk",
       "target": "n",
-      "desc": "对所有敌人施加2层虚弱。",
+      "desc": "Apply 2 Soggy to ALL enemies.",
       "outside": false
     },
     {
       "id": "frostvial",
-      "name": "寒煞瓶",
+      "name": "Frostbite Vial",
       "target": "e",
-      "desc": "施加8层寒煞。",
+      "desc": "Apply 8 Frostbite.",
       "outside": false
     },
     {
       "id": "dough",
-      "name": "春茶",
+      "name": "Cookie Dough",
       "target": "n",
-      "desc": "抽3张法牌。",
+      "desc": "Draw 3 gifts.",
       "outside": false
     },
     {
       "id": "elfdust",
-      "name": "纸灵散",
+      "name": "Elf Dust",
       "target": "n",
-      "desc": "将一张随机稀有法牌加入手牌，费用为0。",
+      "desc": "Add a random Rare gift to your hand. It costs 0.",
       "outside": false
     },
     {
       "id": "deermilk",
-      "name": "灵芝露",
+      "name": "Reindeer Milk",
       "target": "n",
-      "desc": "增加5点生命上限。",
+      "desc": "Gain 5 Max HP.",
       "outside": true
     },
     {
       "id": "punch",
-      "name": "荆符酒",
+      "name": "Holly Punch",
       "target": "n",
-      "desc": "获得3层荆符。",
+      "desc": "Gain 3 Holly.",
       "outside": false
     },
     {
       "id": "starlight",
-      "name": "护命灯露",
+      "name": "Bottled Star",
       "target": "n",
-      "desc": "获得2层缎带。",
+      "desc": "Gain 2 Ribbon.",
       "outside": false
     },
     {
       "id": "smoke",
-      "name": "遁形香",
+      "name": "Chimney Smoke",
       "target": "n",
-      "desc": "逃离普通战斗，不获得奖励，也不需要留下法牌。",
+      "desc": "Escape a normal battle (no rewards, no gift to leave).",
       "outside": false
     },
     {
       "id": "ginger",
-      "name": "淬符姜汁",
+      "name": "Ginger Shot",
       "target": "n",
-      "desc": "本场战斗中，升级手牌中的所有法牌。",
+      "desc": "Rewrap (upgrade) all gifts in your hand this battle.",
       "outside": false
     },
     {
       "id": "wishbone",
-      "name": "团圆羹",
+      "name": "Wishbone Broth",
       "target": "n",
-      "desc": "恢复相当于生命上限30%的生命。",
+      "desc": "Heal 30% of your Max HP.",
       "outside": true
     },
     {
       "id": "wax",
-      "name": "金缕蜡",
+      "name": "Candle Wax",
       "target": "n",
-      "desc": "本场战斗获得4层红绳。",
+      "desc": "Gain 4 Tinsel this battle.",
       "outside": false
     },
     {
       "id": "elixir",
-      "name": "岁火灵液",
+      "name": "Spirit Elixir",
       "target": "n",
-      "desc": "获得10点岁火。",
+      "desc": "Gain 10 Christmas Spirit.",
       "outside": true
     }
   ],
   "enemies": [
     {
       "id": "gingerling",
-      "name": "灶糖童子",
+      "name": "Gingerbread Man",
       "tier": "weak",
       "hp": [
         16,
@@ -2164,15 +2164,15 @@
       "pips": 2,
       "love": "part:paint",
       "hate": "part:glitter",
-      "lore": "祭灶糖沾染残火化成的小童。咬击后会裹糖护身，积蓄下一次力道。",
+      "lore": "Ran out of the North Pole ovens the moment the door opened and had been living off his own crumbs for months.",
       "lines": [
-        "糖是祭灶的，不许你抢！",
-        "裹上糖衣，再来！"
+        "It's gingerDREAD man now!",
+        "Who are ya callin' half-baked?!"
       ],
       "moves": [
         {
           "id": "bite",
-          "name": "糖刃咬击",
+          "name": "Crumbly Bite",
           "actions": [
             {
               "op": "atk",
@@ -2185,7 +2185,7 @@
         },
         {
           "id": "rush",
-          "name": "灶糖护体",
+          "name": "Sugar Rush",
           "actions": [
             {
               "op": "def",
@@ -2218,7 +2218,7 @@
     },
     {
       "id": "snowman",
-      "name": "雪魈",
+      "name": "Snowman",
       "tier": "weak",
       "hp": [
         22,
@@ -2230,15 +2230,15 @@
       "pips": 2,
       "love": "part:musicbox",
       "hate": "part:battery",
-      "lore": "雪封山道的游魂，掷出寒冰，也会用凝视封住对手的气息。",
+      "lore": "Came to life to a song once. Has been waiting for another one ever since.",
       "lines": [
-        "山道冷，你的灯却暖。",
-        "让我再听一声归乡的歌。"
+        "Imma stick you with my carrot!",
+        "I'll keep you frozen till New Year!"
       ],
       "moves": [
         {
           "id": "ball",
-          "name": "寒冰掷",
+          "name": "Iceball",
           "actions": [
             {
               "op": "atk",
@@ -2251,7 +2251,7 @@
         },
         {
           "id": "glare",
-          "name": "封息凝视",
+          "name": "Frost Glare",
           "actions": [
             {
               "op": "debuff",
@@ -2278,7 +2278,7 @@
     },
     {
       "id": "ornament",
-      "name": "灯笼鬼",
+      "name": "Bad Bauble",
       "tier": "weak",
       "hp": [
         15,
@@ -2290,15 +2290,15 @@
       "pips": 2,
       "love": "part:glitter",
       "hate": "part:squeaker",
-      "lore": "无人接回家的旧灯笼生出了怨念，灯骨裂片能接连伤人。",
+      "lore": "Fell off the tree Last Christmas  and has held a grudge against holidays ever since.",
       "lines": [
-        "为什么，没人来接我？",
-        "灯骨碎了，也要照着路！"
+        "I'll shatter your face!",
+        "Tink tink! You'll break before I do!"
       ],
       "moves": [
         {
           "id": "shards",
-          "name": "灯骨飞刃",
+          "name": "Shards",
           "actions": [
             {
               "op": "atk",
@@ -2311,7 +2311,7 @@
         },
         {
           "id": "glint",
-          "name": "妖灯眩目",
+          "name": "Glint",
           "actions": [
             {
               "op": "debuff",
@@ -2337,7 +2337,7 @@
     },
     {
       "id": "rat",
-      "name": "灶台鼠",
+      "name": "Chimney Rat",
       "tier": "weak",
       "hp": [
         16,
@@ -2349,15 +2349,15 @@
       "pips": 2,
       "love": "part:squeaker",
       "hate": "part:bell",
-      "lore": "住在灶台下的鼠灵，啃咬后尖叫壮胆，却忘不了团圆的香气。",
+      "lore": "Despite their name, chimney rats prefer to live in arch-shaped holes cut into walls.",
       "lines": [
-        "灶火都灭了，我吃什么？",
-        "吱！借一口胆气！"
+        "Squeak!",
+        "Stay away from my chimney!"
       ],
       "moves": [
         {
           "id": "gnaw",
-          "name": "啃咬",
+          "name": "Gnaw",
           "actions": [
             {
               "op": "atk",
@@ -2370,7 +2370,7 @@
         },
         {
           "id": "squeak",
-          "name": "吱吱叫",
+          "name": "Squeak",
           "actions": [
             {
               "op": "buff",
@@ -2396,7 +2396,7 @@
     },
     {
       "id": "lights",
-      "name": "烛火精",
+      "name": "Tangled Lights",
       "tier": "weak",
       "hp": [
         20,
@@ -2408,15 +2408,15 @@
       "pips": 2,
       "love": "part:battery",
       "hate": "part:spring",
-      "lore": "灯市熄灭时逃出的火苗，燃芯、爆焰与灯绳缠绕交替而来。",
+      "lore": "Every string of lights that was ever stuffed in a box, tangled into one.",
       "lines": [
-        "别把我关回匣子！",
-        "灯绳缠住你啦！"
+        "Bzzt!",
+        "Night night, {nick}!"
       ],
       "moves": [
         {
           "id": "zap",
-          "name": "烛焰",
+          "name": "Zap",
           "actions": [
             {
               "op": "atk",
@@ -2436,7 +2436,7 @@
         },
         {
           "id": "short",
-          "name": "爆芯",
+          "name": "Short Circuit",
           "actions": [
             {
               "op": "atk",
@@ -2449,7 +2449,7 @@
         },
         {
           "id": "tangle",
-          "name": "灯绳缠绕",
+          "name": "Tangle",
           "actions": [
             {
               "op": "debuff",
@@ -2479,7 +2479,7 @@
     },
     {
       "id": "penguin",
-      "name": "机括小狮",
+      "name": "Wind-up Penguin",
       "tier": "weak",
       "hp": [
         18,
@@ -2491,15 +2491,15 @@
       "pips": 2,
       "love": "part:windup",
       "hate": "part:wheels",
-      "lore": "百工坊失控的小舞狮。每次蓄紧机括，扑击就更沉重。",
+      "lore": "A wind-up toy that kept going after its mechanism broke. It only knows forward.",
       "lines": [
-        "狮头抬起，机括上紧！",
-        "我只认百工坊的铃声。"
+        "Click-click-click... MAXIMUM WADDLE.",
+        "I only know how to move forward."
       ],
       "moves": [
         {
           "id": "waddle",
-          "name": "狮步扑击",
+          "name": "Waddle Smack",
           "actions": [
             {
               "op": "atk",
@@ -2512,7 +2512,7 @@
         },
         {
           "id": "wind",
-          "name": "机括蓄力",
+          "name": "Wind Up",
           "actions": [
             {
               "op": "buff",
@@ -2533,7 +2533,7 @@
     },
     {
       "id": "nutgrunt",
-      "name": "纸甲门卒",
+      "name": "Nutcracker",
       "tier": "normal",
       "hp": [
         42,
@@ -2545,15 +2545,15 @@
       "pips": 3,
       "love": "part:paint",
       "hate": "part:squeaker",
-      "lore": "门神画像中走失的纸甲卒，会架盾、斩击，也会连续压阵。",
+      "lore": "Cracks nuts for a living and wants everyone to know it.",
       "lines": [
-        "门神有令，来者止步！",
-        "纸甲未破，此门不让！"
+        "Nuts and grannies get cracked alike!",
+        "CRACK. CRACK. CRACK."
       ],
       "moves": [
         {
           "id": "crack",
-          "name": "纸刀斩",
+          "name": "Crack",
           "actions": [
             {
               "op": "atk",
@@ -2566,7 +2566,7 @@
         },
         {
           "id": "guard",
-          "name": "门神架盾",
+          "name": "Stand Guard",
           "actions": [
             {
               "op": "def",
@@ -2586,7 +2586,7 @@
         },
         {
           "id": "grind",
-          "name": "双刃压阵",
+          "name": "Grind",
           "actions": [
             {
               "op": "atk",
@@ -2616,7 +2616,7 @@
     },
     {
       "id": "toysoldier",
-      "name": "纸人弩手",
+      "name": "Tin Soldier",
       "tier": "normal",
       "hp": [
         28,
@@ -2628,15 +2628,15 @@
       "pips": 3,
       "love": "part:windup",
       "hate": "part:glitter",
-      "lore": "纸扎军阵中的弩手，擅长三连射，并能以号令鼓舞同伴。",
+      "lore": "Marches in perfect lines.",
       "lines": [
-        "列阵！三弩齐发！",
-        "纸枪也能守住关口。"
+        "Left, right, left, right... CHARGE!",
+        "Make war, not love!"
       ],
       "moves": [
         {
           "id": "march",
-          "name": "纸枪刺",
+          "name": "Bayonet",
           "actions": [
             {
               "op": "atk",
@@ -2649,7 +2649,7 @@
         },
         {
           "id": "volley",
-          "name": "纸弩三连",
+          "name": "Volley",
           "actions": [
             {
               "op": "atk",
@@ -2662,7 +2662,7 @@
         },
         {
           "id": "drill",
-          "name": "军阵号令",
+          "name": "Drill",
           "actions": [
             {
               "op": "buffAll",
@@ -2699,7 +2699,7 @@
     },
     {
       "id": "jack",
-      "name": "爆竹精",
+      "name": "Jack-in-the-Box",
       "tier": "normal",
       "hp": [
         32,
@@ -2711,15 +2711,15 @@
       "pips": 3,
       "love": "part:spring",
       "hate": "part:windup",
-      "lore": "断引线的爆竹成了精。收拢火药时先护身，随后猛然炸开。",
+      "lore": "Has a habit of popping out at the worst possible moment. The reason is anxiety.",
       "lines": [
-        "嘘……引线快到了。",
-        "砰！旧岁退散！"
+        "Pop goes the... GRANNY!",
+        "Round and round the handle turns..."
       ],
       "moves": [
         {
           "id": "wind",
-          "name": "收拢火药",
+          "name": "Winding...",
           "actions": [
             {
               "op": "def",
@@ -2739,7 +2739,7 @@
         },
         {
           "id": "pop",
-          "name": "爆竹惊夜",
+          "name": "POP!",
           "actions": [
             {
               "op": "atk",
@@ -2759,7 +2759,7 @@
     },
     {
       "id": "fruitcake",
-      "name": "年糕蛇",
+      "name": "Fruity Snake",
       "tier": "normal",
       "hp": [
         46,
@@ -2771,15 +2771,15 @@
       "pips": 3,
       "love": "part:ribbon",
       "hate": "type:atk",
-      "lore": "年糕供案下盘踞的蛇妖，硬壳能抵挡刀锋，陈年碎屑会扰乱行囊。",
+      "lore": "Gifted and regifted forty times. All it ever wants is to be eaten.",
       "lines": [
-        "年糕硬了，牙也利了。",
-        "再裹一层，谁也咬不动。"
+        "I'm a fruity cutie patootie!",
+        "Feelin' thirsty? How about a PUNCH?"
       ],
       "moves": [
         {
           "id": "slam",
-          "name": "猛撞",
+          "name": "Slam",
           "actions": [
             {
               "op": "atk",
@@ -2792,7 +2792,7 @@
         },
         {
           "id": "stale",
-          "name": "陈糕落煞",
+          "name": "Stale Crumbs",
           "actions": [
             {
               "op": "add",
@@ -2805,7 +2805,7 @@
         },
         {
           "id": "harden",
-          "name": "硬化",
+          "name": "Harden",
           "actions": [
             {
               "op": "def",
@@ -2837,7 +2837,7 @@
     },
     {
       "id": "angel",
-      "name": "纸鸢妖",
+      "name": "Broken Bauble",
       "tier": "normal",
       "hp": [
         34,
@@ -2849,15 +2849,15 @@
       "pips": 3,
       "love": "part:glitter",
       "hate": "part:paint",
-      "lore": "祈愿纸鸢被岁门的寒风卷落，振翼伤人，也会修补同伴的伤口。",
+      "lore": "A shapely fallen angel made out of fresh snow.",
       "lines": [
-        "风里都是未归的愿。",
-        "让我为同伴补一道纸翼。"
+        "I'll shard all over you!",
+        "Silent night, violent night."
       ],
       "moves": [
         {
           "id": "gust",
-          "name": "纸翼双斩",
+          "name": "Wing Gust",
           "actions": [
             {
               "op": "atk",
@@ -2870,7 +2870,7 @@
         },
         {
           "id": "hymn",
-          "name": "祈愿回春",
+          "name": "Cold Hymn",
           "actions": [
             {
               "op": "healAll",
@@ -2883,7 +2883,7 @@
         },
         {
           "id": "lament",
-          "name": "离人怨",
+          "name": "Lament",
           "actions": [
             {
               "op": "debuff",
@@ -2919,7 +2919,7 @@
     },
     {
       "id": "slime",
-      "name": "糯米怪",
+      "name": "Eggnog Slime",
       "tier": "normal",
       "hp": [
         36,
@@ -2931,15 +2931,15 @@
       "pips": 3,
       "love": "type:skl",
       "hate": "part:battery",
-      "lore": "年夜饭洒落的糯米化形。黏液让人虚弱，冷浆使护身符失灵。",
+      "lore": "A spilled mug of eggnog that got ideas. Loves anything warm and cosy.",
       "lines": [
-        "团圆饭，怎么能少我？",
-        "黏住你，哪也别走。"
+        "Ya callin' me spoiled?!",
+        "I'm gloopy and goopy."
       ],
       "moves": [
         {
           "id": "splash",
-          "name": "泼洒",
+          "name": "Splash",
           "actions": [
             {
               "op": "atk",
@@ -2959,7 +2959,7 @@
         },
         {
           "id": "gloop",
-          "name": "黏糊糊",
+          "name": "Gloop",
           "actions": [
             {
               "op": "debuff",
@@ -2992,7 +2992,7 @@
     },
     {
       "id": "bat",
-      "name": "寒翼蝠",
+      "name": "Icicle Bat",
       "tier": "normal",
       "hp": [
         16,
@@ -3004,15 +3004,15 @@
       "pips": 3,
       "love": "part:bell",
       "hate": "part:squeaker",
-      "lore": "盘旋雪洞的蝠妖，俯冲后用尖啸扰人心神，偏爱清亮的铜铃。",
+      "lore": "Hangs in frozen caves. A good jingle echoes for days in there.",
       "lines": [
-        "铜铃响了吗？",
-        "雪洞里还回荡着旧年的声。"
+        "Skreee!",
+        "I knew I should've stayed in Mt. Moon."
       ],
       "moves": [
         {
           "id": "dive",
-          "name": "俯冲",
+          "name": "Dive",
           "actions": [
             {
               "op": "atk",
@@ -3025,7 +3025,7 @@
         },
         {
           "id": "screech",
-          "name": "尖啸",
+          "name": "Screech",
           "actions": [
             {
               "op": "debuff",
@@ -3051,7 +3051,7 @@
     },
     {
       "id": "grumpkin",
-      "name": "招财妖",
+      "name": "Grumpkin",
       "tier": "normal",
       "hp": [
         38,
@@ -3063,15 +3063,15 @@
       "pips": 3,
       "love": "part:ribbon",
       "hate": "part:squeaker",
-      "lore": "被岁门魇扭曲的招财像，边挥爪边收过路钱，最爱精巧红绳。",
+      "lore": "Hates the noise, the noise, the NOISE. Secretly loves a well-tied bow.",
       "lines": [
-        "过路钱，拿来！",
-        "这红绳……真好看。"
+        "You wouldn't like me when I'm grumpy.",
+        "Your cookies. Hand them over."
       ],
       "moves": [
         {
           "id": "swipe",
-          "name": "横抓",
+          "name": "Swipe",
           "actions": [
             {
               "op": "atk",
@@ -3091,7 +3091,7 @@
         },
         {
           "id": "sulk",
-          "name": "生闷气",
+          "name": "Sulk",
           "actions": [
             {
               "op": "def",
@@ -3104,7 +3104,7 @@
         },
         {
           "id": "grumble",
-          "name": "嘟囔",
+          "name": "Grumble",
           "actions": [
             {
               "op": "debuff",
@@ -3134,7 +3134,7 @@
     },
     {
       "id": "rogueelf",
-      "name": "灯市飞贼",
+      "name": "Rogue Elf",
       "tier": "normal",
       "hp": [
         24,
@@ -3146,15 +3146,15 @@
       "pips": 3,
       "love": "part:wheels",
       "hate": "part:ribbon",
-      "lore": "灯市中的飞贼纸灵，偷得盘缠便潜伏，数回合后会携财逃走。",
+      "lore": "Quit the workshop over unpaid overtime. Always planning a getaway.",
       "lines": [
-        "灯一灭，我就走。",
-        "钱袋先替你保管！"
+        "Your cookies or your life! ...Actually, just the cookies.",
+        "Santa never paid us overtime."
       ],
       "moves": [
         {
           "id": "pickpocket",
-          "name": "偷窃",
+          "name": "Pickpocket",
           "actions": [
             {
               "op": "atk",
@@ -3174,7 +3174,7 @@
         },
         {
           "id": "lurk",
-          "name": "潜伏",
+          "name": "Lie Low",
           "actions": [
             {
               "op": "def",
@@ -3187,7 +3187,7 @@
         },
         {
           "id": "flee",
-          "name": "逃跑",
+          "name": "Escape",
           "actions": [
             {
               "op": "flee",
@@ -3210,7 +3210,7 @@
     },
     {
       "id": "coalgolem",
-      "name": "灶灰石灵",
+      "name": "Coal Golem",
       "tier": "normal",
       "hp": [
         48,
@@ -3222,15 +3222,15 @@
       "pips": 3,
       "love": "part:battery",
       "hate": "part:paint",
-      "lore": "熄灭的灶灰堆成石灵，以重拳和灰烟迫人后退，盼着重新见到火光。",
+      "lore": "Built from every lump of coal ever given. Craves a little spark.",
       "lines": [
-        "给我一点火……",
-        "灰也能堆成拳头！"
+        "Every naughty child... made me BIGGER.",
+        "COAL FOR EVERYONE."
       ],
       "moves": [
         {
           "id": "fist",
-          "name": "灰岩重拳",
+          "name": "Coal Fist",
           "actions": [
             {
               "op": "atk",
@@ -3243,7 +3243,7 @@
         },
         {
           "id": "smog",
-          "name": "灶灰遮目",
+          "name": "Smog",
           "actions": [
             {
               "op": "add",
@@ -3276,7 +3276,7 @@
     },
     {
       "id": "viper",
-      "name": "朱砂蛇",
+      "name": "Candy Cane Viper",
       "tier": "normal",
       "hp": [
         26,
@@ -3288,15 +3288,15 @@
       "pips": 3,
       "love": "part:musicbox",
       "hate": "part:bell",
-      "lore": "朱砂洇入旧符纸生出的蛇，毒牙携寒煞，盘身时蓄力护体。",
+      "lore": "A candy cane that grew fangs. A soft tune still charms it.",
       "lines": [
-        "朱砂未干，煞气先到。",
-        "嘶，听见曲子就想睡。"
+        "Sssso sweet... sssso deadly.",
+        "Refresh yourssself with sssome peppermint venom!"
       ],
       "moves": [
         {
           "id": "fangs",
-          "name": "毒牙",
+          "name": "Fangs",
           "actions": [
             {
               "op": "atk",
@@ -3316,7 +3316,7 @@
         },
         {
           "id": "coil",
-          "name": "盘绕",
+          "name": "Coil",
           "actions": [
             {
               "op": "def",
@@ -3349,7 +3349,7 @@
     },
     {
       "id": "creeper",
-      "name": "桃枝妖",
+      "name": "Mistletoe Creeper",
       "tier": "normal",
       "hp": [
         40,
@@ -3361,15 +3361,15 @@
       "pips": 3,
       "love": "part:ribbon",
       "hate": "part:glitter",
-      "lore": "废弃桃符长出的枝妖，以缠枝封息，再披荆反伤靠近的人。",
+      "lore": "Mistletoe that got tired of waiting for kisses.",
       "lines": [
-        "桃枝也曾护过家门。",
-        "别碰我的刺。"
+        "Kiss kiss bang bang.",
+        "A kiss? How about a SQUEEZE."
       ],
       "moves": [
         {
           "id": "lash",
-          "name": "桃枝鞭",
+          "name": "Vine Lash",
           "actions": [
             {
               "op": "atk",
@@ -3382,7 +3382,7 @@
         },
         {
           "id": "entangle",
-          "name": "纠缠",
+          "name": "Entangle",
           "actions": [
             {
               "op": "debuff",
@@ -3402,7 +3402,7 @@
         },
         {
           "id": "grow",
-          "name": "生长",
+          "name": "Grow",
           "actions": [
             {
               "op": "buff",
@@ -3441,7 +3441,7 @@
     },
     {
       "id": "krampimp",
-      "name": "噬岁小祟",
+      "name": "Krampus Imp",
       "tier": "normal",
       "hp": [
         24,
@@ -3453,15 +3453,15 @@
       "pips": 3,
       "love": "",
       "hate": "",
-      "lore": "岁门魇剥落的恶念，不受安抚。枝鞭连打后，窃笑着积蓄力量。",
+      "lore": "Krampus's little helpers. Pure mischief; nothing you give them is ever enough.",
       "lines": [
-        "岁门开了，你们都别过年！",
-        "打得过这双鞭再说！"
+        "The Master is coming! Heh heh!",
+        "Naughty, naughty, NAUGHTY!"
       ],
       "moves": [
         {
           "id": "switch",
-          "name": "恶念双鞭",
+          "name": "Switch",
           "actions": [
             {
               "op": "atk",
@@ -3474,7 +3474,7 @@
         },
         {
           "id": "snicker",
-          "name": "窃笑",
+          "name": "Snicker",
           "actions": [
             {
               "op": "buff",
@@ -3507,7 +3507,7 @@
     },
     {
       "id": "general",
-      "name": "纸人将军",
+      "name": "Nutcracker General",
       "tier": "elite",
       "hp": [
         82,
@@ -3519,15 +3519,15 @@
       "pips": 5,
       "love": "rare",
       "hate": "part:squeaker",
-      "lore": "镇守旧关的纸人将军，号令后挥刀，再以铁面连击撕开破绽。",
+      "lore": "Commander of the Nutcracker army. Accepts only the finest tribute.",
       "lines": [
-        "纸军听令，封住年关！",
-        "上等法器，才配入我军帐。"
+        "Crush the intruder!",
+        "You're just another nut to crush."
       ],
       "moves": [
         {
           "id": "command",
-          "name": "纸军号令",
+          "name": "Command",
           "actions": [
             {
               "op": "buff",
@@ -3547,7 +3547,7 @@
         },
         {
           "id": "saber",
-          "name": "镇关刀",
+          "name": "Saber Slash",
           "actions": [
             {
               "op": "atk",
@@ -3560,7 +3560,7 @@
         },
         {
           "id": "jaw",
-          "name": "铁面破阵",
+          "name": "Iron Jaw",
           "actions": [
             {
               "op": "atk",
@@ -3588,7 +3588,7 @@
     },
     {
       "id": "yeti",
-      "name": "雪山魈王",
+      "name": "Abominable Snowman",
       "tier": "elite",
       "hp": [
         92,
@@ -3600,15 +3600,15 @@
       "pips": 5,
       "love": "part:musicbox",
       "hate": "part:bell",
-      "lore": "雪山上的孤王，咆哮削弱来者，双爪后掀起整片雪崩。",
+      "lore": "Lonely, enormous and very loud. A lullaby calms it right down.",
       "lines": [
-        "吼！雪山不许点灯！",
-        "那首摇篮曲，你还记得？"
+        "RRRAAAWR!",
+        "GRRRR!"
       ],
       "moves": [
         {
           "id": "roar",
-          "name": "咆哮",
+          "name": "Roar",
           "actions": [
             {
               "op": "buff",
@@ -3628,7 +3628,7 @@
         },
         {
           "id": "maul",
-          "name": "猛击",
+          "name": "Maul",
           "actions": [
             {
               "op": "atk",
@@ -3641,7 +3641,7 @@
         },
         {
           "id": "avalanche",
-          "name": "雪崩",
+          "name": "Avalanche",
           "actions": [
             {
               "op": "atk",
@@ -3664,7 +3664,7 @@
     },
     {
       "id": "coalbaron",
-      "name": "灰财主",
+      "name": "Coal Baron",
       "tier": "elite",
       "hp": [
         76,
@@ -3676,15 +3676,15 @@
       "pips": 5,
       "love": "rare",
       "hate": "part:ribbon",
-      "lore": "占据灶仓的妖财主，先筑灰垒，再掷灰三连、征钱添煞。",
+      "lore": "Hoards coal and cookies alike. Values a gift by its price tag.",
       "lines": [
-        "今年的香资，都归我！",
-        "多添几捧灰，谁也抢不走。"
+        "Coal is the gift that keeps on giving.",
+        "GRAAAAWR!"
       ],
       "moves": [
         {
           "id": "shower",
-          "name": "灰火三叠",
+          "name": "Coal Shower",
           "actions": [
             {
               "op": "atk",
@@ -3697,7 +3697,7 @@
         },
         {
           "id": "tax",
-          "name": "妖财抽税",
+          "name": "Coal Tax",
           "actions": [
             {
               "op": "add",
@@ -3717,7 +3717,7 @@
         },
         {
           "id": "pile",
-          "name": "灶仓壁垒",
+          "name": "Stockpile",
           "actions": [
             {
               "op": "def",
@@ -3746,7 +3746,7 @@
     },
     {
       "id": "alpha",
-      "name": "巡夜狮王",
+      "name": "Reindeer Alpha",
       "tier": "elite",
       "hp": [
         80,
@@ -3758,15 +3758,15 @@
       "pips": 5,
       "love": "part:bell",
       "hate": "part:wheels",
-      "lore": "百年巡夜的狮灵迷失了归途。吼声蓄力，角撞后还有三重踏阵。",
+      "lore": "Led the sleigh team for a hundred Christmases. Still answers to the jingle of sleigh bells.",
       "lines": [
-        "百年巡夜，何处是家？",
-        "铜铃一响，我仍记得旧路。"
+        "The sleigh is broken. And so are the reins.",
+        "We pulled for HIM. Now we run wild!"
       ],
       "moves": [
         {
           "id": "bellow",
-          "name": "怒吼",
+          "name": "Bellow",
           "actions": [
             {
               "op": "buff",
@@ -3779,7 +3779,7 @@
         },
         {
           "id": "gore",
-          "name": "狮角冲撞",
+          "name": "Gore",
           "actions": [
             {
               "op": "atk",
@@ -3792,7 +3792,7 @@
         },
         {
           "id": "stampede",
-          "name": "践踏",
+          "name": "Stampede",
           "actions": [
             {
               "op": "atk",
@@ -3815,7 +3815,7 @@
     },
     {
       "id": "witch",
-      "name": "灶糖婆",
+      "name": "Gingerbread Witch",
       "tier": "elite",
       "hp": [
         84,
@@ -3827,15 +3827,15 @@
       "pips": 5,
       "love": "part:glitter",
       "hate": "part:wheels",
-      "lore": "灶糖屋中的纸婆，能捏糖召童。朱砂符会唤醒她的旧日手艺。",
+      "lore": "Lives in a gingerbread house. Will trade anything for a sprinkle of sparkle.",
       "lines": [
-        "糖童，替婆婆迎客！",
-        "朱砂添一点，纸人就活啦。"
+        "You son of a witch!",
+        "Mmm. Granny on gingerbread."
       ],
       "moves": [
         {
           "id": "hex",
-          "name": "诅咒术",
+          "name": "Hex",
           "actions": [
             {
               "op": "atk",
@@ -3855,7 +3855,7 @@
         },
         {
           "id": "bake",
-          "name": "捏糖召童",
+          "name": "Bake a Minion",
           "actions": [
             {
               "op": "summon",
@@ -3875,7 +3875,7 @@
         },
         {
           "id": "wall",
-          "name": "糖塑壁",
+          "name": "Candy Wall",
           "actions": [
             {
               "op": "def",
@@ -3903,7 +3903,7 @@
     },
     {
       "id": "jackfrost",
-      "name": "霜煞童",
+      "name": "Jack Frost",
       "tier": "elite",
       "hp": [
         76,
@@ -3915,15 +3915,15 @@
       "pips": 5,
       "love": "part:spring",
       "hate": "part:musicbox",
-      "lore": "山口寒气孕出的童子，封路后施寒煞，冰牙三连令人难以招架。",
+      "lore": "Nips noses for fun. Can't sit still; loves anything bouncy.",
       "lines": [
-        "我把春风冻在山外！",
-        "冰牙咬破你的灯！"
+        "I'll frostbite your face off!",
+        "Christmas is cancelled!"
       ],
       "moves": [
         {
           "id": "freeze",
-          "name": "冰封",
+          "name": "Freeze Over",
           "actions": [
             {
               "op": "debuff",
@@ -3943,7 +3943,7 @@
         },
         {
           "id": "nip",
-          "name": "寒冰啃咬",
+          "name": "Icy Nips",
           "actions": [
             {
               "op": "atk",
@@ -3956,7 +3956,7 @@
         },
         {
           "id": "wall",
-          "name": "冰墙",
+          "name": "Ice Wall",
           "actions": [
             {
               "op": "def",
@@ -3978,7 +3978,7 @@
     },
     {
       "id": "santa",
-      "name": "年兽·初现",
+      "name": "Corrupted Santa",
       "tier": "boss",
       "hp": [
         128,
@@ -3990,14 +3990,14 @@
       "pips": 8,
       "love": "part:ribbon",
       "hate": "part:battery",
-      "lore": "吞灯的年兽提前越过岁门。红绳仍能唤起其守岁旧约；蛮力击破外壳，则会释放噬岁形态。",
+      "lore": "Read the whole Naughty List in one night. Somewhere under the coal, he's still Nick.",
       "lines": [
-        "岁门已开，万家灯火皆入我腹！"
+        "What a ho-ho-horrible night to have a curse!"
       ],
       "moves": [
         {
           "id": "ho",
-          "name": "年爪裂夜",
+          "name": "Ho Ho HURT",
           "actions": [
             {
               "op": "atk",
@@ -4010,7 +4010,7 @@
         },
         {
           "id": "nice",
-          "name": "吞灯落晦",
+          "name": "Naughty or Nice",
           "actions": [
             {
               "op": "add",
@@ -4030,7 +4030,7 @@
         },
         {
           "id": "slam",
-          "name": "三重冲撞",
+          "name": "Sack Slam",
           "actions": [
             {
               "op": "atk",
@@ -4043,7 +4043,7 @@
         },
         {
           "id": "guard",
-          "name": "岁门妖甲",
+          "name": "Chimney Guard",
           "actions": [
             {
               "op": "def",
@@ -4072,7 +4072,7 @@
     },
     {
       "id": "krampus",
-      "name": "年兽·噬岁",
+      "name": "KRAMPUS",
       "tier": "boss",
       "hp": [
         160,
@@ -4084,14 +4084,14 @@
       "pips": 8,
       "love": "",
       "hate": "",
-      "lore": "年兽被岁门魇侵蚀后的狂暴形态。爪焰连击、噬灯冲撞与岁末咆哮不断加压，岁火越旺，妖壳越弱。",
+      "lore": "What Santa becomes when the coal wins. There is no gift for this.",
       "lines": [
-        "旧岁不尽，今夜无明！"
+        "SANTA IS GONE. KRAMPUS IS FOREVER!"
       ],
       "moves": [
         {
           "id": "chains",
-          "name": "魇锁封春",
+          "name": "Chains of the Naughty",
           "actions": [
             {
               "op": "debuff",
@@ -4111,7 +4111,7 @@
         },
         {
           "id": "lash",
-          "name": "赤焰四爪",
+          "name": "Birch Lash",
           "actions": [
             {
               "op": "atk",
@@ -4124,7 +4124,7 @@
         },
         {
           "id": "howl",
-          "name": "噬岁咆哮",
+          "name": "Midnight Howl",
           "actions": [
             {
               "op": "buff",
@@ -4144,7 +4144,7 @@
         },
         {
           "id": "sack",
-          "name": "吞火冲撞",
+          "name": "Into the Sack",
           "actions": [
             {
               "op": "atk",
@@ -4167,7 +4167,7 @@
     },
     {
       "id": "naughtylist",
-      "name": "岁门魇",
+      "name": "The Naughty List",
       "tier": "boss",
       "hp": [
         200,
@@ -4179,14 +4179,14 @@
       "pips": 8,
       "love": "",
       "hate": "",
-      "lore": "以人间失散的愿望为食的岁门之魇。结盟年兽才能追入其本体；途中结识的伙伴将一同破门。",
+      "lore": "The list itself, growing bigger with every naughty deed. Santa never had a chance.",
       "lines": [
-        "你护得住一盏灯，护得住所有人的团圆吗？"
+        "I CAN SEE INTO YOUR HEART."
       ],
       "moves": [
         {
           "id": "read",
-          "name": "噬愿点名",
+          "name": "Read the Names",
           "actions": [
             {
               "op": "debuff",
@@ -4206,7 +4206,7 @@
         },
         {
           "id": "ink",
-          "name": "魇墨三叠",
+          "name": "Ink Lash",
           "actions": [
             {
               "op": "atk",
@@ -4219,7 +4219,7 @@
         },
         {
           "id": "mark",
-          "name": "失岁咒印",
+          "name": "Mark as Naughty",
           "actions": [
             {
               "op": "add",
@@ -4239,7 +4239,7 @@
         },
         {
           "id": "cut",
-          "name": "裂门纸刃",
+          "name": "Paper Cut",
           "actions": [
             {
               "op": "atk",
@@ -4537,21 +4537,21 @@
   "events": [
     {
       "id": "lostelf",
-      "title": "迷途纸童",
-      "text": "雪堆里缩着一个抱罗盘的纸童。岁门震动后，它再也找不到回家祭灶的路。",
+      "title": "The Lost Elf",
+      "text": "A tiny elf shivers in a snowdrift, clutching a broken compass. \"I may have taken a wrong turn at the candy cane forest...\"",
       "choices": [
         {
-          "label": "送他回家（失去6点生命，获得遗物）",
+          "label": "Walk him home (lose 6 HP, gain a relic)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "为他指路（岁火+5）",
+          "label": "Point the way (+5 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "不予理会（岁火-5）",
+          "label": "Ignore him (-5 Spirit)",
           "price": 0,
           "needsPotion": false
         }
@@ -4559,21 +4559,21 @@
     },
     {
       "id": "workshop",
-      "title": "写春联",
-      "text": "百工坊的朱砂尚温，案上铺着未写完的春联。你可以替村民续写，也可以寻找能带走的符纸。",
+      "title": "Abandoned Workshop",
+      "text": "Half-finished toys line the dusty benches. The tools are still warm, as if the elves left in a hurry.",
       "choices": [
         {
-          "label": "修修补补（升级一张法牌）",
+          "label": "Tinker (Rewrap a gift)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "搜寻物资（随机法牌和30块铜钱）",
+          "label": "Scavenge (random gift + 30 Cookies)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "离开",
+          "label": "Leave",
           "price": 0,
           "needsPotion": false
         }
@@ -4581,21 +4581,21 @@
     },
     {
       "id": "carolers",
-      "title": "舞狮队",
-      "text": "三名舞狮人仍在空街敲鼓。他们想用最后一曲召回散失的乡亲，也愿为你备一壶药汤。",
+      "title": "Carolers at the Door",
+      "text": "A ragged group of carolers is singing in front of a house. They look like they've been at it for quite a long time. Their voices crack with cold.",
       "choices": [
         {
-          "label": "合敲傩鼓（岁火+10，恢复5生命）",
+          "label": "Sing along (+10 Spirit, heal 5)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "赠送25块铜钱（随机药水）",
+          "label": "Give them 25 Cookies (random potion)",
           "price": 25,
           "needsPotion": false
         },
         {
-          "label": "学傩鼓谱（获得傩鼓乱心）",
+          "label": "Learn their song (gain Off-Key Carol)",
           "price": 0,
           "needsPotion": false
         }
@@ -4603,16 +4603,16 @@
     },
     {
       "id": "pond",
-      "title": "冰河拾财",
-      "text": "冰封的河面下有铜钱闪动。抄近路能省下时辰，但冰层未必承得住你。",
+      "title": "The Frozen Pond",
+      "text": "A frozen pond blocks the path. As you take a closer look, you note coins that twinkle under the ice. The ice creaks under your weight.",
       "choices": [
         {
-          "label": "滑过去（50%获得60块铜钱，否则失去10点生命）",
+          "label": "Skate across (50%: +60 Cookies, else -10 HP)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "绕道而行（岁火-4）",
+          "label": "Walk around (-4 Spirit)",
           "price": 0,
           "needsPotion": false
         }
@@ -4620,21 +4620,21 @@
     },
     {
       "id": "cookiejar",
-      "title": "祭灶供案",
-      "text": "供案上摆着糖饼与香资，写着“留与灶君”。灰里似乎有一枚不祥的晦炭。",
+      "title": "The Cookie Jar",
+      "text": "On a windowsill, you notice an enormous cookie jar. A note reads: FOR SANTA ONLY.",
       "choices": [
         {
-          "label": "往深处掏（75块铜钱，获得晦炭）",
+          "label": "Reach in deep (+75 Cookies, gain Lump of Coal)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "只吃一块（恢复10点生命，岁火-2）",
+          "label": "Take just one (heal 10, -2 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "不碰它",
+          "label": "Leave it",
           "price": 0,
           "needsPotion": false
         }
@@ -4642,21 +4642,21 @@
     },
     {
       "id": "globeshop",
-      "title": "剪窗花",
-      "text": "老妇守着剪纸摊。她说每一张窗花都能替旧符改命，一面五帝钱镜则要六十铜钱。",
+      "title": "The Snow Globe Seller",
+      "text": "An old woman sells snow globes. You take one from her hands almost absentmindedly.",
       "choices": [
         {
-          "label": "剪一幅窗花（变换一张法牌）",
+          "label": "Shake a globe (transform a gift)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "花60块铜钱购买（遗物）",
+          "label": "Buy one for 60 Cookies (relic)",
           "price": 60,
           "needsPotion": false
         },
         {
-          "label": "继续赶路",
+          "label": "Move along",
           "price": 0,
           "needsPotion": false
         }
@@ -4664,21 +4664,21 @@
     },
     {
       "id": "stable",
-      "title": "巡山狮棚",
-      "text": "几只失去主人的巡山狮灵困在棚里。喂它们年食会得到祝福，冒险骑行也许能找回遗物。",
+      "title": "The Empty Stable",
+      "text": "Santa's reserve reindeer pace in their stalls, hungry and restless.",
       "choices": [
         {
-          "label": "添30铜钱年食（生命上限+6）",
+          "label": "Feed them 30 Cookies (+6 Max HP)",
           "price": 30,
           "needsPotion": false
         },
         {
-          "label": "骑上一头（失去10点生命，获得遗物）",
+          "label": "Ride one (lose 10 HP, gain a relic)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "让它们待着",
+          "label": "Leave them be",
           "price": 0,
           "needsPotion": false
         }
@@ -4686,21 +4686,21 @@
     },
     {
       "id": "well",
-      "title": "古井祈福",
-      "text": "铜钱沉在古井深处。井水能疗伤，但今夜每一口都原本留给归家的人。",
+      "title": "The Wishing Well",
+      "text": "You stop by a wishing well and look inside. You see countless coins far below.",
       "choices": [
         {
-          "label": "投入25块铜钱（岁火+8）",
+          "label": "Toss 25 Cookies (+8 Spirit)",
           "price": 25,
           "needsPotion": false
         },
         {
-          "label": "投入一张法牌（留下法牌）",
+          "label": "Toss a gift in (leave a gift)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "喝井水（恢复15点生命，岁火-5）",
+          "label": "Drink (heal 15, -5 Spirit)",
           "price": 0,
           "needsPotion": false
         }
@@ -4708,21 +4708,21 @@
     },
     {
       "id": "elfgame",
-      "title": "拦路小祟",
-      "text": "两个噬岁小祟挡住山口：“押上你的盘缠，来赌今晚谁能见到天亮！”",
+      "title": "Mischievous Elves",
+      "text": "Two elves with red eyes block the path. \"Hey, stranger! How about we play a game? Winner takes all!\"",
       "choices": [
         {
-          "label": "迎战两只噬岁小祟",
+          "label": "Play (fight two Krampus Imps)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "贿赂它们（铜钱-40）",
+          "label": "Bribe them (-40 Cookies)",
           "price": 40,
           "needsPotion": false
         },
         {
-          "label": "责骂它们（生命-6）",
+          "label": "Scold them (-6 HP)",
           "price": 0,
           "needsPotion": false
         }
@@ -4730,16 +4730,16 @@
     },
     {
       "id": "factory",
-      "title": "百工赶年",
-      "text": "符匠们正在赶制最后一批年货。帮忙会疲惫，却能从三件新法器中择一带走。",
+      "title": "The Toy Factory",
+      "text": "The conveyor belts at a toy factory still run. Toys roll by, waiting to be wrapped.",
       "choices": [
         {
-          "label": "加班（失去7点生命，选择法牌）",
+          "label": "Work overtime (lose 7 HP, choose a gift)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "在行囊上小睡（恢复12点生命）",
+          "label": "Take a nap on the sacks (heal 12)",
           "price": 0,
           "needsPotion": false
         }
@@ -4747,21 +4747,21 @@
     },
     {
       "id": "gingerhouse",
-      "title": "灶糖妖屋",
-      "text": "糖香从一间古怪小屋里飘出，檐下挂着未干的纸人。主人似乎正在等你敲门。",
+      "title": "The Gingerbread House",
+      "text": "A cottage made entirely of gingerbread. You feel as though there's something or someone inside.",
       "choices": [
         {
-          "label": "尝灶糖（恢复20生命，获得晦炭）",
+          "label": "Nibble the roof (heal 20, gain Lump of Coal)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "敲门（精英战斗）",
+          "label": "Knock on the door (ELITE fight)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "慢慢后退",
+          "label": "Back away slowly",
           "price": 0,
           "needsPotion": false
         }
@@ -4769,16 +4769,16 @@
     },
     {
       "id": "sleigh",
-      "title": "断辕巡灯车",
-      "text": "巡灯车翻在山沟里。你可以取走车中法器，也可以重敲铜铃，为迷途者引路。",
+      "title": "Santa's Abandoned Sleigh",
+      "text": "Santa's sleigh lies tipped in a ditch, one of its runners snapped. The seat is still warm.",
       "choices": [
         {
-          "label": "取走法器（遗物，岁火-6）",
+          "label": "Search the seat (relic, -6 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "擦亮铃铛（岁火+12）",
+          "label": "Polish the bells (+12 Spirit)",
           "price": 0,
           "needsPotion": false
         }
@@ -4786,21 +4786,21 @@
     },
     {
       "id": "naughtykid",
-      "title": "失约的孩子",
-      "text": "孩子朝你的脚边掷石：“去年他们说灯不灭，人就会回来。可我爹娘呢？”",
+      "title": "The Naughty Child",
+      "text": "A boy pelts you with snowballs. \"Santa never came last year! Why in the hell should I be nice?\"",
       "choices": [
         {
-          "label": "送他法牌（留下法牌，获得双倍岁火）",
+          "label": "Give him a gift (leave; DOUBLE Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "陪他掷震煞雷（生命-5，获得震煞雷+）",
+          "label": "Snowball fight! (-5 HP, gain Snowball+)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "责骂他（铜钱+40，岁火-8）",
+          "label": "Scold him (+40 Cookies, -8 Spirit)",
           "price": 0,
           "needsPotion": false
         }
@@ -4808,16 +4808,16 @@
     },
     {
       "id": "mistletoe",
-      "title": "团圆桃门",
-      "text": "两株桃枝在路上结成门。门后响起熟悉的饭菜声，枝头却藏着另一道法术。",
+      "title": "Mistletoe Arch",
+      "text": "A great arch of mistletoe appears above the path.",
       "choices": [
         {
-          "label": "过团圆门（恢复12生命，获得团圆回响）",
+          "label": "Pass under (heal 12, gain Mistletoe Kiss)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "折桃枝（随机稀有法牌）",
+          "label": "Cut a sprig (gain a random Uncommon gift)",
           "price": 0,
           "needsPotion": false
         }
@@ -4825,21 +4825,21 @@
     },
     {
       "id": "toymaker",
-      "title": "老符匠",
-      "text": "老人伏案补符：“这年关还没过，总得让后人有条归途。”他愿为你重修两张法牌。",
+      "title": "The Old Toymaker",
+      "text": "A stooped toymaker fixes a rocking horse by candlelight. \"Need anything mended, dear?\"",
       "choices": [
         {
-          "label": "重修法牌（随机升级2张）",
+          "label": "Mend my gifts (Rewrap 2 random gifts)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "买一道法术（50铜钱，选择法牌）",
+          "label": "Buy a toy (50 Cookies, choose a gift)",
           "price": 50,
           "needsPotion": false
         },
         {
-          "label": "离开",
+          "label": "Leave",
           "price": 0,
           "needsPotion": false
         }
@@ -4847,21 +4847,21 @@
     },
     {
       "id": "blizzard",
-      "title": "雪封山口",
-      "text": "狂风吞没了山道。继续前行会受伤，等待会耗掉岁火，也能消耗一瓶药汤驱寒。",
+      "title": "Blizzard!",
+      "text": "A howling blizzard swallows the road. You can barely see the tip of your own nose.",
       "choices": [
         {
-          "label": "顶风前进（生命-10）",
+          "label": "Push through (-10 HP)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "躲避风雪（岁火-8）",
+          "label": "Shelter until it passes (-8 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "喝药水取暖（失去一瓶药水）",
+          "label": "Drink a potion for warmth (lose a potion)",
           "price": 0,
           "needsPotion": true
         }
@@ -4869,21 +4869,21 @@
     },
     {
       "id": "postman",
-      "title": "家书驿使",
-      "text": "驿使困在雪中，怀里护着一袋报平安的家书。最近的村庄还隔着一段险路。",
+      "title": "The Frozen Postman",
+      "text": "A postman lies stuck in a snowdrift, his bag bursting with letters to Santa.",
       "choices": [
         {
-          "label": "读信（岁火+12）",
+          "label": "Read the letters (+12 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "亲自送信（生命-6，岁火+18）",
+          "label": "Deliver them yourself (-6 HP, +18 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "烧信取暖（恢复12点生命，岁火-12）",
+          "label": "Burn them for warmth (heal 12, -12 Spirit)",
           "price": 0,
           "needsPotion": false
         }
@@ -4891,21 +4891,21 @@
     },
     {
       "id": "cocoastand",
-      "title": "年货汤摊",
-      "text": "一位妇人支起姜枣汤摊：“守岁人，暖暖身子再走。灶上的两壶药汤也能带上。”",
+      "title": "Hot Cocoa Stand",
+      "text": "A cheerful elf runs a cocoa stand in the middle of nowhere. \"Marshmallows are extra!\"",
       "choices": [
         {
-          "label": "小杯20块铜钱（恢复18点生命）",
+          "label": "Small cup, 20 Cookies (heal 18)",
           "price": 20,
           "needsPotion": false
         },
         {
-          "label": "打包45块铜钱（两瓶随机药水）",
+          "label": "To go, 45 Cookies (2 random potions)",
           "price": 45,
           "needsPotion": false
         },
         {
-          "label": "不用了",
+          "label": "No thanks",
           "price": 0,
           "needsPotion": false
         }
@@ -4913,16 +4913,16 @@
     },
     {
       "id": "fishing",
-      "title": "年年有余",
-      "text": "冰洞边的钓竿猛然下沉。水下可能是失落的药瓶、钱袋，也可能是咬人的鱼妖。",
+      "title": "Ice Fishing",
+      "text": "A fishing hole and an abandoned rod. Something tugs at the line.",
       "choices": [
         {
-          "label": "收线",
+          "label": "Reel it in",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "放下鱼竿",
+          "label": "Leave the line",
           "price": 0,
           "needsPotion": false
         }
@@ -4930,21 +4930,21 @@
     },
     {
       "id": "ball",
-      "title": "傩舞试阵",
-      "text": "庙前的傩舞队邀请你试步。纸甲门卒在旁候场，想较量也可以直接挑战它。",
+      "title": "The Nutcracker's Ball",
+      "text": "Music drifts from a ballroom where nutcrackers waltz to the tune. One of them bows to you.",
       "choices": [
         {
-          "label": "踏傩步（生命-5，升级一张法牌）",
+          "label": "Dance (-5 HP, Rewrap a gift)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "发起决斗（战斗）",
+          "label": "Challenge him to a duel (fight)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "悄悄离开",
+          "label": "Slip away",
           "price": 0,
           "needsPotion": false
         }
@@ -4952,16 +4952,16 @@
     },
     {
       "id": "stocking",
-      "title": "压岁钱",
-      "text": "篱笆上挂着鼓鼓的红包，绳上写着“留给行路人”。拿走物资或补入法牌，都由你选择。",
+      "title": "Stocking on a Fence",
+      "text": "A lonely stocking hangs on a fence post, bulging with something.",
       "choices": [
         {
-          "label": "看看里面（药水和30块铜钱）",
+          "label": "Peek inside (potion + 30 Cookies)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "往里面装法牌（留下法牌）",
+          "label": "Fill it instead (leave a gift)",
           "price": 0,
           "needsPotion": false
         }
@@ -4969,16 +4969,16 @@
     },
     {
       "id": "angels",
-      "title": "守岁灯",
-      "text": "一盏将熄的灯还守着空屋。陪它片刻，把灯油拨亮，也许能让自己的伤痛稍缓。",
+      "title": "Snow Angels",
+      "text": "A field of perfect, untouched snow sparkles under the moon.",
       "choices": [
         {
-          "label": "挑亮岁灯（恢复8生命，岁火+6）",
+          "label": "Make a snow angel (heal 8, +6 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "继续赶路",
+          "label": "Keep moving",
           "price": 0,
           "needsPotion": false
         }
@@ -4986,16 +4986,16 @@
     },
     {
       "id": "fallenstar",
-      "title": "散落的岁火",
-      "text": "雪中落着一枚岁灯灯芯，仍在温暖地跳动。是带它同行，还是让它回到万家灯中？",
+      "title": "The Fallen Star",
+      "text": "A star has fallen into a snowbank, still glowing and sparking.",
       "choices": [
         {
-          "label": "拾起灯芯（岁灯灯芯，已有则100铜钱）",
+          "label": "Take it (Tree-Top Star, or 100 Cookies)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "许个愿（岁火+20）",
+          "label": "Make a wish (+20 Spirit)",
           "price": 0,
           "needsPotion": false
         }
@@ -5003,16 +5003,16 @@
     },
     {
       "id": "exchange",
-      "title": "傩面换符",
-      "text": "戴傩面的行脚客递来符匣：“换一道命数吗，{title}？开匣前不可反悔。”",
+      "title": "Secret Santa Swap",
+      "text": "A masked stranger holds out a wrapped box. \"Care for a swap, {title}? No peeking.\"",
       "choices": [
         {
-          "label": "交换（变换一张法牌）",
+          "label": "Swap (transform a gift)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "婉拒",
+          "label": "Decline",
           "price": 0,
           "needsPotion": false
         }
@@ -5020,16 +5020,16 @@
     },
     {
       "id": "snowmanfriend",
-      "title": "纸偶盼归",
-      "text": "小纸偶独坐在祠堂台阶上，披着红绫。它想再有一个能陪它等天亮的伙伴。",
+      "title": "The Lonely Snowman",
+      "text": "A small, friendly snowman sits alone in a park. It years for companionship.",
       "choices": [
         {
-          "label": "扎一个纸偶（生命-4，岁火+10）",
+          "label": "Build him a friend (-4 HP, +10 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "取走红绫（护身红绫+，岁火-8）",
+          "label": "Take his scarf (gain Scarf Wrap+, -8 Spirit)",
           "price": 0,
           "needsPotion": false
         }
@@ -5037,21 +5037,21 @@
     },
     {
       "id": "mirror",
-      "title": "照岁铜镜",
-      "text": "铜镜映出往年除夕：你与先师并肩点灯，街上家家团圆。触碰记忆也许要付出代价。",
+      "title": "Mirror of Christmas Past",
+      "text": "An ornate mirror shows you young, laughing beside an even younger Santa.",
       "choices": [
         {
-          "label": "伸手触碰回忆（复制一张法牌，生命上限-6）",
+          "label": "Reach into the memory (duplicate a gift, -6 Max HP)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "微笑回忆（岁火+10）",
+          "label": "Smile and remember (+10 Spirit)",
           "price": 0,
           "needsPotion": false
         },
         {
-          "label": "打碎镜子（生命-4，铜钱+40）",
+          "label": "Shatter it (-4 HP, +40 Cookies)",
           "price": 0,
           "needsPotion": false
         }
@@ -5061,63 +5061,63 @@
   "parts": [
     {
       "id": "wheels",
-      "name": "轻身符",
+      "name": "Wheels",
       "rarity": 1,
-      "desc": "灯火费用减少1点。"
+      "desc": "Costs 1 less Cheer."
     },
     {
       "id": "paint",
-      "name": "朱砂印",
+      "name": "Fresh Paint",
       "rarity": 1,
-      "desc": "伤害或格挡增加3点。"
+      "desc": "+3 damage or Wrap."
     },
     {
       "id": "squeaker",
-      "name": "傩鼓印",
+      "name": "Squeaker",
       "rarity": 1,
-      "desc": "施加1层虚弱。"
+      "desc": "Apply 1 Soggy."
     },
     {
       "id": "glitter",
-      "name": "金箔印",
+      "name": "Glitter",
       "rarity": 1,
-      "desc": "施加1层破绽。"
+      "desc": "Apply 1 Brittle."
     },
     {
       "id": "bell",
-      "name": "铜铃印",
+      "name": "Little Bell",
       "rarity": 2,
-      "desc": "抽1张法牌。"
+      "desc": "Draw 1 gift."
     },
     {
       "id": "spring",
-      "name": "爆竹印",
+      "name": "Spring",
       "rarity": 2,
-      "desc": "对随机敌人造成4点伤害。"
+      "desc": "Deal 4 damage to a random enemy."
     },
     {
       "id": "musicbox",
-      "name": "团圆印",
+      "name": "Music Box",
       "rarity": 2,
-      "desc": "恢复2点生命。"
+      "desc": "Heal 2 HP."
     },
     {
       "id": "windup",
-      "name": "更鼓印",
+      "name": "Wind-up Key",
       "rarity": 2,
-      "desc": "下回合获得1点灯火。"
+      "desc": "Next turn, gain 1 Cheer."
     },
     {
       "id": "ribbon",
-      "name": "红绳结",
+      "name": "Big Ribbon",
       "rarity": 2,
-      "desc": "降低一名怪物的1格怨气值。"
+      "desc": "Pops 1 Grumpy pip on any monster."
     },
     {
       "id": "battery",
-      "name": "岁火芯",
+      "name": "Battery",
       "rarity": 3,
-      "desc": "此法牌的数值翻倍。消耗。"
+      "desc": "Doubles this gift's power. Consume."
     }
   ]
 }

@@ -15,7 +15,7 @@ namespace Sleigh.Editor
         public static SleighAudioBank Bake(bool force = false)
         {
             var bank = AssetDatabase.LoadAssetAtPath<SleighAudioBank>(Folder + "/AudioBank.asset");
-            if (bank && bank.version == 3 && !force) return bank;
+            if (bank && bank.version == 2 && !force) return bank;
             Directory.CreateDirectory(Folder + "/Effects"); Directory.CreateDirectory(Folder + "/Music");
             string[] names = { "hover", "cardHover", "click", "toggle", "tick", "count", "pick", "error", "draw", "shuffle", "play", "unwrap", "hit", "crit", "whiff", "blockHit", "block", "buff", "debuff", "heal", "coin", "jingle", "bell", "death", "win", "lose", "turn", "enemyTurn", "windup", "whoosh", "spirit", "transform", "potion", "relic", "type", "line", "pop", "energy", "thud", "fire", "heartbeat", "holdTick", "page", "give", "love", "hate", "charm", "clink", "grab", "spot", "warn" };
             var definitions = new List<SleighAudioBank.Effect>();
@@ -32,14 +32,20 @@ namespace Sleigh.Editor
                     : name == "count" ? .055f : name == "hit" ? .025f : name == "type" ? .045f : name == "fire" ? .09f : name == "holdTick" ? .06f : name == "click" || name == "blockHit" ? .03f : 0;
                 definitions.Add(new SleighAudioBank.Effect { id = name, clips = new AudioClip[variants], gateSeconds = gate });
             }
-            // Original Nian scores are baked offline; never decode the retired reference music.
-            string[] musicNames = { "calm", "map", "battle", "boss", "end" };
+            string[] musicNames = { "calm", "battle", "boss", "end" }; int[] samples44100 = { 920348, 641455, 579945, 504000 };
             var tracks = new List<SleighAudioBank.Song>();
-            foreach (string name in musicNames)
+            for (int i = 0; i < musicNames.Length; i++)
             {
-                if (!File.Exists(Folder + "/Music/" + name + "_loop.wav"))
-                    throw new InvalidOperationException("Run Tools/Nian/bake_music.py before baking: " + name);
-                tracks.Add(new SleighAudioBank.Song { id = name });
+                string name = musicNames[i]; var source = AssetDatabase.LoadAssetAtPath<AudioClip>(Folder + "/" + name + ".ogg");
+                source.LoadAudioData(); var pcm = new float[source.samples * source.channels];
+                if (!source.GetData(pcm, 0)) throw new InvalidOperationException("Cannot decode original music: " + name);
+                int loopFrames = (int)Math.Round(samples44100[i] / 44100.0 * source.frequency), introFrames = (int)Math.Round(loopFrames * .5);
+                if (introFrames + loopFrames > source.samples) throw new InvalidOperationException("Original song is shorter than its loop window: " + name);
+                var intro = new float[introFrames * source.channels]; var loop = new float[loopFrames * source.channels];
+                Array.Copy(pcm, intro, intro.Length); Array.Copy(pcm, intro.Length, loop, 0, loop.Length);
+                WriteWav(Folder + "/Music/" + name + "_intro.wav", intro, source.channels, source.frequency);
+                WriteWav(Folder + "/Music/" + name + "_loop.wav", loop, source.channels, source.frequency);
+                tracks.Add(new SleighAudioBank.Song { id = name, originalLoopSamples44100 = samples44100[i] });
             }
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
             foreach (var definition in definitions)
@@ -47,8 +53,8 @@ namespace Sleigh.Editor
             foreach (var track in tracks)
             { track.intro = AssetDatabase.LoadAssetAtPath<AudioClip>(Folder + "/Music/" + track.id + "_intro.wav"); track.loop = AssetDatabase.LoadAssetAtPath<AudioClip>(Folder + "/Music/" + track.id + "_loop.wav"); }
             if (!bank) { bank = ScriptableObject.CreateInstance<SleighAudioBank>(); AssetDatabase.CreateAsset(bank, Folder + "/AudioBank.asset"); }
-            bank.effects = definitions.ToArray(); bank.music = tracks.ToArray(); bank.version = 3; EditorUtility.SetDirty(bank); AssetDatabase.SaveAssets();
-            Debug.Log("Sleigh audio baked: " + bank.effects.Length + " original sound definitions, " + bank.effects.Sum(e => e.clips.Length) + " variations, five original pentatonic music loops. No runtime synthesis.");
+            bank.effects = definitions.ToArray(); bank.music = tracks.ToArray(); bank.version = 2; EditorUtility.SetDirty(bank); AssetDatabase.SaveAssets();
+            Debug.Log("Sleigh audio baked: " + bank.effects.Length + " original sound definitions, " + bank.effects.Sum(e => e.clips.Length) + " variations, four sample-accurate music loops. No runtime synthesis.");
             return bank;
         }
         static double Midi(int m) => 440 * Math.Pow(2, (m - 69) / 12.0);
@@ -101,7 +107,7 @@ namespace Sleigh.Editor
             void Notes(int root, int[] intervals, double step, double duration, double volume, string waveform)
             { for (int i = 0; i < intervals.Length; i++) Tone(Midi(root + intervals[i]), duration, volume, step * i, waveform); }
             void Bell(int midi) { double f = Midi(midi); Tone(f, 1.2, .12, 0, "sine"); Tone(f * 2.76, .5, .035, 0, "sine"); Tone(f * 5.4, .25, .02, 0, "sine"); }
-            void Jingle() { Tone(181, .8, .12, 0, "sine"); Tone(294, .65, .065, 0, "sine"); Tone(417, .5, .04, .01, "sine"); Noise(.035, .025, 0, "bandpass", 3200); }
+            void Jingle() { for (int i = 0; i < 7; i++) Noise(.06, .06, i * .05 + R() * .02, "bandpass", 7000 + R() * 3000, 0, 6); }
             switch (name)
             {
                 case "hover": Tone(1500 * J(), .025, .03); break;
@@ -121,14 +127,14 @@ namespace Sleigh.Editor
                 case "whiff": Noise(.12, .06, 0, "bandpass", 1200, 4000, 2); break;
                 case "blockHit": Tone(1800 * J(), .06, .06, 0, "square", 1500); Tone(2700 * J(), .12, .05, 0, "triangle"); break;
                 case "block": Tone(700, .08, .13, 0, "triangle", 900); Tone(1050, .14, .09, .05, "triangle"); break;
-                case "buff": Notes(72, new[] { 0, 4, 7, 9 }, .045, .1, .09, "triangle"); break;
+                case "buff": Notes(72, new[] { 0, 4, 7, 12 }, .045, .1, .09, "triangle"); break;
                 case "debuff": Notes(60, new[] { 0, -3, -6 }, .06, .12, .07, "square"); break;
                 case "heal": Notes(79, new[] { 0, 7, 12, 16, 19 }, .05, .25, .06, "sine"); break;
                 case "coin": Tone(988, .06, .09); Tone(1319, .18, .09, .06); break;
                 case "jingle": Jingle(); break;
                 case "bell": Bell(value); break;
                 case "death": Noise(.5, .22, 0, "lowpass", 3000, 100); Tone(400, .5, .1, 0, "sawtooth", 60); break;
-                case "win": Notes(67, new[] { 0, 2, 4, 7, 9, 12, 14 }, .07, .16, .07, "square"); Jingle(); break;
+                case "win": Notes(67, new[] { 0, 4, 7, 12, 16, 19, 24 }, .07, .16, .07, "square"); Jingle(); break;
                 case "lose": Notes(64, new[] { 0, -2, -5, -9, -12 }, .22, .4, .11, "triangle"); break;
                 case "turn": Bell(79); Tone(Midi(86), .5, .05, .1, "sine"); break;
                 case "enemyTurn": Tone(Midi(50), .25, .05, 0, "sawtooth"); Tone(Midi(49), .3, .05, .15, "sawtooth"); break;
@@ -137,7 +143,7 @@ namespace Sleigh.Editor
                 case "spirit": Notes(76, new[] { 0, 4, 7, 11, 14 }, .07, .4, .06, "sine"); Jingle(); break;
                 case "transform": Noise(1.6, .3, 0, "lowpass", 200, 2000, 3); Tone(110, 1.6, .15, 0, "sawtooth", 40); Tone(55, 1.6, .1); break;
                 case "potion": for (int i = 0; i < 5; i++) Tone(300 + R() * 400, .06, .07, i * .05, "sine", 800); break;
-                case "relic": Notes(72, new[] { 0, 7, 9, 12 }, .03, .6, .05, "triangle"); Jingle(); break;
+                case "relic": Notes(72, new[] { 0, 7, 12, 16 }, .03, .6, .05, "triangle"); Jingle(); break;
                 case "type": Tone(700 + R() * 300, .02, .02); break;
                 case "line": Tone(Midi(84 + (int)(R() * 5)), .6, .03, 0, "sine"); break;
                 case "pop": Tone(800 * J(), .06, .09, 0, "sine", 1300); break;
@@ -150,7 +156,7 @@ namespace Sleigh.Editor
                 case "give": Tone(660 * J(), .12, .08, 0, "sine", 1320); Tone(990, .18, .05, .06, "triangle"); break;
                 case "love": Notes(81, new[] { 0, 4, 7 }, .05, .18, .07, "sine"); break;
                 case "hate": Tone(220, .18, .06, 0, "sawtooth", 140); break;
-                case "charm": Notes(72, new[] { 0, 2, 4, 7, 9, 12, 14 }, .06, .35, .07, "sine"); Bell(96); Jingle(); break;
+                case "charm": Notes(72, new[] { 0, 4, 7, 12, 16, 19, 24 }, .06, .35, .07, "sine"); Bell(96); Jingle(); break;
                 case "clink": Tone(2200 * J(.08), .12, .06, 0, "sine"); Tone(3300 * J(.08), .08, .03, .02, "sine"); break;
                 case "grab": Tone(900 * J(), .05, .06, 0, "triangle", 1400); break;
                 case "spot": Noise(.25, .06, 0, "bandpass", 1200, 300, 2); Tone(110, .2, .12, 0, "sine", 80); break;

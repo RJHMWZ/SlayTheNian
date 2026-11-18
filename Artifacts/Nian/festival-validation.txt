@@ -1,9 +1,0 @@
-PASS: Unity compilation and native Play mode; no console errors.
-PASS: All five main-menu buttons use fontScale 1.
-PASS: Fireworks are on the background layer; active during the title screen.
-PASS: Reduce Motion disables fireworks (active particle count 0).
-PASS: 1333 gameplay assertions and 9196 theme/compatibility assertions.
-PASS: Player save unchanged after the isolated visual review.
-Screenshots: festival-menu-final.png; festival-nian-final.png.
-PASS: 325 pixel frames use Point sampling and remain valid after leaving Play mode.
-FIX: Recreate cached sprites if Unity released their sprite or texture.

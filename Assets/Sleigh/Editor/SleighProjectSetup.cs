@@ -11,30 +11,6 @@ namespace Sleigh.Editor
     {
         void OnPreprocessTexture()
         {
-            if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Scenery/", StringComparison.Ordinal))
-            {
-                var scenery = (TextureImporter)assetImporter;
-                scenery.textureType = TextureImporterType.Default; scenery.filterMode = FilterMode.Point;
-                scenery.mipmapEnabled = false; scenery.textureCompression = TextureImporterCompression.Uncompressed;
-                scenery.npotScale = TextureImporterNPOTScale.None; scenery.wrapMode = TextureWrapMode.Clamp;
-                scenery.maxTextureSize = 2048; return;
-            }
-            if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Festival/", StringComparison.Ordinal))
-            {
-                var pixel = (TextureImporter)assetImporter;
-                pixel.textureType = TextureImporterType.Default; pixel.filterMode = FilterMode.Point;
-                pixel.mipmapEnabled = false; pixel.textureCompression = TextureImporterCompression.Uncompressed;
-                pixel.npotScale = TextureImporterNPOTScale.None; pixel.wrapMode = TextureWrapMode.Clamp;
-                pixel.alphaIsTransparency = true; pixel.maxTextureSize = 2048; return;
-            }
-            if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Nian/", StringComparison.Ordinal))
-            {
-                var atlas = (TextureImporter)assetImporter;
-                atlas.textureType = TextureImporterType.Default; atlas.filterMode = FilterMode.Bilinear;
-                atlas.mipmapEnabled = false; atlas.textureCompression = TextureImporterCompression.Uncompressed;
-                atlas.npotScale = TextureImporterNPOTScale.None; atlas.wrapMode = TextureWrapMode.Clamp;
-                atlas.alphaIsTransparency = true; atlas.maxTextureSize = 4096; return;
-            }
             if (assetPath.StartsWith("Assets/Sleigh/Resources/Sleigh/Fonts/", StringComparison.Ordinal))
             {
                 var font = (TextureImporter)assetImporter; font.textureType = TextureImporterType.Default; font.filterMode = FilterMode.Point;

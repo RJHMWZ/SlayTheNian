@@ -13,8 +13,6 @@ namespace Sleigh
         public View[] views;
         public RectTransform[] snowParticles;
         public PixelParticleField particles;
-        public PixelParticleField titleFireworks;
-        public Texture2D titleArtwork;
         public Image flashOverlay, transitionOverlay;
         public SleighAudio audioPlayer;
         public Material[] actorFlashMaterials;
@@ -33,7 +31,6 @@ namespace Sleigh
             if (selected == null) throw new InvalidOperationException("Scene has no baked view: " + name);
             if (snowRoot) snowRoot.gameObject.SetActive(false);
             if (particles) particles.ClearParticles(); shake = punch = 0;
-            if (titleFireworks) { titleFireworks.ClearParticles(); titleFireworks.gameObject.SetActive(name == "Title"); }
             if (arrowRoot) arrowRoot.gameObject.SetActive(false); if (reactionIcon) reactionIcon.gameObject.SetActive(false);
             if (bannerRoot) bannerRoot.gameObject.SetActive(false); if (bubbleRoot) bubbleRoot.gameObject.SetActive(false); if (lowHealthRoot) lowHealthRoot.gameObject.SetActive(false);
             worldLayer.anchoredPosition = new Vector2(320, -180); worldLayer.localScale = Vector3.one;
@@ -48,7 +45,6 @@ namespace Sleigh
             float dt = Time.unscaledDeltaTime;
             bool reduced = GameRoot.Instance && GameRoot.Instance.ReduceMotion;
             if (particles) particles.reduced = reduced;
-            if (titleFireworks) { titleFireworks.reduced = reduced; if (reduced && titleFireworks.ActiveCount > 0) titleFireworks.ClearParticles(); }
             flashAlpha = Mathf.Max(0, flashAlpha - dt * flashFade); transitionAlpha = Mathf.Max(0, transitionAlpha - dt * 5);
             if (flashOverlay) flashOverlay.color = new Color(flashColor.r, flashColor.g, flashColor.b, reduced ? 0 : flashAlpha);
             if (transitionOverlay) { transitionOverlay.color = new Color(0, 0, 0, transitionAlpha); transitionOverlay.raycastTarget = transitionAlpha > .12f; }

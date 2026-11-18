@@ -26,11 +26,8 @@ namespace Sleigh
         public void ShowMap()
         {
             if (run == null) return;
-            NewScreen("Map", "map"); TiledBackground(); if (!world.GetComponent<RectMask2D>()) world.gameObject.AddComponent<RectMask2D>();
+            NewScreen("Map"); TiledBackground(); if (!world.GetComponent<RectMask2D>()) world.gameObject.AddComponent<RectMask2D>();
             var drag = PixelUI.Ensure<MapDrag>(world); drag.move = DragMap; drag.scale = uiScale;
-            Rect(world, 8, 94, 624, 184, Hex(0xc9aa7c), false, "Route board border");
-            Rect(world, 10, 96, 620, 180, Hex(0xfff5dd, .94f), false, "Quiet route board");
-            Rect(world, 10, 285, 620, 55, Hex(0xfff5dd, .88f), false, "Village progress strip");
             Rect(world, 0, 75, 640, 270, Color.clear, true, "Map drag surface");
             mapScroll = mapTarget = Mathf.Clamp(90 + run.night * 92 - 260, 0, 1676); mapFling = 0; mapContent = Group(world, "24 Night Map");
             mapContent.anchoredPosition = new Vector2(-mapScroll, 0);
@@ -42,37 +39,33 @@ namespace Sleigh
                 {
                     Vector2 from = new Vector2(nx(i), ny(i, a)), to = new Vector2(nx(i + 1), ny(i + 1, b)); int count = Mathf.FloorToInt(Vector2.Distance(from, to) / 10);
                     bool lit = run.map[i].done && run.map[i].chosen == run.map[i].options[a] && (i + 1 == run.night || run.map[i + 1].chosen == run.map[i + 1].options[b]);
-                    for (int k = 2; k < count - 1; k++) { var pos = Vector2.Lerp(from, to, k / (float)count); var dot = Sprite(mapContent, "Icon", "path_dot", pos.x, pos.y); if (dot) dot.color = lit ? Gold : Hex(0x976c49, .7f); }
+                    for (int k = 2; k < count - 1; k++) { var pos = Vector2.Lerp(from, to, k / (float)count); var dot = Sprite(mapContent, "Icon", "path_dot", pos.x, pos.y); if (dot) dot.color = lit ? Gold : Hex(0x5a6a98, .7f); }
                 }
             }
             for (int i = 0; i < 24; i++)
             {
                 int n = i; var night = run.map[i];
                 Sprite(mapContent, "BGImage", night.lit ? "house_lit" : "house", nx(i), 318, .8f);
-                Label(mapContent, nx(i) - 35, 324, 70, "第 " + (i + 1) + " 关", .72f, i == run.night ? Hex(0xa6372d) : Hex(0x755f52), 1);
+                Label(mapContent, nx(i) - 35, 324, 70, "DEC " + (i + 1), .72f, i == run.night ? Gold : Muted, 1);
                 var house = Hot(mapContent, nx(i) - 28, 274, 56, 48, () => { if (n == run.night) { run.PickWish(); ShowItem(DB.Kids[n] + "'S WISH", DB.WishText[run.wish], "gift"); } });
                 BindTip(house, DB.Kids[i] + "'s house / DEC " + (i + 1), i < run.night ? night.lit ? "A lovely gift lit up the night." : "The house stayed dark." : "A child is waiting for Christmas.");
                 house.drag = e => DragMap(-e.delta.x / uiScale);
                 for (int j = 0; j < night.options.Length; j++)
                 {
                     string type = night.options[j]; float x = nx(i), y = ny(i, j); bool reach = i == run.night;
-                    Rect(mapContent, x - 23, y - 23, 46, 46, reach ? Hex(0xbb5837) : Hex(0xc2ab8d));
-                    Rect(mapContent, x - 21, y - 21, 42, 42, reach ? Hex(0xffe6a7) : Hex(0xfffcf0));
                     var icon = Sprite(mapContent, "Icon", "node_" + type, x, y);
                     if (icon) icon.color = night.done && night.chosen != type ? Hex(0x777786) : !reach && !night.done ? Hex(0xaaaaaf) : Color.white;
                     if (night.done && night.chosen == type) Sprite(mapContent, "Icon", "check", x + 16, y - 16);
-                    string nodeLabel = type == "battle" ? "战斗" : type == "elite" ? "精英" : type == "event" ? "奇遇" : type == "shop" ? "年货铺" : type == "rest" ? "守岁炉" : type == "boss" ? "岁门" : "遗物";
-                    Label(mapContent, x - 34, y + 26, 68, nodeLabel, .7f, reach ? Hex(0xa6372d) : Hex(0x68564b), 1);
-                    var node = Hot(mapContent, x - 25, y - 25, 50, 60, () => { if (n == run.night) EnterNode(type); }); node.drag = e => DragMap(-e.delta.x / uiScale);
+                    var node = Hot(mapContent, x - 25, y - 25, 50, 50, () => { if (n == run.night) EnterNode(type); }); node.drag = e => DragMap(-e.delta.x / uiScale);
                     string name = type == "rest" ? "Fireside" : type == "shop" ? "Elf Shop" : type == "treasure" ? "Stocking" : type == "boss" ? "Christmas Eve" : char.ToUpperInvariant(type[0]) + type.Substring(1);
                     string desc = type == "battle" ? "Monsters lurk in the snow." : type == "elite" ? "A powerful foe guards a relic." : type == "rest" ? "Rest, rewrap a gift or write to Santa." : type == "shop" ? "Spend Cookies on gifts, relics and potions." : type == "treasure" ? "A stocking stuffed with a relic." : type == "boss" ? "Save Santa's soul." : "Something strange awaits you.";
                     BindTip(node, name + " / DEC " + (i + 1), desc + (reach ? "\nChoose one node for tonight." : ""));
                 }
             }
             SleighMotion.Add(Sprite(mapContent, "Icon", "pin", nx(run.night), ny(run.night, 0) - 44).rectTransform, SleighMotion.Style.Float, 3, 4);
-            Hud(); Label(ui, 60, 49, 520, (24 - run.night) + " NIGHTS UNTIL CHRISTMAS", 1, Hex(0x75463e), 1);
-            Label(ui, 60, 66, 520, NianTheme.Chapter(run.night) + " · 岁火：" + Chinese.Text(run.SpiritName), .85f, Hex(0x4d786b), 1);
-            Label(ui, 90, 346, 460, "Drag, scroll or use arrow keys", .75f, Hex(0x755f52), 1);
+            Hud(); Label(ui, 60, 49, 520, (24 - run.night) + " NIGHTS UNTIL CHRISTMAS", 1, Gold, 1);
+            Label(ui, 60, 66, 520, "Christmas Spirit: " + run.SpiritName, .85f, run.SpiritTier > 1 ? Green : Pink, 1);
+            Label(ui, 90, 346, 460, "Drag, scroll or use arrow keys", .75f, Muted, 1);
             Button(ui, 8, 241, 27, 24, "<", () => MoveMap(-360)); Button(ui, 605, 241, 27, 24, ">", () => MoveMap(360));
         }
         void MoveMap(float delta)
@@ -87,13 +80,7 @@ namespace Sleigh
             if (DB.Frame("Gift", art) == null) art = g.Def.type;
             if (prefab) { var body = r.GetComponent<Image>(); body.sprite = DB.Sprite("Gift", art); body.color = Color.white; body.raycastTarget = false; }
             else Sprite(r, "Gift", art, 0, 0, 1, false, 66, 88);
-            if (DB.Frame("GiftIllustration", g.Id) != null)
-                Sprite(r, "GiftIllustration", g.Id, 6, 21, 1, false, 54, 48);
-            Color trim = NianTheme.Rarity(g.Def.rarity);
-            Rect(r, 0, 0, 66, 1, trim); Rect(r, 0, 87, 66, 1, trim);
-            Rect(r, 0, 0, 1, 88, trim); Rect(r, 65, 0, 1, 88, trim);
-            if (g.Upgrade) { Rect(r, 56, 58, 8, 8, Gold); Label(r, 56, 58, 8, "升", .55f, PixelUI.Outline, 1); }
-            Label(r, 11, 3, 44, g.Name, .75f, g.Upgrade ? Hex(0xc8ffb0) : White, 1, true);
+            Label(r, 3, 3, 60, g.Name, .75f, g.Upgrade ? Hex(0xc8ffb0) : White, 1, true);
             if (!g.Def.flags.Contains("u"))
             { Sprite(r, "Icon", "cost", 4, 4); Label(r, -3, -2, 14, g.Cost.ToString(), .8f, preview != null && g.Cost > preview.Energy ? Red : White, 1); }
             var values = g.Values(); string stat; string icon = null;
@@ -183,7 +170,7 @@ namespace Sleigh
                 { if (id == "smoke" && battle.Kind != "normal") { Toast("No running from this one!", Red); return; } if (d.target == "e") { potionAim = slot; powerAim = false; selectedGift = null; RefreshBattleUI(); } else { if (battle.UsePotion(slot)) PlayBattleCues(); } }
                 else
                 { if (id == "hotcocoa") run.Heal(20); if (id == "deermilk") run.GainMaxHP(5); if (id == "wishbone") run.Heal(Battle.Round(run.maxHp * .3f)); if (id == "elixir") run.AddSpirit(10); run.potions[slot] = null; sound.Play("potion"); RefreshCurrentScreen(); }
-            }, Hex(0x398268), inBattle || d.outside);
+            }, Hex(0x1c5a3a), inBattle || d.outside);
             Button(m, 260, 266, 120, 24, "DISCARD", () => { run.potions[slot] = null; CloseModal(); RefreshCurrentScreen(); });
             Button(m, 400, 266, 120, 24, "BACK", CloseModal);
         }
@@ -224,7 +211,7 @@ namespace Sleigh
             }, "heart");
             if (rewardParts != null) row("part", "CHOOSE A TOY PART", () => ChooseParts(rewardParts, part => InstallPart(part, () => { rewardsClaimed.Add("part"); RenderReward(); })), "part_" + rewardParts[0]);
             if (rewardFriends.Length == 0) row("gift", "CHOOSE A GIFT", () => ChooseGifts(rewardGifts, "CHOOSE A GIFT", id => { run.AddGift(id); rewardsClaimed.Add("gift"); RenderReward(); }), "gift");
-            Button(p, 50, 224, 200, 24, "LEAVE A GIFT >", ShowLeave, Hex(0x398268));
+            Button(p, 50, 224, 200, 24, "LEAVE A GIFT >", ShowLeave, Hex(0x1c5a3a));
         }
         void ShowLeave()
         {
@@ -248,8 +235,7 @@ namespace Sleigh
         {
             NewScreen("Event"); TiledBackground(true); Hud(); var p = PanelBox(ui, 60, 54, 520, 286, Gold);
             Label(p, 12, 12, 496, currentEvent.title.ToUpperInvariant(), 1.2f, Gold, 1);
-            Sprite(p, "EventArt", currentEvent.id, 16, 48, 1, false, 80, 100);
-            Label(p, 112, 55, 388, CharacterText(eventOutcome?.text ?? currentEvent.text), .92f, White, 0, true);
+            Label(p, 20, 55, 480, CharacterText(eventOutcome?.text ?? currentEvent.text), .92f, White, 0, true);
             if (eventOutcome == null)
             {
                 for (int i = 0; i < currentEvent.choices.Length; i++)
@@ -260,7 +246,7 @@ namespace Sleigh
                 }
             }
             else Button(p, 160, 244, 200, 24, eventOutcome.fight != null ? "FIGHT!" : "CONTINUE >", () =>
-            { if (eventOutcome.fight != null) StartBattle(eventOutcome.fight, eventOutcome.kind); else FinishNode(); }, Hex(0x398268));
+            { if (eventOutcome.fight != null) StartBattle(eventOutcome.fight, eventOutcome.kind); else FinishNode(); }, Hex(0x1c5a3a));
         }
         void HandleEventOutcome()
         {
@@ -286,13 +272,13 @@ namespace Sleigh
             NewScreen("Rest"); Sprite(bg, "ChimneyBG", "Animation 1", 0, 0, 1, false); Hud();
             Label(ui, 40, 51, 560, "FIRESIDE - A QUIET NIGHT", 1, Hex(0xf08a3c), 1);
             if (restMessage != null)
-            { Label(ui, 452, 134, 174, restMessage, .86f, White, 0, true); Button(ui, 460, 248, 170, 24, "CONTINUE >", FinishNode, Hex(0x398268)); return; }
+            { Label(ui, 452, 134, 174, restMessage, .86f, White, 0, true); Button(ui, 460, 248, 170, 24, "CONTINUE >", FinishNode, Hex(0x1c5a3a)); return; }
             int heal = Battle.Round(run.maxHp * (run.Adv(5) ? .22f : .3f)) + (run.Has("cocoapot") ? 15 : 0);
             void finish(string message)
             { restMessage = message; ShowRest(); sound.Play("heal"); }
-            Button(ui, 460, 140, 170, 24, "REST (+" + heal + " HP)", () => { run.Heal(heal); finish("You doze by the crackling fire. The aches fade away."); }, Hex(0x398268));
+            Button(ui, 460, 140, 170, 24, "REST (+" + heal + " HP)", () => { run.Heal(heal); finish("You doze by the crackling fire. The aches fade away."); }, Hex(0x1c5a3a));
             Button(ui, 460, 174, 170, 24, "REWRAP A GIFT", () => OpenGiftPicker("REWRAP A GIFT", run.bag.Where(x => x.CanUpgrade).ToList(), g => { g.Upgrade = true; finish("Ribbons tied, bows fluffed. Good as new."); }), null, run.bag.Any(x => x.CanUpgrade));
-            Button(ui, 460, 208, 170, 24, "WRITE TO SANTA", () => { run.AddSpirit(8); finish("Dear Nick, remember the boy who carved toys for everyone?\n+8 Spirit"); }, Hex(0xd94332));
+            Button(ui, 460, 208, 170, 24, "WRITE TO SANTA", () => { run.AddSpirit(8); finish("Dear Nick, remember the boy who carved toys for everyone?\n+8 Spirit"); }, Hex(0x8e1d2b));
         }
         void ShowTreasure()
         {
@@ -303,7 +289,7 @@ namespace Sleigh
             Action open = () => { if (busy) return; string id = run.RandomRelic(); if (id != null) run.AddRelic(id); else run.cookies += 100;
                 if (Application.isPlaying) StartCoroutine(OpenStocking(sock, id)); else RevealStocking(id); };
             var hot = Hot(world, 280, 130, 80, 150, open, () => { if (!busy) SleighMotion.Add(sock.rectTransform, SleighMotion.Style.Swing, 3.4f, 3); }, () => { if (!busy) SleighMotion.Add(sock.rectTransform, SleighMotion.Style.Swing, 1.45f, 3); });
-            Button(ui, 240, 290, 160, 26, "OPEN STOCKING", open, Hex(0xd94332));
+            Button(ui, 240, 290, 160, 26, "OPEN STOCKING", open, Hex(0x8e1d2b));
         }
         void ShowShop(bool generate)
         {
@@ -337,9 +323,9 @@ namespace Sleigh
                 var h = Hot(root, 0, 0, width, height + 20, () => Buy(item)); BindTip(h, title, desc + "\n\n" + item.price + " Cookies");
                 Sprite(root, "Icon", "coin", width / 2 - 14, height + 10); Label(root, width / 2 - 5, height + 4, 40, item.price.ToString(), .8f, run.cookies >= item.price ? Gold : Red);
             }
-            Button(ui, 520, 200, 112, 22, "REWRAP " + rewrapPrice, () => OpenGiftPicker("REWRAP A GIFT", run.bag.Where(x => x.CanUpgrade).ToList(), g => { if (run.Spend(rewrapPrice)) { g.Upgrade = true; shopRewrapped = true; ShowShop(false); } }), Hex(0x398268), !shopRewrapped && run.cookies >= rewrapPrice && run.bag.Any(x => x.CanUpgrade));
+            Button(ui, 520, 200, 112, 22, "REWRAP " + rewrapPrice, () => OpenGiftPicker("REWRAP A GIFT", run.bag.Where(x => x.CanUpgrade).ToList(), g => { if (run.Spend(rewrapPrice)) { g.Upgrade = true; shopRewrapped = true; ShowShop(false); } }), Hex(0x1c5a3a), !shopRewrapped && run.cookies >= rewrapPrice && run.bag.Any(x => x.CanUpgrade));
             Button(ui, 520, 231, 112, 22, "DONATE " + donatePrice, () => { if (run.Spend(donatePrice)) { run.AddSpirit(6); donatePrice += 20; ShowShop(false); } }, Hex(0xa8741f), run.cookies >= donatePrice);
-            Button(ui, 520, 326, 112, 24, "LEAVE >", FinishNode, Hex(0xd94332));
+            Button(ui, 520, 326, 112, 24, "LEAVE >", FinishNode, Hex(0x8e1d2b));
         }
         void Buy(ShopItem item)
         {
@@ -354,9 +340,9 @@ namespace Sleigh
         {
             var all = DB.All.enemies.Where(e => e.id != "naughtylist" || Ledger.Get(e.id).seen).ToArray(); selection = Mathf.Clamp(selection, 0, all.Length - 1); page = Mathf.Clamp(page, 0, (all.Length - 1) / 14);
             var m = OpenModal("NICE & NAUGHTY LEDGER / " + all.Count(e => Ledger.Get(e.id).seen) + "/" + all.Length);
-            var p = PanelBox(m, 30, 49, 580, 258, Gold); Rect(p, 198, 8, 1, 242, Hex(0x98693e));
+            var p = PanelBox(m, 30, 49, 580, 258, Gold); Rect(p, 198, 8, 1, 242, Hex(0x54618c));
             for (int i = 0; i < 14 && page * 14 + i < all.Length; i++)
-            { int index = page * 14 + i; var e = all[index]; var l = Ledger.Get(e.id); Button(p, 8, 9 + i * 16, 182, 15, l.seen ? e.name : "???", () => OpenLedger(index, page), index == selection ? Hex(0xa8741f) : Hex(0x632b2d)); }
+            { int index = page * 14 + i; var e = all[index]; var l = Ledger.Get(e.id); Button(p, 8, 9 + i * 16, 182, 15, l.seen ? e.name : "???", () => OpenLedger(index, page), index == selection ? Hex(0xa8741f) : Hex(0x253262)); }
             var d = all[selection]; var entry = Ledger.Get(d.id); var art = Sprite(p, "Enemy", d.id, 278, 153, Mathf.Min(1.4f, 95f / DB.Frame("Enemy", d.id).height)); if (art && !entry.seen) art.color = Color.black;
             Label(p, 212, 10, 352, entry.seen ? d.name : "???", 1, Gold, 1);
             string description = entry.seen ? d.lore + "\n\nLoves: " + (entry.love ? DB.LikeLabel(d.love) : "???") + "\nHates: " + (entry.hate ? DB.LikeLabel(d.hate) : "???") + "\nDefeated: " + entry.kills + " / Befriended: " + entry.charms : "You haven't met this monster yet.";
@@ -372,12 +358,11 @@ namespace Sleigh
             NewScreen(victory ? "Victory" : "Defeat", victory ? "end" : null); TiledBackground();
             if (victory && !afterPoem)
             {
-                var poem = new List<string> { run.secret ? "年兽记起旧约，与你并肩推开岁门。" : "噬岁妖壳碎落，年兽伏在初明的雪中。",
-                    run.secret ? "岁门魇在众人合力下消散，失落的愿望终于回家。" : "你以残灯接住最后一缕火，重燃了人间岁火。",
-                    DB.CharacterName(run.character) + "终于听见远处的报晓锣声。",
-                    "那些被你点亮的人家，一户接一户打开了门。" };
-                if (run.secret) poem.Add("结识的妖灵也坐进团圆席，人与山灵再续守岁之约。");
-                poem.AddRange(new[] { "新年的第一缕光越过山口。", "今夜灯火不熄，愿所有行人都能回家。" });
+                var poem = new List<string> { run.secret ? "The Naughty List shredded, its dark magic fled," : "The Krampus fell silent, the dark shadow fled", run.secret ? "And Santa stood laughing, his cheeks rosy red." : "And Santa stood blinking, his cheeks rosy red." };
+                poem.Add(run.character == "mrs" ? "\"Martha,\" he whispered, \"you've saved Christmas Day!\"" : run.character == "tinsel" ? "\"Tinsel,\" he whispered, \"you've saved Christmas Day!\"" : "\"Rudie,\" he whispered, \"you've saved Christmas Day!\"");
+                poem.Add(run.character == "mrs" ? "\"I know, dear,\" she said. \"Now get on that sleigh!\"" : run.character == "tinsel" ? "\"I know, boss,\" she grinned. \"Now get on that sleigh!\"" : "So Rudolph just snorted and lit up the way.");
+                if (run.secret) poem.AddRange(new[] { "And all of the friends that were won on the way", "Climbed into the sleigh for the ride Christmas Day." });
+                poem.AddRange(new[] { "And kids heard them say as they flew out of sight:", "\"Merry Christmas to all! Have a jolly good night!\"" });
                 PlayPoem(new[] { poem.ToArray() }, () => ShowEnding(true, true)); return;
             }
             Label(ui, 30, 51, 580, victory ? run.secret ? "A TRULY NICE CHRISTMAS!" : "MERRY CHRISTMAS!" : "GAME HO-HO-HOVER!", 1.6f, victory ? Gold : Pink, 1);
@@ -386,12 +371,12 @@ namespace Sleigh
             {
                 int unlocked = Mathf.Min(10, run.advent + 1); if (!IsBaking) PlayerPrefs.SetInt("Sleigh.Advent", Mathf.Max(PlayerPrefs.GetInt("Sleigh.Advent", 0), unlocked));
                 Sprite(world, "Enemy", "santa", 475, 280, 1.3f);
-                Label(ui, 90, 101, 460, run.secret ? "岁门魇散去，年兽与伙伴一同守岁。\n万家灯明，人间再续共生之约。" : "妖壳碎落，岁火重燃。\n你守住除夕，迎来新年的第一缕光。", .85f, White, 1, true);
+                Label(ui, 90, 101, 460, run.secret ? "The list is torn. Every friend you were kind to\ncame to help. Santa remembers who he is." : "The coal falls away. Santa is himself again.\nChristmas Day is safe.", .85f, White, 1, true);
                 Label(ui, 190, 165, 260, "Spirit: " + run.spirit + " / " + run.SpiritName + "\nGifts left: " + run.stats.left + "\nWishes granted: " + run.stats.wishes + "\nDefeated: " + run.stats.kills + "\nBefriended: " + run.stats.charmed + "\nAdvent " + unlocked + " unlocked!", .85f, Gold, 1);
             }
-            else Label(ui, 170, 130, 300, "岁灯虽熄，仍有人盼你归来。\n踏过年关： " + run.night + " of 24\nMonsters defeated: " + run.stats.kills + "\nGifts left for children: " + run.stats.left + "\nSpirit given: " + run.stats.joy, 1, White, 1, true);
-            if (victory) Button(ui, 240, 315, 160, 25, "THE END", ShowTitle, Hex(0x398268));
-            else { Button(ui, 150, 280, 160, 24, "TRY AGAIN", ShowCharacters, Hex(0xd94332)); Button(ui, 330, 280, 160, 24, "TITLE", ShowTitle); }
+            else Label(ui, 170, 130, 300, "Nights survived: " + run.night + " of 24\nMonsters defeated: " + run.stats.kills + "\nGifts left for children: " + run.stats.left + "\nSpirit given: " + run.stats.joy, 1, White, 1, true);
+            if (victory) Button(ui, 240, 315, 160, 25, "THE END", ShowTitle, Hex(0x1c5a3a));
+            else { Button(ui, 150, 280, 160, 24, "TRY AGAIN", ShowCharacters, Hex(0x8e1d2b)); Button(ui, 330, 280, 160, 24, "TITLE", ShowTitle); }
         }
     }
 }

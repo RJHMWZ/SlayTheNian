@@ -1,4 +1,0 @@
-PASS: 1329 original rule assertions; all base/upgrade cards, enemy AI intents, all potion and event choices, regular and secret boss routes.
-PASS: Nine UI preview views rendered with isolated runs and no PlayerPrefs writes.
-PASS: Unity editor compilation and native Play mode.
-LIMIT: No complete manual 24-node clear or standalone executable build performed.
