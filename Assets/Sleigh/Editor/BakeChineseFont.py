@@ -11,6 +11,9 @@ for high in range(0xA1,0xF8):
 catalog=json.loads((root/'Assets/Sleigh/Resources/Sleigh/Localization/zh-CN.json').read_text(encoding='utf-8'))
 for entry in catalog['entries']:characters.update(entry['text'])
 characters.update('圣诞救援雪橇上的冒险廷瑟克劳斯夫人鲁道夫□×—…，。！？：；（）【】「」“”‘’')
+for source in (root/'Assets/Sleigh').rglob('*.cs'):
+    characters.update(source.read_text(encoding='utf-8-sig'))
+characters.update((root/'Assets/Sleigh/Resources/Sleigh/Definitions.json').read_text(encoding='utf-8'))
 characters.difference_update('\n\r\t');characters=sorted(characters)
 cell=16;columns=64;width=cell*columns;height=2**math.ceil(math.log2(math.ceil(len(characters)/columns)*cell))
 atlas=Image.new('RGBA',(width,height),(255,255,255,0));mask=Image.new('L',(width,height));draw=ImageDraw.Draw(mask);glyphs=[]

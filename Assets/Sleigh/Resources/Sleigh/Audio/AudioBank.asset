@@ -291,17 +291,21 @@ MonoBehaviour:
   - id: calm
     intro: {fileID: 8300000, guid: ff342fb119ba7e34a867364e292035ec, type: 3}
     loop: {fileID: 8300000, guid: d39da380551948c4090e32c5e45ed658, type: 3}
-    originalLoopSamples44100: 920348
+    originalLoopSamples44100: 0
+  - id: map
+    intro: {fileID: 8300000, guid: c5e0cfab16dc6384089f78c884115488, type: 3}
+    loop: {fileID: 8300000, guid: 91028ac32b23e5641917ff9f6c7df47a, type: 3}
+    originalLoopSamples44100: 0
   - id: battle
     intro: {fileID: 8300000, guid: fe085024394540c47b0889f87a361ee7, type: 3}
     loop: {fileID: 8300000, guid: 9de620c8e854656459b669281504bc69, type: 3}
-    originalLoopSamples44100: 641455
+    originalLoopSamples44100: 0
   - id: boss
     intro: {fileID: 8300000, guid: 6a2984504090d3743808b1872911b79d, type: 3}
     loop: {fileID: 8300000, guid: ac5c37b4455fb1b4da85bbc523a7c265, type: 3}
-    originalLoopSamples44100: 579945
+    originalLoopSamples44100: 0
   - id: end
     intro: {fileID: 8300000, guid: 23fb2e398669d3b4b8ed0b7cdb1e6392, type: 3}
     loop: {fileID: 8300000, guid: 929d372403f572241abbceebac59a79f, type: 3}
-    originalLoopSamples44100: 504000
-  version: 2
+    originalLoopSamples44100: 0
+  version: 3

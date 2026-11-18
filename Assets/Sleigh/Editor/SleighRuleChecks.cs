@@ -24,7 +24,7 @@ namespace Sleigh.Editor
                 DB.Load(); Require(DB.All.gifts.Count(x => x.type != "friend") == 47, "47 base gifts");
                 Require(DB.All.gifts.Count(x => x.type == "friend") == 24, "24 dynamically derived friends");
                 Require(DB.All.enemies.Length == 28 && DB.All.relics.Length == 32 && DB.All.potions.Length == 20 && DB.All.events.Length == 26 && DB.All.parts.Length == 10, "source catalogs");
-                Require(DB.Art.Values.Sum(x => x.Length) == 288, "288 original frames");
+                Require(DB.Art.Values.Sum(x => x.Length) >= 314, "original frames plus Nian event artwork");
                 foreach (var f in DB.Art.Values.SelectMany(x => x)) Require(DB.Sprite(f.type, f.anim, f.frame) != null, "sprite " + f.path);
                 foreach (string character in new[] { "mrs", "tinsel", "rudolph" })
                 {
