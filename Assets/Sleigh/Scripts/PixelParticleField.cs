@@ -9,7 +9,7 @@ namespace Sleigh
     {
         struct Dot { public Vector2 position, velocity; public float age, life, size, gravity, floor; public Color tint; public bool active; }
         readonly Dot[] dots = new Dot[768];
-        static readonly Color[] confettiColors = { PixelUI.Red, PixelUI.Green, PixelUI.Gold, PixelUI.White, PixelUI.Pink };
+        static readonly Color[] confettiColors = { PixelUI.Red, PixelUI.Hex(0xba273e), PixelUI.Gold, PixelUI.Hex(0xffda8c), PixelUI.Hex(0xf47752) };
         int cursor;
         public int ActiveCount { get; private set; }
         public bool reduced;

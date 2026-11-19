@@ -34,8 +34,6 @@ namespace Sleigh
         Action modalBack;
         Action skipPoem;
         string tipContent;
-        readonly List<Snowflake> snow = new List<Snowflake>();
-        class Snowflake { public RectTransform rect; public float x, y, speed, phase; }
 
         void Awake()
         {
@@ -54,20 +52,12 @@ namespace Sleigh
             stage = value; IsBaking = baking; canvas = value.canvas; area = value.viewport; sound = value.audioPlayer;
             fx = value.effectPool; pop = value.popupPool; uiScale = -1;
             if (Application.isPlaying && !baking) uiScale = stage.FitViewport(new Vector2(Screen.width, Screen.height), Screen.safeArea);
-            snow.Clear(); var rng = new System.Random(931);
-            foreach (var r in value.snowParticles) snow.Add(new Snowflake { rect = r, x = rng.Next(640), y = rng.Next(360), speed = 10 + rng.Next(20), phase = snow.Count });
+            if (value.snowRoot) value.snowRoot.gameObject.SetActive(false);
         }
         void Update()
         {
             if (!area) return;
             uiScale = stage.FitViewport(new Vector2(Screen.width, Screen.height), Screen.safeArea);
-            foreach (var s in snow)
-            {
-                if (!s.rect) continue;
-                s.y += s.speed * Time.unscaledDeltaTime; s.x += (8 + Mathf.Sin(Time.unscaledTime + s.phase) * 5) * Time.unscaledDeltaTime;
-                if (s.y > 365) { s.y = -5; s.x = Mathf.Repeat(s.x + 77, 640); } s.x = Mathf.Repeat(s.x, 640);
-                s.rect.anchoredPosition = new Vector2(Mathf.Round(s.x), -Mathf.Round(s.y));
-            }
             foreach (var a in actors.Values) a.Tick(reduceMotion);
             TickPresentation();
             if (tip && tip.gameObject.activeSelf)
@@ -112,13 +102,7 @@ namespace Sleigh
         }
         void TiledBackground(bool intro = false, float up = 0)
         {
-            Sprite(bg, intro ? "IntroBG" : "BG", "default", -100, -up, 1, false, 840, 360 + up);
-            Snow(65);
-        }
-        void Snow(int count)
-        {
-            stage.snowRoot.gameObject.SetActive(true);
-            for (int i = 0; i < snow.Count; i++) snow[i].rect.gameObject.SetActive(i < count);
+            SpringFestivalBackdrop.Build(bg, ScreenName == "Combat" ? SpringFestivalBackdrop.Setting.Courtyard : SpringFestivalBackdrop.Setting.Village, intro);
         }
         void BindTip(Hotspot h, string title, string description)
         {
@@ -145,7 +129,7 @@ namespace Sleigh
         RectTransform OpenModal(string title, Action back = null)
         {
             CloseModal(); HideTip(); modal = Group(pop, "Modal:" + title);
-            stage.CoverScreen(Rect(modal, 0, 0, 640, 360, Hex(0x05050b, .91f), true).rectTransform);
+            stage.CoverScreen(Rect(modal, 0, 0, 640, 360, Hex(0x21121b, .94f), true).rectTransform);
             modalBack = back ?? CloseModal; Label(modal, 30, 18, 580, title, 1.1f, Gold, 1);
             if (tip) tip.SetAsLastSibling(); return modal;
         }
@@ -161,7 +145,7 @@ namespace Sleigh
         void Hud()
         {
             if (run == null) return;
-            Rect(ui, 0, 0, 640, 26, Hex(0x0b1026, .96f)); Rect(ui, 0, 25, 640, 1, Hex(0x394775));
+            Rect(ui, 0, 0, 640, 26, Hex(0x311b25, .96f)); Rect(ui, 0, 25, 640, 1, Hex(0x865044));
             Sprite(ui, "Icon", "heart", 15, 13); hudHp = Label(ui, 26, 7, 92, run.hp + "/" + run.maxHp, .8f);
             Sprite(ui, "Icon", "coin", 116, 13); hudCookies = Label(ui, 127, 7, 58, run.cookies.ToString(), .8f, Gold);
             for (int i = 0; i < run.potionSlots; i++)
@@ -242,36 +226,12 @@ namespace Sleigh
         }
         void ShowIntro()
         {
-            NewScreen("Intro"); TiledBackground(true); Sprite(bg, "BGImage", "moon", 540, 76);
-            string[] first = { "'Twas the night before Christmas, and all through the land,", "Not a sleigh bell was jingling, not a reindeer at hand.", "For Santa had read the long Naughty List through,", "And each name that he read made his heart darker, too." };
-            string[] second = { "Till one frosty midnight, he grabbed his big sack", "And ran off the North Pole with the coal on his back.",
-                run.character == "mrs" ? "But up at his home, by the fire's warm glow," : run.character == "tinsel" ? "But down in the workshop, by lantern-light's glow," : "But out in the stable, his nose all aglow,",
-                run.character == "mrs" ? "Sat wise Mrs. Claus. She won't let it go!" : run.character == "tinsel" ? "Worked Tinsel the elf, who would not let it go!" : "Stood Rudolph the reindeer, who would not let go!" };
-            string[] third = run.character == "mrs" ? new[] { "\"Twenty-five nights until Christmas morn breaks.", "I'll keep Christmas living, whatever it takes!", "I'll fight every monster from here to the Pole", "And bring my dear husband back, body and soul!\"" }
-                : run.character == "tinsel" ? new[] { "\"Twenty-five nights till the Christmas bells chime.", "I'll mend every toy and I'll do it in time!", "I'll hammer and tinker my way to the Pole", "And bring the boss back, body and soul!\"" }
-                : new[] { "\"Twenty-five nights till the sleigh bells will chime.", "I'll light up the dark and the cold, all in time!", "I'll gallop through blizzards from here to the Pole", "And bring Santa back, body and soul!\"" };
-            PlayPoem(new[] { first, second, third }, () => Navigate(ShowMap));
+            NewScreen("Intro"); TiledBackground(true);
+            PlayPoem(FestivalOpening(run.character), () => Navigate(ShowMap));
         }
         void PlayPoem(string[][] stanzas, Action onDone)
         {
-            var group = Group(ui, "Original poem"); var lines = new List<PixelLabel>(); var offsets = new List<float>(); float offset = 0;
-            foreach (var stanza in stanzas) { foreach (var line in stanza) { lines.Add(Label(group, 20, 288 + offset, 600, line, 1, lines.Count % 2 == 0 ? Hex(0xf6ead2) : White, 1)); offsets.Add(offset); offset += 20; } offset += 16; }
-            bool done = false; Action finish = () => { if (done) return; done = true; skipPoem = null; onDone(); };
-            skipPoem = finish; Button(ui, 530, 330, 100, 20, "SKIP", finish);
-            Label(ui, 150, 338, 340, "hold to speed up", .75f, Muted, 1);
-            if (Application.isPlaying) StartCoroutine(ScrollPoem(group, lines, offsets, () => done, finish));
-        }
-        IEnumerator ScrollPoem(RectTransform group, IList<PixelLabel> lines, IList<float> offsets, Func<bool> done, Action finish)
-        {
-            float scroll = -1, stopAt = offsets.Last() + 308;
-            while (!done() && group && scroll < stopAt)
-            {
-                float fast = modal == null && (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)) ? 5 : 1;
-                scroll += 13 * fast * Time.unscaledDeltaTime;
-                for (int i = 0; i < lines.Count; i++) { float y = 288 + offsets[i] - scroll; lines[i].rectTransform.anchoredPosition = new Vector2(20, -Mathf.Round(y)); var c = lines[i].color; c.a = Mathf.Clamp01((y - 34) / 50) * Mathf.Clamp01((360 - y) / 40); lines[i].color = c; }
-                yield return null;
-            }
-            if (!done() && group) finish();
+            PlayFestivalStory(stanzas, onDone);
         }
         void FinishNode()
         { CloseModal(); battle = null; run.FinishNode(); if (run.night >= 24) ShowEnding(true); else ShowMap(); }

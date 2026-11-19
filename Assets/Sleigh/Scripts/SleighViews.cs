@@ -45,7 +45,7 @@ namespace Sleigh
             for (int i = 0; i < 24; i++)
             {
                 int n = i; var night = run.map[i];
-                Sprite(mapContent, "BGImage", night.lit ? "house_lit" : "house", nx(i), 318, .8f);
+                SpringFestivalProp.Home(mapContent, nx(i), 318, .8f, night.lit);
                 Label(mapContent, nx(i) - 35, 324, 70, "DEC " + (i + 1), .72f, i == run.night ? Gold : Muted, 1);
                 var house = Hot(mapContent, nx(i) - 28, 274, 56, 48, () => { if (n == run.night) { run.PickWish(); ShowItem(DB.Kids[n] + "'S WISH", DB.WishText[run.wish], "gift"); } });
                 BindTip(house, DB.Kids[i] + "'s house / DEC " + (i + 1), i < run.night ? night.lit ? "A lovely gift lit up the night." : "The house stayed dark." : "A child is waiting for Christmas.");
@@ -63,7 +63,8 @@ namespace Sleigh
                 }
             }
             SleighMotion.Add(Sprite(mapContent, "Icon", "pin", nx(run.night), ny(run.night, 0) - 44).rectTransform, SleighMotion.Style.Float, 3, 4);
-            Hud(); Label(ui, 60, 49, 520, (24 - run.night) + " NIGHTS UNTIL CHRISTMAS", 1, Gold, 1);
+            Hud(); Rect(ui, 60, 45, 520, 39, Hex(0x3f1c2b, .9f));
+            Label(ui, 60, 49, 520, (24 - run.night) + " NIGHTS UNTIL CHRISTMAS", 1, Gold, 1);
             Label(ui, 60, 66, 520, "Christmas Spirit: " + run.SpiritName, .85f, run.SpiritTier > 1 ? Green : Pink, 1);
             Label(ui, 90, 346, 460, "Drag, scroll or use arrow keys", .75f, Muted, 1);
             Button(ui, 8, 241, 27, 24, "<", () => MoveMap(-360)); Button(ui, 605, 241, 27, 24, ">", () => MoveMap(360));
@@ -216,7 +217,7 @@ namespace Sleigh
         void ShowLeave()
         {
             NewScreen("LeaveGift"); TiledBackground(false, 40); Hud(); run.PickWish();
-            var house = Sprite(world, "BGImage", "house", 430, 282, 2);
+            var house = SpringFestivalProp.Home(world, 430, 282, 2);
             string kid = DB.Kids[run.night]; Label(ui, 30, 48, 580, "Little " + kid + " is asleep. Leave a gift under the tree.", .85f, Gold, 1);
             bool canLeave = run.bag.Count > 5;
             OpenGiftPicker("LEAVE A GIFT UNDER THE TREE", canLeave ? run.bag : new List<Gift>(), gi =>
@@ -269,7 +270,7 @@ namespace Sleigh
         }
         void ShowRest()
         {
-            NewScreen("Rest"); Sprite(bg, "ChimneyBG", "Animation 1", 0, 0, 1, false); Hud();
+            NewScreen("Rest"); SpringFestivalBackdrop.Build(bg, SpringFestivalBackdrop.Setting.Hearth); Hud();
             Label(ui, 40, 51, 560, "FIRESIDE - A QUIET NIGHT", 1, Hex(0xf08a3c), 1);
             if (restMessage != null)
             { Label(ui, 452, 134, 174, restMessage, .86f, White, 0, true); Button(ui, 460, 248, 170, 24, "CONTINUE >", FinishNode, Hex(0x1c5a3a)); return; }
@@ -282,9 +283,9 @@ namespace Sleigh
         }
         void ShowTreasure()
         {
-            NewScreen("Treasure"); Sprite(bg, "StockingBG", "Animation 1", 0, 0, 1, false); Hud();
+            NewScreen("Treasure"); TiledBackground(); Hud();
             Label(ui, 40, 56, 560, "A STOCKING STUFFED WITH SOMETHING...", 1, Gold, 1);
-            var sock = Sprite(world, "Icon", "stocking", 320, 140);
+            var sock = SpringFestivalProp.BlessingBag(world, 320, 140);
             sock.rectTransform.pivot = new Vector2(.5f, 1); SleighMotion.Add(sock.rectTransform, SleighMotion.Style.Swing, 1.45f, 3);
             Action open = () => { if (busy) return; string id = run.RandomRelic(); if (id != null) run.AddRelic(id); else run.cookies += 100;
                 if (Application.isPlaying) StartCoroutine(OpenStocking(sock, id)); else RevealStocking(id); };
@@ -303,7 +304,7 @@ namespace Sleigh
                 var parts = DB.Parts.Keys.ToList(); run.Shuffle(parts); foreach (var id in parts.Take(2)) shopItems.Add(new ShopItem { type = "part", id = id, price = price(new[] { 0, 45, 65, 90 }[DB.Parts[id].rarity]) });
                 rewrapPrice = Battle.Round(75 * discount); donatePrice = Battle.Round(40 * discount);
             }
-            NewScreen("Shop"); Sprite(bg, "ShopBG", "Animation 1", 0, 0, 1, false); Hud();
+            NewScreen("Shop"); SpringFestivalBackdrop.Build(bg, SpringFestivalBackdrop.Setting.Market); Hud();
             Label(ui, 12, 108, 158, "Welcome to the\nElf Shop!\n\nEverything here\nis hand-made.", .85f, White, 1);
             int gi = 0, ri = 0, pi = 0, ti = 0;
             foreach (var item in shopItems)
@@ -355,7 +356,7 @@ namespace Sleigh
         void ShowEnding(bool victory, bool afterPoem = false)
         {
             run.active = false; if (!IsBaking) run.Save();
-            NewScreen(victory ? "Victory" : "Defeat", victory ? "end" : null); TiledBackground();
+            NewScreen(victory ? "Victory" : "Defeat", victory ? "end" : null); TiledBackground(victory && !afterPoem);
             if (victory && !afterPoem)
             {
                 var poem = new List<string> { run.secret ? "The Naughty List shredded, its dark magic fled," : "The Krampus fell silent, the dark shadow fled", run.secret ? "And Santa stood laughing, his cheeks rosy red." : "And Santa stood blinking, his cheeks rosy red." };

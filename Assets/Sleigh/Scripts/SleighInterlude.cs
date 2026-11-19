@@ -7,7 +7,7 @@ namespace Sleigh
 {
     public partial class GameRoot
     {
-        IEnumerator OpenStocking(Image sock, string relic)
+        IEnumerator OpenStocking(Graphic sock, string relic)
         {
             busy = true; HideTip(); var motion = sock.GetComponent<SleighMotion>(); motion.ResetMotion();
             var buttonBlock = Rect(pop, 0, 0, 640, 360, Color.clear, true);
@@ -36,20 +36,20 @@ namespace Sleigh
             Appear(Label(ui, 120, 279, 400, relic != null ? DB.Relics[relic].desc : "Something sweet for the road.", .8f, White, 1, true).rectTransform, .1f);
             Appear((RectTransform)Button(ui, 230, 316, 180, 24, "CONTINUE >", FinishNode, Hex(0x1c5a3a)).transform, .2f);
         }
-        void BeginDelivery(Gift gift, int joy, Image house)
+        void BeginDelivery(Gift gift, int joy, SpringFestivalProp house)
         {
             CloseModal(); if (Application.isPlaying) StartCoroutine(DeliverGift(gift, joy, house));
         }
-        IEnumerator DeliverGift(Gift gift, int joy, Image house)
+        IEnumerator DeliverGift(Gift gift, int joy, SpringFestivalProp house)
         {
             busy = true; HideTip(); var barrier = Rect(pop, 0, 0, 640, 360, Color.clear, true);
             stage.CoverScreen(barrier.rectTransform);
             RectTransform parcel = gift != null ? Card(fx, gift, 140, 180) : Sprite(fx, "Icon", "coin", 173, 224, 3).rectTransform;
             parcel.pivot = new Vector2(.5f, .5f); var cg = PixelUI.Ensure<CanvasGroup>(parcel);
             sound.Play("whoosh");
-            yield return Tween(.55f, p => { parcel.anchoredPosition = new Vector2(Mathf.Lerp(173, 430, EaseOut(p)), -Mathf.Lerp(224, 282 - house.rectTransform.sizeDelta.y * .45f, EaseOut(p))); parcel.localScale = Vector3.one * Mathf.Lerp(1, .1f, p); parcel.localRotation = Quaternion.Euler(0, 0, -p * 25); cg.alpha = 1 - p * p; });
+            yield return Tween(.55f, p => { parcel.anchoredPosition = new Vector2(Mathf.Lerp(173, 430, EaseOut(p)), -Mathf.Lerp(224, 282 - house.rectTransform.sizeDelta.y * house.rectTransform.localScale.y * .45f, EaseOut(p))); parcel.localScale = Vector3.one * Mathf.Lerp(1, .1f, p); parcel.localRotation = Quaternion.Euler(0, 0, -p * 25); cg.alpha = 1 - p * p; });
             Release(parcel); bool lit = run.map[run.night].lit;
-            if (lit) house.sprite = DB.Sprite("BGImage", "house_lit");
+            house.SetLit(lit);
             sound.Play("give"); sound.Play(joy > 0 ? "spirit" : "hate"); Burst(430, 220, joy > 0 ? Gold : Pink, 30, true);
             Clear(ui); Hud();
             Appear(Label(ui, 40, 85, 560, joy > 0 ? "A little Christmas magic lights up the night." : "The house stays quiet in the snow.", 1, Gold, 1, true).rectTransform);

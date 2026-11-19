@@ -1,6 +1,7 @@
 #if UNITY_EDITOR
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,6 +15,35 @@ namespace Sleigh.Editor
         {
             var r = Run.New(character, 0, 12345); var b = new Battle(r, new[] { enemy }, kind); b.Cues.Clear();
             return b;
+        }
+        [MenuItem("Sleigh/Verify Spring Festival Theme")]
+        public static void VerifyTheme()
+        {
+            count = 0; DB.Load();
+            string[] guardians = { "rat", "coalgolem", "yeti", "penguin", "alpha", "viper", "toysoldier", "creeper", "rogueelf", "angel", "grumpkin", "slime" };
+            string[] zodiac = { "子鼠", "丑牛", "寅虎", "卯兔", "辰龙", "巳蛇", "午马", "未羊", "申猴", "酉鸡", "戌狗", "亥猪" };
+            for (int i = 0; i < guardians.Length; i++)
+            {
+                string id = guardians[i];
+                Require(DB.Enemies[id].name == zodiac[i] + "守护者", "zodiac guardian " + id);
+                Require(DB.Gifts["f_" + id].name == DB.Enemies[id].name, "guardian friend card " + id);
+                Require(DB.All.encounters.Any(p => p.groups.Any(g => g.ids.Contains(id))), "reachable guardian " + id);
+                Require(DB.Enemies[id].pips > 0 && !DB.Enemies[id].noCharm, "recruitable guardian " + id);
+            }
+            Require(DB.CharacterName("mrs") == "克劳斯夫人" && DB.CharacterName("tinsel") == "廷瑟" && DB.CharacterName("rudolph") == "鲁道夫", "original playable characters");
+            Require(Chinese.Text(DB.PowerName("mrs")) == "温柔劝慰" && Chinese.Text(DB.PowerName("tinsel")) == "巧手改装" && Chinese.Text(DB.PowerName("rudolph")) == "驯鹿出动！", "original character abilities");
+            Require(DB.Enemies["santa"].name == "年兽·临岁" && DB.Enemies["krampus"].name == "年兽·狂祟" && DB.Enemies["naughtylist"].name == "岁祟之源", "both Nian routes");
+            Require(Chinese.Text("DEC 24 / 24") == "岁程 24 / 24", "formatted route progress");
+            Require(Chinese.Text("KRAMPUS / Spirit: Merry") == "年兽·狂祟 / 年味：平安", "formatted boss banner");
+            var catalog = JsonUtility.FromJson<Chinese.Catalog>(Resources.Load<TextAsset>("Sleigh/Localization/zh-CN").text);
+            foreach (var entry in catalog.entries)
+            {
+                Require(!Regex.IsMatch(entry.text, "圣诞|雪橇|北极|坎卜斯|姜饼|胡桃夹|槲寄生|蛋奶酒|卯兔·团团|子鼠·巧巧|午马·追风"), "theme residue: " + entry.source);
+                string[] Tokens(string value) => Regex.Matches(value, @"\{[^{}]+\}").Cast<Match>().Select(m => m.Value).OrderBy(x => x).ToArray();
+                Require(Tokens(entry.source).SequenceEqual(Tokens(entry.text)), "format tokens: " + entry.source);
+                Require(entry.text.Where(c => !char.IsWhiteSpace(c)).All(ChinesePixelFont.HasGlyph), "font coverage: " + entry.source);
+            }
+            Debug.Log("Spring Festival: " + count + " theme assertions passed, including all twelve recruitable guardians, Nian routes, format tokens and font coverage.");
         }
         [MenuItem("Sleigh/Verify Migrated Rules")]
         public static void Verify()
