@@ -52,12 +52,15 @@ namespace Sleigh
         static void Ink(Transform parent, float x, float y, float width, string text, float scale, Color ink)
         { var label = Label(parent, x, y, width, text, scale, ink, 1); label.shadow = false; }
 
-        public static Hotspot MenuButton(Transform parent, float y, float height, string caption, System.Action click, bool primary = false)
+        public static Hotspot MenuButton(Transform parent, float y, float height, string caption, System.Action click)
         {
             var frame = Acquire(parent, "FestivalButton", "Firecracker button:" + caption, 240, y, 160, height);
+            // Scale the whole button about its centre, including the caption.
+            frame.pivot = new Vector2(.5f, .5f);
+            frame.anchoredPosition += new Vector2(80, -height * .5f);
             var art = Acquire(frame, "FirecrackerArt", "Red paper firecracker", 0, 0, 160, height);
             var background = Ensure<FirecrackerButtonBackground>(art);
-            background.primary = primary; background.raycastTarget = false; background.SetHovered(false); background.SetVerticesDirty();
+            background.raycastTarget = false; background.ResetInteraction(); background.SetVerticesDirty();
             Label(frame, 21, (height - 12 * .8f) * .5f, 118, caption, .8f, Cream, 1);
             var button = Hot(frame, -5, -2, 188, height + 4, () => { SleighAudio.Instance?.Play("click"); click?.Invoke(); });
             button.enter = () => { background.SetHovered(true); SleighAudio.Instance?.Play("hover"); };

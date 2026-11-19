@@ -153,6 +153,15 @@ for t in types:
             name=t[0]+'__'+re.sub(r'[^\w-]','_',anim[0])+'__'+str(i)
             im.save(art/(name+'.png'))
             frames.append(dict(type=t[0],anim=anim[0],frame=i,path='Sleigh/Art/'+name,width=w,height=h,pivotX=f[8] if len(f)>8 else 0,pivotY=f[9] if len(f)>9 else 0,sheet=sheet,x=x,y=y,eyes=[dict(x=p[1],y=p[2]) for p in f[10]] if len(f)>10 else []))
+# Keep the authored default-player replacement when extracting the reference again.
+player_art = art/'yierIdle0.png'
+if player_art.exists():
+    with Image.open(player_art) as player_image:
+        player_width, player_height = player_image.size
+    for frame in frames:
+        if frame['type'] == 'Claus' and frame['anim'] == 'idle' and frame['frame'] == 0:
+            frame.update(path='Sleigh/Art/yierIdle0', width=player_width, height=player_height,
+                         pivotX=.54, pivotY=1, sheet=player_art.name, x=0, y=0, eyes=[])
 (OUT/'ArtIndex.json').write_text(json.dumps(dict(frames=frames),indent=2),encoding='utf-8')
 with (OUT/'Sprite_Frame_Index.csv').open('w',encoding='utf-8-sig',newline='') as f:
     writer=csv.DictWriter(f,fieldnames=list(frames[0])); writer.writeheader(); writer.writerows(frames)

@@ -20,7 +20,8 @@ namespace Sleigh.Editor
             finally { root.BindStage(root.Stage, false); }
             Canvas.ForceUpdateCanvases();
             EditorSceneManager.MarkSceneDirty(root.gameObject.scene);
-            Debug.Log("Spring festival menu preview ready. Only the Title view was rebuilt; save the scene to keep the preview.");
+            EditorSceneManager.SaveScene(root.gameObject.scene);
+            Debug.Log("Spring festival menu saved in the scene. Runtime reuses the authored title and firecracker buttons.");
         }
     }
 }

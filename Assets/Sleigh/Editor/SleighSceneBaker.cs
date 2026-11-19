@@ -59,6 +59,9 @@ namespace Sleigh.Editor
             stage.effectPool = Raw(stage.effectLayer, "Reusable transient visuals"); stage.popupPool = Raw(stage.popupLayer, "Reusable dialogs");
             stage.transitionOverlay = Rect(stage.popupLayer, 0, 0, 640, 360, Color.clear); stage.transitionOverlay.name = "Scene fade";
             BuildPresentationWidgets(stage);
+            var irisObject = Raw(stage.popupLayer, "Circular iris transition");
+            stage.irisTransition = irisObject.gameObject.AddComponent<PixelIrisTransition>();
+            stage.irisTransition.color = Hex(0x301122); stage.irisTransition.raycastTarget = false;
             var soundObject = new GameObject("Audio"); soundObject.transform.SetParent(rootObject.transform, false); var sound = soundObject.AddComponent<SleighAudio>(); stage.audioPlayer = sound; sound.bank = audioBank;
             sound.musicSources = new AudioSource[4]; sound.effectVoices = new AudioSource[20];
             for (int i = 0; i < 24; i++)

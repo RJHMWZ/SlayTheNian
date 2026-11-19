@@ -75,7 +75,7 @@ namespace Sleigh
                 Vector2 p = LocalPointer(Input.mousePosition); float height = tip.sizeDelta.y;
                 tip.anchoredPosition = new Vector2(Mathf.Clamp(p.x + 14, 4, 396), -Mathf.Clamp(p.y - height - 8, 45, 354 - height)); tip.SetAsLastSibling();
             }
-            if (busy) return;
+            if (busy || stage.IsTransitioning) return;
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
             { if (modal) { modalBack?.Invoke(); } else if (skipPoem != null) skipPoem(); else if (ScreenName == "Combat" && (selectedGift != null || powerAim || potionAim >= 0)) CancelAim(); else ShowSettings(); return; }
             if (modal) return;
@@ -86,23 +86,29 @@ namespace Sleigh
                 if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Q)) PressPower();
                 for (int i = 0; i < Mathf.Min(9, battle.Hand.Count); i++) if (Input.GetKeyDown(KeyCode.Alpha1 + i)) SelectGift(battle.Hand[i]);
             }
-            else if (ScreenName == "Title" && Input.GetKeyDown(KeyCode.Return)) ShowCharacters();
+            else if (ScreenName == "Title" && Input.GetKeyDown(KeyCode.Return)) Navigate(ShowCharacters);
             else if (ScreenName == "CharacterSelect")
-            { if (Input.GetKeyDown(KeyCode.LeftArrow)) { characterIndex = (characterIndex + 2) % 3; ShowCharacters(); } if (Input.GetKeyDown(KeyCode.RightArrow)) { characterIndex = (characterIndex + 1) % 3; ShowCharacters(); } if (Input.GetKeyDown(KeyCode.Return)) BeginRun(); }
+            { if (Input.GetKeyDown(KeyCode.LeftArrow)) { characterIndex = (characterIndex + 2) % 3; ShowCharacters(); } if (Input.GetKeyDown(KeyCode.RightArrow)) { characterIndex = (characterIndex + 1) % 3; ShowCharacters(); } if (Input.GetKeyDown(KeyCode.Return)) Navigate(BeginRun); }
             else if (ScreenName == "Map")
             { if (Input.GetKey(KeyCode.RightArrow)) MoveMap(300 * Time.unscaledDeltaTime); if (Input.GetKey(KeyCode.LeftArrow)) MoveMap(-300 * Time.unscaledDeltaTime); }
         }
         void OnApplicationQuit() { PlayerPrefs.Save(); }
+        void Navigate(Action next)
+        {
+            if (IsBaking || !Application.isPlaying) next?.Invoke();
+            else stage.Navigate(next);
+        }
         Vector2 LocalPointer(Vector2 screen)
         { RectTransformUtility.ScreenPointToLocalPointInRectangle(area, screen, null, out var p); return new Vector2(p.x + 320, 180 - p.y); }
-        void NewScreen(string name, string music = "calm")
+        void NewScreen(string name, string music = "calm", bool preserveLayout = false)
         {
             if (Application.isPlaying) StopAllCoroutines();
             HideTip(); CloseModal(); skipPoem = null; ScreenName = name; busy = false; selectedGift = null; powerAim = false; potionAim = -1;
             var view = stage.Show(name); bg = view.background; world = view.world; ui = view.ui;
-            foreach (var layer in new[] { bg, world, ui, fx, pop }) Clear(layer);
+            if (!preserveLayout) foreach (var layer in new[] { bg, world, ui }) Clear(layer);
+            foreach (var layer in new[] { fx, pop }) Clear(layer);
             actors.Clear(); handViews.Clear(); handOrder.Clear(); displayedUnits.Clear(); assistingGuest = null; usingVisualNumbers = false; ambientTimer = .2f; ambientFireTimer = .25f; floatingRelic = null; tip = null; sound.Music(music); stage.Transition();
-            Rect(bg, 0, 0, 640, 360, Hex(0x060914));
+            if (!preserveLayout) Rect(bg, 0, 0, 640, 360, Hex(0x060914));
         }
         void TiledBackground(bool intro = false, float up = 0)
         {
@@ -185,14 +191,23 @@ namespace Sleigh
         { string id = run?.character ?? characters[characterIndex]; return Chinese.Text(s).Replace("{nick}", DB.CharacterName(id)).Replace("{name}", DB.CharacterName(id)).Replace("{title}", id == "mrs" ? "夫人" : id == "rudolph" ? "红鼻子" : "小精灵"); }
         public void ShowTitle()
         {
-            battle = null; run = null; NewScreen("Title");
-            SpringFestivalMenu.Build(bg, ui, menuTitle);
-            var saved = Run.Load(); bool canContinue = saved != null && saved.active && saved.hp > 0 && saved.night < 24;
-            SpringFestivalMenu.MenuButton(ui, 196, 24, "NEW RUN", ShowCharacters, true);
-            if (canContinue) SpringFestivalMenu.MenuButton(ui, 227, 22, "CONTINUE / DEC " + (saved.night + 1), () => { run = saved; ShowMap(); });
-            SpringFestivalMenu.MenuButton(ui, canContinue ? 256 : 227, 22, "HOW TO PLAY", ShowHelp);
-            SpringFestivalMenu.MenuButton(ui, canContinue ? 285 : 256, 22, "SETTINGS", ShowSettings);
-            SpringFestivalMenu.MenuButton(ui, canContinue ? 314 : 285, 22, "LEDGER", () => OpenLedger());
+            var titleView = stage.views.First(v => v.name == "Title").ui.GetComponent<SpringFestivalTitleView>();
+            bool authored = !IsBaking && titleView && titleView.IsReady;
+            battle = null; run = null; NewScreen("Title", preserveLayout: authored);
+            if (!authored)
+            {
+                SpringFestivalMenu.Build(bg, ui, menuTitle);
+                titleView = PixelUI.Ensure<SpringFestivalTitleView>(ui);
+                titleView.SetAuthoredButtons(new[] {
+                    SpringFestivalMenu.MenuButton(ui, 196, 22, "NEW RUN", null),
+                    SpringFestivalMenu.MenuButton(ui, 227, 22, "CONTINUE", null),
+                    SpringFestivalMenu.MenuButton(ui, 256, 22, "HOW TO PLAY", null),
+                    SpringFestivalMenu.MenuButton(ui, 285, 22, "SETTINGS", null),
+                    SpringFestivalMenu.MenuButton(ui, 314, 22, "LEDGER", null)
+                });
+            }
+            var saved = Run.Load();
+            titleView.Bind(saved, () => Navigate(ShowCharacters), () => Navigate(() => { run = saved; ShowMap(); }), ShowHelp, ShowSettings, () => OpenLedger());
         }
         void ShowCharacters()
         {
@@ -218,7 +233,7 @@ namespace Sleigh
             Label(ui, 255, 298, 130, advent == 0 ? "ADVENT OFF" : "ADVENT " + advent, .8f, Gold, 1);
             Button(ui, 390, 295, 22, 19, "+", () => { advent = Mathf.Min(unlocked, advent + 1); ShowCharacters(); }, null, advent < unlocked);
             if (advent > 0) BindTip(Hot(ui, 250, 294, 140, 22, () => ShowItem("ADVENT " + advent, string.Join("\n", DB.Advent.Take(advent)), "calendar")), "Advent " + advent, string.Join("\n", DB.Advent.Take(advent)));
-            Button(ui, 160, 327, 150, 24, "< BACK", ShowTitle); Button(ui, 330, 327, 150, 24, "BEGIN >", BeginRun, Hex(0x1c5a3a));
+            Button(ui, 160, 327, 150, 24, "< BACK", () => Navigate(ShowTitle)); Button(ui, 330, 327, 150, 24, "BEGIN >", () => Navigate(BeginRun), Hex(0x1c5a3a));
         }
         void BeginRun()
         {
@@ -234,7 +249,7 @@ namespace Sleigh
             string[] third = run.character == "mrs" ? new[] { "\"Twenty-five nights until Christmas morn breaks.", "I'll keep Christmas living, whatever it takes!", "I'll fight every monster from here to the Pole", "And bring my dear husband back, body and soul!\"" }
                 : run.character == "tinsel" ? new[] { "\"Twenty-five nights till the Christmas bells chime.", "I'll mend every toy and I'll do it in time!", "I'll hammer and tinker my way to the Pole", "And bring the boss back, body and soul!\"" }
                 : new[] { "\"Twenty-five nights till the sleigh bells will chime.", "I'll light up the dark and the cold, all in time!", "I'll gallop through blizzards from here to the Pole", "And bring Santa back, body and soul!\"" };
-            PlayPoem(new[] { first, second, third }, ShowMap);
+            PlayPoem(new[] { first, second, third }, () => Navigate(ShowMap));
         }
         void PlayPoem(string[][] stanzas, Action onDone)
         {
@@ -288,7 +303,7 @@ namespace Sleigh
             Button(m, 160, 218, 288, 23, "FAST ENEMY: " + (fastEnemy ? "ON" : "OFF"), () => { fastEnemy = !fastEnemy; PlayerPrefs.SetInt("Sleigh.FastEnemy", fastEnemy ? 1 : 0); ShowSettings(); });
             Button(m, 160, 248, 288, 23, "CONFIRM END TURN: " + (confirmEnd ? "ON" : "OFF"), () => { confirmEnd = !confirmEnd; PlayerPrefs.SetInt("Sleigh.ConfirmEnd", confirmEnd ? 1 : 0); ShowSettings(); });
             Button(m, 160, 307, 134, 24, "BACK", CloseModal, Hex(0x1c5a3a));
-            if (run != null && run.active) Button(m, 314, 307, 134, 24, "TITLE", () => Confirm("Return to title? Continue resumes from the start of this night.", ShowTitle));
+            if (run != null && run.active) Button(m, 314, 307, 134, 24, "TITLE", () => Confirm("Return to title? Continue resumes from the start of this night.", () => Navigate(ShowTitle)));
         }
         void Confirm(string text, Action yes)
         { var m = OpenModal("ARE YOU SURE?"); Label(m, 120, 115, 400, text, 1, White, 1, true); Button(m, 170, 250, 140, 26, "YES", () => { CloseModal(); yes(); }, Hex(0x8e1d2b)); Button(m, 330, 250, 140, 26, "BACK", CloseModal); }

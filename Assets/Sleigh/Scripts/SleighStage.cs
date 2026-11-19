@@ -14,6 +14,14 @@ namespace Sleigh
         public RectTransform[] snowParticles;
         public PixelParticleField particles;
         public Image flashOverlay, transitionOverlay;
+        public PixelIrisTransition irisTransition;
+        [SerializeField, Min(.05f)] float irisCloseSeconds = .38f, irisOpenSeconds = .46f;
+        enum IrisPhase { Idle, Closing, Covered, Opening }
+        IrisPhase irisPhase;
+        Action navigateAtCover;
+        float irisElapsed;
+        bool irisReduced;
+        public bool IsTransitioning => irisPhase != IrisPhase.Idle;
         public SleighAudio audioPlayer;
         public Material[] actorFlashMaterials;
         public RectTransform arrowRoot, bannerRoot, bubbleRoot, lowHealthRoot;
@@ -39,10 +47,58 @@ namespace Sleigh
         public void Flash(Color color, float alpha = .2f, float seconds = .2f)
         { flashColor = color; flashAlpha = alpha; flashFade = alpha / Mathf.Max(.01f, seconds); }
         public void Impact(float strength, float zoom = .025f) { shake = Mathf.Max(shake, strength); punch = Mathf.Max(punch, zoom); }
-        public void Transition() { if (Application.isPlaying) transitionAlpha = .85f; }
+        public void Transition() { if (Application.isPlaying && !IsTransitioning) transitionAlpha = .85f; }
+
+        public bool Navigate(Action next)
+        {
+            if (IsTransitioning || next == null) return false;
+            if (!irisTransition) { next(); return true; }
+            navigateAtCover = next; irisElapsed = 0; irisPhase = IrisPhase.Closing;
+            irisReduced = GameRoot.Instance && GameRoot.Instance.ReduceMotion;
+            transitionAlpha = 0;
+            if (transitionOverlay) { transitionOverlay.color = Color.clear; transitionOverlay.raycastTarget = false; }
+            irisTransition.transform.SetAsLastSibling();
+            irisTransition.raycastTarget = true;
+            irisTransition.SetReveal(1, irisReduced);
+            return true;
+        }
+
+        void TickIris(float dt)
+        {
+            if (!IsTransitioning) return;
+            irisElapsed += dt;
+            if (irisPhase == IrisPhase.Closing)
+            {
+                float p = Mathf.Clamp01(irisElapsed / (irisReduced ? .12f : irisCloseSeconds));
+                irisTransition.SetReveal(1 - Mathf.SmoothStep(0, 1, p), irisReduced);
+                if (p >= 1) { irisPhase = IrisPhase.Covered; irisElapsed = 0; }
+            }
+            else if (irisPhase == IrisPhase.Covered && irisElapsed >= .06f)
+            {
+                // The callback runs on a later frame, after a fully covered frame.
+                var next = navigateAtCover; navigateAtCover = null;
+                irisPhase = IrisPhase.Opening; irisElapsed = 0;
+                try { next?.Invoke(); }
+                catch (Exception ex) { Debug.LogException(ex, this); }
+            }
+            else if (irisPhase == IrisPhase.Opening)
+            {
+                float p = Mathf.Clamp01(irisElapsed / (irisReduced ? .12f : irisOpenSeconds));
+                irisTransition.SetReveal(Mathf.SmoothStep(0, 1, p), irisReduced);
+                if (p >= 1) ResetIris();
+            }
+        }
+
+        void ResetIris()
+        {
+            irisPhase = IrisPhase.Idle; navigateAtCover = null; irisElapsed = 0;
+            if (irisTransition) { irisTransition.SetReveal(1); irisTransition.raycastTarget = false; }
+        }
+        void OnDisable() { ResetIris(); }
         void Update()
         {
             float dt = Time.unscaledDeltaTime;
+            TickIris(dt);
             bool reduced = GameRoot.Instance && GameRoot.Instance.ReduceMotion;
             if (particles) particles.reduced = reduced;
             flashAlpha = Mathf.Max(0, flashAlpha - dt * flashFade); transitionAlpha = Mathf.Max(0, transitionAlpha - dt * 5);

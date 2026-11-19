@@ -8,15 +8,35 @@ namespace Sleigh
     [RequireComponent(typeof(CanvasRenderer))]
     public sealed class FirecrackerButtonBackground : MaskableGraphic
     {
-        public bool primary;
         float highlight;
         bool hovered;
+        RectTransform buttonRoot;
+        Vector3 restingScale;
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            buttonRoot = transform.parent as RectTransform;
+            restingScale = buttonRoot ? buttonRoot.localScale : Vector3.one;
+            ResetInteraction();
+        }
+
+        protected override void OnDisable()
+        {
+            ResetInteraction();
+            base.OnDisable();
+        }
+
+        public void ResetInteraction()
+        {
+            hovered = false; highlight = 0;
+            if (buttonRoot) buttonRoot.localScale = restingScale;
+            SetVerticesDirty();
+        }
 
         public void SetHovered(bool value)
         {
             hovered = value;
-            if (!value) highlight = 0;
-            SetVerticesDirty();
         }
 
         void Update()
@@ -25,7 +45,9 @@ namespace Sleigh
             float target = hovered ? 1 : 0;
             float value = reduced ? target : Mathf.MoveTowards(highlight, target, Time.unscaledDeltaTime * 9);
             if (Mathf.Abs(value - highlight) < .001f) return;
-            highlight = value; SetVerticesDirty();
+            highlight = value;
+            if (buttonRoot) buttonRoot.localScale = restingScale * (1 + highlight * .06f);
+            SetVerticesDirty();
         }
 
         protected override void OnPopulateMesh(VertexHelper vh)
@@ -33,7 +55,7 @@ namespace Sleigh
             vh.Clear();
             float w = rectTransform.rect.width, h = rectTransform.rect.height, cy = h * .5f;
             var outline = Hex(0x751329);
-            var paper = Color.Lerp(Hex(primary ? 0xef432d : 0xc62432), Hex(0xff7150), highlight * .55f);
+            var paper = Color.Lerp(Hex(0xc62432), Hex(0xef432d), highlight);
             var gold = Color.Lerp(Hex(0xf4b73f), Hex(0xffe498), highlight);
             var light = Hex(0xffdf7e);
 
@@ -69,7 +91,7 @@ namespace Sleigh
             float sx = w + 18, sy = cy - 9;
             Diamond(vh, sx, sy, 2 + highlight, Hex(0xffd254));
             Box(vh, sx, sy, 1, 1, Hex(0xfff1ba));
-            if (primary || highlight > .1f)
+            if (highlight > .1f)
             {
                 Box(vh, sx - 5, sy - 4, 2, 1, light);
                 Box(vh, sx + 4, sy + 3, 2, 1, light);
