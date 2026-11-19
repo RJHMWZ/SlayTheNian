@@ -1,5 +1,6 @@
 #if UNITY_EDITOR
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
@@ -44,9 +45,18 @@ namespace Sleigh.Editor
                     mask.SetReveal(1); populate.Invoke(mask, new object[] { vertices });
                     Require(vertices.currentVertCount == 0, "Open mask leaves no visible overlay");
                     mask.SetReveal(0); populate.Invoke(mask, new object[] { vertices });
-                    Require(vertices.currentVertCount == 4, "Closed mask covers the entire viewport");
+                    Require(vertices.currentVertCount > 4, "Closed mask includes the festive paper pattern");
                     mask.SetReveal(.5f); populate.Invoke(mask, new object[] { vertices });
-                    Require(vertices.currentVertCount > 4 && vertices.currentVertCount <= 1440, "Circular opening uses a bounded pixel mesh");
+                    Require(vertices.currentVertCount > 4 && vertices.currentVertCount <= 30000, "Patterned opening uses a bounded pixel mesh");
+                    var triangles = new List<UIVertex>(); vertices.GetUIVertexStream(triangles);
+                    Vector2 centre = mask.rectTransform.rect.center;
+                    float clearRadius = (mask.rectTransform.rect.size.magnitude * .5f + 2) * .5f - 2;
+                    for (int i = 0; i < triangles.Count; i += 3)
+                    {
+                        Vector2 sample = (triangles[i].position + triangles[i + 1].position + triangles[i + 2].position) / 3;
+                        Require((sample - centre).sqrMagnitude >= clearRadius * clearRadius,
+                            "Paper pattern and gold trim must stay outside the circular opening");
+                    }
                     mask.SetReveal(.5f, true); populate.Invoke(mask, new object[] { vertices });
                     UIVertex vertex = default; vertices.PopulateUIVertex(ref vertex, 0);
                     Require(vertices.currentVertCount == 4 && vertex.color.a > 0 && vertex.color.a < 255, "Reduced motion uses a translucent full-screen fade");

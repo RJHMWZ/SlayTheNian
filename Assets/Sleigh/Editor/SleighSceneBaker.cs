@@ -41,12 +41,12 @@ namespace Sleigh.Editor
             var rootObject = new GameObject("GameRoot"); Undo.RegisterCreatedObjectUndo(rootObject, "Bake Sleigh presentation");
             var root = rootObject.AddComponent<GameRoot>(); var stage = rootObject.AddComponent<SleighStage>();
             var cameraObject = new GameObject("Pixel Camera", typeof(Camera), typeof(AudioListener), typeof(SleighAudioCompressor)); cameraObject.transform.SetParent(rootObject.transform, false); cameraObject.tag = "MainCamera";
-            var camera = cameraObject.GetComponent<Camera>(); camera.orthographic = true; camera.orthographicSize = 180; camera.transform.position = new Vector3(320, -180, -10); camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = Color.black; stage.pixelCamera = camera;
+            var camera = cameraObject.GetComponent<Camera>(); camera.orthographic = true; camera.orthographicSize = 180; camera.transform.position = new Vector3(320, -180, -10); camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = Hex(0xa91b29); stage.pixelCamera = camera;
             var eventObject = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule)); eventObject.transform.SetParent(rootObject.transform, false); eventObject.GetComponent<EventSystem>().pixelDragThreshold = 7;
             var canvasObject = new GameObject("Sleigh Canvas", typeof(RectTransform), typeof(Canvas), typeof(GraphicRaycaster)); canvasObject.transform.SetParent(rootObject.transform, false);
             stage.canvas = canvasObject.GetComponent<Canvas>(); stage.canvas.renderMode = RenderMode.ScreenSpaceOverlay; stage.canvas.pixelPerfect = true; stage.canvas.sortingOrder = 100;
-            var black = Rect(canvasObject.transform, 0, 0, 1, 1, Color.black); black.name = "Letterbox"; black.rectTransform.anchorMin = Vector2.zero; black.rectTransform.anchorMax = Vector2.one; black.rectTransform.offsetMin = black.rectTransform.offsetMax = Vector2.zero;
-            stage.viewport = Raw(canvasObject.transform, "Viewport 640 x 360"); stage.viewport.anchorMin = stage.viewport.anchorMax = new Vector2(.5f, .5f); stage.viewport.pivot = new Vector2(.5f, .5f); stage.viewport.localScale = Vector3.one * 3; stage.viewport.gameObject.AddComponent<RectMask2D>();
+            var black = Rect(canvasObject.transform, 0, 0, 1, 1, Hex(0xa91b29)); black.name = "Full screen background"; black.rectTransform.anchorMin = Vector2.zero; black.rectTransform.anchorMax = Vector2.one; black.rectTransform.offsetMin = black.rectTransform.offsetMax = Vector2.zero;
+            stage.viewport = Raw(canvasObject.transform, "Viewport 640 x 360"); stage.viewport.anchorMin = stage.viewport.anchorMax = new Vector2(.5f, .5f); stage.viewport.pivot = new Vector2(.5f, .5f); stage.viewport.localScale = Vector3.one * 3;
             stage.backgroundLayer = Raw(stage.viewport, "BG"); stage.worldLayer = Raw(stage.viewport, "World"); stage.uiLayer = Raw(stage.viewport, "UI"); stage.effectLayer = Raw(stage.viewport, "FX"); stage.popupLayer = Raw(stage.viewport, "Pop");
             stage.worldLayer.pivot = new Vector2(.5f, .5f); stage.worldLayer.anchoredPosition = new Vector2(320, -180);
             string[] viewNames = { "Title", "CharacterSelect", "Intro", "Map", "Combat", "Reward", "LeaveGift", "Event", "Shop", "Rest", "Treasure", "Victory", "Defeat" };
@@ -61,7 +61,7 @@ namespace Sleigh.Editor
             BuildPresentationWidgets(stage);
             var irisObject = Raw(stage.popupLayer, "Circular iris transition");
             stage.irisTransition = irisObject.gameObject.AddComponent<PixelIrisTransition>();
-            stage.irisTransition.color = Hex(0x301122); stage.irisTransition.raycastTarget = false;
+            stage.irisTransition.color = Hex(0xb51e2d); stage.irisTransition.raycastTarget = false;
             var soundObject = new GameObject("Audio"); soundObject.transform.SetParent(rootObject.transform, false); var sound = soundObject.AddComponent<SleighAudio>(); stage.audioPlayer = sound; sound.bank = audioBank;
             sound.musicSources = new AudioSource[4]; sound.effectVoices = new AudioSource[20];
             for (int i = 0; i < 24; i++)

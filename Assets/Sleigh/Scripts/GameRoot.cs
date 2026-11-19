@@ -53,14 +53,14 @@ namespace Sleigh
         {
             stage = value; IsBaking = baking; canvas = value.canvas; area = value.viewport; sound = value.audioPlayer;
             fx = value.effectPool; pop = value.popupPool; uiScale = -1;
+            if (Application.isPlaying && !baking) uiScale = stage.FitViewport(new Vector2(Screen.width, Screen.height), Screen.safeArea);
             snow.Clear(); var rng = new System.Random(931);
             foreach (var r in value.snowParticles) snow.Add(new Snowflake { rect = r, x = rng.Next(640), y = rng.Next(360), speed = 10 + rng.Next(20), phase = snow.Count });
         }
         void Update()
         {
             if (!area) return;
-            float fit = Mathf.Min(Screen.width / 640f, Screen.height / 360f); float desired = fit >= 1 ? Mathf.Floor(fit) : fit;
-            if (Mathf.Abs(desired - uiScale) > .001f) { uiScale = desired; area.localScale = Vector3.one * uiScale; }
+            uiScale = stage.FitViewport(new Vector2(Screen.width, Screen.height), Screen.safeArea);
             foreach (var s in snow)
             {
                 if (!s.rect) continue;
@@ -144,7 +144,8 @@ namespace Sleigh
         void HideTip() { tipContent = null; if (tip) tip.gameObject.SetActive(false); }
         RectTransform OpenModal(string title, Action back = null)
         {
-            CloseModal(); HideTip(); modal = Group(pop, "Modal:" + title); Rect(modal, 0, 0, 640, 360, Hex(0x05050b, .91f), true);
+            CloseModal(); HideTip(); modal = Group(pop, "Modal:" + title);
+            stage.CoverScreen(Rect(modal, 0, 0, 640, 360, Hex(0x05050b, .91f), true).rectTransform);
             modalBack = back ?? CloseModal; Label(modal, 30, 18, 580, title, 1.1f, Gold, 1);
             if (tip) tip.SetAsLastSibling(); return modal;
         }

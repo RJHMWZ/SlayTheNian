@@ -249,7 +249,7 @@ BGImage,tree,0,Sleigh/Art/BGImage__tree__0,168,256,0.5,1,shared-0-sheet0.png,769
 BGImage,Animation 1,0,Sleigh/Art/BGImage__Animation_1__0,168,256,0.5,1,shared-0-sheet0.png,769,1537
 BGImage,spotlight,0,Sleigh/Art/BGImage__spotlight__0,147,299,0.4897959183673469,0.0033444816053511705,shared-0-sheet0.png,769,513
 Claus,idle,0,Sleigh/Art/yierIdle0,71,98,0.54,1,yierIdle0.png,0,0
-Claus,rudolph_idle,0,Sleigh/Art/Claus__rudolph_idle__0,65,79,0.5076923076923077,1,shared-0-sheet1.png,129,385
+Claus,rudolph_idle,0,Sleigh/Art/bubu1,90,100,0.5,1,bubu1.png,0,0
 Claus,tinsel_idle,0,Sleigh/Art/Claus__tinsel_idle__0,73,87,0.5068493150684932,1,shared-0-sheet1.png,138,257
 BG,default,0,Sleigh/Art/BG__default__0,235,540,0,0,bg-sheet0.png,0,0
 ButtonPanel,default,0,Sleigh/Art/ButtonPanel__default__0,88,22,0,0,shared-0-sheet2.png,1,1

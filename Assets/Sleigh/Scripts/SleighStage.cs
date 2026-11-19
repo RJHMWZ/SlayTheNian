@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Sleigh
 {
-    public sealed class SleighStage : MonoBehaviour
+    public sealed partial class SleighStage : MonoBehaviour
     {
         [Serializable] public class View { public string name; public RectTransform background, world, ui; }
         public Canvas canvas;

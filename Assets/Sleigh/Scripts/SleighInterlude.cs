@@ -11,6 +11,7 @@ namespace Sleigh
         {
             busy = true; HideTip(); var motion = sock.GetComponent<SleighMotion>(); motion.ResetMotion();
             var buttonBlock = Rect(pop, 0, 0, 640, 360, Color.clear, true);
+            stage.CoverScreen(buttonBlock.rectTransform);
             float jingle = 0;
             yield return Tween(.78f, p => {
                 float t = p * .78f; sock.rectTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Sin(t * 13) * Mathf.Lerp(1.45f, 11.5f, p));
@@ -42,6 +43,7 @@ namespace Sleigh
         IEnumerator DeliverGift(Gift gift, int joy, Image house)
         {
             busy = true; HideTip(); var barrier = Rect(pop, 0, 0, 640, 360, Color.clear, true);
+            stage.CoverScreen(barrier.rectTransform);
             RectTransform parcel = gift != null ? Card(fx, gift, 140, 180) : Sprite(fx, "Icon", "coin", 173, 224, 3).rectTransform;
             parcel.pivot = new Vector2(.5f, .5f); var cg = PixelUI.Ensure<CanvasGroup>(parcel);
             sound.Play("whoosh");

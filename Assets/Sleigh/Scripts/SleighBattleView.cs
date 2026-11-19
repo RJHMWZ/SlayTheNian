@@ -288,6 +288,7 @@ namespace Sleigh
         {
             busy = true; HideTip(); stage.arrowRoot.gameObject.SetActive(false); stage.reactionIcon.gameObject.SetActive(false);
             var barrier = Rect(pop, 0, 0, 640, 360, Color.clear, true, "Resolving actions");
+            stage.CoverScreen(barrier.rectTransform);
             var cues = battle.Cues.ToArray(); battle.Cues.Clear(); ActorVisual lunging = null; bool enemySequence = false;
             for (int index = 0; index < cues.Length; index++)
             {
