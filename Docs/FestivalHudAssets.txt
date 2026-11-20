@@ -1,0 +1,22 @@
+Spring Festival HUD asset generation
+Generator: built-in image_gen tool. Transparent RGBA output. Generated PNG is copied byte-for-byte; Unity sprite subrect metadata is used instead of editing the PNG.
+Asset: Assets/Sleigh/Resources/Sleigh/Art/Icons/FestivalHudAtlas.png
+Sprite metadata: Assets/Sleigh/Resources/Sleigh/FestivalHudArt.json
+The 12 illustrated cells map to 32 runtime icon names, including 20 tinted consumable variants.
+Import: point filter, no mipmaps, no texture compression, no NPOT rescaling. Existing display sizes are preserved except the gift basket and small HUD icons. No gameplay or save data changes.
+Prompt:
+Use case: stylized-concept. Asset type: ONE production game UI SPRITE ATLAS, used directly by Unity as a single transparent texture with subrect sprites. Generate a cohesive Lunar New Year / Chinese Spring Festival pixel-art icon atlas. Square 1024x1024 canvas, EXACTLY 4 columns by 3 rows, twelve equal square cells of 256x256, no grid lines. Every icon is centered in its own cell and fits inside the central 176x176 pixels leaving at least 40 transparent pixels to every cell boundary. Consistent handmade 16-bit pixel game style, strong 1-pixel-looking dark burgundy outlines, chunky shapes on a low-resolution pixel grid, restrained vermilion red, festive gold, ivory and warm brown palette, two or three flat shading colors per object, crisp stair-step pixels, high contrast silhouettes legible at 16 to 24 pixels. No soft shadows, NO painted lighting, no floating decorations outside icons. Actual transparent background, no checkerboard baked into artwork.
+Cell positions in strict row-major order:
+ROW 1 col 1: a simple ruby red heart with tiny gold Chinese-knot ribbon at its base, health.
+ROW 1 col 2: a CLOSED VERTICAL RED ENVELOPE with small simple round golden seal and gold folded top, lucky money, NOT a coin, NOT a cookie.
+ROW 1 col 3: one squat traditional bright RED CHINESE LANTERN with thick golden horizontal ribs, gold top and short gold tassel, festival spirit, NOT a Christmas tree.
+ROW 1 col 4: one golden double-lobed Chinese medicinal GOURD BOTTLE with red cloth stopper and red cord, consumable item.
+ROW 2 col 1: the SAME gourd shape but an EMPTY SLOT silhouette: hollow dark burgundy interior, muted warm-gold outline, no liquid, no stopper, not a solid filled bottle.
+ROW 2 col 2: round red silk BLESSING GIFT BAG with gold drawstring and large plain gold diamond seal, a small handmade fabric bag, NOT Santa's sack.
+ROW 2 col 3: horizontal open bamboo-woven NEW YEAR GIFT BASKET with bamboo handle, three simple red-and-gold parcels inside, not a vehicle, not a sleigh.
+ROW 2 col 4: short symmetrical STRING OF RED FIRECRACKERS tied on a gold fuse, full saturated red, energetic but no explosion, no sparks outside icon.
+ROW 3 col 1: SAME firecracker string but UNLIT/DIM state, muted dark brown red and dull gold, still clean and visible silhouette.
+ROW 3 col 2: small unfurled GOLDEN BAMBOO SCROLL with red silk ties, bestiary/ledger.
+ROW 3 col 3: ornate tiny ROUND RED CHINESE DECORATIVE SEAL with simple gold geometric center and scalloped rim, menu/settings.
+ROW 3 col 4: a two-tier rectangular RED LACQUER REUNION FOOD BOX with gold rim, simple gold arched handle and two ivory rice cake squares visible in open top.
+No lettering, no numbers, no calligraphy, no labels, no characters, no logo, no background, no Christmas motifs, no gradients or antialiasing. All twelve distinct objects aligned precisely to the 4x3 cell centers, same apparent scale. This is an asset sheet, not a screenshot or a mockup.

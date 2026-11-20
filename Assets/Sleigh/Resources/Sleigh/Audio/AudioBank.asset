@@ -157,11 +157,11 @@ MonoBehaviour:
     gateSeconds: 0
   - id: win
     clips:
-    - {fileID: 8300000, guid: 8a450b1483a6f8c42be40ad5d485bed7, type: 3}
+    - {fileID: 8300000, guid: 74b1119dd08d9a04da1a84bac81ec679, type: 3}
     gateSeconds: 0
   - id: lose
     clips:
-    - {fileID: 8300000, guid: b912006142ab7ba4fb81b240aa75fe5a, type: 3}
+    - {fileID: 8300000, guid: 37b7bd82cf0919c46b0acccab1fc9dcb, type: 3}
     gateSeconds: 0
   - id: turn
     clips:
@@ -287,21 +287,37 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: 80a8403c48b08274e8ad61f309d3610b, type: 3}
     gateSeconds: 0
+  - id: blessing
+    clips:
+    - {fileID: 8300000, guid: aff5cee171b5428f8c9e588a5a5ea09d, type: 3}
+    gateSeconds: 0.12
+  - id: zodiac
+    clips:
+    - {fileID: 8300000, guid: f8d376d32da849fc8cc37ec5a6020066, type: 3}
+    gateSeconds: 0.12
+  - id: firecracker
+    clips:
+    - {fileID: 8300000, guid: 951d11fa762644ad9e6547c4c17bd464, type: 3}
+    gateSeconds: 0.12
   music:
   - id: calm
-    intro: {fileID: 8300000, guid: ff342fb119ba7e34a867364e292035ec, type: 3}
-    loop: {fileID: 8300000, guid: d39da380551948c4090e32c5e45ed658, type: 3}
-    originalLoopSamples44100: 920348
+    intro: {fileID: 0}
+    loop: {fileID: 8300000, guid: 90006978db8122d4fbfe19a5fe1ace37, type: 3}
+    originalLoopSamples44100: 0
   - id: battle
-    intro: {fileID: 8300000, guid: fe085024394540c47b0889f87a361ee7, type: 3}
-    loop: {fileID: 8300000, guid: 9de620c8e854656459b669281504bc69, type: 3}
-    originalLoopSamples44100: 641455
+    intro: {fileID: 0}
+    loop: {fileID: 8300000, guid: 6e82f9871dad6774ab18ad2c3f3ed7fa, type: 3}
+    originalLoopSamples44100: 0
   - id: boss
-    intro: {fileID: 8300000, guid: 6a2984504090d3743808b1872911b79d, type: 3}
-    loop: {fileID: 8300000, guid: ac5c37b4455fb1b4da85bbc523a7c265, type: 3}
-    originalLoopSamples44100: 579945
+    intro: {fileID: 0}
+    loop: {fileID: 8300000, guid: 35424cd64d75d19478754cf787f7d868, type: 3}
+    originalLoopSamples44100: 0
   - id: end
-    intro: {fileID: 8300000, guid: 23fb2e398669d3b4b8ed0b7cdb1e6392, type: 3}
-    loop: {fileID: 8300000, guid: 929d372403f572241abbceebac59a79f, type: 3}
-    originalLoopSamples44100: 504000
-  version: 2
+    intro: {fileID: 0}
+    loop: {fileID: 8300000, guid: 97bba43dda5136e41bfd085064e8fc93, type: 3}
+    originalLoopSamples44100: 0
+  - id: menu
+    intro: {fileID: 0}
+    loop: {fileID: 8300000, guid: 965dbdfb8d95a1c439dded1ff93f69bd, type: 3}
+    originalLoopSamples44100: 0
+  version: 3

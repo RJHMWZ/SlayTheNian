@@ -450,19 +450,19 @@
     },
     {
       "source": "Red Nose",
-      "text": "红鼻子"
+      "text": "迎春爆竹"
     },
     {
       "source": "At the start of each battle, apply 1 Soggy to ALL enemies. Dazzling!",
-      "text": "战斗开始时，对所有敌人施加1层湿透。真耀眼！"
+      "text": "爆竹齐鸣，震慑岁祟。战斗开始时，对所有敌人施加1层易碎。"
     },
     {
       "source": "Cookie Tin",
-      "text": "饼干罐"
+      "text": "团圆食盒"
     },
     {
       "source": "At the end of each battle, heal 6 HP.",
-      "text": "战斗结束后恢复6点生命。"
+      "text": "分享食盒里的团圆年糕，战斗结束后恢复6点生命。"
     },
     {
       "source": "Jingle Bell",
@@ -2122,19 +2122,19 @@
     },
     {
       "source": "Mrs. C",
-      "text": "克劳斯夫人"
+      "text": "一二"
     },
     {
       "source": "Mrs. Claus",
-      "text": "克劳斯夫人"
+      "text": "一二"
     },
     {
       "source": "Rudolph",
-      "text": "鲁道夫"
+      "text": "布布"
     },
     {
       "source": "Rudie",
-      "text": "小鲁迪"
+      "text": "布布"
     },
     {
       "source": "little elf",
@@ -2142,11 +2142,11 @@
     },
     {
       "source": "missus",
-      "text": "夫人"
+      "text": "一二"
     },
     {
       "source": "red-nose",
-      "text": "红鼻子"
+      "text": "布布"
     },
     {
       "source": "24 NIGHTS TO SAVE CHRISTMAS",
@@ -2174,7 +2174,7 @@
     },
     {
       "source": "Runs the North Pole while Santa\ntakes all the credit.",
-      "text": "克劳斯夫人，擅长照料与安抚。\n收到求援，前来帮助十二生肖守岁。"
+      "text": "一二，温柔又机灵，擅长安抚伙伴。\n带上点心与祝福，帮助十二生肖守岁。"
     },
     {
       "source": "Head toymaker of Santa's\nworkshop and his trusted advisor.",
@@ -2182,7 +2182,7 @@
     },
     {
       "source": "The reindeer with the brightest\nnose and the biggest heart.",
-      "text": "红鼻子驯鹿鲁道夫，热心又勇敢。\n带着驯鹿伙伴，为村民照亮归乡路。"
+      "text": "布布，热心又勇敢，总是挺身而出。\n召集伙伴并肩作战，守护团圆的灯火。"
     },
     {
       "source": " HP / ",
@@ -2922,11 +2922,11 @@
     },
     {
       "source": "REINDEER!",
-      "text": "驯鹿出动！"
+      "text": "生肖拜年"
     },
     {
       "source": "KIND WORD",
-      "text": "温柔劝慰"
+      "text": "迎春送福"
     },
     {
       "source": "Choose a toy part to add to a gift in your hand. Fills as you play gifts.",
@@ -2934,11 +2934,11 @@
     },
     {
       "source": "The next reindeer of Santa's team gallops in to help. Fills when you take damage.",
-      "text": "召唤队列中的下一头驯鹿前来援助。受到伤害或格挡时充能。"
+      "text": "请出下一位生肖守护者拜年助阵，送来抽牌、护甲或驱祟等祝福。十二生肖每场战斗随机排序，依次轮流出场。受到伤害或格挡时充能。"
     },
     {
       "source": "Pick a monster: pop 1 Grumpy pip, learn what it loves and apply a random debuff. Fills from Skills and Grumpy pips.",
-      "text": "选择一个目标：降低1格祟气，得知其喜好并施加随机减益。通过技能年礼和降低祟气充能。"
+      "text": "送出新春福字：选择一个目标，降低1格祟气、得知其喜好并施加随机减益。通过打出技能年礼和降低祟气充能。"
     },
     {
       "source": "Draw 2 gifts and gain 1 Cheer.",
@@ -3474,7 +3474,7 @@
     },
     {
       "source": "But up at his home, by the fire's warm glow,",
-      "text": "求援的信笺，落在克劳斯夫人的炉边，"
+      "text": "求援的信笺，落在一二的炉边，"
     },
     {
       "source": "But down in the workshop, by lantern-light's glow,",
@@ -3482,7 +3482,7 @@
     },
     {
       "source": "But out in the stable, his nose all aglow,",
-      "text": "求援的信笺，随风落进鲁道夫的鹿舍，"
+      "text": "求援的信笺，随风送到布布的家中，"
     },
     {
       "source": "Sat wise Mrs. Claus. She won't let it go!",
@@ -3494,7 +3494,7 @@
     },
     {
       "source": "Stood Rudolph the reindeer, who would not let go!",
-      "text": "鲁道夫点亮红鼻子，决心为归乡的人引路。"
+      "text": "布布提起花灯，决心为归乡的人引路。"
     },
     {
       "source": "\"Twenty-five nights until Christmas morn breaks.",
@@ -3538,7 +3538,7 @@
     },
     {
       "source": "I'll gallop through blizzards from here to the Pole",
-      "text": "带上驯鹿伙伴，与生肖们守住最后一盏花灯，"
+      "text": "带上拜年的伙伴，与生肖们守住最后一盏花灯，"
     },
     {
       "source": "And bring Santa back, body and soul!\"",
@@ -3562,7 +3562,7 @@
     },
     {
       "source": "\"Martha,\" he whispered, \"you've saved Christmas Day!\"",
-      "text": "“克劳斯夫人，谢谢你守住了大家的团圆。”"
+      "text": "“一二，谢谢你守住了大家的团圆。”"
     },
     {
       "source": "\"Tinsel,\" he whispered, \"you've saved Christmas Day!\"",
@@ -3570,11 +3570,11 @@
     },
     {
       "source": "\"Rudie,\" he whispered, \"you've saved Christmas Day!\"",
-      "text": "“鲁道夫，谢谢你带回了归乡的灯火。”"
+      "text": "“布布，谢谢你带回了归乡的灯火。”"
     },
     {
       "source": "\"I know, dear,\" she said. \"Now get on that sleigh!\"",
-      "text": "夫人笑着递出年糕：“来，一起吃团圆饭。”"
+      "text": "一二笑着递出年糕：“来，一起吃团圆饭。”"
     },
     {
       "source": "\"I know, boss,\" she grinned. \"Now get on that sleigh!\"",
@@ -3582,7 +3582,7 @@
     },
     {
       "source": "So Rudolph just snorted and lit up the way.",
-      "text": "鲁道夫喷了个响鼻，再次用红鼻子照亮前路。"
+      "text": "布布举起花灯，再次为大家照亮前路。"
     },
     {
       "source": "And all of the friends that were won on the way",
