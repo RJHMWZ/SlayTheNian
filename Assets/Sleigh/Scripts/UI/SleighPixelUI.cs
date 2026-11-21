@@ -45,16 +45,18 @@ namespace Sleigh
             var im = PixelUI.Ensure<Image>(r); im.sprite = null; im.color = Color.clear; im.raycastTarget = true;
             var hsp = PixelUI.Ensure<Hotspot>(im); hsp.ClearBindings(); hsp.click = click; hsp.enter = enter; hsp.exit = exit; return hsp;
         }
-        public static Hotspot Button(Transform p, float x, float y, float w, float h, string label, Action click, Color? c = null, bool enabled = true)
+        public static Hotspot Button(Transform p, float x, float y, float w, float h, string label, Action click, Color? c = null, bool enabled = true, float captionScale = .8f)
         {
             var r = Acquire(p, "Button", "Button:" + label, x, y, w, h);
             Rect(r, 0, 2, w, h, Outline); var im = Rect(r, 0, 0, w, h, c ?? Hex(0x7c3541), true);
             Rect(r, 1, 1, w - 2, 1, Hex(0xffffff, .16f)); Rect(r, 1, h - 2, w - 2, 1, Hex(0x000000, .3f));
-            Label(r, 2, (h - 12 * .8f) / 2, w - 4, label, .8f, enabled ? White : Muted, 1);
+            Label(r, 2, (h - 12 * captionScale) / 2, w - 4, label, captionScale, enabled ? White : Muted, 1);
             var hot = PixelUI.Ensure<Hotspot>(im); hot.ClearBindings(); hot.enabledAction = enabled; hot.click = () => { SleighAudio.Instance?.Play("click"); click?.Invoke(); };
             Color normal = im.color; if (!enabled) im.color = normal * new Color(.5f, .5f, .5f, 1);
             hot.enter = () => { if (enabled) { im.color = Color.Lerp(normal, Color.white, .18f); SleighAudio.Instance?.Play("hover"); } };
-            hot.exit = () => { if (im && enabled) im.color = normal; }; return hot;
+            hot.exit = () => { if (im && enabled) im.color = normal; };
+            hot.press = held => { if (im && enabled) im.color = held ? Color.Lerp(normal, Color.black, .18f) : hot.hovered ? Color.Lerp(normal, Color.white, .18f) : normal; };
+            return hot;
         }
         public static void Clear(Transform t)
         { if (t) PixelPoolBucket.On(t).ReleaseChildren(); }

@@ -21,16 +21,15 @@ Assets/Sleigh/
     Authoring/               场景、预制体、菜单预览及导入设置
     Audio/                   声音资源绑定与离线合成
     Build/                   构建、显示设置
-    Import/                  字体生成；Legacy/ 保留旧参考导入器
+    Import/                  字体生成
     Validation/              项目、规则、主题、画面、视口、转场检查
   Audio/
     BGM/                     MainMenu、NormalBattle、BossBattle、Exploration、Ending
     SFX/                     Victory、Defeat；Generated/ 为离线生成音效
-    Legacy/                  保留旧版源音乐、烘焙音乐及未再绑定的胜负音效
   Art/Fonts/                 字体源文件及许可证
   Materials/                 已绑定的材质与 shader
   Resources/Sleigh/
-    Art/                     Characters、Cards、Backgrounds、Icons、Effects、UI
+    Art/                     Characters、Backgrounds、Icons、Effects、Festival
     Prefabs/                 保留资源键的 GameRoot、ActorView、GiftView
     Audio/AudioBank.asset    保留运行时加载入口的音频配置
     Fonts/                   运行时点阵字体与授权文件

@@ -53,18 +53,22 @@ namespace Sleigh
         { var label = Label(parent, x, y, width, text, scale, ink, 1); label.shadow = false; }
 
         public static Hotspot MenuButton(Transform parent, float y, float height, string caption, System.Action click)
+            => MenuButton(parent, 240, y, 160, height, caption, click);
+
+        public static Hotspot MenuButton(Transform parent, float x, float y, float width, float height, string caption, System.Action click, float captionScale = 1)
         {
-            var frame = Acquire(parent, "FestivalButton", "Firecracker button:" + caption, 240, y, 160, height);
+            var frame = Acquire(parent, "FestivalButton", "Firecracker button:" + caption, x, y, width, height);
             // Scale the whole button about its centre, including the caption.
             frame.pivot = new Vector2(.5f, .5f);
-            frame.anchoredPosition += new Vector2(80, -height * .5f);
-            var art = Acquire(frame, "FirecrackerArt", "Red paper firecracker", 0, 0, 160, height);
+            frame.anchoredPosition += new Vector2(width * .5f, -height * .5f);
+            var art = Acquire(frame, "FirecrackerArt", "Red paper firecracker", 0, 0, width, height);
             var background = Ensure<FirecrackerButtonBackground>(art);
             background.raycastTarget = false; background.ResetInteraction(); background.SetVerticesDirty();
-            Label(frame, 21, (height - 12 * .8f) * .5f, 118, caption, .8f, Cream, 1);
-            var button = Hot(frame, -5, -2, 188, height + 4, () => { SleighAudio.Instance?.Play("click"); click?.Invoke(); });
+            Label(frame, 18, (height - 12 * captionScale) * .5f, width - 36, caption, captionScale, Cream, 1);
+            var button = Hot(frame, -5, -2, width + 28, height + 4, () => { SleighAudio.Instance?.Play("click"); click?.Invoke(); });
             button.enter = () => { background.SetHovered(true); SleighAudio.Instance?.Play("hover"); };
             button.exit = () => background.SetHovered(false);
+            button.press = background.SetPressed;
             return button;
         }
 

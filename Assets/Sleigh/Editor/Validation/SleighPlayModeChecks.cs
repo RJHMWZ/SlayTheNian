@@ -73,6 +73,17 @@ namespace Sleigh.Editor
                 throw new Exception("Button blocked by " + (hits.Count == 0 ? "empty raycast" : hits[0].gameObject.name));
             button.OnPointerClick(data);
         }
+        static void VerifyFestivalBackground(GameRoot root, string asset)
+        {
+            var background = root.Stage.views.Single(v => v.name == root.ScreenName).background;
+            var expected = Resources.Load<Sprite>("Sleigh/Art/Backgrounds/" + asset);
+            var images = background.GetComponentsInChildren<Image>().Where(i => i.isActiveAndEnabled && i.sprite).ToArray();
+            if (!expected || images.Length != 1 || images[0].sprite != expected)
+                throw new Exception(root.ScreenName + " must display the imported " + asset + " background at runtime.");
+            if (background.GetComponentsInChildren<SpringFestivalBackdrop>().Any(b => b.isActiveAndEnabled))
+                throw new Exception(root.ScreenName + " still has the old procedural village active.");
+            Debug.Log("PLAY_SMOKE background verified: " + root.ScreenName + " / " + expected.texture.name);
+        }
         static void Tick()
         {
             if (finishing || !SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
@@ -112,15 +123,22 @@ namespace Sleigh.Editor
                         if (skip == null) return; skip(); Advance("intro skip"); break;
                     case 4:
                         if (root.ScreenName != "Map") return;
+                        VerifyFestivalBackground(root, "FestivalMapBackground");
                         Call(root, "EnterNode", "battle"); Advance("first map battle"); break;
                     case 5:
                         if (root.ScreenName != "Combat" || (bool)root.GetType().GetField("busy", Private).GetValue(root)) return;
+                        VerifyFestivalBackground(root, "FestivalBattleBackground");
+                        SleighPolishChecks.VerifyCombatInput(root);
                         Click(Button(root, "END TURN")); Advance("end turn click"); break;
                     case 6:
                         if (root.battle.Turn < 2 || (bool)root.GetType().GetField("busy", Private).GetValue(root)) return;
                         root.StartBattle(new[] { "santa" }, "boss"); Advance("boss battle"); break;
                     case 7:
-                        if (root.ScreenName == "Combat" && root.battle.Kind == "boss") Finish(true, "Title, raycasts, character choice, save panel, intro, map, ordinary battle, turn and boss startup passed.");
+                        if (root.ScreenName == "Combat" && root.battle.Kind == "boss")
+                        {
+                            VerifyFestivalBackground(root, "FestivalBattleBackground");
+                            Finish(true, "Title, raycasts, character choice, save panel, intro, map, ordinary battle, turn and boss startup passed.");
+                        }
                         break;
                 }
             }

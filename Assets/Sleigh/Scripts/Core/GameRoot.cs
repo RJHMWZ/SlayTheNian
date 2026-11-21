@@ -84,7 +84,7 @@ namespace Sleigh
             if (tip && tip.gameObject.activeSelf)
             {
                 Vector2 p = LocalPointer(Input.mousePosition); float height = tip.sizeDelta.y;
-                tip.anchoredPosition = new Vector2(Mathf.Clamp(p.x + 14, 4, 396), -Mathf.Clamp(p.y - height - 8, 45, 354 - height)); tip.SetAsLastSibling();
+                tip.anchoredPosition = new Vector2(Mathf.Clamp(p.x + 14, 4, 636 - tip.sizeDelta.x), -Mathf.Clamp(p.y - height - 8, 45, Mathf.Max(45, 354 - height))); tip.SetAsLastSibling();
             }
             if (busy || stage.IsTransitioning) return;
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
@@ -104,6 +104,8 @@ namespace Sleigh
             { if (Input.GetKey(KeyCode.RightArrow)) MoveMap(300 * Time.unscaledDeltaTime); if (Input.GetKey(KeyCode.LeftArrow)) MoveMap(-300 * Time.unscaledDeltaTime); }
         }
         void OnApplicationQuit() { PlayerPrefs.Save(); }
+        void OnApplicationFocus(bool focused) { if (!focused) ResetPointerInteraction(); }
+        void OnApplicationPause(bool paused) { if (paused) ResetPointerInteraction(); }
         void OnDestroy()
         {
 #if UNITY_EDITOR
@@ -121,16 +123,27 @@ namespace Sleigh
         void NewScreen(string name, string music = "calm", bool preserveLayout = false)
         {
             if (Application.isPlaying) StopAllCoroutines();
+            ResetPointerInteraction();
             HideTip(); CloseModal(); skipPoem = null; ScreenName = name; busy = false; selectedGift = null; powerAim = false; potionAim = -1;
             var view = stage.Show(name); bg = view.background; world = view.world; ui = view.ui;
             if (!preserveLayout) foreach (var layer in new[] { bg, world, ui }) Clear(layer);
             foreach (var layer in new[] { fx, pop }) Clear(layer);
-            actors.Clear(); handViews.Clear(); handOrder.Clear(); displayedUnits.Clear(); assistingGuest = null; usingVisualNumbers = false; ambientTimer = .2f; ambientFireTimer = .25f; floatingRelic = null; tip = null; sound.Music(music); stage.Transition();
+            actors.Clear(); handViews.Clear(); handOrder.Clear(); displayedUnits.Clear(); assistingGuest = null; usingVisualNumbers = false; ambientTimer = .2f; ambientFireTimer = .25f; floatingRelic = null; tip = null; sound.Duck(1); sound.Music(music); stage.Transition();
             if (!preserveLayout) Rect(bg, 0, 0, 640, 360, Hex(0x060914));
         }
         void TiledBackground(bool intro = false, float up = 0)
         {
-            SpringFestivalBackdrop.Build(bg, ScreenName == "Combat" ? SpringFestivalBackdrop.Setting.Courtyard : SpringFestivalBackdrop.Setting.Village, intro);
+            if (ScreenName == "Combat" || ScreenName == "Map")
+            {
+                // Resolve the imported asset directly, including when art is reimported in an open editor session.
+                string asset = ScreenName == "Combat" ? "FestivalBattleBackground" : "FestivalMapBackground";
+                var sprite = Resources.Load<Sprite>("Sleigh/Art/Backgrounds/" + asset);
+                if (!sprite) throw new InvalidOperationException("Missing festival background: " + asset);
+                var backdrop = Ensure<Image>(Acquire(bg, "FestivalScenery", asset, 0, 0, 640, 360));
+                backdrop.sprite = sprite; backdrop.type = Image.Type.Simple;
+                backdrop.color = Color.white; backdrop.raycastTarget = false;
+            }
+            else SpringFestivalBackdrop.Build(bg, SpringFestivalBackdrop.Setting.Village, intro);
         }
         void BindTip(Hotspot h, string title, string description)
         {
@@ -144,21 +157,21 @@ namespace Sleigh
             if (busy) return; tipContent = content;
             if (!tip)
             {
-                tip = PanelBox(pop, 0, 0, 240, 100, Gold);
-                tipText = Label(tip, 9, 8, 222, content, .8f, White, 0, true);
+                tip = PanelBox(pop, 0, 0, 264, 100, Gold);
+                tipText = Label(tip, 9, 8, 246, content, 1, White, 0, true);
             }
-            tipText.Set(content); float h = 18 + PixelLabel.Lines(content, 222, .8f, true).Count * 9.6f;
-            tip.sizeDelta = new Vector2(240, h);
+            tipText.Set(content); float h = 22 + PixelLabel.Lines(content, 246, 1, true).Count * 12;
+            tip.sizeDelta = new Vector2(264, h);
             var imgs = tip.GetComponentsInChildren<Image>();
-            if (imgs.Length >= 3) { imgs[0].rectTransform.sizeDelta = new Vector2(240, h); imgs[1].rectTransform.sizeDelta = new Vector2(238, h - 2); imgs[2].rectTransform.sizeDelta = new Vector2(234, h - 6); }
+            if (imgs.Length >= 3) { imgs[0].rectTransform.sizeDelta = new Vector2(264, h); imgs[1].rectTransform.sizeDelta = new Vector2(262, h - 2); imgs[2].rectTransform.sizeDelta = new Vector2(258, h - 6); }
             tip.gameObject.SetActive(true); tip.SetAsLastSibling();
         }
         void HideTip() { tipContent = null; if (tip) tip.gameObject.SetActive(false); }
-        RectTransform OpenModal(string title, Action back = null)
+        RectTransform OpenModal(string title, Action back = null, float titleScale = 1.1f)
         {
-            CloseModal(); HideTip(); modal = Group(pop, "Modal:" + title);
+            ResetPointerInteraction(); CloseModal(); HideTip(); modal = Group(pop, "Modal:" + title);
             stage.CoverScreen(Rect(modal, 0, 0, 640, 360, Hex(0x21121b, .94f), true).rectTransform);
-            modalBack = back ?? CloseModal; Label(modal, 30, 18, 580, title, 1.1f, Gold, 1);
+            modalBack = back ?? CloseModal; Label(modal, 30, 18, 580, title, titleScale, Gold, 1);
             if (tip) tip.SetAsLastSibling(); return modal;
         }
         void CloseModal() { if (modal) Release(modal); modal = null; modalBack = null; HideTip(); }
@@ -225,11 +238,11 @@ namespace Sleigh
                 SpringFestivalMenu.Build(bg, ui, menuTitle);
                 titleView = PixelUI.Ensure<SpringFestivalTitleView>(ui);
                 titleView.SetAuthoredButtons(new[] {
-                    SpringFestivalMenu.MenuButton(ui, 196, 22, "NEW RUN", null),
-                    SpringFestivalMenu.MenuButton(ui, 227, 22, "CONTINUE", null),
-                    SpringFestivalMenu.MenuButton(ui, 256, 22, "HOW TO PLAY", null),
-                    SpringFestivalMenu.MenuButton(ui, 285, 22, "SETTINGS", null),
-                    SpringFestivalMenu.MenuButton(ui, 314, 22, "LEDGER", null)
+                    SpringFestivalMenu.MenuButton(ui, 180, 194, 264, 28, "NEW RUN", null, 1.25f),
+                    SpringFestivalMenu.MenuButton(ui, 188, 234, 248, 26, "CONTINUE", null, 1.15f),
+                    SpringFestivalMenu.MenuButton(ui, 166, 272, 76, 22, "玩法", null),
+                    SpringFestivalMenu.MenuButton(ui, 382, 272, 76, 22, "SETTINGS", null),
+                    SpringFestivalMenu.MenuButton(ui, 274, 272, 76, 22, "LEDGER", null)
                 });
             }
             titleView.Bind(() => Navigate(ShowCharacters), () => ShowSaveSlots(false), ShowHelp, ShowSettings, () => OpenLedger());
@@ -286,26 +299,26 @@ namespace Sleigh
         }
         void ShowHelp()
         {
-            var m = OpenModal("HOW TO SAVE CHRISTMAS");
-            Label(m, 72, 58, 496, "Give Gifts using Cheer. Choose a gift, then a monster; drag-and-drop also works. Cheer refills each turn. Wrap absorbs damage until your next turn. E ends the turn. P uses your charged power.\n\nFit toy parts to gifts. Give monsters things they love to pop Grumpy pips. A Softened monster skips its turn and joins you if you leave it unharmed. Hitting it breaks its trust.\n\nTake rewards, then leave a gift for a child. Fulfill their wish for +4 Spirit. Your sack needs at least 5 gifts. Spirit fades nightly and changes Krampus's strength.\n\nBeat all 24 nights. Can you bring Santa home without hurting him?", .86f, White, 0, true);
-            Button(m, 240, 318, 160, 24, "LET'S GO", CloseModal, Hex(0x1c5a3a));
+            var m = OpenModal("HOW TO SAVE CHRISTMAS", titleScale: 1.4f);
+            Label(m, 56, 62, 528, "Give Gifts using Cheer. Choose a gift, then a monster; drag-and-drop also works. Cheer refills each turn. Wrap absorbs damage until your next turn. E ends the turn. P uses your charged power.\n\nFit toy parts to gifts. Give monsters things they love to pop Grumpy pips. A Softened monster skips its turn and joins you if you leave it unharmed. Hitting it breaks its trust.\n\nTake rewards, then leave a gift for a child. Fulfill their wish for +4 Spirit. Your sack needs at least 5 gifts. Spirit fades nightly and changes Krampus's strength.\n\nBeat all 24 nights. Can you bring Santa home without hurting him?", 1.2f, White, 0, true);
+            Button(m, 240, 314, 160, 28, "LET'S GO", CloseModal, Hex(0x1c5a3a), captionScale: 1.05f);
         }
         void ShowSettings()
         {
-            if (busy) return; var m = OpenModal("SETTINGS");
+            if (busy) return; var m = OpenModal("SETTINGS", titleScale: 1.4f);
             void volume(string name, float y, Func<float> get, Action<float> set)
             {
-                Label(m, 160, y + 4, 220, name + " " + Mathf.RoundToInt(get() * 100) + "%", .9f);
-                Button(m, 390, y, 24, 20, "-", () => { set(Mathf.Clamp01(get() - .1f)); sound.Apply(); ShowSettings(); });
-                Button(m, 424, y, 24, 20, "+", () => { set(Mathf.Clamp01(get() + .1f)); sound.Apply(); ShowSettings(); });
+                Label(m, 160, y + 6, 208, name + " " + Mathf.RoundToInt(get() * 100) + "%", 1.15f);
+                Button(m, 380, y, 32, 28, "-", () => { set(Mathf.Clamp01(get() - .1f)); sound.Apply(); ShowSettings(); }, captionScale: 1.1f);
+                Button(m, 422, y, 32, 28, "+", () => { set(Mathf.Clamp01(get() + .1f)); sound.Apply(); ShowSettings(); }, captionScale: 1.1f);
             }
-            volume("MASTER", 64, () => sound.master, v => sound.master = v); volume("MUSIC", 94, () => sound.musicVolume, v => sound.musicVolume = v); volume("EFFECTS", 124, () => sound.effectsVolume, v => sound.effectsVolume = v);
-            Button(m, 160, 158, 288, 23, "MUTE: " + (sound.mute ? "ON" : "OFF"), () => { sound.mute = !sound.mute; sound.Apply(); ShowSettings(); });
-            Button(m, 160, 188, 288, 23, "REDUCE MOTION: " + (reduceMotion ? "ON" : "OFF"), () => { reduceMotion = !reduceMotion; PlayerPrefs.SetInt("Sleigh.ReduceMotion", reduceMotion ? 1 : 0); ShowSettings(); });
-            Button(m, 160, 218, 288, 23, "FAST ENEMY: " + (fastEnemy ? "ON" : "OFF"), () => { fastEnemy = !fastEnemy; PlayerPrefs.SetInt("Sleigh.FastEnemy", fastEnemy ? 1 : 0); ShowSettings(); });
-            Button(m, 160, 248, 288, 23, "CONFIRM END TURN: " + (confirmEnd ? "ON" : "OFF"), () => { confirmEnd = !confirmEnd; PlayerPrefs.SetInt("Sleigh.ConfirmEnd", confirmEnd ? 1 : 0); ShowSettings(); });
-            Button(m, 160, 307, 134, 24, "BACK", CloseModal, Hex(0x1c5a3a));
-            if (run != null && run.active) Button(m, 314, 307, 134, 24, "TITLE", () => Confirm("Return to title? Continue resumes from the start of this night.", () => Navigate(ShowTitle)));
+            volume("MASTER", 56, () => sound.master, v => sound.master = v); volume("MUSIC", 90, () => sound.musicVolume, v => sound.musicVolume = v); volume("EFFECTS", 124, () => sound.effectsVolume, v => sound.effectsVolume = v);
+            Button(m, 160, 160, 288, 28, "MUTE: " + (sound.mute ? "ON" : "OFF"), () => { sound.mute = !sound.mute; sound.Apply(); ShowSettings(); }, captionScale: 1.05f);
+            Button(m, 160, 194, 288, 28, "REDUCE MOTION: " + (reduceMotion ? "ON" : "OFF"), () => { reduceMotion = !reduceMotion; PlayerPrefs.SetInt("Sleigh.ReduceMotion", reduceMotion ? 1 : 0); ShowSettings(); }, captionScale: 1.05f);
+            Button(m, 160, 228, 288, 28, "FAST ENEMY: " + (fastEnemy ? "ON" : "OFF"), () => { fastEnemy = !fastEnemy; PlayerPrefs.SetInt("Sleigh.FastEnemy", fastEnemy ? 1 : 0); ShowSettings(); }, captionScale: 1.05f);
+            Button(m, 160, 262, 288, 28, "CONFIRM END TURN: " + (confirmEnd ? "ON" : "OFF"), () => { confirmEnd = !confirmEnd; PlayerPrefs.SetInt("Sleigh.ConfirmEnd", confirmEnd ? 1 : 0); ShowSettings(); }, captionScale: 1.05f);
+            Button(m, 160, 314, 134, 28, "BACK", CloseModal, Hex(0x1c5a3a), captionScale: 1.05f);
+            if (run != null && run.active) Button(m, 314, 314, 134, 28, "TITLE", () => Confirm("Return to title? Continue resumes from the start of this night.", () => Navigate(ShowTitle)), captionScale: 1.05f);
         }
         void Confirm(string text, Action yes)
         { var m = OpenModal("ARE YOU SURE?"); Label(m, 120, 115, 400, text, 1, White, 1, true); Button(m, 170, 250, 140, 26, "YES", () => { CloseModal(); yes(); }, Hex(0x8e1d2b)); Button(m, 330, 250, 140, 26, "BACK", CloseModal); }

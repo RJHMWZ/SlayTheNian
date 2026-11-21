@@ -15,12 +15,22 @@ namespace Sleigh
         float born;
         RectTransform rect;
         Vector3 baseScale;
+        Quaternion baseRotation;
+        Image targetImage;
+        Color baseColor;
+        bool suspended;
         public void ResetMotion() { style = Style.None; enabled = false; if (!rect) rect = (RectTransform)transform; born = Time.unscaledTime; }
         public void Configure(Style mode, float amount = 2, float hz = 2, float offset = 0)
-        { enabled = true; rect = (RectTransform)transform; style = mode; origin = rect.anchoredPosition; baseScale = rect.localScale; amplitude = amount; frequency = hz; phase = offset; born = Time.unscaledTime; }
+        { enabled = true; rect = (RectTransform)transform; style = mode; origin = rect.anchoredPosition; baseScale = rect.localScale; baseRotation = rect.localRotation; targetImage = GetComponent<Image>(); if (targetImage) baseColor = targetImage.color; suspended = false; amplitude = amount; frequency = hz; phase = offset; born = Time.unscaledTime; }
         void LateUpdate()
         {
-            if (!rect || style == Style.None || reduceMotion || (GameRoot.Instance && GameRoot.Instance.ReduceMotion)) return;
+            if (!rect || style == Style.None) return;
+            if (reduceMotion || (GameRoot.Instance && GameRoot.Instance.ReduceMotion))
+            {
+                if (!suspended) { rect.anchoredPosition = origin; rect.localScale = baseScale; rect.localRotation = baseRotation; if (style == Style.Spotlight && targetImage) targetImage.color = baseColor; suspended = true; }
+                return;
+            }
+            suspended = false;
             float t = Time.unscaledTime - born, wave = Mathf.Sin(t * frequency + phase);
             switch (style)
             {
@@ -33,7 +43,7 @@ namespace Sleigh
                     float ease = 1 - Mathf.Pow(1 - p, 3); rect.anchoredPosition = origin + from * (1 - ease);
                     if (p >= 1) style = Style.None; break;
                 case Style.Spotlight:
-                    var image = GetComponent<Image>(); if (image) { var c = image.color; c.a = .85f + wave * .05f; image.color = c; } break;
+                    if (targetImage) { var c = targetImage.color; c.a = .85f + wave * .05f; targetImage.color = c; } break;
             }
         }
         public static SleighMotion Add(RectTransform r, Style mode, float amount = 2, float hz = 2, float phase = 0)

@@ -37,6 +37,7 @@ namespace Sleigh
                 button.click = () => { SleighAudio.Instance?.Play("click"); action?.Invoke(); };
                 button.enter = () => { art.SetHovered(true); SleighAudio.Instance?.Play("hover"); };
                 button.exit = () => art.SetHovered(false);
+                button.press = art.SetPressed;
             }
             showingContinue = true;
             continueCaption.Set("继续冒险");

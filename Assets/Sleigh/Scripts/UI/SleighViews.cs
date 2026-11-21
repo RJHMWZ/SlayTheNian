@@ -79,8 +79,17 @@ namespace Sleigh
             r.name = "Gift " + g.Uid + ": " + g.Name; r.anchorMin = r.anchorMax = new Vector2(0, 1); r.pivot = new Vector2(0, 1); r.anchoredPosition = new Vector2(x, -y); r.localScale = Vector3.one * scale;
             string art = g.Def.type == "friend" ? g.Def.enemy : g.Id;
             if (DB.Frame("Gift", art) == null) art = g.Def.type;
-            if (prefab) { var body = r.GetComponent<Image>(); body.sprite = DB.Sprite("Gift", art); body.color = Color.white; body.raycastTarget = false; }
-            else Sprite(r, "Gift", art, 0, 0, 1, false, 66, 88);
+            if (prefab) { var body = r.GetComponent<Image>(); body.sprite = DB.Sprite("CardFrame", g.Def.type); body.color = Color.white; body.raycastTarget = false; }
+            else Sprite(r, "CardFrame", g.Def.type, 0, 0, 1, false, 66, 88);
+            // The category frame and the Spring Festival illustration share no baked-in text or holiday props.
+            Image illustration;
+            if (g.Def.type == "friend")
+            {
+                var f = DB.Frame("Enemy", art);
+                illustration = Sprite(r, "Enemy", art, 33, 66, Mathf.Min(42f / f.width, 44f / f.height));
+            }
+            else illustration = Sprite(r, "Gift", art, 12, 24, 1, false, 42, 42);
+            if (illustration) illustration.name = "Festival card illustration";
             Label(r, 3, 3, 60, g.Name, .75f, g.Upgrade ? Hex(0xc8ffb0) : White, 1, true);
             if (!g.Def.flags.Contains("u"))
             { Sprite(r, "Icon", "cost", 4, 4); Label(r, -3, -2, 14, g.Cost.ToString(), .8f, preview != null && g.Cost > preview.Energy ? Red : White, 1); }
@@ -339,19 +348,21 @@ namespace Sleigh
         }
         void OpenLedger(int selection = 0, int page = 0)
         {
-            var all = DB.All.enemies.Where(e => e.id != "naughtylist" || Ledger.Get(e.id).seen).ToArray(); selection = Mathf.Clamp(selection, 0, all.Length - 1); page = Mathf.Clamp(page, 0, (all.Length - 1) / 14);
-            var m = OpenModal("NICE & NAUGHTY LEDGER / " + all.Count(e => Ledger.Get(e.id).seen) + "/" + all.Length);
+            const int pageSize = 9;
+            var all = DB.All.enemies.Where(e => e.id != "naughtylist" || Ledger.Get(e.id).seen).ToArray(); selection = Mathf.Clamp(selection, 0, all.Length - 1); page = Mathf.Clamp(page, 0, (all.Length - 1) / pageSize);
+            var m = OpenModal("NICE & NAUGHTY LEDGER / " + all.Count(e => Ledger.Get(e.id).seen) + "/" + all.Length, titleScale: 1.4f);
             var p = PanelBox(m, 30, 49, 580, 258, Gold); Rect(p, 198, 8, 1, 242, Hex(0x54618c));
-            for (int i = 0; i < 14 && page * 14 + i < all.Length; i++)
-            { int index = page * 14 + i; var e = all[index]; var l = Ledger.Get(e.id); Button(p, 8, 9 + i * 16, 182, 15, l.seen ? e.name : "???", () => OpenLedger(index, page), index == selection ? Hex(0xa8741f) : Hex(0x253262)); }
+            for (int i = 0; i < pageSize && page * pageSize + i < all.Length; i++)
+            { int index = page * pageSize + i; var e = all[index]; var l = Ledger.Get(e.id); Button(p, 8, 9 + i * 26, 182, 24, l.seen ? e.name : "???", () => OpenLedger(index, page), index == selection ? Hex(0xa8741f) : Hex(0x253262), captionScale: 1.05f); }
             var d = all[selection]; var entry = Ledger.Get(d.id); var art = Sprite(p, "Enemy", d.id, 278, 153, Mathf.Min(1.4f, 95f / DB.Frame("Enemy", d.id).height)); if (art && !entry.seen) art.color = Color.black;
-            Label(p, 212, 10, 352, entry.seen ? d.name : "???", 1, Gold, 1);
+            Label(p, 212, 10, 352, entry.seen ? d.name : "???", 1.3f, Gold, 1);
             string description = entry.seen ? d.lore + "\n\nLoves: " + (entry.love ? DB.LikeLabel(d.love) : "???") + "\nHates: " + (entry.hate ? DB.LikeLabel(d.hate) : "???") + "\nDefeated: " + entry.kills + " / Befriended: " + entry.charms : "You haven't met this monster yet.";
-            Label(p, 332, 39, 228, description, .74f, White, 0, true);
+            Label(p, 332, 43, 228, description, 1.1f, White, 0, true);
             if (entry.charms > 0 && DB.Gifts.ContainsKey("f_" + d.id)) Card(p, new Gift { Id = "f_" + d.id }, 243, 158, .8f);
-            int pg = page; Button(m, 50, 319, 50, 22, "<", () => OpenLedger(selection, pg - 1), null, page > 0);
-            Button(m, 110, 319, 50, 22, ">", () => OpenLedger(selection, pg + 1), null, (page + 1) * 14 < all.Length);
-            Button(m, 455, 319, 140, 22, "BACK", CloseModal);
+            int pg = page; Button(m, 50, 316, 50, 28, "<", () => OpenLedger((pg - 1) * pageSize, pg - 1), null, page > 0, 1.1f);
+            Button(m, 110, 316, 50, 28, ">", () => OpenLedger((pg + 1) * pageSize, pg + 1), null, (page + 1) * pageSize < all.Length, 1.1f);
+            Label(m, 174, 323, 160, (page + 1) + " / " + ((all.Length + pageSize - 1) / pageSize), 1.05f, White, 1);
+            Button(m, 455, 316, 140, 28, "BACK", CloseModal, captionScale: 1.05f);
         }
         void ShowEnding(bool victory, bool afterPoem = false)
         {

@@ -28,7 +28,11 @@ namespace Sleigh
             float dt = Time.unscaledDeltaTime;
             if (ScreenName == "Map" && mapContent)
             {
-                if (!Input.GetMouseButton(0) && Time.unscaledTime - lastMapDrag > .03f) { mapTarget = Mathf.Clamp(mapTarget + mapFling * dt, 0, 1676); mapFling *= Mathf.Exp(-8 * dt); }
+                if (!Input.GetMouseButton(0) && Time.unscaledTime - lastMapDrag > .03f)
+                {
+                    mapTarget = Mathf.Clamp(mapTarget + mapFling * dt, 0, 1676);
+                    mapFling = mapTarget <= 0 || mapTarget >= 1676 ? 0 : mapFling * Mathf.Exp(-8 * dt);
+                }
                 mapScroll = Mathf.Lerp(mapScroll, mapTarget, 1 - Mathf.Exp(-10 * dt)); mapContent.anchoredPosition = new Vector2(-Mathf.Round(mapScroll), 0);
             }
             if (ScreenName == "Rest" || ScreenName == "Treasure" || ScreenName == "Victory")
@@ -62,7 +66,9 @@ namespace Sleigh
         void TickHand(float dt)
         {
             int count = handOrder.Count; float spacing = Mathf.Min(58, 420f / Mathf.Max(1, count)), mid = (count - 1) * .5f;
-            int hover = selectedGift != null || busy || modal ? -1 : handOrder.FindIndex(v => v.gift.Uid == hoveredCard);
+            int hover = -1;
+            if (selectedGift == null && !busy && !modal)
+                for (int i = 0; i < count; i++) if (handOrder[i].gift.Uid == hoveredCard) { hover = i; break; }
             float k = 1 - Mathf.Exp(-14 * dt);
             for (int i = 0; i < count; i++)
             {
@@ -78,7 +84,9 @@ namespace Sleigh
                 }
                 v.root.anchoredPosition = new Vector2(v.x, -v.y); v.root.localScale = Vector3.one * v.scale; v.root.localRotation = Quaternion.Euler(0, 0, v.rotation);
                 var body = v.root.GetComponent<Image>(); bool affordable = !v.gift.Def.flags.Contains("u") && v.gift.Cost <= (usingVisualNumbers ? viewEnergy : battle.Energy);
-                if (body) body.color = affordable || busy ? Color.white : Hex(0x888899);
+                var tint = affordable || busy ? Color.white : Hex(0x888899);
+                if (body) body.color = tint;
+                if (v.illustration) v.illustration.color = tint;
             }
             if (hover >= 0) handOrder[hover].root.SetAsLastSibling();
             if (selectedGift != null && handViews.TryGetValue(selectedGift.Uid, out var selected)) selected.root.SetAsLastSibling();
@@ -151,9 +159,9 @@ namespace Sleigh
         {
             Vector2 origin = rect.anchoredPosition; Vector3 size = rect.localScale; cg.alpha = 0;
             if (delay > 0) yield return Wait(delay);
-            yield return Tween(.35f, p => { cg.alpha = p; rect.anchoredPosition = origin + Vector2.down * 8 * (1 - EaseOut(p)); if (scale) rect.localScale = size * Mathf.Lerp(.92f, 1, BackOut(p)); });
+            yield return Tween(.35f, p => { cg.alpha = p; rect.anchoredPosition = origin + (reduceMotion ? Vector2.zero : Vector2.down * 8 * (1 - EaseOut(p))); if (scale) rect.localScale = reduceMotion ? size : size * Mathf.Lerp(.92f, 1, BackOut(p)); });
         }
         void DragMap(float delta)
-        { MoveMap(delta); mapFling = delta / Mathf.Max(.01f, Time.unscaledDeltaTime); lastMapDrag = Time.unscaledTime; }
+        { MoveMap(delta); mapFling = Mathf.Clamp(delta / Mathf.Max(.01f, Time.unscaledDeltaTime), -1200, 1200); lastMapDrag = Time.unscaledTime; }
     }
 }

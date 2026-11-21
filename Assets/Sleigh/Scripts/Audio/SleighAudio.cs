@@ -20,6 +20,7 @@ namespace Sleigh
         string song;
         int channel = -1, voice;
         float duck = 1, duckTarget = 1;
+        float appliedMusicA = float.NaN, appliedMusicB = float.NaN, appliedEffects = float.NaN;
         public string CurrentSong => song;
         public int RuntimeGeneratedClipCount => 0;
         void Awake()
@@ -60,8 +61,17 @@ namespace Sleigh
         {
             if (musicSources == null || musicSources.Length != 4) return;
             float volume = mute ? 0 : master;
-            for (int i = 0; i < musicSources.Length; i++) if (musicSources[i]) musicSources[i].volume = gains[i / 2] * musicVolume * volume * duck;
-            if (effectVoices != null) foreach (var source in effectVoices) if (source) source.volume = volume * effectsVolume;
+            float musicA = gains[0] * musicVolume * volume * duck, musicB = gains[1] * musicVolume * volume * duck, effectsLevel = volume * effectsVolume;
+            if (musicA != appliedMusicA || musicB != appliedMusicB)
+            {
+                for (int i = 0; i < musicSources.Length; i++) if (musicSources[i]) musicSources[i].volume = i < 2 ? musicA : musicB;
+                appliedMusicA = musicA; appliedMusicB = musicB;
+            }
+            if (effectsLevel != appliedEffects)
+            {
+                if (effectVoices != null) foreach (var source in effectVoices) if (source) source.volume = effectsLevel;
+                appliedEffects = effectsLevel;
+            }
         }
         void Update()
         {
@@ -72,7 +82,9 @@ namespace Sleigh
                 if (scheduled[i] && to[i] == 0 && gains[i] <= 0 && musicSources != null && musicSources.Length == 4)
                 { musicSources[i * 2].Stop(); musicSources[i * 2 + 1].Stop(); scheduled[i] = false; }
             }
-            duck = Mathf.Lerp(duck, duckTarget, 1 - Mathf.Exp(-10 * dt)); SetVolumes();
+            duck = Mathf.Lerp(duck, duckTarget, 1 - Mathf.Exp(-10 * dt));
+            if (Mathf.Abs(duck - duckTarget) < .001f) duck = duckTarget;
+            SetVolumes();
         }
         void Fade(int group, float target, float seconds)
         { from[group] = gains[group]; to[group] = target; fadeTime[group] = 0; fadeDuration[group] = seconds; }

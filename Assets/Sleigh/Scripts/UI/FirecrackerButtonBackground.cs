@@ -9,7 +9,7 @@ namespace Sleigh
     public sealed class FirecrackerButtonBackground : MaskableGraphic
     {
         float highlight;
-        bool hovered;
+        bool hovered, pressed;
         RectTransform buttonRoot;
         Vector3 restingScale;
 
@@ -29,7 +29,7 @@ namespace Sleigh
 
         public void ResetInteraction()
         {
-            hovered = false; highlight = 0;
+            hovered = pressed = false; highlight = 0;
             if (buttonRoot) buttonRoot.localScale = restingScale;
             SetVerticesDirty();
         }
@@ -39,14 +39,20 @@ namespace Sleigh
             hovered = value;
         }
 
+        public void SetPressed(bool value)
+        {
+            pressed = value;
+            if (buttonRoot) buttonRoot.localScale = restingScale * (GameRoot.Instance && GameRoot.Instance.ReduceMotion ? 1 : pressed ? .97f : 1 + highlight * .04f);
+        }
+
         void Update()
         {
             bool reduced = GameRoot.Instance && GameRoot.Instance.ReduceMotion;
-            float target = hovered ? 1 : 0;
+            float target = hovered || pressed ? 1 : 0;
             float value = reduced ? target : Mathf.MoveTowards(highlight, target, Time.unscaledDeltaTime * 9);
+            if (buttonRoot) buttonRoot.localScale = restingScale * (reduced ? 1 : pressed ? .97f : 1 + value * .04f);
             if (Mathf.Abs(value - highlight) < .001f) return;
             highlight = value;
-            if (buttonRoot) buttonRoot.localScale = restingScale * (1 + highlight * .06f);
             SetVerticesDirty();
         }
 

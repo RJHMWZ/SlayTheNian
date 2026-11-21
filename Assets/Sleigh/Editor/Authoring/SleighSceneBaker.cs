@@ -14,7 +14,7 @@ namespace Sleigh.Editor
 {
     public static class SleighSceneBaker
     {
-        public const int Version = 5;
+        public const int Version = 8;
         const string Prefabs = "Assets/Sleigh/Resources/Sleigh/Prefabs";
         const string Materials = "Assets/Sleigh/Materials";
         static RectTransform Raw(Transform parent, string name, float w = 640, float h = 360)
@@ -35,8 +35,6 @@ namespace Sleigh.Editor
                 if (scene.isDirty) throw new InvalidOperationException("The current unrelated scene has unsaved changes. Bake in SleighTheSpire scene.");
                 scene = File.Exists(scenePath) ? EditorSceneManager.OpenScene(scenePath) : EditorSceneManager.NewScene(NewSceneSetup.EmptyScene);
             }
-            if (File.Exists(scenePath))
-            { Directory.CreateDirectory("Temp/Sleigh"); File.Copy(scenePath, "Temp/Sleigh/BeforePresentationBake.unity", true); }
             foreach (var previous in scene.GetRootGameObjects().Where(o => o.GetComponent<GameRoot>()).ToArray()) Undo.DestroyObjectImmediate(previous);
             var rootObject = new GameObject("GameRoot"); Undo.RegisterCreatedObjectUndo(rootObject, "Bake Sleigh presentation");
             var root = rootObject.AddComponent<GameRoot>(); var stage = rootObject.AddComponent<SleighStage>();
@@ -95,7 +93,7 @@ namespace Sleigh.Editor
         static void BuildReusablePrefabs()
         {
             var card = new GameObject("GiftView", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image)); var r = card.GetComponent<RectTransform>(); r.sizeDelta = new Vector2(66, 88); r.pivot = new Vector2(0, 1);
-            var image = card.GetComponent<Image>(); image.sprite = DB.Sprite("Gift", "sock"); image.raycastTarget = false;
+            var image = card.GetComponent<Image>(); image.sprite = DB.Sprite("CardFrame", "atk"); image.raycastTarget = false;
             PrefabUtility.SaveAsPrefabAsset(card, Prefabs + "/GiftView.prefab"); UnityEngine.Object.DestroyImmediate(card);
             var actor = new GameObject("ActorView", typeof(RectTransform)); actor.GetComponent<RectTransform>().sizeDelta = Vector2.one;
             Sprite(actor.transform, "Enemy", "gingerling", 0, 0); Sprite(actor.transform, "HeartEye", "Animation 1", -8, -60); Sprite(actor.transform, "HeartEye", "Animation 1", 8, -60);

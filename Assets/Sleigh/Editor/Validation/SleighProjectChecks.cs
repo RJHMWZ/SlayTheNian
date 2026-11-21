@@ -131,6 +131,7 @@ namespace Sleigh.Editor
                 SleighFestivalChecks.Verify();
                 SleighViewportChecks.Check();
                 SleighTransitionChecks.Check();
+                SleighPolishChecks.Verify();
                 string output = Path.GetFullPath(Path.Combine(Application.dataPath, "../Logs"));
                 Directory.CreateDirectory(output);
                 File.WriteAllText(Path.Combine(output, "ProjectValidationResult.txt"), "PASS: integrity, material ownership, rules, theme, presentation, viewport and transitions.");

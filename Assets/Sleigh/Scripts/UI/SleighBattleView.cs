@@ -15,6 +15,7 @@ namespace Sleigh
         bool powerAim;
         int potionAim = -1;
         RectTransform dragGhost, handRoot, battleControls;
+        int dragPointer = int.MinValue;
         PixelLabel orbNumber, drawNumber, discardNumber, consumedNumber, comboNumber;
         Image powerFill;
         Image assistingGuest;
@@ -31,9 +32,10 @@ namespace Sleigh
         int viewHp, viewMaxHp, viewEnergy, viewPower, viewCookies, viewSpirit, viewDraw, viewDiscard, viewConsumed;
 
         sealed class HandVisual
-        { public Gift gift; public RectTransform root; public float x, y, rotation, scale = 1; public bool drawing; }
+        { public Gift gift; public RectTransform root; public Image illustration; public float x, y, rotation, scale = 1; public bool drawing; }
         sealed class ActorVisual
         {
+            static readonly int FlashProperty = Shader.PropertyToID("_Flash");
             public Unit unit, frame; public RectTransform root, hud; public Image art, ghostFill, healthFill, previewFill;
             public Image[] hearts, pips, pipPreview; public PixelLabel hpLabel, intentLabel;
             public float x, y = 226, offsetX, offsetY, sx = 1, sy = 1, alpha = 1, flash, ghost, ghostDelay;
@@ -45,19 +47,23 @@ namespace Sleigh
             {
                 if (!root || hidden || !art) return;
                 float dt = Time.unscaledDeltaTime, breath = reduced ? 0 : Mathf.Sin(Time.unscaledTime * 2.2f + x) * .018f;
-                root.anchoredPosition = new Vector2(Mathf.Round(x + offsetX), -Mathf.Round(y + offsetY));
-                root.localScale = new Vector3(sx * (1 - breath * .5f), sy * (1 + breath), 1);
+                root.anchoredPosition = new Vector2(Mathf.Round(x + (reduced ? 0 : offsetX)), -Mathf.Round(y + (reduced ? 0 : offsetY)));
+                root.localScale = reduced ? Vector3.one : new Vector3(sx * (1 - breath * .5f), sy * (1 + breath), 1);
                 art.color = new Color(1, 1, 1, alpha);
-                if (art.material && art.material.shader.name == "Sleigh/UI Pixel Flash" && lastFlash != flash)
-                { art.material.SetFloat("_Flash", flash); lastFlash = flash; }
+                float visibleFlash = reduced ? 0 : flash;
+                if (lastFlash != visibleFlash)
+                {
+                    if (art.material && art.material.HasProperty(FlashProperty)) art.material.SetFloat(FlashProperty, visibleFlash);
+                    lastFlash = visibleFlash;
+                }
                 if (frame != null && ghostFill)
                 {
                     if (ghost > frame.Hp) { ghostDelay += dt; if (ghostDelay > .35f) ghost = Mathf.Max(frame.Hp, ghost - dt * frame.MaxHp * .9f); }
                     else { ghost = frame.Hp; ghostDelay = 0; }
                     ghostFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(56 * Mathf.Max(0, ghost) / frame.MaxHp), 5);
                 }
-                if (intentLabel && !reduced)
-                    intentLabel.rectTransform.localScale = Vector3.one * (1 + (frame != null && frame.Soft ? .03f : .015f) * Mathf.Sin(Time.unscaledTime * 3 + x));
+                if (intentLabel)
+                    intentLabel.rectTransform.localScale = Vector3.one * (reduced ? 1 : 1 + (frame != null && frame.Soft ? .03f : .015f) * Mathf.Sin(Time.unscaledTime * 3 + x));
             }
         }
         Unit Display(Unit u) => displayedUnits.TryGetValue(u, out var f) ? f : u;
@@ -72,7 +78,7 @@ namespace Sleigh
             AddActor(battle.Player);
             foreach (var e in battle.Units) { var a = AddActor(e); if (!reduceMotion) a.sx = a.sy = .01f; }
             RefreshBattleUI();
-            if (Application.isPlaying) { var a = actors[battle.Player]; a.x = -40; StartCoroutine(Tween(.5f, p => a.x = Mathf.Lerp(-40, 150, EaseOut(p)))); PlayBattleCues(); }
+            if (Application.isPlaying) { var a = actors[battle.Player]; if (!reduceMotion) { a.x = -40; StartCoroutine(Tween(.5f, p => a.x = Mathf.Lerp(-40, 150, EaseOut(p)))); } PlayBattleCues(); }
         }
         ActorVisual AddActor(Unit model)
         {
@@ -207,7 +213,7 @@ namespace Sleigh
                 var move = !string.IsNullOrEmpty(u.Move) ? u.Def.Move(u.Move) : null;
                 string icon = u.Soft || u.Charmed ? "heart" : move != null && move.actions.Any(ac => ac.op == "atk") ? "intent_attack" : move != null && move.actions.Any(ac => ac.op == "flee") ? "intent_escape" : move != null && move.actions.Any(ac => ac.op == "def") ? "intent_defend" : "intent_buff";
                 Sprite(p, "Icon", icon, 0, intentY - 5); string intent = DisplayIntent(u);
-                a.intentLabel = Label(p, -66, intentY + 3, 132, intent, .65f, u.Charmed || u.Soft ? Pink : Gold, 1, true);
+                a.intentLabel = Label(p, -66, intentY + 3, 132, intent, .8f, u.Charmed || u.Soft ? Pink : Gold, 1, true);
                 var model = a.unit;
                 var hot = Hot(p, -Mathf.Max(30, a.Width / 2), -a.Height - 6, Mathf.Max(60, a.Width), a.Height + 23, () => ClickUnit(model), () => { hoveredUnit = model; }, () => { if (hoveredUnit == model) hoveredUnit = null; });
                 var entry = Ledger.Get(u.Id);
@@ -227,20 +233,24 @@ namespace Sleigh
             if (handViews.TryGetValue(gift.Uid, out var old)) return old;
             int i = handViews.Count; float x = 326 + (i - (presentedHand.Count - 1) * .5f) * Mathf.Min(58, 420f / Mathf.Max(1, presentedHand.Count));
             var r = Card(handRoot, gift, x - 33, 274, 1, battle); r.pivot = new Vector2(.5f, .5f);
-            var v = new HandVisual { gift = gift, root = r, x = drawing ? 30 : x, y = drawing ? 336 : 318, scale = drawing ? .15f : 1, drawing = drawing };
+            var picture = r.Find("Festival card illustration");
+            var v = new HandVisual { gift = gift, root = r, illustration = picture ? picture.GetComponent<Image>() : null, x = drawing ? 30 : x, y = drawing ? 336 : 318, scale = drawing ? .15f : 1, drawing = drawing };
             r.anchoredPosition = new Vector2(v.x, -v.y); r.localScale = Vector3.one * v.scale;
             var hot = Hot(r, 0, 0, 66, 88, () => SelectGift(battle.Hand.Find(g => g.Uid == gift.Uid) ?? gift));
             hot.enter = () => { if (busy) return; hoveredCard = gift.Uid; ShowTip(gift.Name + "\n\n" + GiftTip(gift, battle)); sound.Play("cardHover", Mathf.Max(0, presentedHand.FindIndex(g => g.Uid == gift.Uid))); };
             hot.exit = () => { if (hoveredCard == gift.Uid) hoveredCard = int.MinValue; HideTip(); };
             hot.beginDrag = e =>
             {
-                var g = battle.Hand.Find(c => c.Uid == gift.Uid); if (busy || g == null || !battle.Playable(g)) return;
+                var g = battle.Hand.Find(c => c.Uid == gift.Uid); if (busy || modal || dragGhost || g == null || !battle.Playable(g)) return;
                 selectedGift = g; powerAim = false; potionAim = -1; HideTip(); sound.Play("pick");
-                var p = LocalPointer(e.position); dragGhost = Card(fx, g, p.x - 33, p.y - 44); var cg = PixelUI.Ensure<CanvasGroup>(dragGhost); cg.alpha = .92f;
+                dragPointer = e.pointerId;
+                var p = LocalPointer(e.position); dragGhost = Card(fx, g, p.x - 33, p.y - 44); var cg = PixelUI.Ensure<CanvasGroup>(dragGhost); cg.alpha = .92f; cg.blocksRaycasts = false;
             };
-            hot.drag = e => { if (dragGhost) { var p = LocalPointer(e.position); dragGhost.anchoredPosition = new Vector2(p.x - 33, -p.y + 44); } };
+            hot.drag = e => { if (dragGhost && e.pointerId == dragPointer && selectedGift?.Uid == gift.Uid) { var p = LocalPointer(e.position); dragGhost.anchoredPosition = new Vector2(p.x - 33, -p.y + 44); } };
             hot.endDrag = e =>
             {
+                if (e.pointerId != dragPointer || selectedGift?.Uid != gift.Uid) return;
+                dragPointer = int.MinValue;
                 if (dragGhost) { Release(dragGhost); dragGhost = null; }
                 if (busy || selectedGift == null || selectedGift.Uid != gift.Uid) return;
                 var p = LocalPointer(e.position); var target = TargetAt(p);
@@ -250,16 +260,38 @@ namespace Sleigh
         }
         void SelectGift(Gift gift)
         {
+            if (dragGhost) return;
             if (gift == null || busy || modal || !battle.Playable(gift)) { sound.Play("error"); if (!busy) Toast("Not enough Cheer, or this gift is ungiftable.", Red); return; }
             if (gift.Def.target != "e") { PlayGift(gift, null); return; }
             selectedGift = selectedGift == gift ? null : gift; powerAim = false; potionAim = -1; sound.Play("pick");
             if (selectedGift != null) ShowTip(gift.Name + "\n\n" + GiftTip(gift, battle));
+            else HideTip();
         }
         Unit TargetAt(Vector2 point)
-        { return battle.Foes().Where(u => !u.Pending).LastOrDefault(u => actors.TryGetValue(u, out var a) && Mathf.Abs(point.x - a.x) < Mathf.Max(32, a.Width / 2) && point.y >= 220 - a.Height && point.y <= 253); }
+        {
+            if (battle == null) return null;
+            // Same frontmost-foe ordering, without allocating a list and LINQ closures every frame.
+            for (int i = battle.Units.Count - 1; i >= 0; i--)
+            {
+                var u = battle.Units[i];
+                if (u.Dead || u.Charmed || u.Pending || !actors.TryGetValue(u, out var a)) continue;
+                if (Mathf.Abs(point.x - a.x) < Mathf.Max(32, a.Width / 2) && point.y >= 220 - a.Height && point.y <= 253) return u;
+            }
+            return null;
+        }
+        void ResetPointerInteraction()
+        {
+            if (dragGhost) { Release(dragGhost); dragGhost = null; }
+            dragPointer = int.MinValue;
+            selectedGift = null; powerAim = false; potionAim = -1;
+            hoveredCard = int.MinValue; hoveredUnit = null; previousAim = null; mapFling = 0;
+            HideTip();
+            if (stage && stage.arrowRoot) stage.arrowRoot.gameObject.SetActive(false);
+            if (stage && stage.reactionIcon) stage.reactionIcon.gameObject.SetActive(false);
+        }
         void ClickUnit(Unit target)
         {
-            if (busy || target.Charmed || target.Dead || target.Pending) return;
+            if (busy || dragGhost || target.Charmed || target.Dead || target.Pending) return;
             if (selectedGift != null) { PlayGift(selectedGift, target); return; }
             if (powerAim) { powerAim = false; if (battle.UsePower(target)) PlayBattleCues(); return; }
             if (potionAim >= 0) { int slot = potionAim; potionAim = -1; if (battle.UsePotion(slot, target)) PlayBattleCues(); return; }
@@ -268,7 +300,7 @@ namespace Sleigh
         void PlayGift(Gift gift, Unit target)
         { if (busy) return; HideTip(); if (!battle.Play(gift, target)) { sound.Play("error"); return; } selectedGift = null; hoveredUnit = null; hoveredCard = int.MinValue; PlayBattleCues(); }
         void CancelAim()
-        { if (busy) return; selectedGift = null; powerAim = false; potionAim = -1; HideTip(); sound.Play("whiff"); }
+        { if (busy) return; ResetPointerInteraction(); sound.Play("whiff"); }
         void PressPower()
         {
             if (busy || battle.Ended || !battle.PlayerPhase || battle.Power < 100) { sound.Play("error"); Toast("Still charging...", Muted); return; }
@@ -391,7 +423,8 @@ namespace Sleigh
                 {
                     sound.Play("charm"); stage.Flash(Pink, .25f, .4f); Floating(cue.unit, "WON OVER!", Pink, 1.1f);
                     if (a != null) { Burst(a.x, 226 - a.Height * .6f, Pink, 40, true); if (a.hud) a.hud.gameObject.SetActive(false); float x0 = a.x;
-                        yield return Tween(.6f, p => { a.x = Mathf.Lerp(x0, cue.frame.X, EaseOut(p)); a.offsetY = -Mathf.Sin(p * Mathf.PI) * 15; }); a.offsetY = 0; ConfigureHearts(a); BuildUnitHud(a); }
+                        if (reduceMotion) a.x = cue.frame.X;
+                        else yield return Tween(.6f, p => { a.x = Mathf.Lerp(x0, cue.frame.X, EaseOut(p)); a.offsetY = -Mathf.Sin(p * Mathf.PI) * 15; }); a.offsetY = 0; ConfigureHearts(a); BuildUnitHud(a); }
                     continue;
                 }
                 if (cue.kind == "transform")
@@ -475,8 +508,8 @@ namespace Sleigh
         {
             var r = stage.bannerRoot; r.gameObject.SetActive(true); stage.bannerTitle.Set(title); stage.bannerTitle.color = tint; stage.bannerSubtitle.Set(subtitle);
             var cg = r.GetComponent<CanvasGroup>(); Vector2 home = new Vector2(100, -100);
-            yield return Tween(.18f, p => { cg.alpha = p; r.anchoredPosition = home + Vector2.right * 60 * (1 - EaseOut(p)); r.localScale = Vector3.one * Mathf.Lerp(.92f, 1, BackOut(p)); });
-            yield return Wait(hold); yield return Tween(.15f, p => { cg.alpha = 1 - p; r.anchoredPosition = home + Vector2.left * p * 40; }); r.gameObject.SetActive(false);
+            yield return Tween(.18f, p => { cg.alpha = p; r.anchoredPosition = home + (reduceMotion ? Vector2.zero : Vector2.right * 60 * (1 - EaseOut(p))); r.localScale = reduceMotion ? Vector3.one : Vector3.one * Mathf.Lerp(.92f, 1, BackOut(p)); });
+            yield return Wait(hold); yield return Tween(.15f, p => { cg.alpha = 1 - p; r.anchoredPosition = home + (reduceMotion ? Vector2.zero : Vector2.left * p * 40); }); r.gameObject.SetActive(false);
         }
         IEnumerator Say(ActorVisual actor, string text)
         {
@@ -484,7 +517,12 @@ namespace Sleigh
             var r = stage.bubbleRoot; r.gameObject.SetActive(true); stage.bubbleText.Set(""); var cg = r.GetComponent<CanvasGroup>(); cg.alpha = 1;
             r.anchoredPosition = new Vector2(Mathf.Clamp((actor?.x ?? 320) - 135, 5, 365), -Mathf.Clamp(226 - (actor?.Height ?? 80) - 80, 46, 170));
             float characters = 0; while (characters < text.Length)
-            { characters += Time.unscaledDeltaTime * (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space) ? 800 : 58); stage.bubbleText.Set(text.Substring(0, Mathf.Min(text.Length, (int)characters))); sound.Play("type"); yield return null; }
+            {
+                characters += Time.unscaledDeltaTime * (reduceMotion || Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space) ? 800 : 58);
+                int count = Mathf.Min(text.Length, (int)characters);
+                if (count != stage.bubbleText.text.Length) { stage.bubbleText.Set(text.Substring(0, count)); sound.Play("type"); }
+                yield return null;
+            }
             stage.bubbleText.Set(text); yield return Wait(.6f); r.gameObject.SetActive(false);
         }
         static float EaseOut(float p) => 1 - Mathf.Pow(1 - p, 3);

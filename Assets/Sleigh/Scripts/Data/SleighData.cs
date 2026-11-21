@@ -78,12 +78,13 @@ namespace Sleigh
         {
             var f = Frame(type, anim, frame); if (f == null) return null;
             string key = f.sourceWidth > 0 ? f.path + ":" + f.x + ":" + f.y + ":" + f.sourceWidth + ":" + f.sourceHeight : f.path;
-            if (!sprites.TryGetValue(key, out var s))
+            // Scene reloads / atlas reimports can destroy native objects while managed cache keys remain.
+            if (!sprites.TryGetValue(key, out var s) || !s)
             {
                 s = f.sourceWidth > 0 ? null : Resources.Load<Sprite>(f.path);
                 if (s == null)
                 {
-                    if (!textures.TryGetValue(f.path, out var tex))
+                    if (!textures.TryGetValue(f.path, out var tex) || !tex)
                     {
                         tex = Resources.Load<Texture2D>(f.path);
                         if (!tex) return null;

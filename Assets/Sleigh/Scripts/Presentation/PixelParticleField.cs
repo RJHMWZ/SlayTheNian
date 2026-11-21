@@ -17,10 +17,12 @@ namespace Sleigh
         public void Burst(Vector2 origin, int count, Color tint, float speed = 110, float gravity = 180, float life = .65f, bool up = false, bool floor = true)
         {
             if (reduced) return;
+            count = Mathf.Clamp(count, 0, dots.Length);
             for (int i = 0; i < count; i++)
             {
                 float angle = up ? Random.Range(-2.6f, -.5f) : Random.Range(-Mathf.PI, Mathf.PI);
                 float velocity = Random.Range(speed * .35f, speed);
+                if (!dots[cursor].active) ActiveCount++;
                 dots[cursor] = new Dot { active = true, position = origin, velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * velocity,
                     life = life * Random.Range(.7f, 1.25f), size = Random.value < .25f ? 3 : 2, gravity = gravity, floor = floor ? 232 : 10000, tint = Random.value < .25f ? PixelUI.White : tint };
                 cursor = (cursor + 1) % dots.Length;
@@ -33,7 +35,9 @@ namespace Sleigh
         }
         void Update()
         {
-            float dt = Time.unscaledDeltaTime; int active = 0;
+            if (ActiveCount == 0) return;
+            if (reduced) { ClearParticles(); return; }
+            float dt = Mathf.Min(Time.unscaledDeltaTime, .05f); int active = 0;
             for (int i = 0; i < dots.Length; i++)
             {
                 if (!dots[i].active) continue;
@@ -48,6 +52,7 @@ namespace Sleigh
         protected override void OnPopulateMesh(VertexHelper vh)
         {
             vh.Clear();
+            if (ActiveCount == 0) return;
             for (int i = 0; i < dots.Length; i++)
             {
                 var p = dots[i]; if (!p.active) continue;

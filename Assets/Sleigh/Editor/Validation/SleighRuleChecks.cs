@@ -58,8 +58,20 @@ namespace Sleigh.Editor
                 DB.Load(); Require(DB.All.gifts.Count(x => x.type != "friend") == 47, "47 base gifts");
                 Require(DB.All.gifts.Count(x => x.type == "friend") == 24, "24 dynamically derived friends");
                 Require(DB.All.enemies.Length == 28 && DB.All.relics.Length == 32 && DB.All.potions.Length == 20 && DB.All.events.Length == 26 && DB.All.parts.Length == 10, "source catalogs");
-                Require(DB.Art.Values.Sum(x => x.Length) == 287, "festival HUD replacements and retained game frames");
-                foreach (var f in DB.Art.Values.SelectMany(x => x)) Require(DB.Sprite(f.type, f.anim, f.frame) != null, "sprite " + f.path);
+                foreach (string category in new[] { "atk", "skl", "pow", "curse", "friend" })
+                    Require(DB.Sprite("CardFrame", category), "Spring Festival card frame " + category);
+                foreach (var enemy in DB.All.enemies) Require(DB.Sprite("Enemy", enemy.id), "Spring Festival enemy " + enemy.id);
+                foreach (var gift in DB.All.gifts)
+                    Require(DB.Sprite("Gift", gift.type == "friend" ? gift.enemy : gift.id), "Spring Festival gift " + gift.id);
+                foreach (var f in DB.Art.Values.SelectMany(x => x))
+                {
+                    var sprite = DB.Sprite(f.type, f.anim, f.frame);
+                    Require(sprite, "sprite " + f.path);
+                    Require(!f.path.Contains("Gift__") && !f.path.Contains("Enemy__"), "no legacy Christmas sprite path " + f.path);
+                    if (f.sourceWidth > 0)
+                        Require(f.x >= 0 && f.y >= 0 && f.x + f.sourceWidth <= sprite.texture.width && f.y + f.sourceHeight <= sprite.texture.height,
+                            "atlas region inside texture: " + f.type + "/" + f.anim);
+                }
                 foreach (string character in new[] { "mrs", "tinsel", "rudolph" })
                 {
                     var r = Run.New(character, 0, 49); Require(r.hp == DB.CharacterHP(character), character + " HP");

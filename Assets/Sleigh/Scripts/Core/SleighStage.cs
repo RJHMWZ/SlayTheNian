@@ -16,6 +16,10 @@ namespace Sleigh
         public Image flashOverlay, transitionOverlay;
         public PixelIrisTransition irisTransition;
         [SerializeField, Min(.05f)] float irisCloseSeconds = .38f, irisOpenSeconds = .46f;
+        [SerializeField, Range(0, 1), Tooltip("Screen shake strength. Set to 1 to restore the original presentation.")]
+        float screenShakeIntensity = .75f;
+        [SerializeField, Range(0, 1), Tooltip("Full-screen flash strength. Set to 1 to restore the original presentation.")]
+        float screenFlashIntensity = .8f;
         enum IrisPhase { Idle, Closing, Covered, Opening }
         IrisPhase irisPhase;
         Action navigateAtCover;
@@ -45,8 +49,8 @@ namespace Sleigh
             return selected;
         }
         public void Flash(Color color, float alpha = .2f, float seconds = .2f)
-        { flashColor = color; flashAlpha = alpha; flashFade = alpha / Mathf.Max(.01f, seconds); }
-        public void Impact(float strength, float zoom = .025f) { shake = Mathf.Max(shake, strength); punch = Mathf.Max(punch, zoom); }
+        { flashColor = color; flashAlpha = Mathf.Clamp01(alpha) * screenFlashIntensity; flashFade = flashAlpha / Mathf.Max(.01f, seconds); }
+        public void Impact(float strength, float zoom = .025f) { shake = Mathf.Max(shake, strength * screenShakeIntensity); punch = Mathf.Max(punch, zoom * screenShakeIntensity); }
         public void Transition() { if (Application.isPlaying && !IsTransitioning) transitionAlpha = .85f; }
 
         public bool Navigate(Action next)
