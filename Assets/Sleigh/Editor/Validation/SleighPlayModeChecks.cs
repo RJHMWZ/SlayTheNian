@@ -35,6 +35,7 @@ namespace Sleigh.Editor
             EditorSceneManager.OpenScene(SleighProjectSetup.ScenePath);
             SessionState.SetBool(Active, true); SessionState.SetBool("Sleigh.Smoke.Reloaded", false); SessionState.SetInt(Step, 0);
             SessionState.SetFloat(Stamp, (float)EditorApplication.timeSinceStartup);
+            SessionState.SetInt("Sleigh.Smoke.EffectCard", 0); SessionState.SetBool("Sleigh.Smoke.SawBattleEffect", false);
             Register(); EditorApplication.EnterPlaymode();
         }
         static void Log(string message, string stack, LogType type)
@@ -91,6 +92,8 @@ namespace Sleigh.Editor
             {
                 double elapsed = EditorApplication.timeSinceStartup - SessionState.GetFloat(Stamp, 0);
                 int step = SessionState.GetInt(Step, 0); var root = GameRoot.Instance;
+                if (root && root.Stage.battleEffects && root.Stage.battleEffects.ActiveCount > 0)
+                    SessionState.SetBool("Sleigh.Smoke.SawBattleEffect", true);
                 if (elapsed > 35) throw new Exception("Timeout step " + step + ", root=" + root + ", screen=" + root?.ScreenName + ", enabled=" + root?.enabled);
                 if (elapsed < 1 || !root || root.Stage.IsTransitioning) return;
                 switch (step)
@@ -129,11 +132,29 @@ namespace Sleigh.Editor
                         if (root.ScreenName != "Combat" || (bool)root.GetType().GetField("busy", Private).GetValue(root)) return;
                         VerifyFestivalBackground(root, "FestivalBattleBackground");
                         SleighPolishChecks.VerifyCombatInput(root);
-                        Click(Button(root, "END TURN")); Advance("end turn click"); break;
+                        foreach (var foe in root.battle.Foes()) foe.Hp = foe.MaxHp = 400;
+                        root.battle.Player.Hp = Mathf.Max(1, root.battle.Player.MaxHp - 12);
+                        Advance("combat input checked; testing card effects"); break;
                     case 6:
+                        if ((bool)root.GetType().GetField("busy", Private).GetValue(root)) return;
+                        string[] effectCards = { "sock", "mitten", "icicle", "bellslam", "fireplace", "checktwice", "spiked", "baubles", "sledsweep", "f_gingerling" };
+                        int effectIndex = SessionState.GetInt("Sleigh.Smoke.EffectCard", 0);
+                        if (effectIndex < effectCards.Length)
+                        {
+                            var gift = root.battle.AddToHand(effectCards[effectIndex], true);
+                            if (!root.battle.Play(gift, root.battle.Foes().First())) throw new Exception("Effect fixture card could not be played: " + gift.Id);
+                            Call(root, "PlayBattleCues");
+                            SessionState.SetInt("Sleigh.Smoke.EffectCard", effectIndex + 1);
+                            SessionState.SetFloat(Stamp, (float)EditorApplication.timeSinceStartup);
+                            Debug.Log("PLAY_SMOKE effect card: " + gift.Id); return;
+                        }
+                        if (!SessionState.GetBool("Sleigh.Smoke.SawBattleEffect", false)) throw new Exception("Card resolution did not display any festival effect.");
+                        if (!root.Stage.battleEffects || root.Stage.battleEffects.raycastTarget) throw new Exception("Battle effects missing or intercepting input.");
+                        Click(Button(root, "END TURN")); Advance("card effects resolved; end turn click"); break;
+                    case 7:
                         if (root.battle.Turn < 2 || (bool)root.GetType().GetField("busy", Private).GetValue(root)) return;
                         root.StartBattle(new[] { "santa" }, "boss"); Advance("boss battle"); break;
-                    case 7:
+                    case 8:
                         if (root.ScreenName == "Combat" && root.battle.Kind == "boss")
                         {
                             VerifyFestivalBackground(root, "FestivalBattleBackground");

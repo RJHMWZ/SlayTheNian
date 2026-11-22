@@ -13,6 +13,7 @@ namespace Sleigh
         public View[] views;
         public RectTransform[] snowParticles;
         public PixelParticleField particles;
+        public FestivalBattleEffects battleEffects;
         public Image flashOverlay, transitionOverlay;
         public PixelIrisTransition irisTransition;
         [SerializeField, Min(.05f)] float irisCloseSeconds = .38f, irisOpenSeconds = .46f;
@@ -43,6 +44,7 @@ namespace Sleigh
             if (selected == null) throw new InvalidOperationException("Scene has no baked view: " + name);
             if (snowRoot) snowRoot.gameObject.SetActive(false);
             if (particles) particles.ClearParticles(); shake = punch = 0;
+            if (battleEffects) battleEffects.ClearEffects();
             if (arrowRoot) arrowRoot.gameObject.SetActive(false); if (reactionIcon) reactionIcon.gameObject.SetActive(false);
             if (bannerRoot) bannerRoot.gameObject.SetActive(false); if (bubbleRoot) bubbleRoot.gameObject.SetActive(false); if (lowHealthRoot) lowHealthRoot.gameObject.SetActive(false);
             worldLayer.anchoredPosition = new Vector2(320, -180); worldLayer.localScale = Vector3.one;
@@ -105,6 +107,7 @@ namespace Sleigh
             TickIris(dt);
             bool reduced = GameRoot.Instance && GameRoot.Instance.ReduceMotion;
             if (particles) particles.reduced = reduced;
+            if (battleEffects) battleEffects.reduced = reduced;
             flashAlpha = Mathf.Max(0, flashAlpha - dt * flashFade); transitionAlpha = Mathf.Max(0, transitionAlpha - dt * 5);
             if (flashOverlay) flashOverlay.color = new Color(flashColor.r, flashColor.g, flashColor.b, reduced ? 0 : flashAlpha);
             if (transitionOverlay) { transitionOverlay.color = new Color(0, 0, 0, transitionAlpha); transitionOverlay.raycastTarget = transitionAlpha > .12f; }

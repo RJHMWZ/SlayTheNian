@@ -14,7 +14,7 @@ namespace Sleigh.Editor
 {
     public static class SleighSceneBaker
     {
-        public const int Version = 8;
+        public const int Version = 9;
         const string Prefabs = "Assets/Sleigh/Resources/Sleigh/Prefabs";
         const string Materials = "Assets/Sleigh/Materials";
         static RectTransform Raw(Transform parent, string name, float w = 640, float h = 360)
@@ -53,6 +53,8 @@ namespace Sleigh.Editor
             var random = new System.Random(931);
             for (int i = 0; i < stage.snowParticles.Length; i++) stage.snowParticles[i] = Rect(stage.snowRoot, random.Next(640), random.Next(360), i % 5 == 0 ? 2 : 1, i % 5 == 0 ? 2 : 1, Hex(0xf4f8ff, .25f + i % 4 * .15f)).rectTransform;
             var particleObject = Raw(stage.effectLayer, "Pooled Pixel Particles (768)"); stage.particles = particleObject.gameObject.AddComponent<PixelParticleField>(); stage.particles.raycastTarget = false;
+            var battleEffects = Raw(stage.effectLayer, "Pooled Festival Battle Effects (32)");
+            stage.battleEffects = battleEffects.gameObject.AddComponent<FestivalBattleEffects>(); stage.battleEffects.raycastTarget = false;
             stage.flashOverlay = Rect(stage.effectLayer, 0, 0, 640, 360, Color.clear); stage.flashOverlay.name = "Impact flash";
             stage.effectPool = Raw(stage.effectLayer, "Reusable transient visuals"); stage.popupPool = Raw(stage.popupLayer, "Reusable dialogs");
             stage.transitionOverlay = Rect(stage.popupLayer, 0, 0, 640, 360, Color.clear); stage.transitionOverlay.name = "Scene fade";

@@ -353,11 +353,12 @@ namespace Sleigh
             var barrier = Rect(pop, 0, 0, 640, 360, Color.clear, true, "Resolving actions");
             stage.CoverScreen(barrier.rectTransform);
             var cues = battle.Cues.ToArray(); battle.Cues.Clear(); ActorVisual lunging = null; bool enemySequence = false;
+            Gift effectGift = null; var impactStyle = FestivalBattleEffects.Style.Slash; bool attackPending = false;
             for (int index = 0; index < cues.Length; index++)
             {
                 var cue = cues[index]; if (ScreenName != "Combat") break;
                 ApplyCueFrame(cue); actors.TryGetValue(cue.unit ?? battle.Player, out var a);
-                if (cue.kind == "turn") enemySequence = cue.text.StartsWith("ENEMY");
+                if (cue.kind == "turn") { enemySequence = cue.text.StartsWith("ENEMY"); effectGift = null; attackPending = false; }
                 float speed = fastEnemy && enemySequence ? 2.2f : 1;
                 if (cue.kind == "intent") continue;
                 if (cue.kind == "draw")
@@ -371,7 +372,7 @@ namespace Sleigh
                     continue;
                 }
                 if (cue.kind == "shuffle") { sound.Play("shuffle"); Burst(30, 336, Gold, 12); yield return Wait(.22f / speed); continue; }
-                if (cue.kind == "gift") { comboCount++; sound.Play("play", comboCount - 1); if (comboNumber) comboNumber.Set(comboCount >= 2 ? "GIFT COMBO x" + comboCount : ""); yield return FlyPlayedGift(cue); continue; }
+                if (cue.kind == "gift") { effectGift = cue.gift; comboCount++; sound.Play("play", comboCount - 1); if (comboNumber) comboNumber.Set(comboCount >= 2 ? "GIFT COMBO x" + comboCount : ""); yield return FlyPlayedGift(cue); continue; }
                 if (cue.kind == "handDiscard" || cue.kind == "melt") { if (cue.gift != null) yield return DiscardHandVisual(cue.gift, cue.kind == "melt"); continue; }
                 if (cue.kind == "discard" || cue.kind == "addDiscard") { Pulse(discardNumber?.rectTransform); continue; }
                 if (cue.kind == "consume") { Floating(cue.unit, "CONSUMED", Muted, .75f); continue; }
@@ -380,29 +381,51 @@ namespace Sleigh
                 if (cue.kind == "spawn") { if (a != null && !reduceMotion) { yield return Tween(.32f / speed, p => a.sx = a.sy = BackOut(p)); a.sx = a.sy = 1; } continue; }
                 if (cue.kind == "attack")
                 {
+                    impactStyle = cue.frame.IsPlayer && effectGift != null
+                        ? FestivalBattleEffects.ForGift(effectGift.Id, effectGift.Def.type) : FestivalBattleEffects.Style.Slash;
+                    attackPending = true;
                     if (assistingGuest && cue.frame.IsPlayer)
-                    { yield return Tween(.07f / speed, p => { guestKick = 16 * EaseOut(p); assistingGuest.rectTransform.anchoredPosition = new Vector2(guestHomeX + guestKick, -226); }); continue; }
+                    {
+                        yield return Tween(.07f / speed, p => { guestKick = 16 * EaseOut(p); assistingGuest.rectTransform.anchoredPosition = new Vector2(guestHomeX + guestKick, -226); });
+                        FestivalFlight(impactStyle, cue.unit, cue.target); if (!reduceMotion) yield return Wait(.12f); continue;
+                    }
                     float direction = cue.frame.IsPlayer || cue.frame.Charmed ? 1 : -1;
                     if (a != null && !reduceMotion)
                     {
                         if (!cue.frame.IsPlayer) { sound.Play("windup"); yield return Tween(.12f / speed, p => { a.offsetX = -direction * 8 * p; a.sx = 1 - .12f * p; a.sy = 1 + .12f * p; }); }
                         yield return Tween(.08f / speed, p => { a.offsetX = Mathf.Lerp(-direction * 5, direction * (cue.frame.IsPlayer ? 16 : 22), EaseOut(p)); a.sx = 1.15f; a.sy = .9f; });
                     }
+                    FestivalFlight(impactStyle, cue.unit, cue.target);
+                    if (!reduceMotion) yield return Wait(.12f);
                     lunging = a; continue;
                 }
                 if (cue.kind == "hit" || cue.kind == "blocked")
                 {
+                    var hitStyle = cue.kind == "blocked" ? FestivalBattleEffects.Style.Guard : attackPending ? impactStyle : FestivalBattleEffects.Style.Firecracker;
+                    FestivalEffect(hitStyle, cue.unit, .85f + Mathf.Min(25, cue.n) * .02f);
+                    attackPending = false;
                     bool large = cue.n >= 15; sound.Play(cue.kind == "blocked" ? "blockHit" : cue.n > 0 ? "hit" : "whiff", cue.n);
+                    if (cue.kind == "hit" && cue.n > 0)
+                    {
+                        if (hitStyle == FestivalBattleEffects.Style.Firecracker) sound.Play("firecracker");
+                        else if (hitStyle == FestivalBattleEffects.Style.Gong) sound.Play("bell");
+                        else if (hitStyle == FestivalBattleEffects.Style.Frost) sound.Play("clink");
+                    }
                     if (large) sound.Play("crit");
                     Floating(cue.unit, cue.kind == "blocked" ? "BLOCKED" : cue.n.ToString(), cue.frame.IsPlayer ? Red : White, large ? 1.5f : 1);
-                    if (a != null) Burst(a.x, 226 - a.Height * .55f, cue.kind == "blocked" ? Ice : cue.frame.IsPlayer ? Red : White, 8 + Mathf.Min(22, cue.n));
+                    if (a != null)
+                    {
+                        Burst(a.x, 226 - a.Height * .55f, FestivalBattleEffects.Ink(hitStyle), 6 + Mathf.Min(14, cue.n));
+                        // Present contact on this frame, before the impact hold.
+                        if (!reduceMotion && cue.n > 0) { a.flash = 1; a.sx = 1.12f; a.sy = .9f; }
+                    }
                     stage.Impact(cue.kind == "blocked" ? 1.5f : Mathf.Min(9, 1.5f + cue.n * .3f), large ? .05f : .012f);
                     if (large) stage.Flash(White, .18f, .15f); if (cue.frame.IsPlayer && cue.n > 0) stage.Flash(Hex(0xff2020), .22f, .3f);
                     if (!reduceMotion && cue.n > 0) { hitPause = large ? .09f : .035f; yield return Wait(hitPause / speed); hitPause = 0; }
                     if (a != null)
                     {
                         float recoil = (cue.frame.IsPlayer ? -1 : 1) * Mathf.Min(18, 5 + cue.n * .6f), startLunge = lunging?.offsetX ?? 0;
-                        yield return Tween(.2f / speed, p =>
+                        yield return Tween(.16f / speed, p =>
                         { a.flash = (1 - p) * (cue.n > 0 ? 1 : 0); a.offsetX = recoil * (1 - EaseOut(p)); a.sx = 1 + .15f * (1 - p); a.sy = 1 - .12f * (1 - p);
                             if (assistingGuest) assistingGuest.rectTransform.anchoredPosition = new Vector2(guestHomeX + guestKick * (1 - EaseOut(p)), -226);
                             if (lunging != null && lunging != a) { lunging.offsetX = startLunge * (1 - EaseOut(p)); lunging.sx = Mathf.Lerp(1.15f, 1, p); lunging.sy = Mathf.Lerp(.9f, 1, p); } });
@@ -453,6 +476,12 @@ namespace Sleigh
                 if (cue.kind == "move") { Floating(cue.unit, cue.text, cue.frame.Charmed ? Pink : Gold, .9f); yield return Wait(.22f / speed); continue; }
                 if (cue.kind == "wrapBreak") { sound.Play("blockHit"); Floating(cue.unit, cue.text, Ice, .8f); Burst(a?.x ?? 150, 190, Ice, 18); continue; }
                 sound.Play(cue.kind);
+                if (cue.kind == "heal") FestivalEffect(FestivalBattleEffects.Style.Heal, cue.unit ?? battle.Player);
+                else if (cue.kind == "block") FestivalEffect(FestivalBattleEffects.Style.Guard, cue.unit ?? battle.Player);
+                else if (cue.kind == "debuff") FestivalEffect(effectGift != null && FestivalBattleEffects.ForGift(effectGift.Id, effectGift.Def.type) == FestivalBattleEffects.Style.Frost
+                    ? FestivalBattleEffects.Style.Frost : FestivalBattleEffects.Style.Seal, cue.unit);
+                else if (cue.kind == "buff" || cue.kind == "energy" || cue.kind == "love" || cue.kind == "soft")
+                    FestivalEffect(FestivalBattleEffects.Style.Blessing, cue.unit ?? battle.Player);
                 string text = cue.text ?? (cue.kind == "heal" ? "HP" : cue.kind == "block" ? "WRAP" : cue.kind == "energy" ? "CHEER" : "");
                 if (cue.n != 0) text = (cue.n > 0 ? "+" : "") + cue.n + " " + text;
                 Color tint = cue.kind == "heal" ? Green : cue.kind == "block" ? Ice : cue.kind == "debuff" || cue.kind == "hate" || cue.kind == "soft" ? Pink : Gold;
@@ -475,7 +504,12 @@ namespace Sleigh
             var card = Card(fx, gift, start.x - 33, start.y - 44); card.pivot = new Vector2(.5f, .5f); var group = PixelUI.Ensure<CanvasGroup>(card);
             float x = cue.targetFrame != null ? Mathf.Clamp((cue.targetFrame.X + 150) / 2 + 30, 140, 520) : 320, y = cue.targetFrame != null ? 226 - (actors.TryGetValue(cue.target, out var target) ? target.Height : 80) / 2 - 40 : 180;
             yield return Tween(.14f, p => { card.anchoredPosition = new Vector2(Mathf.Lerp(start.x, x, EaseOut(p)), -Mathf.Lerp(start.y, y, EaseOut(p))); card.localScale = Vector3.one * Mathf.Lerp(1, 1.1f, p); });
-            sound.Play("unwrap"); Burst(x, y, GiftColor(gift), 18);
+            sound.Play("unwrap");
+            var style = FestivalBattleEffects.ForGift(gift.Id, gift.Def.type);
+            if (gift.Def.type != "atk" && gift.Def.target != "e" && style != FestivalBattleEffects.Style.Guard
+                && style != FestivalBattleEffects.Style.Heal && style != FestivalBattleEffects.Style.Summon)
+                FestivalEffect(style, battle.Player);
+            Burst(x, y, FestivalBattleEffects.Ink(style), 10);
             yield return Tween(.16f, p => { group.alpha = 1 - p; card.localScale = Vector3.one * Mathf.Lerp(1.1f, 1.25f, p); }); Release(card);
         }
         IEnumerator DiscardHandVisual(Gift gift, bool melt)
@@ -494,6 +528,7 @@ namespace Sleigh
             sound.Play("whoosh"); assistingGuest = Sprite(fx, "Enemy", id, -40, 226, DB.Enemies[id].scale); if (!assistingGuest) yield break;
             assistingGuest.rectTransform.localScale = new Vector3(-1, 1, 1); guestKick = 0;
             guestHomeX = 194 + assistingGuest.rectTransform.sizeDelta.x / 2;
+            FestivalEffect(FestivalBattleEffects.Style.Summon, battle.Player);
             yield return Tween(.3f, p => assistingGuest.rectTransform.anchoredPosition = new Vector2(Mathf.Lerp(-40, guestHomeX, EaseOut(p)), -226));
             Floating(battle.Player, text, Pink, .9f); yield return Wait(.15f);
         }
