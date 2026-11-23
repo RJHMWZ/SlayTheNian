@@ -1,0 +1,17 @@
+import {pathToFileURL} from 'node:url';
+const skill='C:/Users/ivy/.codex/plugins/cache/openai-primary-runtime/presentations/26.1119.11507/skills/presentations';
+const {finalizePresentation}=await import(pathToFileURL(skill+'/container_tools/artifact_tool_utils.mjs'));
+const r=await finalizePresentation({
+ workspaceDir:'D:/workspace/SlayTheNian',
+ candidatePath:'D:/workspace/SlayTheNian/.codex-build/game-intro/designer/candidate.pptx',
+ finalPath:'D:/workspace/SlayTheNian/Deliverables/爆竹驱年_设计者视角.pptx',
+ pythonExecutable:'C:/Users/ivy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe',
+ integrityValidatorPath:skill+'/container_tools/inspect_presentation_package_integrity.py',
+ layoutValidatorPath:skill+'/container_tools/inspect_presentation_layout_geometry.py',
+ layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit'],
+ explicitTotalSlideCount:10,
+ requiredNativeTableOwnerSlides:[],requiredNativeChartOwnerSlides:[],
+ fontPolicy:{basis:'design',families:['Microsoft YaHei']},verifyArtifactToolImport:true,
+ receiptPath:'D:/workspace/SlayTheNian/.codex-build/game-intro/designer/validation.json'
+});
+console.log(JSON.stringify({finalPath:r.finalPath,package:r.packageIntegrity.status,layout:r.presentationLayout.finding_count,slides:r.presentationLayout.slide_count,import:r.firstPartyImport.passed}));

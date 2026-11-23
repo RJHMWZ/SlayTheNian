@@ -1,0 +1,37 @@
+[
+  {
+    "file": "D:\\workspace\\SlayTheNian\\Assets\\Sleigh\\Art\\AppIcons\\AppIcon_01_NianGuardian.png",
+    "theme": "年兽",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7fc8684f2f99b40ec6633168db136d74ea5670d1c20b853e5d200887a6db878b"
+  },
+  {
+    "file": "D:\\workspace\\SlayTheNian\\Assets\\Sleigh\\Art\\AppIcons\\AppIcon_02_Firecrackers.png",
+    "theme": "爆竹",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "1ce24f7a19b64017670ce899d9687830d55a8d5ee52bb29a04617b1618b8e9bd"
+  },
+  {
+    "file": "D:\\workspace\\SlayTheNian\\Assets\\Sleigh\\Art\\AppIcons\\AppIcon_03_ZodiacRabbit.png",
+    "theme": "生肖伙伴",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "4ddb97827831e15f43fded91a834d8745e6dbfbb9818dd36f7d0d750cfd70f92"
+  },
+  {
+    "file": "D:\\workspace\\SlayTheNian\\Assets\\Sleigh\\Art\\AppIcons\\AppIcon_04_FestivalCards.png",
+    "theme": "年礼卡牌",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "dfdd6b36d9b5ffc61b52545dc46047d92acdbd99e43a6d97820f0ef148cf0fcd"
+  },
+  {
+    "file": "D:\\workspace\\SlayTheNian\\Assets\\Sleigh\\Art\\AppIcons\\AppIcon_05_LanternHome.png",
+    "theme": "守岁灯火",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "1b65cf4fd2ea4ec8932e91f7294bacee564bfabe95fdbbb697797e50c99978bb"
+  }
+]
