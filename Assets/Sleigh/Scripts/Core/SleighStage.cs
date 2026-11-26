@@ -21,7 +21,7 @@ namespace Sleigh
         float screenShakeIntensity = .75f;
         [SerializeField, Range(0, 1), Tooltip("Full-screen flash strength. Set to 1 to restore the original presentation.")]
         float screenFlashIntensity = .8f;
-        enum IrisPhase { Idle, Closing, Covered, Opening }
+        enum IrisPhase { Idle, Closing, Covered, PreparingOpening, Opening }
         IrisPhase irisPhase;
         Action navigateAtCover;
         float irisElapsed;
@@ -72,7 +72,13 @@ namespace Sleigh
         void TickIris(float dt)
         {
             if (!IsTransitioning) return;
-            irisElapsed += dt;
+            if (irisPhase == IrisPhase.PreparingOpening)
+            {
+                // Discard the screen-build frame's delta, including its deferred Canvas rebuild.
+                irisPhase = IrisPhase.Opening; irisElapsed = 0;
+                return;
+            }
+            irisElapsed += irisPhase == IrisPhase.Opening ? Mathf.Min(dt, 1f / 30) : dt;
             if (irisPhase == IrisPhase.Closing)
             {
                 float p = Mathf.Clamp01(irisElapsed / (irisReduced ? .12f : irisCloseSeconds));
@@ -83,7 +89,7 @@ namespace Sleigh
             {
                 // The callback runs on a later frame, after a fully covered frame.
                 var next = navigateAtCover; navigateAtCover = null;
-                irisPhase = IrisPhase.Opening; irisElapsed = 0;
+                irisPhase = IrisPhase.PreparingOpening; irisElapsed = 0;
                 try { next?.Invoke(); }
                 catch (Exception ex) { Debug.LogException(ex, this); }
             }

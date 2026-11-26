@@ -33,9 +33,18 @@ namespace Sleigh.Editor
                 Require(switches == 0 && mask.Reveal == 0, "Fully covered frame precedes screen switch");
                 tick.Invoke(stage, new object[] { .07f });
                 Require(switches == 1 && mask.Reveal == 0, "Exactly one screen switch while covered");
-                tick.Invoke(stage, new object[] { .2f });
+                tick.Invoke(stage, new object[] { .65f });
+                Require(stage.IsTransitioning && mask.Reveal == 0 && mask.raycastTarget,
+                    "Screen construction and its first rendered frame must not consume the opening animation");
+                for (int i = 0; i < 5; i++) tick.Invoke(stage, new object[] { 1f / 60 });
+                Require(mask.Reveal > 0 && mask.Reveal < .15f, "Opening begins with a small central circle");
+                float beforeStall = mask.Reveal;
+                tick.Invoke(stage, new object[] { .65f });
+                Require(mask.Reveal > beforeStall && mask.Reveal - beforeStall < .12f,
+                    "A slow frame advances opening gradually instead of jumping to fully open");
+                for (int i = 0; i < 5; i++) tick.Invoke(stage, new object[] { 1f / 60 });
                 Require(mask.Reveal > 0 && mask.Reveal < 1 && mask.raycastTarget, "New screen opens while input stays blocked");
-                tick.Invoke(stage, new object[] { 1f });
+                for (int i = 0; i < 60; i++) tick.Invoke(stage, new object[] { 1f / 60 });
                 Require(!stage.IsTransitioning && mask.Reveal == 1 && !mask.raycastTarget, "Opening releases input");
 
                 var populate = typeof(PixelIrisTransition).GetMethod("OnPopulateMesh", BindingFlags.Instance | BindingFlags.NonPublic,

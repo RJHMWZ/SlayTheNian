@@ -38,6 +38,9 @@ namespace Sleigh.Editor
             SessionState.SetFloat(Stamp, (float)EditorApplication.timeSinceStartup);
             SessionState.SetInt("Sleigh.Smoke.EffectCard", 0); SessionState.SetBool("Sleigh.Smoke.SawBattleEffect", false);
             SessionState.SetBool("Sleigh.Smoke.SawCardDissolve", false);
+            SessionState.SetInt("Sleigh.Smoke.IrisOpenSamples", 0);
+            SessionState.SetFloat("Sleigh.Smoke.IrisLastReveal", 0);
+            SessionState.SetBool("Sleigh.Smoke.IrisOpenedFromCentre", false);
             Register(); EditorApplication.EnterPlaymode();
         }
         static void Log(string message, string stack, LogType type)
@@ -91,6 +94,16 @@ namespace Sleigh.Editor
             {
                 double elapsed = EditorApplication.timeSinceStartup - SessionState.GetFloat(Stamp, 0);
                 int step = SessionState.GetInt(Step, 0); var root = GameRoot.Instance;
+                if (root && root.ScreenName == "CharacterSelect" && root.Stage.IsTransitioning && root.Stage.irisTransition)
+                {
+                    float reveal = root.Stage.irisTransition.Reveal;
+                    if (reveal > SessionState.GetFloat("Sleigh.Smoke.IrisLastReveal", 0) && reveal < 1)
+                    {
+                        SessionState.SetFloat("Sleigh.Smoke.IrisLastReveal", reveal);
+                        SessionState.SetInt("Sleigh.Smoke.IrisOpenSamples", SessionState.GetInt("Sleigh.Smoke.IrisOpenSamples", 0) + 1);
+                        if (reveal < .2f) SessionState.SetBool("Sleigh.Smoke.IrisOpenedFromCentre", true);
+                    }
+                }
                 if (root && root.Stage.battleEffects && root.Stage.battleEffects.ActiveCount > 0)
                     SessionState.SetBool("Sleigh.Smoke.SawBattleEffect", true);
                 if (root && !SessionState.GetBool("Sleigh.Smoke.SawCardDissolve", false))
@@ -123,6 +136,9 @@ namespace Sleigh.Editor
                         Click(Button(root, "NEW RUN")); Advance(); break;
                     case 1:
                         if (root.ScreenName != "CharacterSelect") return;
+                        if (SessionState.GetInt("Sleigh.Smoke.IrisOpenSamples", 0) < 4 ||
+                            !SessionState.GetBool("Sleigh.Smoke.IrisOpenedFromCentre", false))
+                            throw new Exception("Iris opening skipped the small central circle or intermediate frames.");
                         Click(Button(root, "BEGIN >")); Advance(); break;
                     case 2:
                         Click(Button(root, "保存并开始")); Advance(); break;
