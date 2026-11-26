@@ -18,7 +18,6 @@ namespace Sleigh
             if (DB.Frame("Gift", art) == null) art = g.Def.type;
             if (prefab) { var body = r.GetComponent<Image>(); body.sprite = DB.Sprite("CardFrame", g.Def.type); body.color = Color.white; body.raycastTarget = false; }
             else Sprite(r, "CardFrame", g.Def.type, 0, 0, 1, false, 66, 88);
-            // The category frame and the Spring Festival illustration share no baked-in text or holiday props.
             Image illustration;
             if (g.Def.type == "friend")
             {

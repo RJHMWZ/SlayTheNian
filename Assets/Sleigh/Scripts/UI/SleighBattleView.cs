@@ -514,7 +514,7 @@ namespace Sleigh
             if (reduceMotion || !surface)
                 yield return Tween(.14f, p => group.alpha = 1 - p);
             else
-                yield return Tween(.34f, p => surface.SetDissolve(p));
+                yield return Tween(.6f, p => surface.SetDissolve(p));
             Release(card);
         }
         IEnumerator DiscardHandVisual(Gift gift, bool melt)

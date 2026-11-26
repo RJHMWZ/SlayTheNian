@@ -4,7 +4,6 @@ using static Sleigh.PixelUI;
 
 namespace Sleigh
 {
-    // Pixel-grid scenery, rendered as one mesh. Decoration never intercepts input.
     [RequireComponent(typeof(CanvasRenderer))]
     public sealed class SpringFestivalBackdrop : MaskableGraphic
     {
@@ -52,7 +51,6 @@ namespace Sleigh
         {
             vh.Clear();
             if (setting == Setting.Hearth) { Hearth(vh); return; }
-            // A plum-coloured dusk keeps the red lanterns and warm windows legible.
             for (int y = 0; y < 234; y += 3)
                 Box(vh, 0, y, 640, 3, Color.Lerp(Hex(0x291728), Hex(0xb75a48), y / 234f));
             Glow(vh, 323, 174, 118, 56, Hex(0xffb85c, .055f));
@@ -66,7 +64,6 @@ namespace Sleigh
                 for (int j = 0; j < 3; j++) Box(vh, x + 11 + j * 10, roof + 17, 4, 9, Hex(0xe5a46a, .5f));
             }
             Pagoda(vh, 324, 111);
-            // Lantern reflections in the stone path; the combat floor remains at y=232.
             Box(vh, 0, 225, 640, 135, Hex(0x714343));
             for (int row = 0; row < 13; row++)
             {
@@ -341,7 +338,6 @@ namespace Sleigh
                 Box(vh, 289 + i * 8, 263 - h, 7, h, Hex(0xed8749));
                 Box(vh, 291 + i * 8, 266 - h * .6f, 3, h * .6f, GoldInk);
             }
-            // A round reunion table with tea and rice cakes, rather than a chimney.
             Disk(vh, 159, 276, 59, 17, Hex(0xa75c43));
             Box(vh, 115, 279, 8, 27, Hex(0x4a2a30)); Box(vh, 195, 279, 8, 27, Hex(0x4a2a30));
             Disk(vh, 158, 267, 23, 6, Cream); Box(vh, 146, 258, 23, 8, Hex(0xe6b877));

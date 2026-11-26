@@ -47,9 +47,8 @@ namespace Sleigh.Editor
             if (mode == PlayModeStateChange.EnteredEditMode && SessionState.GetBool(Active, false))
             { SessionState.SetBool(Active, false); EditorApplication.delayCall += () => EditorApplication.Exit(SessionState.GetBool("Sleigh.Smoke.Passed", false) ? 0 : 1); }
         }
-        static void Advance(string message)
+        static void Advance()
         {
-            Debug.Log("PLAY_SMOKE: " + message);
             SessionState.SetInt(Step, SessionState.GetInt(Step, 0) + 1);
             SessionState.SetFloat(Stamp, (float)EditorApplication.timeSinceStartup);
         }
@@ -71,7 +70,6 @@ namespace Sleigh.Editor
             var point = RectTransformUtility.WorldToScreenPoint(null, rect.TransformPoint(rect.rect.center));
             var data = new PointerEventData(EventSystem.current) { position = point, button = PointerEventData.InputButton.Left };
             var hits = new System.Collections.Generic.List<RaycastResult>(); EventSystem.current.RaycastAll(data, hits);
-            Debug.Log("PLAY_SMOKE raycast " + button.transform.parent.name + ": " + string.Join(", ", hits.Take(5).Select(h => h.gameObject.name)));
             if (hits.Count == 0 || hits[0].gameObject.GetComponent<Hotspot>() != button)
                 throw new Exception("Button blocked by " + (hits.Count == 0 ? "empty raycast" : hits[0].gameObject.name));
             button.OnPointerClick(data);
@@ -85,7 +83,6 @@ namespace Sleigh.Editor
                 throw new Exception(root.ScreenName + " must display the imported " + asset + " background at runtime.");
             if (background.GetComponentsInChildren<SpringFestivalBackdrop>().Any(b => b.isActiveAndEnabled))
                 throw new Exception(root.ScreenName + " still has the old procedural village active.");
-            Debug.Log("PLAY_SMOKE background verified: " + root.ScreenName + " / " + expected.texture.name);
         }
         static void Tick()
         {
@@ -103,8 +100,6 @@ namespace Sleigh.Editor
                     if (dissolving)
                     {
                         SessionState.SetBool("Sleigh.Smoke.SawCardDissolve", true);
-                        ScreenCapture.CaptureScreenshot(Path.GetFullPath("Logs/CardSurfaceInCombat.png"));
-                        Debug.Log("PLAY_SMOKE: played card visibly dissolving with all UI layers bound");
                     }
                 }
                 if (elapsed > 35) throw new Exception("Timeout step " + step + ", root=" + root + ", screen=" + root?.ScreenName + ", enabled=" + root?.enabled);
@@ -117,7 +112,6 @@ namespace Sleigh.Editor
                         {
                             SessionState.SetBool("Sleigh.Smoke.Reloaded", true);
                             SessionState.SetFloat(Stamp, (float)EditorApplication.timeSinceStartup);
-                            Debug.Log("PLAY_SMOKE: requesting script reload while the menu is open");
                             EditorUtility.RequestScriptReload(); return;
                         }
                         if (Application.companyName != "CodexValidation" || Application.productName != "SlayTheNianPlaySmoke") throw new Exception("Unexpected PlayerPrefs scope");
@@ -126,28 +120,27 @@ namespace Sleigh.Editor
                         var startButton = startLabel ? startLabel.transform.parent.GetComponentInChildren<Hotspot>() : null;
                         // OnEnable recovery finishes on the next player frame after domain reload.
                         if (!startButton || startButton.click == null) return;
-                        Debug.Log("PLAY_SMOKE runtime root enabled=" + root.enabled + ", stage=" + root.Stage.enabled);
-                        Click(Button(root, "NEW RUN")); Advance("title click"); break;
+                        Click(Button(root, "NEW RUN")); Advance(); break;
                     case 1:
                         if (root.ScreenName != "CharacterSelect") return;
-                        Click(Button(root, "BEGIN >")); Advance("character begin click"); break;
+                        Click(Button(root, "BEGIN >")); Advance(); break;
                     case 2:
-                        Click(Button(root, "保存并开始")); Advance("save slot click"); break;
+                        Click(Button(root, "保存并开始")); Advance(); break;
                     case 3:
                         if (root.ScreenName != "Intro") return;
                         var skip = (Action)root.GetType().GetField("skipPoem", Private).GetValue(root);
-                        if (skip == null) return; skip(); Advance("intro skip"); break;
+                        if (skip == null) return; skip(); Advance(); break;
                     case 4:
                         if (root.ScreenName != "Map") return;
                         VerifyFestivalBackground(root, "FestivalMapBackground");
-                        Call(root, "EnterNode", "battle"); Advance("first map battle"); break;
+                        Call(root, "EnterNode", "battle"); Advance(); break;
                     case 5:
                         if (root.ScreenName != "Combat" || (bool)root.GetType().GetField("busy", Private).GetValue(root)) return;
                         VerifyFestivalBackground(root, "FestivalBattleBackground");
                         SleighPolishChecks.VerifyCombatInput(root);
                         foreach (var foe in root.battle.Foes()) foe.Hp = foe.MaxHp = 400;
                         root.battle.Player.Hp = Mathf.Max(1, root.battle.Player.MaxHp - 12);
-                        Advance("combat input checked; testing card effects"); break;
+                        Advance(); break;
                     case 6:
                         if ((bool)root.GetType().GetField("busy", Private).GetValue(root)) return;
                         string[] effectCards = { "sock", "mitten", "icicle", "bellslam", "fireplace", "checktwice", "spiked", "baubles", "sledsweep", "f_gingerling" };
@@ -159,15 +152,15 @@ namespace Sleigh.Editor
                             Call(root, "PlayBattleCues");
                             SessionState.SetInt("Sleigh.Smoke.EffectCard", effectIndex + 1);
                             SessionState.SetFloat(Stamp, (float)EditorApplication.timeSinceStartup);
-                            Debug.Log("PLAY_SMOKE effect card: " + gift.Id); return;
+                            return;
                         }
                         if (!SessionState.GetBool("Sleigh.Smoke.SawBattleEffect", false)) throw new Exception("Card resolution did not display any festival effect.");
                         if (!SessionState.GetBool("Sleigh.Smoke.SawCardDissolve", false)) throw new Exception("Played cards did not dissolve.");
                         if (!root.Stage.battleEffects || root.Stage.battleEffects.raycastTarget) throw new Exception("Battle effects missing or intercepting input.");
-                        Click(Button(root, "END TURN")); Advance("card effects resolved; end turn click"); break;
+                        Click(Button(root, "END TURN")); Advance(); break;
                     case 7:
                         if (root.battle.Turn < 2 || (bool)root.GetType().GetField("busy", Private).GetValue(root)) return;
-                        root.StartBattle(new[] { "santa" }, "boss"); Advance("boss battle"); break;
+                        root.StartBattle(new[] { "santa" }, "boss"); Advance(); break;
                     case 8:
                         if (root.ScreenName == "Combat" && root.battle.Kind == "boss")
                         {

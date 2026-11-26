@@ -4,7 +4,6 @@ using static Sleigh.PixelUI;
 
 namespace Sleigh
 {
-    // Reusable pixel UI skin. The hit area and caption are separate from this illustration.
     [RequireComponent(typeof(CanvasRenderer))]
     public sealed class FirecrackerButtonBackground : MaskableGraphic
     {
@@ -65,7 +64,6 @@ namespace Sleigh
             var gold = Color.Lerp(Hex(0xf4b73f), Hex(0xffe498), highlight);
             var light = Hex(0xffdf7e);
 
-            // A long cylinder with curved paper ends, rather than a rectangular panel.
             Disc(vh, 6, cy + 2, 10, cy, outline); Box(vh, 6, 2, w - 12, h, outline);
             Disc(vh, w - 6, cy + 2, 10, cy, outline);
             Disc(vh, 6, cy, 9, cy, gold); Box(vh, 6, 0, w - 12, h, paper);
@@ -75,21 +73,18 @@ namespace Sleigh
             Box(vh, 8, h - 5, w - 22, 2, Hex(0xad1b2e));
             Box(vh, 8, h - 3, w - 22, 2, Hex(0x8f182b));
 
-            // Two gilded collars and tiny printed lozenges on the red wrapper.
             Box(vh, 8, 0, 8, h, gold); Box(vh, 9, 1, 2, h - 2, light);
             Box(vh, 15, 1, 1, h - 2, Hex(0xbf792d));
             Box(vh, w - 20, 0, 8, h, gold); Box(vh, w - 19, 1, 2, h - 2, light);
             Box(vh, w - 13, 1, 1, h - 2, Hex(0xbf792d));
             Diamond(vh, 22, cy, 2, gold); Diamond(vh, w - 26, cy, 2, gold);
 
-            // Rolled paper cross sections make both ends read as a real firecracker.
             Disc(vh, 4, cy, 4, Mathf.Max(1, cy - 3), Hex(0xd68c38));
             Disc(vh, 4, cy, 2, Mathf.Max(1, cy - 5), Hex(0xf8ce71));
             Disc(vh, w - 5, cy, 6, Mathf.Max(1, cy - 2), Hex(0x9f2630));
             Disc(vh, w - 5, cy, 4, Mathf.Max(1, cy - 4), Hex(0xf2ac51));
             Disc(vh, w - 5, cy, 2, Mathf.Max(1, cy - 6), Hex(0xa94a30));
 
-            // Braided fuse turns upward into a small gold spark outside the caption.
             Box(vh, w - 3, cy - 1, 11, 2, Hex(0x81382c));
             Box(vh, w + 6, cy - 4, 4, 3, Hex(0xf2cd84));
             Box(vh, w + 9, cy - 7, 4, 3, Hex(0xa7723a));

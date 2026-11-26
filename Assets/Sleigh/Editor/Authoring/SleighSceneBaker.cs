@@ -90,7 +90,6 @@ namespace Sleigh.Editor
             PlayerSettings.runInBackground = true;
             if (!Application.isBatchMode) SleighDisplaySetup.FullHD();
             AssetDatabase.SaveAssets();
-            Debug.Log("Sleigh scene baked: 13 complete views, persistent Canvas/Camera/EventSystem, 90 snow particles, 16 actor slots, pooled cards/dialogs/FX, 24 audio voices. " + root.GetComponentsInChildren<Transform>(true).Length + " saved objects.");
         }
         static void BuildReusablePrefabs()
         {

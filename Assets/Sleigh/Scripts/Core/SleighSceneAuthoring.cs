@@ -9,7 +9,7 @@ namespace Sleigh
 {
     public partial class GameRoot
     {
-        // Called through the editor/MCP baker. None of this authoring path runs in a player build.
+        // Editor-only authoring stays in this assembly to access the GameRoot partial class.
         public void BakeViewsInEditor()
         {
             IsBaking = true; bool oldNotes = Ledger.SuppressNotes; Ledger.SuppressNotes = true;

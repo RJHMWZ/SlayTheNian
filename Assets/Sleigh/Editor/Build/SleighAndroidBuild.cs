@@ -7,7 +7,6 @@ using UnityEngine;
 
 namespace Sleigh.Editor
 {
-    // Uses the build pipeline directly, without the Android device-list IMGUI window.
     public static class SleighAndroidBuild
     {
         [MenuItem("Sleigh/Android/配置手机横屏")]
@@ -23,11 +22,15 @@ namespace Sleigh.Editor
             if (string.IsNullOrWhiteSpace(PlayerSettings.GetApplicationIdentifier(BuildTargetGroup.Android)))
                 PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, "com.sleigh.slaythenian");
             AssetDatabase.SaveAssets();
-            Debug.Log("Android landscape configuration ready.");
         }
 
         [MenuItem("Sleigh/Android/构建横屏测试APK")]
-        public static void BuildTestApk()
+        public static void BuildTestApk() => BuildApk(true);
+
+        [MenuItem("Sleigh/Android/构建正式APK")]
+        public static void BuildReleaseApk() => BuildApk(false);
+
+        static void BuildApk(bool development)
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling)
                 throw new InvalidOperationException("Stop Play mode and wait for script compilation before building Android.");
@@ -46,13 +49,12 @@ namespace Sleigh.Editor
                 EditorUserBuildSettings.exportAsGoogleAndroidProject = false;
                 var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
                     scenes = new[] { SleighProjectSetup.ScenePath },
-                    locationPathName = "Builds/Android/SlayTheNian-test.apk",
+                    locationPathName = development ? "Builds/Android/SlayTheNian-test.apk" : "Builds/Android/SlayTheNian.apk",
                     target = BuildTarget.Android,
-                    options = BuildOptions.Development
+                    options = development ? BuildOptions.Development : BuildOptions.None
                 });
                 if (report.summary.result != BuildResult.Succeeded)
                     throw new InvalidOperationException("Android APK build failed. See the first build error in the Console. Result: " + report.summary.result);
-                Debug.Log("Android test APK ready: " + Path.GetFullPath(report.summary.outputPath));
             }
             finally
             {

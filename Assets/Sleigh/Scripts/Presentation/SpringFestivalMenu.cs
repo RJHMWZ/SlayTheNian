@@ -4,7 +4,6 @@ using static Sleigh.PixelUI;
 
 namespace Sleigh
 {
-    // A menu-only illustration. One mesh, no textures, particles or per-frame objects.
     [RequireComponent(typeof(CanvasRenderer))]
     public sealed class SpringFestivalMenu : MaskableGraphic
     {
@@ -108,7 +107,6 @@ namespace Sleigh
         {
             vh.Clear();
             if (foreground) { TitleOrnaments(vh); return; }
-            // Clear centre, lively edges: decoration never receives pointer events.
             for (int y = 0; y < 360; y += 4)
                 Box(vh, 0, y, 640, 4, Color.Lerp(Hex(0xa90f28), Hex(0xef583c), y / 360f));
             for (int i = 0; i < 16; i++)
@@ -152,13 +150,11 @@ namespace Sleigh
                 if (x > 220 && x < 420) continue;
                 Box(vh, x, y, i % 2 == 0 ? 3 : 2, 3 + Mathf.Sin(clock * 3 + i) * 2, i % 3 == 0 ? GoldInk : Hex(0xff9980, .85f));
             }
-            // Small plum blossoms, drawn above the cloud bank.
             Blossom(vh, 36, 206); Blossom(vh, 608, 197); Blossom(vh, 168, 316); Blossom(vh, 470, 323);
         }
 
         void TitleOrnaments(VertexHelper vh)
         {
-            // Red silk tails and a gilt ribbon frame the much larger dancing letters.
             Wedge(vh, new Vector2(182, 123), Mathf.PI, .28f, 34, Hex(0x9b1424));
             Wedge(vh, new Vector2(458, 123), 0, .28f, 34, Hex(0x9b1424));
             Box(vh, 180, 126, 280, 10, Hex(0xbd182b));
@@ -331,7 +327,6 @@ namespace Sleigh
         }
         static void Disk(VertexHelper vh, float cx, float cy, float rx, float ry, Color ink)
         {
-            // Horizontal strips keep every silhouette on the same pixel grid as the game.
             for (float y = -ry; y < ry; y += 2)
             {
                 float half = Mathf.Sqrt(Mathf.Max(0, 1 - Mathf.Pow((y + 1) / ry, 2))) * rx;

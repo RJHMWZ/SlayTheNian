@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 namespace Sleigh
 {
-    // A saved UI graphic, rendered as pixel rows around a circular opening.
-    // No render texture, shader or runtime-created mask objects are needed.
     [RequireComponent(typeof(CanvasRenderer))]
     public sealed class PixelIrisTransition : MaskableGraphic
     {
@@ -42,7 +40,6 @@ namespace Sleigh
                 var red = Color.Lerp(ink, PixelUI.Hex(0xef5930, ink.a), .18f + (1 - height) * .18f);
                 PaperBox(vh, bounds.xMin, bottom, bounds.xMax, top, red);
             }
-            // Quiet repeating brocade: diamond paper cuts alternate with stepped clouds.
             var pattern = Color.Lerp(ink, PixelUI.Hex(0xf5c65a, ink.a), .25f);
             for (int row = 0; row * 64 < bounds.height + 32; row++)
                 for (int column = -1; column * 80 < bounds.width + 40; column++)
@@ -68,7 +65,6 @@ namespace Sleigh
                 CornerMark(vh, x + sx * 7, y + sy * 7, sx * 15, sy * 2, trim);
                 CornerMark(vh, x + sx * 7, y + sy * 7, sx * 2, sy * 11, trim);
             }
-            // A fine gilt edge makes the opening read as a round paper-cut window.
             if (radius > 0)
                 for (float bottom = bounds.yMin; bottom < bounds.yMax; bottom += 2)
                 {

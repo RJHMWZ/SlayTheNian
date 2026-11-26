@@ -21,7 +21,6 @@ namespace Sleigh.Editor
             Canvas.ForceUpdateCanvases();
             EditorSceneManager.MarkSceneDirty(root.gameObject.scene);
             EditorSceneManager.SaveScene(root.gameObject.scene);
-            Debug.Log("Spring festival menu saved in the scene. Runtime reuses the authored title and firecracker buttons.");
         }
     }
 }

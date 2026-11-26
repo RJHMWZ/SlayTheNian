@@ -42,7 +42,6 @@ namespace Sleigh.Editor
                 for (int i = 0; i < definition.clips.Length; i++) definition.clips[i] = AssetDatabase.LoadAssetAtPath<AudioClip>(EffectsFolder + "/" + definition.id + "_" + i + ".wav");
             if (!bank) { bank = ScriptableObject.CreateInstance<SleighAudioBank>(); AssetDatabase.CreateAsset(bank, Folder + "/AudioBank.asset"); }
             bank.effects = definitions.ToArray(); bank.music = bank.music ?? Array.Empty<SleighAudioBank.Song>(); bank.version = Version; BindProvidedMusic(bank); BindProvidedEffects(bank); EditorUtility.SetDirty(bank); AssetDatabase.SaveAssets();
-            Debug.Log("Sleigh audio baked: " + bank.effects.Length + " sound definitions, " + bank.effects.Sum(e => e.clips.Length) + " variations, " + bank.music.Length + " music tracks using provided audio files. No runtime synthesis.");
             return bank;
         }
         static void BindProvidedEffects(SleighAudioBank bank)

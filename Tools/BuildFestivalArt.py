@@ -6,7 +6,6 @@ The illustrations themselves come from imagegen, not procedural stand-ins.
 from pathlib import Path
 from PIL import Image
 import argparse
-import csv
 import json
 import math
 import re
@@ -196,9 +195,6 @@ def main():
     (RES / 'ArtIndex.json').write_text(json.dumps(dict(frames=final), ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     pixelize_existing_catalog('FestivalHudArt')
     pixelize_existing_catalog('FestivalMapArt')
-    with (RES / 'Sprite_Frame_Index.csv').open('w', encoding='utf-8', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=['type', 'anim', 'frame', 'path', 'width', 'height', 'pivotX', 'pivotY', 'sheet', 'x', 'y'], extrasaction='ignore')
-        writer.writeheader(); writer.writerows(final)
     print(f'Prepared {len(definitions["enemies"])} Spring Festival enemies, {len(GIFT_ITEMS)} item/card symbols and five card categories; {len(final)} logical frames retained.')
 
 
