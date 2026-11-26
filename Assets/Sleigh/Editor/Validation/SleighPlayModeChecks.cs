@@ -32,10 +32,12 @@ namespace Sleigh.Editor
                 throw new InvalidOperationException("Play smoke tests run only in the isolated validation project.");
             PlayerSettings.companyName = "CodexValidation"; PlayerSettings.productName = "SlayTheNianPlaySmoke";
             AssetDatabase.SaveAssets();
+            PlayerPrefs.SetInt("Sleigh.ReduceMotion", 0);
             EditorSceneManager.OpenScene(SleighProjectSetup.ScenePath);
             SessionState.SetBool(Active, true); SessionState.SetBool("Sleigh.Smoke.Reloaded", false); SessionState.SetInt(Step, 0);
             SessionState.SetFloat(Stamp, (float)EditorApplication.timeSinceStartup);
             SessionState.SetInt("Sleigh.Smoke.EffectCard", 0); SessionState.SetBool("Sleigh.Smoke.SawBattleEffect", false);
+            SessionState.SetBool("Sleigh.Smoke.SawCardDissolve", false);
             Register(); EditorApplication.EnterPlaymode();
         }
         static void Log(string message, string stack, LogType type)
@@ -94,6 +96,17 @@ namespace Sleigh.Editor
                 int step = SessionState.GetInt(Step, 0); var root = GameRoot.Instance;
                 if (root && root.Stage.battleEffects && root.Stage.battleEffects.ActiveCount > 0)
                     SessionState.SetBool("Sleigh.Smoke.SawBattleEffect", true);
+                if (root && !SessionState.GetBool("Sleigh.Smoke.SawCardDissolve", false))
+                {
+                    var dissolving = root.Stage.canvas.GetComponentsInChildren<CardSurfaceEffects>()
+                        .FirstOrDefault(c => c.Dissolve > .25f && c.Dissolve < .75f);
+                    if (dissolving)
+                    {
+                        SessionState.SetBool("Sleigh.Smoke.SawCardDissolve", true);
+                        ScreenCapture.CaptureScreenshot(Path.GetFullPath("Logs/CardSurfaceInCombat.png"));
+                        Debug.Log("PLAY_SMOKE: played card visibly dissolving with all UI layers bound");
+                    }
+                }
                 if (elapsed > 35) throw new Exception("Timeout step " + step + ", root=" + root + ", screen=" + root?.ScreenName + ", enabled=" + root?.enabled);
                 if (elapsed < 1 || !root || root.Stage.IsTransitioning) return;
                 switch (step)
@@ -149,6 +162,7 @@ namespace Sleigh.Editor
                             Debug.Log("PLAY_SMOKE effect card: " + gift.Id); return;
                         }
                         if (!SessionState.GetBool("Sleigh.Smoke.SawBattleEffect", false)) throw new Exception("Card resolution did not display any festival effect.");
+                        if (!SessionState.GetBool("Sleigh.Smoke.SawCardDissolve", false)) throw new Exception("Played cards did not dissolve.");
                         if (!root.Stage.battleEffects || root.Stage.battleEffects.raycastTarget) throw new Exception("Battle effects missing or intercepting input.");
                         Click(Button(root, "END TURN")); Advance("card effects resolved; end turn click"); break;
                     case 7:

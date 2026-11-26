@@ -69,7 +69,7 @@ namespace Sleigh
         Unit Display(Unit u) => displayedUnits.TryGetValue(u, out var f) ? f : u;
         public void StartBattle(string[] ids, string kind)
         {
-            NewScreen("Combat", kind == "boss" ? "boss" : "battle"); TiledBackground(false, 110);
+            NewScreen("Combat", kind == "boss" ? "boss" : "battle"); TiledBackground();
             battle = new Battle(run, ids, kind); presentedHand.Clear(); usingVisualNumbers = true; comboCount = 0;
             viewHp = run.hp; viewMaxHp = run.maxHp; viewCookies = run.cookies; viewSpirit = run.spirit;
             viewEnergy = 0; viewPower = 40; viewDraw = run.bag.Count; viewDiscard = viewConsumed = 0;
@@ -510,7 +510,12 @@ namespace Sleigh
                 && style != FestivalBattleEffects.Style.Heal && style != FestivalBattleEffects.Style.Summon)
                 FestivalEffect(style, battle.Player);
             Burst(x, y, FestivalBattleEffects.Ink(style), 10);
-            yield return Tween(.16f, p => { group.alpha = 1 - p; card.localScale = Vector3.one * Mathf.Lerp(1.1f, 1.25f, p); }); Release(card);
+            var surface = card.GetComponent<CardSurfaceEffects>();
+            if (reduceMotion || !surface)
+                yield return Tween(.14f, p => group.alpha = 1 - p);
+            else
+                yield return Tween(.34f, p => surface.SetDissolve(p));
+            Release(card);
         }
         IEnumerator DiscardHandVisual(Gift gift, bool melt)
         {

@@ -21,7 +21,7 @@ namespace Sleigh
                 ShowShop(true); restMessage = null; ShowRest(); restMessage = "You doze by the crackling fire. The aches fade away."; ShowRest(); restMessage = null;
                 ShowTreasure();
                 ui.GetComponentsInChildren<Hotspot>(true).First(h => h.transform.parent.name == "Button:OPEN STOCKING").click();
-                NewScreen("Combat", "battle"); TiledBackground(false, 110);
+                NewScreen("Combat", "battle"); TiledBackground();
                 battle = new Battle(run, new[] { "nutgrunt", "jackfrost", "santa" }, "elite");
                 battle.Cues.Clear(); battle.Hand.Clear();
                 foreach (var d in DB.All.gifts.Take(10)) battle.Hand.Add(new Gift { Id = d.id, Uid = -battle.Hand.Count - 1, ToyPart = DB.All.parts[battle.Hand.Count].id });

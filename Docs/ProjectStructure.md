@@ -2,6 +2,8 @@
 
 Unity 2022.3.62f2；保留现有命名空间 `Sleigh`、默认程序集、序列化字段、存档键和运行时资源入口。项目整理不修改玩法、数值或界面布局。
 
+阅读源码从 [源码阅读指南](CodeGuide.md) 开始；制作课程可参考 [复刻教程详细目录](ReproductionTutorial.md)。2026-11-26 的代码拆分见 [本轮整理记录](CodeOrganizationReport.md)，早期资源迁移记录见 [历史整理报告](ProjectOrganizationReport.md)。
+
 ## 目录
 
 ```text
@@ -34,7 +36,6 @@ Assets/Sleigh/
     Audio/AudioBank.asset    保留运行时加载入口的音频配置
     Fonts/                   运行时点阵字体与授权文件
     Localization/            中文文本
-    UI/                      已有菜单按钮贴图
     *.json                   定义和三个美术索引，保留原加载键
 ```
 
@@ -43,7 +44,8 @@ Assets/Sleigh/
 ## 依赖与入口
 
 - `GameRoot` 负责屏幕流转；通过现有 partial 文件调用 UI 和演出。
-- `Run`、`Battle`、`EventRules` 依赖 `DB` 定义；UI 读取模型并播放提示，不改写规则。
+- 原 `UI/SleighViews.cs` 已按职责拆为 `GameRoot.Map.cs`、`GameRoot.Cards.cs`、`GameRoot.Rewards.cs`、`GameRoot.Events.cs`、`GameRoot.Shop.cs`、`GameRoot.Progression.cs`。它们仍属于同一个 `GameRoot` 类和程序集。
+- `Run`、`Battle`、`EventRules` 依赖 `DB` 定义；UI 调用规则并播放提示。当前部分商店、休息、奖励与补给的状态修改仍位于界面方法中，讲解时需同时追踪这些入口。
 - `DB` 以 `type/anim` 为稳定的逻辑键，三个 JSON 索引决定实际贴图路径。图集坐标使用原始像素，显示尺寸独立保存。
 - `PixelUI` 使用对象池创建和回收控件；控件复用时解除旧回调。运行时闪白材质由 GameRoot 持有副本并在销毁时释放。
 - `SleighAudio` 使用四个预建音乐 AudioSource 和音效声部池。`AudioBank.asset` 通过 GUID 引用实际音频，运行时不合成声音。
@@ -57,7 +59,7 @@ Assets/Sleigh/
 3. 音乐和提供的胜负音效绑定集中于 `Editor/Audio/SleighSoundBaker.cs`。重新烘焙保留五首提供的音乐及两条提供的音效。
 4. `FestivalSoundSynth.cs` 是离线音效算法；从现有菜单烘焙资源即可。未经需求不要修改已经确认的声音或导入质量。
 5. `Editor/Import/BakeChineseFont.py` 从 `Art/Fonts/FusionPixel12.ttf` 生成运行时点阵字体；整理目录时不执行字体重烘焙。
-6. `Import/Legacy/ImportReference.py` 为旧项目迁移工具，源数据当前不在仓库。它不是日常生成入口；不要用旧参考覆盖现有玩法配置。
+6. 历史整理记录提到的 `Import/Legacy/ImportReference.py` 当前工作树中不存在，不作为日常入口。不要用旧参考数据覆盖现有玩法配置。
 
 ## 验证
 
@@ -68,12 +70,13 @@ Assets/Sleigh/
 - 涉及初始化、输入、脚本重载时，还要在隔离副本 `Temp/ProjectOrganizationAudit/UnityValidation` 运行 `Sleigh.Editor.SleighPlayModeChecks.StartBatch`，验证真实Play Mode按钮射线、选人、存档、剧情、地图和战斗。测试使用独立PlayerPrefs范围，不操作玩家存档。
 - 编辑器运行中重载脚本会重新绑定单例、按钮和音频，并返回主菜单；可以从自动存档继续。该恢复逻辑不进入玩家构建。
 - 有编辑器或未保存场景时，在独立项目副本上跑批处理；不关闭用户编辑器、不重烘焙或覆盖用户场景。
-- `Tools/OrganizeProject.ps1` 是本次一次性迁移的受限执行器，必须配合审阅过的移动计划使用，不应在后续开发中盲目重复执行。
+- `Tools/OrganizeProject.ps1` 是历史一次性迁移的受限执行器，必须配合审阅过的移动计划使用，不应在后续开发中盲目重复执行。
+- `Tools/CleanFestivalAssets.py` 会实际删除素材和对应元数据，静态引用分析不能证明动态加载资源无用，不作为日常验证命令运行。
 
 ## 保留候选与限制
 
 - 四组同内容文件属于字体许可证；为满足各字体目录的授权归档而保留。
-- 旧音乐和两条旧胜负音效已移到 `Audio/Legacy`，没有删除或重新压缩。
-- 旧版图标、教程和品牌贴图仍可能被原美术索引、烘焙视图或动态资源逻辑访问，保留现有内容。进一步删除需要独立验证资源加载与发行构建。
-- `Test.cs`、样例场景、字体字符表及参考 CSV 保留；CSV 仅为原提取参考，当前运行时 JSON 为准。
-- 没有调整第三方包、Unity 缓存、平台配置或 Android 构建依赖。移动后首次切回 Unity，编辑器可能需要刷新资源和重新生成 IDE 工程。
+- 历史报告记录过 `Audio/Legacy`、参考 CSV 和旧美术；当前工作树已与该报告不同，不能把历史清单当成现有文件清单，也不应为整理而恢复这些旧资源。
+- 现有素材即使没有普通 C# 调用点，也可能由序列化 GUID、JSON 索引或动态加载访问。进一步删除需要独立验证资源加载与发行构建。
+- `Test.cs`、样例场景和字体许可证按维护约定保留。当前玩法与美术映射以运行时 JSON 为准。
+- 本轮不调整第三方包、Unity 缓存、平台配置或 Android 构建依赖。移动后首次切回 Unity，编辑器可能需要刷新资源和重新生成 IDE 工程。

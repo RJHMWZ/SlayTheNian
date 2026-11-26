@@ -33,7 +33,6 @@ namespace Sleigh
         readonly Dictionary<Unit, ActorVisual> actors = new Dictionary<Unit, ActorVisual>();
         Action modalBack;
         Action skipPoem;
-        string tipContent;
 
         void Awake()
         {
@@ -131,7 +130,7 @@ namespace Sleigh
             actors.Clear(); handViews.Clear(); handOrder.Clear(); displayedUnits.Clear(); assistingGuest = null; usingVisualNumbers = false; ambientTimer = .2f; ambientFireTimer = .25f; floatingRelic = null; tip = null; sound.Duck(1); sound.Music(music); stage.Transition();
             if (!preserveLayout) Rect(bg, 0, 0, 640, 360, Hex(0x060914));
         }
-        void TiledBackground(bool intro = false, float up = 0)
+        void TiledBackground(bool intro = false)
         {
             if (ScreenName == "Combat" || ScreenName == "Map")
             {
@@ -154,7 +153,7 @@ namespace Sleigh
         void ShowTip(string content)
         {
             content = Chinese.Text(content);
-            if (busy) return; tipContent = content;
+            if (busy) return;
             if (!tip)
             {
                 tip = PanelBox(pop, 0, 0, 264, 100, Gold);
@@ -166,7 +165,7 @@ namespace Sleigh
             if (imgs.Length >= 3) { imgs[0].rectTransform.sizeDelta = new Vector2(264, h); imgs[1].rectTransform.sizeDelta = new Vector2(262, h - 2); imgs[2].rectTransform.sizeDelta = new Vector2(258, h - 6); }
             tip.gameObject.SetActive(true); tip.SetAsLastSibling();
         }
-        void HideTip() { tipContent = null; if (tip) tip.gameObject.SetActive(false); }
+        void HideTip() { if (tip) tip.gameObject.SetActive(false); }
         RectTransform OpenModal(string title, Action back = null, float titleScale = 1.1f)
         {
             ResetPointerInteraction(); CloseModal(); HideTip(); modal = Group(pop, "Modal:" + title);

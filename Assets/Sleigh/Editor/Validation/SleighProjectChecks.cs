@@ -133,6 +133,8 @@ namespace Sleigh.Editor
                 SleighTransitionChecks.Check();
                 SleighPolishChecks.Verify();
                 SleighBattleEffectsChecks.Verify();
+                if (SystemInfo.graphicsDeviceType != UnityEngine.Rendering.GraphicsDeviceType.Null)
+                    SleighCardSurfaceChecks.Verify();
                 string output = Path.GetFullPath(Path.Combine(Application.dataPath, "../Logs"));
                 Directory.CreateDirectory(output);
                 File.WriteAllText(Path.Combine(output, "ProjectValidationResult.txt"), "PASS: integrity, material ownership, rules, theme, presentation, viewport and transitions.");
